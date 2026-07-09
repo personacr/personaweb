@@ -1,0 +1,25 @@
+# ═══════════════════════════════════════════════════
+# PERSONA — TEXTOS DEL SITIO
+# ═══════════════════════════════════════════════════
+#
+# CÓMO EDITAR:
+# Cada línea tiene el formato:  clave = valor
+# Solo cambiá lo que está DESPUÉS del signo =
+# Las líneas que empiezan con # son comentarios (no se muestran)
+# Guardá el archivo y el sitio se actualiza en ~60 segundos
+#
+# ═══════════════════════════════════════════════════
+
+# ─── HOME · HERO ───
+hero_manifiesto_es = La magia de lo cotidiano y el poder del subconsciente para crear.
+hero_manifiesto_en = The magic of everyday life and the power of the subconscious to create.
+
+# ─── HOME · INTRO DE DISCIPLINAS ───
+doors_titulo_es = Cuatro maneras de hacer la misma pregunta
+doors_titulo_en = Four ways of asking the same question
+doors_texto_es = ¿Qué nos conecta por debajo de lo que vemos? El cine, la foto, el escenario y la música son mis formas de buscar la respuesta.
+doors_texto_en = What connects us beneath what we see? Film, photography, stage and music are my ways of searching for the answer.
+
+# ─── CONTACTO ───
+contacto_email = josepablo@persona.cr
+contacto_whatsapp = 50688433789

@@ -1,0 +1,28 @@
+# ═══════════════════════════════════════════════════
+# PERSONA — GALERÍAS DE FOTOS
+# ═══════════════════════════════════════════════════
+#
+# CÓMO FUNCIONA:
+# 1. Subí tus fotos a la carpeta img/ correspondiente
+# 2. Agregá el nombre del archivo a la lista de abajo
+# 3. El orden de la lista = el orden en el sitio
+#
+# FORMATO:  nombre_galeria = ruta1, ruta2, ruta3
+# (todo en una sola línea, separado por comas)
+#
+# ═══════════════════════════════════════════════════
+
+# ─── PHOTO · ESPECTÁCULOS ───
+espectaculos = img/photo/espectaculos/01.jpg, img/photo/espectaculos/02.jpg, img/photo/espectaculos/03.jpg, img/photo/espectaculos/04.jpg, img/photo/espectaculos/05.jpg, img/photo/espectaculos/06.jpg
+
+# ─── PHOTO · PERSONAS ───
+personas = img/photo/personas/01.jpg, img/photo/personas/02.jpg, img/photo/personas/03.jpg, img/photo/personas/04.jpg, img/photo/personas/05.jpg, img/photo/personas/06.jpg
+
+# ─── PHOTO · CONCEPTUAL ───
+conceptual = img/photo/conceptual/01.jpg, img/photo/conceptual/02.jpg, img/photo/conceptual/03.jpg, img/photo/conceptual/04.jpg
+
+# ─── STAGE · LIGHTS WILL GUIDE YOU ───
+lwgy = img/stage/lwgy/01.jpg, img/stage/lwgy/02.jpg, img/stage/lwgy/03.jpg, img/stage/lwgy/04.jpg
+
+# ─── STAGE · MATILDA JR ───
+matilda = img/stage/matilda/01.jpg, img/stage/matilda/02.jpg, img/stage/matilda/03.jpg, img/stage/matilda/04.jpg
