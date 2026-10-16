@@ -1,7 +1,7 @@
 name: Armar sitio
 on:
   push:
-    paths: ['contenido/**', 'plantillas/**', 'herramientas/**', 'styles.css', 'site.js']
+    paths: ['contenido/**', 'plantillas/**', 'herramientas/**', 'img/subidas/**', 'styles.css', 'site.js']
   workflow_dispatch:
 permissions:
   contents: write
@@ -12,7 +12,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
-      - run: pip install pyyaml jinja2
+      - run: pip install pyyaml jinja2 pillow
+      - run: python3 herramientas/fotos.py
       - run: python3 herramientas/construir.py
       - run: |
           git config user.name "persona-bot"; git config user.email "actions@users.noreply.github.com"

@@ -1,21 +1,22 @@
-{% extends "base.html" %}{% from "macros.html" import L, video, pic with context %}
+{% extends "base.html" %}{% from "macros.html" import L, pic, tile, cinema with context %}
 {% block body %}
 <main class="wrap">
   <header class="page-top">
-    <p class="eyebrow">{{ t.stage_eyebrow }}</p>
-    <h1 class="display">{{ L('stage') }}</h1>
+    <div><p class="eyebrow">{{ t.stage_eyebrow }}</p><h1 class="display" style="margin-top:8px">{{ L('stage') }}</h1></div>
     <p class="lead">{{ t.stage_lead }}</p>
   </header>
-  {% for p in s.proyectos %}
-  <article class="project" id="{{ p.slug }}">
-    <div class="project-head">
-      <h2>{{ p.titulo }}</h2>
-      <dl class="facts"><dt>{{ t.year }}</dt><dd>{{ p.anio }}</dd><dt>{{ t.role }}</dt><dd>{{ p['rol_' ~ lang] }}</dd><dt>{{ t.about_it }}</dt><dd>{{ p['sinopsis_' ~ lang] }}</dd>
-      {% if p.enlaces %}<dt>Links</dt><dd>{% for e in p.enlaces %}<a href="{{ e.url }}" rel="noopener">{{ e.texto }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</dd>{% endif %}</dl>
-    </div>
-    {% if p.videos %}<div class="videos">{% for v in p.videos %}{{ video(v, t) }}{% endfor %}</div>{% endif %}
-    <div class="stills">{% for f in p.fotos %}<figure class="ph" data-i="{{ loop.index0 }}">{{ pic(f, p.titulo ~ ' — ' ~ loop.index, sizes="(max-width:700px) 50vw, 25vw") }}</figure>{% endfor %}</div>
-  </article>
-  {% endfor %}
+  <div class="works tall">
+    {% for p in s.proyectos %}
+    <button type="button" class="work rv" data-open="ver-{{ p.slug }}" id="{{ p.slug }}" style="--d:{{ loop.index0 * 0.08 }}s">
+      {{ pic(p.fotos[0], '', sizes="(max-width:520px) 100vw, 33vw") }}
+      <span class="t"><b>{{ p.titulo }}</b><small><em>{{ p.anio }}</em> · {{ p['rol_' ~ lang] }}</small></span>
+    </button>
+    {% endfor %}
+  </div>
+  <section class="block">
+    <div class="head"><h2 class="h2">{{ L(t.stage_photos) }}</h2><span class="eyebrow">{{ t.stage_photos_sub }}</span></div>
+    <div class="jg">{% for f in stills %}{% if f.label %}<p class="label">{{ f.label }}</p>{% endif %}{{ tile(f, lang, None, loop.index0) }}{% endfor %}</div>
+  </section>
 </main>
+{% for p in s.proyectos %}{{ cinema(p, t, lang, p.fotos) }}{% endfor %}
 {% endblock %}

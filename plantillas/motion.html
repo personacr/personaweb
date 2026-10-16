@@ -1,33 +1,27 @@
-{% extends "base.html" %}{% from "macros.html" import L, video with context %}
+{% extends "base.html" %}{% from "macros.html" import L, video, thumb, cinema with context %}
 {% block body %}
 <main class="wrap">
   <header class="page-top">
-    <p class="eyebrow">{{ t.motion_eyebrow }}</p>
-    <h1 class="display">{{ L('motion') }}</h1>
+    <div><p class="eyebrow">{{ t.motion_eyebrow }}</p><h1 class="display" style="margin-top:8px">{{ L('motion') }}</h1></div>
     <p class="lead">{{ t.motion_lead }}</p>
   </header>
-  <section aria-label="{{ t.filmography }}">
-    <p class="eyebrow" style="margin-bottom:var(--s2)">{{ t.filmography }}</p>
+  <div class="works">
     {% for p in m.proyectos %}
-    <a class="film" href="#{{ p.slug }}"><span class="y">{{ p.anio }}</span><span><b>{{ p.titulo }}</b><i>{{ p['tipo_' ~ lang] }} · {{ p['rol_' ~ lang] }}</i></span><span class="arrow">{{ t.see }} ↓</span></a>
+    {%- set th = p.portada and (R ~ p.portada ~ '-1280.webp') or (thumb(p.videos[0]) if p.videos else '') -%}
+    <button type="button" class="work rv{% if not th %} noimg{% endif %}" data-open="ver-{{ p.slug }}" id="{{ p.slug }}" style="--d:{{ (loop.index0 % 3) * 0.07 }}s">
+      {% if th %}<img src="{{ th }}" alt="" loading="lazy">{% endif %}
+      <span class="t"><b>{{ p.titulo }}</b><small>{% if p.anio %}<em>{{ p.anio }}</em> · {% endif %}{{ p['rol_' ~ lang] }}</small></span>
+    </button>
     {% endfor %}
+  </div>
+  <section class="block" id="reels">
+    <div class="head"><h2 class="h2">{{ L('reels') }}</h2><span class="eyebrow">{{ t.reels_lead }}</span></div>
+    <div class="strip-x">{% for v in m.reels %}{{ video(v, t) }}{% endfor %}</div>
   </section>
-  {% for p in m.proyectos %}
-  <article class="project" id="{{ p.slug }}">
-    <div class="project-head">
-      <h2>{{ p.titulo }}</h2>
-      <dl class="facts"><dt>{{ t.year }}</dt><dd>{{ p.anio or '—' }}</dd><dt>{{ t.type }}</dt><dd>{{ p['tipo_' ~ lang] }}</dd><dt>{{ t.role }}</dt><dd>{{ p['rol_' ~ lang] }}</dd><dt>{{ t.about_it }}</dt><dd>{{ p['sinopsis_' ~ lang] }}</dd></dl>
-    </div>
-    <div class="videos{% if p.videos and p.videos[0].formato == 'vertical' %} vertical{% endif %}">{% for v in p.videos %}{{ video(v, t) }}{% endfor %}</div>
-  </article>
-  {% endfor %}
-  <section class="project" id="reels">
-    <div class="project-head"><h2>{{ L('reels') }}</h2><p class="lead">{{ t.reels_lead }}</p></div>
-    <div class="videos vertical">{% for v in m.reels %}{{ video(v, t) }}{% endfor %}</div>
-  </section>
-  <section class="project" id="bitacora">
-    <div class="project-head"><h2>{{ L(t.fieldnotes|lower) }}</h2><p class="lead">{{ t.fieldnotes_lead }}</p></div>
-    <div class="videos vertical">{% for v in m.bitacora %}{{ video(v, t) }}{% endfor %}</div>
+  <section id="bitacora">
+    <div class="head"><h2 class="h2">{{ L(t.fieldnotes|lower) }}</h2><span class="eyebrow">{{ t.fieldnotes_lead }}</span></div>
+    <div class="strip-x">{% for v in m.bitacora %}{{ video(v, t) }}{% endfor %}</div>
   </section>
 </main>
+{% for p in m.proyectos %}{{ cinema(p, t, lang) }}{% endfor %}
 {% endblock %}

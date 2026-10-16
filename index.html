@@ -31,46 +31,96 @@
   <div class="nav-inner">
     <a class="wordmark" href="">person<span class="l">a</span></a>
     <button class="burger" id="burger" aria-label="Menú" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
-    <ul class="nav-links" id="nav-links">      <li><a href="motion/">Motion</a></li>      <li><a href="photo/">Photo</a></li>      <li><a href="stage/">Stage</a></li>      <li><a href="music/">Music</a></li>      <li><a href="sobre-mi/">Sobre mí</a></li>      <li><a href="contacto/">Contacto</a></li>      <li class="lang"><b>ES</b> · <a href="en/" hreflang="en" lang="en">EN</a></li>
+    <ul class="nav-links" id="nav-links">      <li><a href="motion/">Motion</a></li>      <li><a href="photo/">Photo</a></li>      <li><a href="stage/">Stage</a></li>      <li><a href="sobre-mi/">Sobre mí</a></li>      <li><a href="contacto/">Contacto</a></li>      <li class="lang"><b>ES</b> · <a href="en/" hreflang="en" lang="en">EN</a></li>
     </ul>
   </div>
 </nav>
 
 <header class="hero">
   <img class="poster" src="img/home/hero-poster.jpg" alt="" fetchpriority="high">
-  <video autoplay muted loop playsinline preload="metadata" poster="img/home/hero-poster.jpg" data-src="img/home/hero.mp4" aria-hidden="true"></video>
+  <video autoplay muted loop playsinline preload="none" poster="img/home/hero-poster.jpg" data-src="img/home/hero.mp4" aria-hidden="true"></video>
+  <div class="bars" aria-hidden="true"></div>
   <div class="hero-in">
     <div>
       <h1>Narrador visual. Cine, fotografía y escena.</h1>
       <p class="credit">Jose Pablo García · Costa Rica · Disponible para giras y festivales</p>
     </div>
-    <div class="btns"><a class="btn" href="motion/">Ver trabajo en video ▸</a><a class="btn" href="#trabajo">Explorar ↓</a></div>
+    <div class="btns"><a class="btn" href="#trabajo">Ver trabajo ↓</a><a class="btn" href="motion/">Motion ▸</a></div>
   </div>
 </header>
 <main>
   <section class="block wrap" id="trabajo">
-    <div class="block-head"><h2>trabaj<span class="l">o</span></h2><span class="eyebrow">Selección</span></div>
-    <a class="strip reveal" href="photo/en-vivo/">&lt;img style=&#34;object-position:50% 35%&#34; src="img/photo/en-vivo/jacob-collier-en-vivo-2025-04-1280.webp" srcset="img/photo/en-vivo/jacob-collier-en-vivo-2025-04-640.webp 640w, img/photo/en-vivo/jacob-collier-en-vivo-2025-04-1280.webp 1280w, img/photo/en-vivo/jacob-collier-en-vivo-2025-04-2048.webp 2048w" sizes="100vw" alt="Jacob Collier — En vivo · 2025" loading="lazy" decoding="async"><span class="credit">Jacob Collier — En vivo · 2025</span></a>
-    <a class="strip reveal" href="photo/teatro/">&lt;img style=&#34;object-position:50% 40%&#34; src="img/photo/teatro/sala-de-espera-teatro-2026-04-1280.webp" srcset="img/photo/teatro/sala-de-espera-teatro-2026-04-640.webp 640w, img/photo/teatro/sala-de-espera-teatro-2026-04-1280.webp 1280w, img/photo/teatro/sala-de-espera-teatro-2026-04-2048.webp 2048w" sizes="100vw" alt="Sala de Espera — Teatro · 2026" loading="lazy" decoding="async"><span class="credit">Sala de Espera — Teatro · 2026</span></a>
-    <a class="strip reveal" href="photo/en-vivo/">&lt;img style=&#34;object-position:50% 40%&#34; src="img/photo/en-vivo/daniel-patino-en-vivo-2024-12-1280.webp" srcset="img/photo/en-vivo/daniel-patino-en-vivo-2024-12-640.webp 640w, img/photo/en-vivo/daniel-patino-en-vivo-2024-12-1280.webp 1280w, img/photo/en-vivo/daniel-patino-en-vivo-2024-12-2048.webp 2048w" sizes="100vw" alt="Daniel Patiño — En vivo · 2024" loading="lazy" decoding="async"><span class="credit">Daniel Patiño — En vivo · 2024</span></a>
-    <a class="strip reveal" href="photo/movimiento/">&lt;img style=&#34;object-position:50% 45%&#34; src="img/photo/movimiento/festival-reves-movimiento-2026-14-1280.webp" srcset="img/photo/movimiento/festival-reves-movimiento-2026-14-640.webp 640w, img/photo/movimiento/festival-reves-movimiento-2026-14-1280.webp 1280w, img/photo/movimiento/festival-reves-movimiento-2026-14-2048.webp 2048w" sizes="100vw" alt="Festival Revés — Movimiento · 2026" loading="lazy" decoding="async"><span class="credit">Festival Revés — Movimiento · 2026</span></a>
-    <a class="strip reveal" href="photo/arte/">&lt;img style=&#34;object-position:50% 50%&#34; src="img/photo/arte/parallel-perceptions-arte-02-1280.webp" srcset="img/photo/arte/parallel-perceptions-arte-02-640.webp 640w, img/photo/arte/parallel-perceptions-arte-02-1280.webp 1280w, img/photo/arte/parallel-perceptions-arte-02-2048.webp 2048w" sizes="100vw" alt="Parallel Perceptions — Arte" loading="lazy" decoding="async"><span class="credit">Parallel Perceptions — Arte</span></a>
+    <div class="head"><h2 class="h2">selecció<span class="l">n</span></h2><a class="more" href="photo/">Todo Photo →</a></div>
+    <div class="jg tight"><a class="it rv" href="photo/en-vivo/" style="--r:1.497;--k:1.45;--d:0.0s;background:#1e3153">
+  <img src="img/photo/en-vivo/jacob-collier-en-vivo-2025-04-1280.webp" srcset="img/photo/en-vivo/jacob-collier-en-vivo-2025-04-640.webp 640w, img/photo/en-vivo/jacob-collier-en-vivo-2025-04-1280.webp 1280w, img/photo/en-vivo/jacob-collier-en-vivo-2025-04-2048.webp 2048w" sizes="(max-width:700px) 60vw, 33vw" alt="La entrada: brazos abiertos, simetría — Jacob Collier · 2025" width="1000" height="668" loading="lazy" decoding="async">
+  <span class="cap"><span>La entrada: brazos abiertos, simetría</span><small>Jacob Collier · 2025</small></span>
+</a><a class="it rv" href="photo/teatro/" style="--r:1.4993;--k:1.45;--d:0.07s;background:#393939">
+  <img src="img/photo/teatro/sala-de-espera-teatro-2026-02-1280.webp" srcset="img/photo/teatro/sala-de-espera-teatro-2026-02-640.webp 640w, img/photo/teatro/sala-de-espera-teatro-2026-02-1280.webp 1280w, img/photo/teatro/sala-de-espera-teatro-2026-02-2048.webp 2048w" sizes="(max-width:700px) 60vw, 33vw" alt="El espejo: la actriz se vuelve personaje — Sala de Espera · 2026" width="1000" height="667" loading="lazy" decoding="async">
+  <span class="cap"><span>El espejo: la actriz se vuelve personaje</span><small>Sala de Espera · 2026</small></span>
+</a><a class="it rv" href="photo/movimiento/" style="--r:0.786;--k:1;--d:0.14s;background:#8b8a89">
+  <img src="img/photo/movimiento/movimiento-2026-02-1280.webp" srcset="img/photo/movimiento/movimiento-2026-02-640.webp 640w, img/photo/movimiento/movimiento-2026-02-1280.webp 1280w, img/photo/movimiento/movimiento-2026-02-2048.webp 2048w" sizes="(max-width:700px) 60vw, 33vw" alt="Serie B/N 2026: suelo y aire — 2026" width="786" height="1000" loading="lazy" decoding="async">
+  <span class="cap"><span>Serie B/N 2026: suelo y aire</span><small>2026</small></span>
+</a><a class="it rv" href="photo/en-vivo/" style="--r:0.668;--k:1;--d:0.21s;background:#2d5d7a">
+  <img src="img/photo/en-vivo/daniel-patino-en-vivo-2024-10-1280.webp" srcset="img/photo/en-vivo/daniel-patino-en-vivo-2024-10-640.webp 640w, img/photo/en-vivo/daniel-patino-en-vivo-2024-10-1280.webp 1280w, img/photo/en-vivo/daniel-patino-en-vivo-2024-10-2048.webp 2048w" sizes="(max-width:700px) 60vw, 33vw" alt="Tu firma: remolino hecho en cámara — Daniel Patiño · 2024" width="668" height="1000" loading="lazy" decoding="async">
+  <span class="cap"><span>Tu firma: remolino hecho en cámara</span><small>Daniel Patiño · 2024</small></span>
+</a><a class="it rv" href="photo/retrato/" style="--r:0.668;--k:1;--d:0.0s;background:#3e4749">
+  <img src="img/photo/retrato/retrato-2025-01-1280.webp" srcset="img/photo/retrato/retrato-2025-01-640.webp 640w, img/photo/retrato/retrato-2025-01-1280.webp 1280w, img/photo/retrato/retrato-2025-01-2048.webp 2048w" sizes="(max-width:700px) 60vw, 33vw" alt="Chelista en la ventana del palacio — 2025" width="668" height="1000" loading="lazy" decoding="async">
+  <span class="cap"><span>Chelista en la ventana del palacio</span><small>2025</small></span>
+</a><a class="it rv" href="photo/arte/" style="--r:1.7762;--k:1.45;--d:0.07s;background:#64777d">
+  <img src="img/photo/arte/parallel-perceptions-arte-02-1280.webp" srcset="img/photo/arte/parallel-perceptions-arte-02-640.webp 640w, img/photo/arte/parallel-perceptions-arte-02-1280.webp 1280w, img/photo/arte/parallel-perceptions-arte-02-2048.webp 2048w" sizes="(max-width:700px) 60vw, 33vw" alt="Vuelo y estructura — Parallel Perceptions" width="1000" height="563" loading="lazy" decoding="async">
+  <span class="cap"><span>Vuelo y estructura</span><small>Parallel Perceptions</small></span>
+</a><a class="it rv" href="photo/en-vivo/" style="--r:1.497;--k:1.45;--d:0.14s;background:#402e25">
+  <img src="img/photo/en-vivo/arturo-pardo-en-vivo-2025-16-1280.webp" srcset="img/photo/en-vivo/arturo-pardo-en-vivo-2025-16-640.webp 640w, img/photo/en-vivo/arturo-pardo-en-vivo-2025-16-1280.webp 1280w, img/photo/en-vivo/arturo-pardo-en-vivo-2025-16-2048.webp 2048w" sizes="(max-width:700px) 60vw, 33vw" alt="Cierre: dos siluetas miran la luz — Arturo Pardo · 2025" width="1000" height="668" loading="lazy" decoding="async">
+  <span class="cap"><span>Cierre: dos siluetas miran la luz</span><small>Arturo Pardo · 2025</small></span>
+</a><a class="it rv" href="photo/teatro/" style="--r:0.8;--k:0.8;--d:0.21s;background:#272b33">
+  <img src="img/photo/teatro/sala-de-espera-teatro-2026-09-1280.webp" srcset="img/photo/teatro/sala-de-espera-teatro-2026-09-640.webp 640w, img/photo/teatro/sala-de-espera-teatro-2026-09-1280.webp 1280w, img/photo/teatro/sala-de-espera-teatro-2026-09-2048.webp 2048w" sizes="(max-width:700px) 60vw, 33vw" alt="El elenco completo: imagen de campaña — Sala de Espera · 2026" width="800" height="1000" loading="lazy" decoding="async">
+  <span class="cap"><span>El elenco completo: imagen de campaña</span><small>Sala de Espera · 2026</small></span>
+</a><a class="it rv" href="photo/movimiento/" style="--r:1.25;--k:1.45;--d:0.0s;background:#58596f">
+  <img src="img/photo/movimiento/movimiento-09-1280.webp" srcset="img/photo/movimiento/movimiento-09-640.webp 640w, img/photo/movimiento/movimiento-09-1280.webp 1280w, img/photo/movimiento/movimiento-09-2048.webp 2048w" sizes="(max-width:700px) 60vw, 33vw" alt="Vuelo al atardecer" width="1000" height="800" loading="lazy" decoding="async">
+  <span class="cap"><span>Vuelo al atardecer</span></span>
+</a><a class="it rv" href="photo/retrato/" style="--r:1.497;--k:1.45;--d:0.07s;background:#7e8086">
+  <img src="img/photo/retrato/retrato-2025-07-1280.webp" srcset="img/photo/retrato/retrato-2025-07-640.webp 640w, img/photo/retrato/retrato-2025-07-1280.webp 1280w, img/photo/retrato/retrato-2025-07-2048.webp 2048w" sizes="(max-width:700px) 60vw, 33vw" alt="Enmarcado por la espiral — 2025" width="1000" height="668" loading="lazy" decoding="async">
+  <span class="cap"><span>Enmarcado por la espiral</span><small>2025</small></span>
+</a><a class="it rv" href="photo/en-vivo/" style="--r:1.497;--k:1.45;--d:0.14s;background:#232b3b">
+  <img src="img/photo/en-vivo/jacob-collier-en-vivo-2025-15-1280.webp" srcset="img/photo/en-vivo/jacob-collier-en-vivo-2025-15-640.webp 640w, img/photo/en-vivo/jacob-collier-en-vivo-2025-15-1280.webp 1280w, img/photo/en-vivo/jacob-collier-en-vivo-2025-15-2048.webp 2048w" sizes="(max-width:700px) 60vw, 33vw" alt="Clímax: artista, orquesta y manos — Jacob Collier · 2025" width="1000" height="668" loading="lazy" decoding="async">
+  <span class="cap"><span>Clímax: artista, orquesta y manos</span><small>Jacob Collier · 2025</small></span>
+</a><a class="it rv" href="photo/movimiento/" style="--r:1.4993;--k:1.45;--d:0.21s;background:#746d69">
+  <img src="img/photo/movimiento/festival-reves-movimiento-2026-14-1280.webp" srcset="img/photo/movimiento/festival-reves-movimiento-2026-14-640.webp 640w, img/photo/movimiento/festival-reves-movimiento-2026-14-1280.webp 1280w, img/photo/movimiento/festival-reves-movimiento-2026-14-2048.webp 2048w" sizes="(max-width:700px) 60vw, 33vw" alt="Revés 2026: el taller en pleno vuelo — Festival Revés · 2026" width="1000" height="667" loading="lazy" decoding="async">
+  <span class="cap"><span>Revés 2026: el taller en pleno vuelo</span><small>Festival Revés · 2026</small></span>
+</a><a class="it rv" href="photo/arte/" style="--r:0.75;--k:1;--d:0.0s;background:#4c4a39">
+  <img src="img/photo/arte/hyatt-place-arte-15-1280.webp" srcset="img/photo/arte/hyatt-place-arte-15-640.webp 640w, img/photo/arte/hyatt-place-arte-15-1280.webp 1280w, img/photo/arte/hyatt-place-arte-15-2048.webp 2048w" sizes="(max-width:700px) 60vw, 33vw" alt="Caleidoscopio: Bajos del Toro — Hyatt Place" width="750" height="1000" loading="lazy" decoding="async">
+  <span class="cap"><span>Caleidoscopio: Bajos del Toro</span><small>Hyatt Place</small></span>
+</a><a class="it rv" href="photo/bitacora/" style="--r:1.497;--k:1.45;--d:0.07s;background:#4b3b40">
+  <img src="img/photo/bitacora/bitacora-2025-02-1280.webp" srcset="img/photo/bitacora/bitacora-2025-02-640.webp 640w, img/photo/bitacora/bitacora-2025-02-1280.webp 1280w, img/photo/bitacora/bitacora-2025-02-2048.webp 2048w" sizes="(max-width:700px) 60vw, 33vw" alt="El bus pasa — 2025" width="1000" height="668" loading="lazy" decoding="async">
+  <span class="cap"><span>El bus pasa</span><small>2025</small></span>
+</a><a class="it rv" href="photo/en-vivo/" style="--r:1.497;--k:1.45;--d:0.14s;background:#103758">
+  <img src="img/photo/en-vivo/daniel-patino-en-vivo-2024-12-1280.webp" srcset="img/photo/en-vivo/daniel-patino-en-vivo-2024-12-640.webp 640w, img/photo/en-vivo/daniel-patino-en-vivo-2024-12-1280.webp 1280w, img/photo/en-vivo/daniel-patino-en-vivo-2024-12-2048.webp 2048w" sizes="(max-width:700px) 60vw, 33vw" alt="Tu firma II: el prisma multiplica — Daniel Patiño · 2024" width="1000" height="668" loading="lazy" decoding="async">
+  <span class="cap"><span>Tu firma II: el prisma multiplica</span><small>Daniel Patiño · 2024</small></span>
+</a><a class="it rv" href="photo/teatro/" style="--r:1.4993;--k:1.45;--d:0.21s;background:#474747">
+  <img src="img/photo/teatro/sala-de-espera-teatro-2026-04-1280.webp" srcset="img/photo/teatro/sala-de-espera-teatro-2026-04-640.webp 640w, img/photo/teatro/sala-de-espera-teatro-2026-04-1280.webp 1280w, img/photo/teatro/sala-de-espera-teatro-2026-04-2048.webp 2048w" sizes="(max-width:700px) 60vw, 33vw" alt="El ritual del grupo antes de salir — Sala de Espera · 2026" width="1000" height="667" loading="lazy" decoding="async">
+  <span class="cap"><span>El ritual del grupo antes de salir</span><small>Sala de Espera · 2026</small></span>
+</a><a class="it rv" href="photo/retrato/" style="--r:0.667;--k:0.8;--d:0.0s;background:#707374">
+  <img src="img/photo/retrato/retrato-2026-12-1280.webp" srcset="img/photo/retrato/retrato-2026-12-640.webp 640w, img/photo/retrato/retrato-2026-12-1280.webp 1280w, img/photo/retrato/retrato-2026-12-2048.webp 2048w" sizes="(max-width:700px) 60vw, 33vw" alt="Cierre: silueta frente al valle — 2026" width="667" height="1000" loading="lazy" decoding="async">
+  <span class="cap"><span>Cierre: silueta frente al valle</span><small>2026</small></span>
+</a><a class="it rv" href="photo/movimiento/" style="--r:1.7762;--k:1.45;--d:0.07s;background:#102235">
+  <img src="img/photo/movimiento/movimiento-13-1280.webp" srcset="img/photo/movimiento/movimiento-13-640.webp 640w, img/photo/movimiento/movimiento-13-1280.webp 1280w, img/photo/movimiento/movimiento-13-2048.webp 2048w" sizes="(max-width:700px) 60vw, 33vw" alt="Sombrero y bastón en azul" width="1000" height="563" loading="lazy" decoding="async">
+  <span class="cap"><span>Sombrero y bastón en azul</span></span>
+</a></div>
   </section>
-  <section class="block wrap">
-    <div class="block-head"><h2>disciplina<span class="l">s</span></h2></div>
+  <section class="wrap">
     <div class="doors">
-      <a class="door reveal" href="motion/"><img src="img/motion/banner/banner.jpg" alt="" loading="lazy"><div class="door-t"><b>motio<span class="l">n</span></b><span>Cine &amp; video</span></div></a>
-      <a class="door reveal" href="photo/"><img src="img/photo/en-vivo/jacob-collier-en-vivo-2025-04-1280.webp" alt="" loading="lazy"><div class="door-t"><b>phot<span class="l">o</span></b><span>Fotografía</span></div></a>
-      <a class="door reveal" href="stage/"><img src="img/stage/still-standing/still-standing-2026-02-1280.webp" alt="" loading="lazy"><div class="door-t"><b>stag<span class="l">e</span></b><span>Artes escénicas</span></div></a>
-      <a class="door reveal" href="music/"><img src="img/photo/en-vivo/jacob-collier-en-vivo-2025-13-1280.webp" alt="" loading="lazy"><div class="door-t"><b>musi<span class="l">c</span></b><span>Bandas sonoras</span></div></a>
+      <a class="door rv" href="motion/" style="--d:0.0s"><img src="img/motion/banner/banner.jpg" alt="" loading="lazy"><div class="door-t"><b>motio<span class="l">n</span></b><span>Cine &amp; video</span></div></a>
+      <a class="door rv" href="photo/" style="--d:0.08s"><img src="img/photo/en-vivo/jacob-collier-en-vivo-2025-04-1280.webp" alt="" loading="lazy"><div class="door-t"><b>phot<span class="l">o</span></b><span>Fotografía</span></div></a>
+      <a class="door rv" href="stage/" style="--d:0.16s"><img src="img/stage/still-standing/still-standing-2026-02-1280.webp" alt="" loading="lazy"><div class="door-t"><b>stag<span class="l">e</span></b><span>Artes escénicas</span></div></a>
     </div>
   </section>
-  <section class="block wrap">
-    <div class="block-head"><h2>crédito<span class="l">s</span></h2><span class="eyebrow">Con quienes he trabajado</span></div>
-    <div class="logos"><div><img src="img/clientes/grupo-del-este.png" alt="Grupo del Este" loading="lazy"></div><div><img src="img/clientes/ampm.png" alt="ampm" loading="lazy"></div><div><img src="img/clientes/hyatt-place.png" alt="Hyatt Place" loading="lazy"></div><div><img src="img/clientes/incae.png" alt="INCAE Business School" loading="lazy"></div><div><img src="img/clientes/centro-cultural.png" alt="Centro Cultural Costarricense Norteamericano" loading="lazy"></div><div><img src="img/clientes/festival-ballet-san-jose.png" alt="Festival de Ballet San José" loading="lazy"></div><div><img src="img/clientes/reves.png" alt="Revés" loading="lazy"></div><div><img src="img/clientes/andamio.png" alt="Andamio Escuela de Movimiento" loading="lazy"></div><div><img src="img/clientes/flamenco-naranjo.png" alt="Flamenco Naranjo" loading="lazy"></div><div><img src="img/clientes/los-innato.png" alt="Los Innato" loading="lazy"></div><div><img src="img/clientes/arturo-pardo.png" alt="Arturo Pardo y Viceversa" loading="lazy"></div><div><img src="img/clientes/maracuya.svg" alt="Maracuyá" loading="lazy"></div><div><img src="img/clientes/fresh-market.png" alt="Fresh Market" loading="lazy"></div></div>
-<p class="names">Hernán Jiménez</p>  </section>
-  <section class="block wrap">
-    <div class="block-head"><h2>servicio<span class="l">s</span></h2></div>
+  <section class="block">
+    <div class="wrap head"><h2 class="h2">crédito<span class="l">s</span></h2><span class="eyebrow">Con quienes he trabajado</span></div>
+    <div class="marquee" aria-label="Con quienes he trabajado"><div class="marquee-t">
+X>X>X>X>X>X>X>X>X>X>X>X>X><span class="nm">Hernán Jiménez</span>X aria-hidden="true">X aria-hidden="true">X aria-hidden="true">X aria-hidden="true">X aria-hidden="true">X aria-hidden="true">X aria-hidden="true">X aria-hidden="true">X aria-hidden="true">X aria-hidden="true">X aria-hidden="true">X aria-hidden="true">X aria-hidden="true"><span class="nm" aria-hidden="true">Hernán Jiménez</span>    </div></div>
+  </section>
+  <section class="wrap">
+    <div class="head"><h2 class="h2">servicio<span class="l">s</span></h2></div>
     <div class="services">
       <a class="service" href="photo/en-vivo/"><h3>Música en vivo &amp; giras</h3><p>Foto y video de conciertos, giras y festivales, del camerino al último aplauso.</p><span>Cotizar →</span></a>
       <a class="service" href="motion/"><h3>Cine &amp; video</h3><p>Dirección, fotografía y edición de cortos, videoclips y contenido para redes sociales.</p><span>Cotizar →</span></a>
@@ -87,18 +137,18 @@
 <footer class="footer">
   <div class="footer-in">
     <a class="wordmark" href="">person<span class="l">a</span></a>
-    <nav aria-label="Menú"><a href="motion/">Motion</a><a href="photo/">Photo</a><a href="stage/">Stage</a><a href="music/">Music</a><a href="sobre-mi/">Sobre mí</a><a href="contacto/">Contacto</a><a href="https://www.instagram.com/persona.cr" rel="noopener">Instagram</a><a href="https://vimeo.com/personacr" rel="noopener">Vimeo</a><a href="https://www.linkedin.com/in/josepablogarcia/" rel="noopener">LinkedIn</a><a href="https://wa.me/50688433789" rel="noopener">WhatsApp</a>
+    <nav aria-label="Menú"><a href="motion/">Motion</a><a href="photo/">Photo</a><a href="stage/">Stage</a><a href="sobre-mi/">Sobre mí</a><a href="contacto/">Contacto</a><a href="https://www.instagram.com/persona.cr" rel="noopener">Instagram</a><a href="https://vimeo.com/personacr" rel="noopener">Vimeo</a><a href="https://www.linkedin.com/in/josepablogarcia/" rel="noopener">LinkedIn</a><a href="https://wa.me/50688433789" rel="noopener">WhatsApp</a>
     </nav>
     <p class="footer-meta">Jose Pablo García · Costa Rica · © 2026 · <a href="https://bio.persona.cr">bio.persona.cr</a></p>
   </div>
 </footer>
-<a class="btn blue float-cta" href="contacto/">Escribime</a><div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Foto ampliada">
-  <button class="x" type="button" id="lb-x">Cerrar</button>
+<a class="btn blue float-cta" href="contacto/">Escribime</a><dialog class="lb" id="lb" aria-label="Foto ampliada">
+  <button class="x" type="button" id="lb-x">Cerrar ✕</button>
   <button class="pv" type="button" id="lb-p" aria-label="Anterior">‹</button>
   <img id="lb-img" alt="">
   <p id="lb-c"></p>
   <button class="nx" type="button" id="lb-n" aria-label="Siguiente">›</button>
-</div>
+</dialog>
 <script src="site.js" defer></script>
 </body>
 </html>

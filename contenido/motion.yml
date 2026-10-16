@@ -1,116 +1,207 @@
 # Motion · filmografía, reels y bitácora en video. Editable desde Pages CMS.
-# plataforma: vimeo | youtube | instagram   ·   formato: horizontal | vertical
+# plataforma: vimeo | youtube | instagram · formato: horizontal | vertical
+# banda_sonora: discos o canciones de Spotify (tipo: album | track)
 proyectos:
-  - slug: abril
-    titulo: ABRIL
-    anio: "2026"
-    tipo_es: Largometraje · dir. Hernán Jiménez
-    tipo_en: Feature film · dir. Hernán Jiménez
-    rol_es: Segunda unidad de fotografía · Campaña en redes
-    rol_en: Second unit cinematography · Social media campaign
-    sinopsis_es: Segunda unidad de fotografía para la película de Hernán Jiménez, y reels para su lanzamiento en redes.
-    sinopsis_en: Second unit cinematography for Hernán Jiménez's feature, plus reels for its social media launch.
-    videos:
-      - {plataforma: instagram, id: Dc8yRiOx5L5, formato: vertical, titulo: Reel de lanzamiento · ABRIL}
-  - slug: dele-viaje
-    titulo: Dele Viaje
-    anio: 2012 · 2017
-    tipo_es: Serie de televisión · dos temporadas
-    tipo_en: TV series · two seasons
-    rol_es: Director y guionista
-    rol_en: Director & screenwriter
-    sinopsis_es: Serie de viajes creada, escrita y dirigida por Jose Pablo García.
-    sinopsis_en: Travel series created, written and directed by Jose Pablo García.
-    videos:
-      - {plataforma: youtube, id: ImkZIvtrLjU, formato: horizontal, titulo: Tráiler · Temporada 1}
-      - {plataforma: youtube, id: J74H-5ccmfQ, formato: horizontal, titulo: Tráiler · Temporada 2}
-  - slug: a-ojos-cerrados
-    titulo: A Ojos Cerrados
-    anio: "2010"
-    tipo_es: Largometraje · dir. Hernán Jiménez
-    tipo_en: Feature film · dir. Hernán Jiménez
-    rol_es: Productor
-    rol_en: Producer
-    sinopsis_es: Ópera prima de Hernán Jiménez.
-    sinopsis_en: Hernán Jiménez's debut feature.
-    videos:
-      - {plataforma: youtube, id: uN0BB31Eztw, formato: horizontal, titulo: Tráiler oficial}
-  - slug: lorem-ipsum
+- slug: abril
+  titulo: ABRIL
+  anio: '2026'
+  tipo_es: Largometraje · dir. Hernán Jiménez
+  tipo_en: Feature film · dir. Hernán Jiménez
+  rol_es: Segunda unidad de fotografía · Campaña en redes
+  rol_en: Second unit cinematography · Social media campaign
+  sinopsis_es: Segunda unidad de fotografía para la película de Hernán Jiménez, y reels para su lanzamiento en redes.
+  sinopsis_en: Second unit cinematography for Hernán Jiménez's feature, plus reels for its social media launch.
+  videos:
+  - plataforma: instagram
+    id: Dc8yRiOx5L5
+    formato: vertical
+    titulo: Reel de lanzamiento · ABRIL
+  banda_sonora: []
+  portada: ''
+- slug: dele-viaje
+  titulo: Dele Viaje
+  anio: 2012 · 2017
+  tipo_es: Serie de televisión · dos temporadas
+  tipo_en: TV series · two seasons
+  rol_es: Director, guionista y producción de la banda sonora
+  rol_en: Director, screenwriter & soundtrack producer
+  sinopsis_es: Serie de viajes creada, escrita y dirigida por Jose Pablo García.
+  sinopsis_en: Travel series created, written and directed by Jose Pablo García.
+  videos:
+  - plataforma: youtube
+    id: ImkZIvtrLjU
+    formato: horizontal
+    titulo: Tráiler · Temporada 1
+  - plataforma: youtube
+    id: J74H-5ccmfQ
+    formato: horizontal
+    titulo: Tráiler · Temporada 2
+  banda_sonora:
+  - titulo: Banda sonora · Temporada 2
+    tipo: album
+    id: 0fyfDje2Yt4TyLOnvzCoTw
+  - titulo: Desde Arriba · Temporada 1
+    tipo: track
+    id: 2467kn6cpAf5ti1jQ4rnaG
+  - titulo: La Mitad de lo que Soy · Temporada 1
+    tipo: track
+    id: 3tS1qb3pVKpIaCs0Dcny3r
+  portada: ''
+- slug: a-ojos-cerrados
+  titulo: A Ojos Cerrados
+  anio: '2010'
+  tipo_es: Largometraje · dir. Hernán Jiménez
+  tipo_en: Feature film · dir. Hernán Jiménez
+  rol_es: Productor
+  rol_en: Producer
+  sinopsis_es: Ópera prima de Hernán Jiménez.
+  sinopsis_en: Hernán Jiménez's debut feature.
+  videos:
+  - plataforma: youtube
+    id: uN0BB31Eztw
+    formato: horizontal
+    titulo: Tráiler oficial
+  banda_sonora: []
+  portada: ''
+- slug: lorem-ipsum
+  titulo: Lorem Ipsum
+  anio: '2021'
+  tipo_es: Cortometraje
+  tipo_en: Short film
+  rol_es: Codirector y director de fotografía
+  rol_en: Co-director & cinematographer
+  sinopsis_es: Con Marko Fonseca y Melania Fernández. Codirección con Diego van der Laat, quien firma historia y música.
+  sinopsis_en: With Marko Fonseca and Melania Fernández. Co-directed with Diego van der Laat, who wrote the story and music.
+  videos:
+  - plataforma: vimeo
+    id: '634799613'
+    formato: horizontal
     titulo: Lorem Ipsum
-    anio: "2021"
-    tipo_es: Cortometraje
-    tipo_en: Short film
-    rol_es: Codirector y director de fotografía
-    rol_en: Co-director & cinematographer
-    sinopsis_es: Con Marko Fonseca y Melania Fernández. Codirección con Diego van der Laat, quien firma historia y música.
-    sinopsis_en: With Marko Fonseca and Melania Fernández. Co-directed with Diego van der Laat, who wrote the story and music.
-    videos:
-      - {plataforma: vimeo, id: "634799613", formato: horizontal, titulo: Lorem Ipsum}
-  - slug: preludio
-    titulo: Preludio
-    anio: "2021"
-    tipo_es: Cortometraje
-    tipo_en: Short film
-    rol_es: Codirector, fotografía y edición
-    rol_en: Co-director, cinematography & editing
-    sinopsis_es: Lo que precede y sirve de entrada, preparación o principio de algo.
-    sinopsis_en: An action or event serving as an introduction.
-    videos:
-      - {plataforma: vimeo, id: "601395044", formato: horizontal, titulo: Preludio | Prelude}
-  - slug: manana-manana
-    titulo: Mañana Mañana
-    anio: ""
-    tipo_es: Videoclip · Patiño
-    tipo_en: Music video · Patiño
-    rol_es: Director, fotografía y edición
-    rol_en: Director, cinematography & editing
-    sinopsis_es: Video oficial de Patiño.
-    sinopsis_en: Official music video for Patiño.
-    videos:
-      - {plataforma: youtube, id: ymWONly-2FE, formato: horizontal, titulo: Mañana Mañana · Patiño}
-  - slug: moment
-    titulo: Moment
-    anio: "2024"
-    tipo_es: Videodanza
-    tipo_en: Dance film
-    rol_es: Fotografía y edición
-    rol_en: Cinematography & editing
-    sinopsis_es: Video promocional de danza.
-    sinopsis_en: Dance promo film.
-    videos:
-      - {plataforma: vimeo, id: "963239232", formato: horizontal, titulo: MOMENT · Promo}
-  - slug: an-instant
-    titulo: An Instant
-    anio: ""
-    tipo_es: Cortometraje
-    tipo_en: Short film
-    rol_es: Director y editor
-    rol_en: Director & editor
-    sinopsis_es: Un instante.
-    sinopsis_en: A single instant.
-    videos:
-      - {plataforma: youtube, id: 7NnWlWsZX48, formato: horizontal, titulo: an instant (un instante)}
-  - slug: silencio
-    titulo: Silencio
-    anio: "2019"
-    tipo_es: Cortometraje
-    tipo_en: Short film
-    rol_es: Creador
-    rol_en: Creator
-    sinopsis_es: Voz de Adriana Álvarez. Moravia, San José.
-    sinopsis_en: Voice by Adriana Álvarez. Moravia, San José.
-    videos:
-      - {plataforma: vimeo, id: "339285450", formato: horizontal, titulo: Silencio (Silence)}
+  banda_sonora: []
+  portada: ''
+- slug: preludio
+  titulo: Preludio
+  anio: '2021'
+  tipo_es: Cortometraje
+  tipo_en: Short film
+  rol_es: Codirector, fotografía y edición
+  rol_en: Co-director, cinematography & editing
+  sinopsis_es: Lo que precede y sirve de entrada, preparación o principio de algo.
+  sinopsis_en: An action or event serving as an introduction.
+  videos:
+  - plataforma: vimeo
+    id: '601395044'
+    formato: horizontal
+    titulo: Preludio | Prelude
+  banda_sonora: []
+  portada: ''
+- slug: manana-manana
+  titulo: Mañana Mañana
+  anio: ''
+  tipo_es: Videoclip · Patiño
+  tipo_en: Music video · Patiño
+  rol_es: Director, fotografía y edición
+  rol_en: Director, cinematography & editing
+  sinopsis_es: Video oficial de Patiño.
+  sinopsis_en: Official music video for Patiño.
+  videos:
+  - plataforma: youtube
+    id: ymWONly-2FE
+    formato: horizontal
+    titulo: Mañana Mañana · Patiño
+  banda_sonora: []
+  portada: ''
+- slug: moment
+  titulo: Moment
+  anio: '2024'
+  tipo_es: Videodanza
+  tipo_en: Dance film
+  rol_es: Fotografía y edición
+  rol_en: Cinematography & editing
+  sinopsis_es: Video promocional de danza.
+  sinopsis_en: Dance promo film.
+  videos:
+  - plataforma: vimeo
+    id: '963239232'
+    formato: horizontal
+    titulo: MOMENT · Promo
+  banda_sonora: []
+  portada: ''
+- slug: an-instant
+  titulo: An Instant
+  anio: ''
+  tipo_es: Cortometraje
+  tipo_en: Short film
+  rol_es: Director y editor
+  rol_en: Director & editor
+  sinopsis_es: Un instante.
+  sinopsis_en: A single instant.
+  videos:
+  - plataforma: youtube
+    id: 7NnWlWsZX48
+    formato: horizontal
+    titulo: an instant (un instante)
+  banda_sonora: []
+  portada: ''
+- slug: silencio
+  titulo: Silencio
+  anio: '2019'
+  tipo_es: Cortometraje
+  tipo_en: Short film
+  rol_es: Creador
+  rol_en: Creator
+  sinopsis_es: Voz de Adriana Álvarez. Moravia, San José.
+  sinopsis_en: Voice by Adriana Álvarez. Moravia, San José.
+  videos:
+  - plataforma: vimeo
+    id: '339285450'
+    formato: horizontal
+    titulo: Silencio (Silence)
+  banda_sonora: []
+  portada: ''
 reels:
-  - {plataforma: vimeo, id: "1162873267", formato: vertical, titulo: Festival Revés 2026}
-  - {plataforma: vimeo, id: "1163467105", formato: vertical, titulo: Andamio · Promo 2026}
-  - {plataforma: vimeo, id: "1104345596", formato: vertical, titulo: Festival Revés 2025}
-  - {plataforma: vimeo, id: "857355547", formato: vertical, titulo: Acentos · 2023}
+- plataforma: vimeo
+  id: '1162873267'
+  formato: vertical
+  titulo: Festival Revés 2026
+- plataforma: vimeo
+  id: '1163467105'
+  formato: vertical
+  titulo: Andamio · Promo 2026
+- plataforma: vimeo
+  id: '1104345596'
+  formato: vertical
+  titulo: Festival Revés 2025
+- plataforma: vimeo
+  id: '857355547'
+  formato: vertical
+  titulo: Acentos · 2023
 bitacora:
-  - {plataforma: instagram, id: DVce0h9DZBW, formato: vertical, titulo: Atardecer desde el dron}
-  - {plataforma: instagram, id: CwnhgZvoEj9, formato: vertical, titulo: Afuera de un concierto de Coldplay}
-  - {plataforma: vimeo, id: "1104339033", formato: vertical, titulo: Coldplay · Roma 2024}
-  - {plataforma: vimeo, id: "1104347403", formato: vertical, titulo: Imagination · Coldplay 2022–2025}
-  - {plataforma: vimeo, id: "853482772", formato: vertical, titulo: Photo Reel · Suiza}
-  - {plataforma: vimeo, id: "853482737", formato: vertical, titulo: Photo Reel · Barcelona}
-  - {plataforma: vimeo, id: "853482933", formato: vertical, titulo: Photo Reel · Copenhague}
+- plataforma: instagram
+  id: DVce0h9DZBW
+  formato: vertical
+  titulo: Atardecer desde el dron
+- plataforma: instagram
+  id: CwnhgZvoEj9
+  formato: vertical
+  titulo: Afuera de un concierto de Coldplay
+- plataforma: vimeo
+  id: '1104339033'
+  formato: vertical
+  titulo: Coldplay · Roma 2024
+- plataforma: vimeo
+  id: '1104347403'
+  formato: vertical
+  titulo: Imagination · Coldplay 2022–2025
+- plataforma: vimeo
+  id: '853482772'
+  formato: vertical
+  titulo: Photo Reel · Suiza
+- plataforma: vimeo
+  id: '853482737'
+  formato: vertical
+  titulo: Photo Reel · Barcelona
+- plataforma: vimeo
+  id: '853482933'
+  formato: vertical
+  titulo: Photo Reel · Copenhague

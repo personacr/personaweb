@@ -15,49 +15,72 @@ leer = lambda p: yaml.safe_load(open(p, encoding='utf-8'))
 site = leer('contenido/sitio.yml')
 motion = leer('contenido/motion.yml')
 stage = leer('contenido/stage.yml')
-music = leer('contenido/music.yml')
+
 thumbs = {str(k): v for k, v in (leer('contenido/miniaturas.yml') or {}).items()}
 capitulos = sorted((leer(p) for p in glob.glob('contenido/photo/*.yml')), key=lambda c: c['orden'])
+from PIL import Image
 for c in capitulos:
     for i, f in enumerate(c['fotos']):
         f['i'] = i
+    port = [f for f in c['fotos'] if f['archivo'] == c['portada']]
+    c['muestra'] = (port + [f for f in c['fotos'] if f['archivo'] != c['portada']])[:7]
+POR_SLUG = {c['slug']: c for c in capitulos}
+
+def medir(base):
+    im = Image.open(base + '-640.webp').convert('RGB')
+    return dict(w=im.width, h=im.height, color='#%02x%02x%02x' % im.resize((1, 1), Image.BOX).getpixel((0, 0)))
+
+def mosaico(lang):
+    out = []
+    for ref in site.get('mosaico', []):
+        slug, orden = str(ref).split(':')
+        c = POR_SLUG[slug]; f = c['fotos'][int(orden) - 1]
+        out.append(dict(f=f, slug=c['slug'] if lang == 'es' else c['slug_en']))
+    return out
+
+def stills(lang):
+    out = []
+    for p in stage['proyectos']:
+        for j, base in enumerate(p['fotos']):
+            d = medir(base); d.update(archivo=base, formato='par', credito=p['titulo'] + ' · ' + str(p['anio']),
+                                      pie_es=p['titulo'], pie_en=p['titulo'], label=p['titulo'] if j == 0 else '')
+            out.append(d)
+    return out
 
 # ── textos de interfaz ──────────────────────────────────────────────
 T = {
  'es': dict(
-  nav=[('motion','Motion'),('photo','Photo'),('stage','Stage'),('music','Music'),('sobre-mi','Sobre mí'),('contacto','Contacto')],
+  nav=[('motion','Motion'),('photo','Photo'),('stage','Stage'),('sobre-mi','Sobre mí'),('contacto','Contacto')],
   contact_slug='contacto', menu='Menú', write='Escribime', photo='Foto ampliada', close='Cerrar', prev='Anterior', next='Siguiente',
-  see_reel='Ver trabajo en video', explore='Explorar', selected='trabajo', selected_sub='Selección', doors='disciplinas',
-  credits='créditos', credits_sub='Con quienes he trabajado', offer='servicios', quote='Cotizar', form='Formulario',
-  photos='fotos', chapter='Capítulo', next_chapter='Siguiente capítulo', quote_project='Cotizar tu proyecto',
-  photo_eyebrow='Fotografía · seis capítulos', photo_lead='Música en vivo, danza, teatro, retrato, arte y viaje. Cada capítulo se lee como una historia.',
-  motion_eyebrow='Cine & video', motion_lead='Dirección, fotografía y edición: series, cortos, videoclips y reels.',
-  filmography='Filmografía', see='Ver', year='Año', type='Formato', role='Rol', about_it='Sobre la obra', play='Reproducir',
-  reels_lead='Reels verticales para festivales, escuelas y marcas.', fieldnotes='Bitácora', fieldnotes_lead='Lo que filmo cuando nadie me contrata.',
-  stage_eyebrow='Artes escénicas', stage_lead='Dirección escénica y artística: espectáculos inmersivos, musicales y teatro.',
-  music_eyebrow='Bandas sonoras', music_lead='Música original para series y espectáculos.',
+  explore='Ver trabajo', selected='selección', all_photo='Todo Photo', credits='créditos', credits_sub='Con quienes he trabajado', clients='clientes',
+  offer='servicios', quote='Cotizar', form='Formulario', photos='fotos', chapters='Capítulos', next_chapter='Siguiente capítulo', quote_project='Cotizar tu proyecto',
+  photo_eyebrow='Fotografía', photo_lead='Seis capítulos: música en vivo, danza, teatro, retrato, arte y viaje.',
+  motion_eyebrow='Cine & video', motion_lead='Series, cortos, videoclips y reels. Tocá una obra para verla.',
+  year='Año', type='Formato', role='Rol', play='Reproducir', soundtrack='Banda sonora',
+  reels_lead='Festivales, escuelas y marcas', fieldnotes='Bitácora', fieldnotes_lead='Viajes, conciertos y dron',
+  stage_eyebrow='Artes escénicas', stage_lead='Dirección escénica y artística. Tocá una producción para ver videos y música.',
+  stage_photos='en escena', stage_photos_sub='Fotos de las producciones',
   about_title='sobre mí', contact_title='contacto', contact_lead='Contame de tu proyecto: gira, concierto, obra, película o marca.',
   email='Correo', f_name='Nombre', f_type='Tipo de proyecto', f_msg='Mensaje', f_send='Enviar mensaje',
-  f_types=['Música en vivo / gira','Cine o video','Teatro o danza','Marca o evento','Otro'],
+  f_types=['Música en vivo / gira','Cine o video','Contenido para redes','Teatro o danza','Marca o evento','Otro'],
   doors_list=[('motion','motion','img/motion/banner/banner.jpg','Cine & video'),('photo','photo','img/photo/en-vivo/jacob-collier-en-vivo-2025-04-1280.webp','Fotografía'),
-              ('stage','stage','img/stage/still-standing/still-standing-2026-02-1280.webp','Artes escénicas'),('music','music','img/photo/en-vivo/jacob-collier-en-vivo-2025-13-1280.webp','Bandas sonoras')]),
+              ('stage','stage','img/stage/still-standing/still-standing-2026-02-1280.webp','Artes escénicas')]),
  'en': dict(
-  nav=[('motion','Motion'),('photo','Photo'),('stage','Stage'),('music','Music'),('about','About'),('contact','Contact')],
+  nav=[('motion','Motion'),('photo','Photo'),('stage','Stage'),('about','About'),('contact','Contact')],
   contact_slug='contact', menu='Menu', write='Get in touch', photo='Enlarged photo', close='Close', prev='Previous', next='Next',
-  see_reel='Watch film work', explore='Explore', selected='work', selected_sub='Selected', doors='disciplines',
-  credits='credits', credits_sub='People I have worked with', offer='services', quote='Get a quote', form='Contact form',
-  photos='photos', chapter='Chapter', next_chapter='Next chapter', quote_project='Quote your project',
-  photo_eyebrow='Photography · six chapters', photo_lead='Live music, dance, theatre, portrait, fine art and travel. Each chapter reads like a story.',
-  motion_eyebrow='Film & video', motion_lead='Direction, cinematography and editing: series, shorts, music videos and reels.',
-  filmography='Filmography', see='See', year='Year', type='Format', role='Role', about_it='About', play='Play',
-  reels_lead='Vertical reels for festivals, schools and brands.', fieldnotes='Field notes', fieldnotes_lead='What I film when nobody is hiring.',
-  stage_eyebrow='Performing arts', stage_lead='Stage and artistic direction: immersive shows, musicals and theatre.',
-  music_eyebrow='Soundtracks', music_lead='Original music for series and shows.',
+  explore='See work', selected='selected', all_photo='All Photo', credits='credits', credits_sub='People I have worked with', clients='clients',
+  offer='services', quote='Get a quote', form='Contact form', photos='photos', chapters='Chapters', next_chapter='Next chapter', quote_project='Quote your project',
+  photo_eyebrow='Photography', photo_lead='Six chapters: live music, dance, theatre, portrait, fine art and travel.',
+  motion_eyebrow='Film & video', motion_lead='Series, shorts, music videos and reels. Tap a work to watch it.',
+  year='Year', type='Format', role='Role', play='Play', soundtrack='Soundtrack',
+  reels_lead='Festivals, schools and brands', fieldnotes='Field notes', fieldnotes_lead='Travel, concerts and drone',
+  stage_eyebrow='Performing arts', stage_lead='Stage and artistic direction. Tap a production for videos and music.',
+  stage_photos='on stage', stage_photos_sub='Production photos',
   about_title='about', contact_title='contact', contact_lead='Tell me about your project: tour, concert, play, film or brand.',
   email='Email', f_name='Name', f_type='Project type', f_msg='Message', f_send='Send message',
-  f_types=['Live music / tour','Film or video','Theatre or dance','Brand or event','Other'],
+  f_types=['Live music / tour','Film or video','Social media content','Theatre or dance','Brand or event','Other'],
   doors_list=[('motion','motion','img/motion/banner/banner.jpg','Film & video'),('photo','photo','img/photo/en-vivo/jacob-collier-en-vivo-2025-04-1280.webp','Photography'),
-              ('stage','stage','img/stage/still-standing/still-standing-2026-02-1280.webp','Performing arts'),('music','music','img/photo/en-vivo/jacob-collier-en-vivo-2025-13-1280.webp','Soundtracks')]),
+              ('stage','stage','img/stage/still-standing/still-standing-2026-02-1280.webp','Performing arts')]),
 }
 ES2EN = {c['slug']: c['slug_en'] for c in capitulos}
 def en_path(p):
@@ -80,7 +103,7 @@ def pagina(plantilla, ruta_es, ruta_en, lang, seccion, titulo, desc, extra=None,
     ruta = ruta_es if lang == 'es' else ruta_en
     prof = ruta.count('/')
     ctx = dict(site=site, t=T[lang], lang=lang, R='../' * prof, P='' if lang == 'es' else 'en/', thumbs=thumbs, year=datetime.date.today().year,
-               m=motion, s=stage, mu=music, capitulos=capitulos,
+               m=motion, s=stage, capitulos=capitulos,
                page=dict(title=titulo, description=desc, path=ruta, path_es=ruta_es, path_en=ruta_en, section=seccion, og=og,
                          schema={'@context': 'https://schema.org', '@graph': [PERSON, ORG] + (schema or [])}))
     ctx.update(extra or {})
@@ -94,7 +117,8 @@ for lang in ('es', 'en'):
     pagina('home.html', '', 'en/', lang, '',
            f"{N} · PERSONA — " + ('Cineasta y fotógrafo, Costa Rica' if es else 'Filmmaker & Photographer'),
            'Narrador visual costarricense. Fotografía de conciertos, danza y teatro; videoclips, cortos y dirección escénica. Disponible para giras y festivales.' if es else
-           'Costa Rican visual storyteller. Concert, dance and theatre photography; music videos, short films and stage direction. Available for tours and festivals.')
+           'Costa Rican visual storyteller. Concert, dance and theatre photography; music videos, short films and stage direction. Available for tours and festivals.',
+           extra=dict(mosaico=mosaico(lang)))
     pagina('photo.html', 'photo/', 'en/photo/', lang, 'photo',
            f"{'Fotografía de conciertos, danza y teatro' if es else 'Concert, Dance & Theatre Photography'} · {N}",
            ('Seis capítulos de fotografía: música en vivo, danza, teatro, retrato, arte y viaje. Por ' if es else 'Six photography chapters: live music, dance, theatre, portrait, fine art and travel. By ') + N + ' (PERSONA), Costa Rica.')
@@ -126,16 +150,18 @@ for lang in ('es', 'en'):
     pagina('stage.html', 'stage/', 'en/stage/', lang, 'stage',
            f"{'Dirección escénica' if es else 'Stage Direction'} · Still Standing, Lights Will Guide You · {N}",
            'Dirección escénica y artística: Still Standing (2026), Lights Will Guide You (2023–2024) y Matilda Jr. (2025).' if es else
-           'Stage and artistic direction: Still Standing (2026), Lights Will Guide You (2023–2024) and Matilda Jr. (2025).')
-    pagina('music.html', 'music/', 'en/music/', lang, 'music',
-           f"{'Bandas sonoras' if es else 'Soundtracks'} · {N} | PERSONA",
-           'Música original: Lights Will Guide You y las bandas sonoras de Dele Viaje.' if es else 'Original music: Lights Will Guide You and the Dele Viaje soundtracks.')
+           'Stage and artistic direction: Still Standing (2026), Lights Will Guide You (2023–2024) and Matilda Jr. (2025).',
+           extra=dict(stills=stills(lang)))
     pagina('about.html', 'sobre-mi/', 'en/about/', lang, 'sobre-mi' if es else 'about',
            f"{N}, {'narrador visual · Sobre mí' if es else 'visual storyteller · About'} | PERSONA", site['bio_corta_' + lang])
     pagina('contacto.html', 'contacto/', 'en/contact/', lang, 'contacto' if es else 'contact',
            f"{'Contacto y cotizaciones' if es else 'Contact & quotes'} · {N} | PERSONA",
            'Foto y video para conciertos, giras, teatro, danza y marcas. Escribime por WhatsApp o correo.' if es else
            'Photo and video for concerts, tours, theatre, dance and brands. Reach me on WhatsApp or email.')
+
+for viejo, nuevo in (('music/', 'motion/'), ('en/music/', 'en/motion/')):
+    os.makedirs(viejo, exist_ok=True)
+    open(viejo + 'index.html', 'w').write(env.get_template('redirect.html').render(lang='es', to='../' * viejo.count('/') + nuevo))
 
 hoy = datetime.date.today().isoformat()
 open('sitemap.xml', 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +

@@ -1,35 +1,68 @@
 # Stage · producciones escénicas. Editable desde Pages CMS.
 proyectos:
-  - slug: still-standing
-    titulo: Still Standing
-    anio: "2026"
-    rol_es: Codirector y vocalista
-    rol_en: Co-director & lead vocals
-    sinopsis_es: Producción escénica de Andamio Escuela de Movimiento.
-    sinopsis_en: A stage production by Andamio Escuela de Movimiento.
-    fotos: [img/stage/still-standing/still-standing-2026-01, img/stage/still-standing/still-standing-2026-02, img/stage/still-standing/still-standing-2026-03, img/stage/still-standing/still-standing-2026-04]
-    enlaces: [{texto: andamiocr.com/stillstanding, url: "https://andamiocr.com/stillstanding"}]
-    videos: []
-  - slug: lights-will-guide-you
-    titulo: Lights Will Guide You
-    anio: 2023–2024
-    rol_es: Codirector y vocalista · Show inmersivo inspirado en Coldplay
-    rol_en: Co-director & lead vocals · Coldplay-inspired immersive show
-    sinopsis_es: Un show inmersivo inspirado en la música de Coldplay.
-    sinopsis_en: An immersive show inspired by the music of Coldplay.
-    fotos: [img/stage/lights-will-guide-you/lights-will-guide-you-01, img/stage/lights-will-guide-you/lights-will-guide-you-02, img/stage/lights-will-guide-you/lights-will-guide-you-03, img/stage/lights-will-guide-you/lights-will-guide-you-04]
-    enlaces: [{texto: lightswillguideyou.com, url: "https://www.lightswillguideyou.com"}, {texto: "@lightswillguideyoushow", url: "https://www.instagram.com/lightswillguideyoushow"}]
-    videos:
-      - {plataforma: youtube, id: 2vuC5Xzz3o4, formato: horizontal, titulo: Show Teaser}
-      - {plataforma: youtube, id: IJOK1HAB5E8, formato: horizontal, titulo: Fix You — Music Video}
-      - {plataforma: youtube, id: OPrmY1j9wQk, formato: horizontal, titulo: Amsterdam — Scene Clip}
-  - slug: matilda-jr
-    titulo: Matilda Jr.
-    anio: "2025"
-    rol_es: Dirección artística
-    rol_en: Artistic direction
-    sinopsis_es: Dirección artística del musical.
-    sinopsis_en: Artistic direction of the musical.
-    fotos: [img/stage/matilda/matilda-jr-2025-01, img/stage/matilda/matilda-jr-2025-02, img/stage/matilda/matilda-jr-2025-03, img/stage/matilda/matilda-jr-2025-04]
-    enlaces: []
-    videos: []
+- slug: still-standing
+  titulo: Still Standing
+  anio: '2026'
+  rol_es: Codirector y vocalista
+  rol_en: Co-director & lead vocals
+  sinopsis_es: Producción escénica de Andamio Escuela de Movimiento.
+  sinopsis_en: A stage production by Andamio Escuela de Movimiento.
+  fotos:
+  - img/stage/still-standing/still-standing-2026-01
+  - img/stage/still-standing/still-standing-2026-02
+  - img/stage/still-standing/still-standing-2026-03
+  - img/stage/still-standing/still-standing-2026-04
+  enlaces:
+  - texto: andamiocr.com/stillstanding
+    url: https://andamiocr.com/stillstanding
+  videos: []
+  banda_sonora: []
+- slug: lights-will-guide-you
+  titulo: Lights Will Guide You
+  anio: 2023–2024
+  rol_es: Codirector y vocalista · Show inmersivo inspirado en Coldplay
+  rol_en: Co-director & lead vocals · Coldplay-inspired immersive show
+  sinopsis_es: Un show inmersivo inspirado en la música de Coldplay.
+  sinopsis_en: An immersive show inspired by the music of Coldplay.
+  fotos:
+  - img/stage/lights-will-guide-you/lights-will-guide-you-01
+  - img/stage/lights-will-guide-you/lights-will-guide-you-02
+  - img/stage/lights-will-guide-you/lights-will-guide-you-03
+  - img/stage/lights-will-guide-you/lights-will-guide-you-04
+  enlaces:
+  - texto: lightswillguideyou.com
+    url: https://www.lightswillguideyou.com
+  - texto: '@lightswillguideyoushow'
+    url: https://www.instagram.com/lightswillguideyoushow
+  videos:
+  - plataforma: youtube
+    id: 2vuC5Xzz3o4
+    formato: horizontal
+    titulo: Show Teaser
+  - plataforma: youtube
+    id: IJOK1HAB5E8
+    formato: horizontal
+    titulo: Fix You — Music Video
+  - plataforma: youtube
+    id: OPrmY1j9wQk
+    formato: horizontal
+    titulo: Amsterdam — Scene Clip
+  banda_sonora:
+  - titulo: Álbum del show · Lights Will Guide You
+    tipo: album
+    id: 0jFRRi06CjHRyyJElNydOc
+- slug: matilda-jr
+  titulo: Matilda Jr.
+  anio: '2025'
+  rol_es: Dirección artística
+  rol_en: Artistic direction
+  sinopsis_es: Dirección artística del musical.
+  sinopsis_en: Artistic direction of the musical.
+  fotos:
+  - img/stage/matilda/matilda-jr-2025-01
+  - img/stage/matilda/matilda-jr-2025-02
+  - img/stage/matilda/matilda-jr-2025-03
+  - img/stage/matilda/matilda-jr-2025-04
+  enlaces: []
+  videos: []
+  banda_sonora: []

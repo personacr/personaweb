@@ -54,13 +54,13 @@
   </div>
 </footer>
 {% if page.section != 'contacto' %}<a class="btn blue float-cta" href="{{ R }}{{ P }}contacto/">{{ t.write }}</a>{% endif %}
-<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="{{ t.photo }}">
-  <button class="x" type="button" id="lb-x">{{ t.close }}</button>
+<dialog class="lb" id="lb" aria-label="{{ t.photo }}">
+  <button class="x" type="button" id="lb-x">{{ t.close }} ✕</button>
   <button class="pv" type="button" id="lb-p" aria-label="{{ t.prev }}">‹</button>
   <img id="lb-img" alt="">
   <p id="lb-c"></p>
   <button class="nx" type="button" id="lb-n" aria-label="{{ t.next }}">›</button>
-</div>
+</dialog>
 <script src="{{ R }}site.js" defer></script>
 </body>
 </html>

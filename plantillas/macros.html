@@ -1,12 +1,59 @@
 {#- Piezas reutilizables -#}
 {%- macro L(w) -%}{{ w[:-1] }}<span class="l">{{ w[-1] }}</span>{%- endmacro -%}
-{%- macro pic(src, alt, w=None, h=None, sizes="100vw", cls="", eager=False, color=None) -%}
-<img src="{{ R }}{{ src }}-1280.webp" srcset="{{ R }}{{ src }}-640.webp 640w, {{ R }}{{ src }}-1280.webp 1280w, {{ R }}{{ src }}-2048.webp 2048w" sizes="{{ sizes }}" alt="{{ alt }}"{% if w %} width="{{ w }}" height="{{ h }}"{% endif %}{% if cls %} class="{{ cls }}"{% endif %}{% if color %} style="background:{{ color }}"{% endif %} {% if eager %}fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
+
+{%- macro pic(src, alt, w=None, h=None, sizes="100vw", eager=False, vt=None) -%}
+<img src="{{ R }}{{ src }}-1280.webp" srcset="{{ R }}{{ src }}-640.webp 640w, {{ R }}{{ src }}-1280.webp 1280w, {{ R }}{{ src }}-2048.webp 2048w" sizes="{{ sizes }}" alt="{{ alt }}"{% if w %} width="{{ w }}" height="{{ h }}"{% endif %}{% if vt %} style="view-transition-name:{{ vt }}"{% endif %} {% if eager %}fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
 {%- endmacro -%}
+
+{#- Una foto dentro del mosaico justificado. k = peso (completa 1.45 · par 1 · detalle .8) -#}
+{%- macro tile(f, lang, href=None, i=0) -%}
+{%- set r = (f.w / f.h) | round(4) -%}
+{%- set k = {'completa': 1.45, 'detalle': 0.8}.get(f.formato, 1) -%}
+<{{ 'a' if href else 'figure' }} class="it rv" {% if href %}href="{{ href }}"{% else %}tabindex="0" data-full="{{ R }}{{ f.archivo }}-2048.webp"{% endif %} style="--r:{{ r }};--k:{{ k }};--d:{{ ((i % 4) * 0.07) | round(2) }}s;background:{{ f.color }}">
+  {{ pic(f.archivo, f['pie_' ~ lang] ~ (' — ' ~ f.credito if f.credito else ''), f.w, f.h, sizes="(max-width:700px) 60vw, 33vw") }}
+  <span class="cap"><span>{{ f['pie_' ~ lang] }}</span>{% if f.credito %}<small>{{ f.credito }}</small>{% endif %}</span>
+</{{ 'a' if href else 'figure' }}>
+{%- endmacro -%}
+
+{%- macro thumb(v) -%}
+{{- thumbs.get(v.id|string) if v.plataforma == 'vimeo' else ('https://i.ytimg.com/vi/' ~ v.id ~ '/hqdefault.jpg' if v.plataforma == 'youtube' else '') -}}
+{%- endmacro -%}
+
 {%- macro video(v, t) -%}
-{%- set thumb = (thumbs.get(v.id|string) if v.plataforma == 'vimeo' else ('https://i.ytimg.com/vi/' ~ v.id ~ '/hqdefault.jpg' if v.plataforma == 'youtube' else '')) -%}
+{%- set th = thumb(v) -%}
 <button type="button" class="video {{ v.formato }}{% if v.plataforma == 'instagram' %} ig{% endif %}" data-p="{{ v.plataforma }}" data-id="{{ v.id }}" aria-label="{{ t.play }}: {{ v.titulo }}">
-  {% if thumb %}<img src="{{ thumb }}" alt="" loading="lazy">{% endif %}
+  {% if th %}<img src="{{ th }}" alt="" loading="lazy">{% endif %}
   <span class="play"><i>▶</i><span><small>{{ {'vimeo':'Vimeo','youtube':'YouTube','instagram':'Instagram'}[v.plataforma] }}</small>{{ v.titulo }}</span></span>
 </button>
+{%- endmacro -%}
+
+{%- macro spotify(b) -%}
+<div><p class="eyebrow" style="margin-bottom:6px">{{ b.titulo }}</p><iframe title="{{ b.titulo }}" data-src="https://open.spotify.com/embed/{{ b.tipo }}/{{ b.id }}?theme=0" height="{{ 352 if b.tipo == 'album' else 152 }}" loading="lazy" allow="encrypted-media"></iframe></div>
+{%- endmacro -%}
+
+{#- Ficha en «sala de proyección» (dialog). Su contenido está en el HTML para buscadores. -#}
+{%- macro cinema(p, t, lang, fotos=[]) -%}
+{%- set vert = p.videos and p.videos[0].formato == 'vertical' -%}
+<dialog class="cinema" id="ver-{{ p.slug }}" aria-labelledby="h-{{ p.slug }}">
+  <div class="cinema-in">
+    <button class="x" type="button" data-close>{{ t.close }} ✕</button>
+    {% if p.videos %}<div class="screen{% if p.videos|length == 1 and not vert %} one{% endif %}{% if vert %} vert{% endif %}">{% for v in p.videos %}{{ video(v, t) }}{% endfor %}</div>{% endif %}
+    {% if fotos %}<div class="stills">{% for f in fotos %}{{ pic(f, p.titulo, sizes="(max-width:600px) 50vw, 300px") }}{% endfor %}</div>{% endif %}
+    <div class="ficha">
+      <div>
+        <h2 id="h-{{ p.slug }}">{{ p.titulo }}</h2>
+        <dl class="facts">
+          {% if p.anio %}<dt>{{ t.year }}</dt><dd>{{ p.anio }}</dd>{% endif %}
+          {% if p['tipo_' ~ lang] %}<dt>{{ t.type }}</dt><dd>{{ p['tipo_' ~ lang] }}</dd>{% endif %}
+          <dt>{{ t.role }}</dt><dd>{{ p['rol_' ~ lang] }}</dd>
+          {% if p.enlaces %}<dt>Links</dt><dd>{% for e in p.enlaces %}<a href="{{ e.url }}" rel="noopener">{{ e.texto }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</dd>{% endif %}
+        </dl>
+      </div>
+      <div>
+        <p>{{ p['sinopsis_' ~ lang] }}</p>
+        {% if p.banda_sonora %}<div class="sound"><p class="eyebrow" style="color:var(--accent)">{{ t.soundtrack }}</p>{% for b in p.banda_sonora %}{{ spotify(b) }}{% endfor %}</div>{% endif %}
+      </div>
+    </div>
+  </div>
+</dialog>
 {%- endmacro -%}

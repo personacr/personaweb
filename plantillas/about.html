@@ -1,28 +1,25 @@
 {% extends "base.html" %}{% from "macros.html" import L, pic with context %}
 {% block body %}
 <main class="wrap">
-  <header class="page-top">
-    <p class="eyebrow">{{ site.nombre }}</p>
-    <h1 class="display">{{ L(t.about_title) }}</h1>
-  </header>
+  <header class="page-top"><div><p class="eyebrow">{{ site.nombre }}</p><h1 class="display" style="margin-top:8px">{{ L(t.about_title) }}</h1></div></header>
   <div class="about">
-    {{ pic('img/about/jose-pablo-garcia', site.nombre, sizes="320px") }}
+    {{ pic('img/about/jose-pablo-garcia', site.nombre, sizes="260px") }}
     <div>
       <p class="lead">{{ site['frase_' ~ lang] }}</p>
-      <p style="margin-top:var(--s3);max-width:var(--text)">{{ site['bio_corta_' ~ lang] }}</p>
-      <p style="margin-top:var(--s3);font-family:var(--serif);font-style:italic;font-weight:300;font-size:22px;color:var(--mist)">«{{ site['manifiesto_' ~ lang] }}»</p>
+      <p style="max-width:var(--text);margin-top:14px">{{ site['bio_corta_' ~ lang] }}</p>
+      <p style="margin-top:16px;font-family:var(--serif);font-style:italic;font-weight:300;font-size:19px;color:var(--mist)">«{{ site['manifiesto_' ~ lang] }}»</p>
     </div>
   </div>
   <section class="block">
-    <div class="block-head"><h2>{{ L(t.credits) }}</h2></div>
+    <div class="head"><h2 class="h2">{{ L(t.credits) }}</h2></div>
     <ul class="credits-list">
-      {% for p in m.proyectos %}<li><b>{{ p.titulo }}</b><span>{{ p.anio }}{% if p.anio %} · {% endif %}{{ p['rol_' ~ lang] }}</span></li>{% endfor %}
-      {% for p in s.proyectos %}<li><b>{{ p.titulo }}</b><span>{{ p.anio }} · {{ p['rol_' ~ lang] }}</span></li>{% endfor %}
+      {% for p in m.proyectos %}<li><b>{{ p.titulo }}</b>{{ p.anio }}{% if p.anio %} · {% endif %}{{ p['rol_' ~ lang] }}</li>{% endfor %}
+      {% for p in s.proyectos %}<li><b>{{ p.titulo }}</b>{{ p.anio }} · {{ p['rol_' ~ lang] }}</li>{% endfor %}
     </ul>
   </section>
   <section>
-    <div class="logos">{% for c in site.clientes %}<div><img src="{{ R }}{{ c.logo }}" alt="{{ c.nombre }}" loading="lazy"></div>{% endfor %}</div>
-    {% if site.clientes_sin_logo %}<p class="names">{{ site.clientes_sin_logo | join(' · ') }}</p>{% endif %}
+    <div class="head"><h2 class="h2">{{ L(t.clients) }}</h2></div>
+    <div class="marquee" style="border:0;-webkit-mask:none;mask:none"><div class="marquee-t" style="animation:none;flex-wrap:wrap;width:auto;padding:8px 0;gap:36px 52px">{% for c in site.clientes %}<img src="{{ R }}{{ c.logo }}" alt="{{ c.nombre }}" loading="lazy">{% endfor %}{% for n in site.clientes_sin_logo %}<span class="nm">{{ n }}</span>{% endfor %}</div></div>
   </section>
 </main>
 {% endblock %}

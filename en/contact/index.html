@@ -31,18 +31,17 @@
   <div class="nav-inner">
     <a class="wordmark" href="../../en/">person<span class="l">a</span></a>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
-    <ul class="nav-links" id="nav-links">      <li><a href="../../en/motion/">Motion</a></li>      <li><a href="../../en/photo/">Photo</a></li>      <li><a href="../../en/stage/">Stage</a></li>      <li><a href="../../en/music/">Music</a></li>      <li><a href="../../en/about/">About</a></li>      <li><a href="../../en/contact/" class="active" aria-current="page">Contact</a></li>      <li class="lang"><a href="../../contacto/" hreflang="es" lang="es">ES</a> · <b>EN</b></li>
+    <ul class="nav-links" id="nav-links">      <li><a href="../../en/motion/">Motion</a></li>      <li><a href="../../en/photo/">Photo</a></li>      <li><a href="../../en/stage/">Stage</a></li>      <li><a href="../../en/about/">About</a></li>      <li><a href="../../en/contact/" class="active" aria-current="page">Contact</a></li>      <li class="lang"><a href="../../contacto/" hreflang="es" lang="es">ES</a> · <b>EN</b></li>
     </ul>
   </div>
 </nav>
 
 <main class="wrap">
   <header class="page-top">
-    <p class="eyebrow">Costa Rica · Available for tours and festivals</p>
-    <h1 class="display">contac<span class="l">t</span></h1>
+    <div><p class="eyebrow">Costa Rica · Available for tours and festivals</p><h1 class="display" style="margin-top:8px">contac<span class="l">t</span></h1></div>
     <p class="lead">Tell me about your project: tour, concert, play, film or brand.</p>
   </header>
-  <div class="about" style="grid-template-columns:1fr 1.4fr">
+  <div class="contact">
     <div class="direct">
       <a href="https://wa.me/50688433789" rel="noopener"><small>WhatsApp</small>+506 8843 3789</a>
       <a href="mailto:josepablo@persona.cr"><small>Email</small>josepablo@persona.cr</a>
@@ -51,7 +50,7 @@
     <form class="form" action="https://formspree.io/f/mojoqqqn" method="POST" id="contact-form">
       <label for="f-name">Name<input id="f-name" name="nombre" required autocomplete="name"></label>
       <label for="f-mail">Email<input id="f-mail" name="email" type="email" required autocomplete="email"></label>
-      <label for="f-type">Project type<select id="f-type" name="tipo"><option>Live music / tour</option><option>Film or video</option><option>Theatre or dance</option><option>Brand or event</option><option>Other</option></select></label>
+      <label for="f-type">Project type<select id="f-type" name="tipo"><option>Live music / tour</option><option>Film or video</option><option>Social media content</option><option>Theatre or dance</option><option>Brand or event</option><option>Other</option></select></label>
       <label for="f-msg">Message<textarea id="f-msg" name="mensaje" required></textarea></label>
       <button class="btn blue" type="submit" style="justify-self:start">Send message</button>
     </form>
@@ -61,18 +60,18 @@
 <footer class="footer">
   <div class="footer-in">
     <a class="wordmark" href="../../en/">person<span class="l">a</span></a>
-    <nav aria-label="Menu"><a href="../../en/motion/">Motion</a><a href="../../en/photo/">Photo</a><a href="../../en/stage/">Stage</a><a href="../../en/music/">Music</a><a href="../../en/about/">About</a><a href="../../en/contact/">Contact</a><a href="https://www.instagram.com/persona.cr" rel="noopener">Instagram</a><a href="https://vimeo.com/personacr" rel="noopener">Vimeo</a><a href="https://www.linkedin.com/in/josepablogarcia/" rel="noopener">LinkedIn</a><a href="https://wa.me/50688433789" rel="noopener">WhatsApp</a>
+    <nav aria-label="Menu"><a href="../../en/motion/">Motion</a><a href="../../en/photo/">Photo</a><a href="../../en/stage/">Stage</a><a href="../../en/about/">About</a><a href="../../en/contact/">Contact</a><a href="https://www.instagram.com/persona.cr" rel="noopener">Instagram</a><a href="https://vimeo.com/personacr" rel="noopener">Vimeo</a><a href="https://www.linkedin.com/in/josepablogarcia/" rel="noopener">LinkedIn</a><a href="https://wa.me/50688433789" rel="noopener">WhatsApp</a>
     </nav>
     <p class="footer-meta">Jose Pablo García · Costa Rica · © 2026 · <a href="https://bio.persona.cr">bio.persona.cr</a></p>
   </div>
 </footer>
-<a class="btn blue float-cta" href="../../en/contacto/">Get in touch</a><div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Enlarged photo">
-  <button class="x" type="button" id="lb-x">Close</button>
+<a class="btn blue float-cta" href="../../en/contacto/">Get in touch</a><dialog class="lb" id="lb" aria-label="Enlarged photo">
+  <button class="x" type="button" id="lb-x">Close ✕</button>
   <button class="pv" type="button" id="lb-p" aria-label="Previous">‹</button>
   <img id="lb-img" alt="">
   <p id="lb-c"></p>
   <button class="nx" type="button" id="lb-n" aria-label="Next">›</button>
-</div>
+</dialog>
 <script src="../../site.js" defer></script>
 </body>
 </html>

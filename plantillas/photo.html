@@ -2,15 +2,14 @@
 {% block body %}
 <main class="wrap">
   <header class="page-top">
-    <p class="eyebrow">{{ t.photo_eyebrow }}</p>
-    <h1 class="display">{{ L('photo') }}</h1>
+    <div><p class="eyebrow">{{ t.photo_eyebrow }}</p><h1 class="display" style="margin-top:8px">{{ L('photo') }}</h1></div>
     <p class="lead">{{ t.photo_lead }}</p>
   </header>
-  <div class="chapters">
-    {% for c in capitulos %}
-    <a class="chapter-card reveal" href="{{ R }}{{ P }}photo/{{ c.slug if lang == 'es' else c.slug_en }}/">{{ pic(c.portada, '', sizes="(max-width:700px) 100vw, 50vw") }}
-      <div><span class="eyebrow">{{ c.numero }} · {{ c.fotos|length }} {{ t.photos }}</span><b>{{ L(c['titulo_' ~ lang]|lower) }}</b></div></a>
-    {% endfor %}
-  </div>
+  {% for c in capitulos %}
+  <a class="sheet rv" href="{{ R }}{{ P }}photo/{{ c.slug if lang == 'es' else c.slug_en }}/" style="display:block;--d:{{ (loop.index0 % 3) * 0.06 }}s">
+    <div class="sheet-h"><span class="n">{{ c.numero }}</span><b>{{ L(c['titulo_' ~ lang]|lower) }}</b><i>{{ c['intro_' ~ lang] }}</i><span class="more">{{ c.fotos|length }} {{ t.photos }} →</span></div>
+    <div class="film-strip">{% for f in c.muestra %}<span style="--r:{{ (f.w / f.h) | round(3) }}">{{ pic(f.archivo, '', sizes="(max-width:700px) 33vw, 20vw", vt=('cover-' ~ c.slug) if f.archivo == c.portada else None) }}</span>{% endfor %}</div>
+  </a>
+  {% endfor %}
 </main>
 {% endblock %}

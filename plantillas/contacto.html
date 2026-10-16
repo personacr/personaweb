@@ -2,11 +2,10 @@
 {% block body %}
 <main class="wrap">
   <header class="page-top">
-    <p class="eyebrow">{{ site['lugar_' ~ lang] }}</p>
-    <h1 class="display">{{ L(t.contact_title) }}</h1>
+    <div><p class="eyebrow">{{ site['lugar_' ~ lang] }}</p><h1 class="display" style="margin-top:8px">{{ L(t.contact_title) }}</h1></div>
     <p class="lead">{{ t.contact_lead }}</p>
   </header>
-  <div class="about" style="grid-template-columns:1fr 1.4fr">
+  <div class="contact">
     <div class="direct">
       <a href="https://wa.me/{{ site.whatsapp }}" rel="noopener"><small>WhatsApp</small>+506 8843 3789</a>
       <a href="mailto:{{ site.email }}"><small>{{ t.email }}</small>{{ site.email }}</a>
