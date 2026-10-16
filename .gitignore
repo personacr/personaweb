@@ -1,0 +1,8 @@
+# Originales: viven en la Mac / respaldo, nunca en el repo público
+FOTOGRAFIA/
+REFERENCIAS/
+LOGOS_DE_CLIENTES/
+nuevas/
+*.HEIC
+*.heic
+.DS_Store
