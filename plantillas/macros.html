@@ -1,7 +1,7 @@
 {#- Piezas reutilizables -#}
 {%- macro L(w) -%}{{ w[:-1] }}<span class="l">{{ w[-1] }}</span>{%- endmacro -%}
 {%- macro pic(src, alt, w=None, h=None, sizes="100vw", cls="", eager=False, color=None) -%}
-<img src="{{ R }}{{ src }}-1000.webp" srcset="{{ R }}{{ src }}-640.webp 640w, {{ R }}{{ src }}-1000.webp 1000w" sizes="{{ sizes }}" alt="{{ alt }}"{% if w %} width="{{ w }}" height="{{ h }}"{% endif %}{% if cls %} class="{{ cls }}"{% endif %}{% if color %} style="background:{{ color }}"{% endif %} {% if eager %}fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
+<img src="{{ R }}{{ src }}-1280.webp" srcset="{{ R }}{{ src }}-640.webp 640w, {{ R }}{{ src }}-1280.webp 1280w, {{ R }}{{ src }}-2048.webp 2048w" sizes="{{ sizes }}" alt="{{ alt }}"{% if w %} width="{{ w }}" height="{{ h }}"{% endif %}{% if cls %} class="{{ cls }}"{% endif %}{% if color %} style="background:{{ color }}"{% endif %} {% if eager %}fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
 {%- endmacro -%}
 {%- macro video(v, t) -%}
 {%- set thumb = (thumbs.get(v.id|string) if v.plataforma == 'vimeo' else ('https://i.ytimg.com/vi/' ~ v.id ~ '/hqdefault.jpg' if v.plataforma == 'youtube' else '')) -%}

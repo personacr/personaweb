@@ -35,7 +35,7 @@
   function show(i) {
     cur = (i + figs.length) % figs.length;
     var img = $('img', figs[cur]);
-    li.src = img.currentSrc ? img.currentSrc.replace(/-640\.webp$/, '-1000.webp') : img.src;
+    li.src = img.currentSrc ? img.currentSrc.replace(/-(640|1280)\.webp$/, '-2048.webp') : img.src;
     li.alt = img.alt; lc.textContent = img.alt;
   }
   function close() { lb.hidden = true; document.body.style.overflow = ''; if (last) last.focus(); }

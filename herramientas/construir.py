@@ -39,8 +39,8 @@ T = {
   about_title='sobre mí', contact_title='contacto', contact_lead='Contame de tu proyecto: gira, concierto, obra, película o marca.',
   email='Correo', f_name='Nombre', f_type='Tipo de proyecto', f_msg='Mensaje', f_send='Enviar mensaje',
   f_types=['Música en vivo / gira','Cine o video','Teatro o danza','Marca o evento','Otro'],
-  doors_list=[('motion','motion','img/motion/banner/banner.jpg','Cine & video'),('photo','photo','img/photo/en-vivo/jacob-collier-en-vivo-2025-04-1000.webp','Fotografía'),
-              ('stage','stage','img/stage/still-standing/still-standing-2026-02-1000.webp','Artes escénicas'),('music','music','img/photo/en-vivo/jacob-collier-en-vivo-2025-13-1000.webp','Bandas sonoras')]),
+  doors_list=[('motion','motion','img/motion/banner/banner.jpg','Cine & video'),('photo','photo','img/photo/en-vivo/jacob-collier-en-vivo-2025-04-1280.webp','Fotografía'),
+              ('stage','stage','img/stage/still-standing/still-standing-2026-02-1280.webp','Artes escénicas'),('music','music','img/photo/en-vivo/jacob-collier-en-vivo-2025-13-1280.webp','Bandas sonoras')]),
  'en': dict(
   nav=[('motion','Motion'),('photo','Photo'),('stage','Stage'),('music','Music'),('about','About'),('contact','Contact')],
   contact_slug='contact', menu='Menu', write='Get in touch', photo='Enlarged photo', close='Close', prev='Previous', next='Next',
@@ -56,8 +56,8 @@ T = {
   about_title='about', contact_title='contact', contact_lead='Tell me about your project: tour, concert, play, film or brand.',
   email='Email', f_name='Name', f_type='Project type', f_msg='Message', f_send='Send message',
   f_types=['Live music / tour','Film or video','Theatre or dance','Brand or event','Other'],
-  doors_list=[('motion','motion','img/motion/banner/banner.jpg','Film & video'),('photo','photo','img/photo/en-vivo/jacob-collier-en-vivo-2025-04-1000.webp','Photography'),
-              ('stage','stage','img/stage/still-standing/still-standing-2026-02-1000.webp','Performing arts'),('music','music','img/photo/en-vivo/jacob-collier-en-vivo-2025-13-1000.webp','Soundtracks')]),
+  doors_list=[('motion','motion','img/motion/banner/banner.jpg','Film & video'),('photo','photo','img/photo/en-vivo/jacob-collier-en-vivo-2025-04-1280.webp','Photography'),
+              ('stage','stage','img/stage/still-standing/still-standing-2026-02-1280.webp','Performing arts'),('music','music','img/photo/en-vivo/jacob-collier-en-vivo-2025-13-1280.webp','Soundtracks')]),
 }
 ES2EN = {c['slug']: c['slug_en'] for c in capitulos}
 def en_path(p):
@@ -69,7 +69,7 @@ env = Environment(loader=FileSystemLoader('plantillas'), autoescape=True, trim_b
 env.filters['en_path'] = en_path
 
 PERSON = {'@type': 'Person', '@id': site['url'] + '/#jpg', 'name': site['nombre'], 'alternateName': site['nombre_alterno'],
-          'jobTitle': 'Cineasta, fotógrafo y director escénico', 'nationality': 'Costa Rica', 'image': site['url'] + '/img/about/jose-pablo-garcia-1000.webp',
+          'jobTitle': 'Cineasta, fotógrafo y director escénico', 'nationality': 'Costa Rica', 'image': site['url'] + '/img/about/jose-pablo-garcia-1280.webp',
           'knowsAbout': ['Fotografía de conciertos', 'Fotografía de danza', 'Fotografía de teatro', 'Dirección de fotografía', 'Videoclips', 'Dirección escénica'],
           'sameAs': [site['instagram'], site['vimeo'], site['linkedin'], site['bio']], 'brand': {'@id': site['url'] + '/#persona'}}
 ORG = {'@type': 'ProfessionalService', '@id': site['url'] + '/#persona', 'name': 'PERSONA', 'founder': {'@id': site['url'] + '/#jpg'},
@@ -111,11 +111,11 @@ for lang in ('es', 'en'):
         for fl in filas:  # un "par" que quedó solo se muestra como detalle
             if fl['formato'] == 'par' and len(fl['fotos']) == 1: fl['formato'] = 'detalle'; fl['sizes'] = '560px'
         tit = c['titulo_' + lang]
-        imgs = [{'@type': 'ImageObject', 'contentUrl': f"{site['url']}/{f['archivo']}-1000.webp", 'name': f"{f['pie_' + lang]}" + (f" — {f['credito']}" if f['credito'] else ''),
+        imgs = [{'@type': 'ImageObject', 'contentUrl': f"{site['url']}/{f['archivo']}-1280.webp", 'name': f"{f['pie_' + lang]}" + (f" — {f['credito']}" if f['credito'] else ''),
                  'creator': {'@id': site['url'] + '/#jpg'}, 'creditText': f'{N} / PERSONA', 'copyrightNotice': f'© {N}'} for f in c['fotos']]
         pagina('capitulo.html', f"photo/{c['slug']}/", f"en/photo/{c['slug_en']}/", lang, 'photo',
                f"{tit} · {'Fotografía' if es else 'Photography'} · {N} | PERSONA", c['intro_' + lang],
-               extra=dict(c=c, rows=filas, siguiente=sig), og=c['portada'] + '-1000.webp',
+               extra=dict(c=c, rows=filas, siguiente=sig), og=c['portada'] + '-1280.webp',
                schema=[{'@type': 'ImageGallery', 'name': tit, 'description': c['intro_' + lang], 'hasPart': imgs}])
     pagina('motion.html', 'motion/', 'en/motion/', lang, 'motion',
            f"{'Cine y video: series, cortos y videoclips' if es else 'Film & Video: series, shorts and music videos'} · {N}",

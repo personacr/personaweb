@@ -2,14 +2,14 @@
 nombre: Jose Pablo García
 nombre_alterno: [José Pablo García, Jose Pablo Garcia, "Jose Pablo García · PERSONA"]
 url: https://personacr.github.io/personaweb
-frase_es: Narrador visual para la música, la escena y el cine.
-frase_en: Visual storyteller for music, stage and film.
+frase_es: Narrador visual. Cine, fotografía y escena.
+frase_en: Visual storyteller. Film, photography and stage.
 lugar_es: Costa Rica · Disponible para giras y festivales
 lugar_en: Costa Rica · Available for tours and festivals
 manifiesto_es: La magia de lo cotidiano y el poder del subconsciente para crear.
 manifiesto_en: The magic of everyday life and the power of the subconscious to create.
-bio_corta_es: Cineasta independiente costarricense con más de 15 años de experiencia en cine, fotografía, televisión, creación de contenido y artes escénicas.
-bio_corta_en: Costa Rican independent filmmaker with over 15 years of experience at the intersection of cinema, photography, TV, content creation and performing arts.
+bio_corta_es: Cineasta independiente costarricense con más de 20 años de experiencia en cine, fotografía, televisión, creación de contenido y artes escénicas.
+bio_corta_en: Costa Rican independent filmmaker with over 20 years of experience at the intersection of cinema, photography, TV, content creation and performing arts.
 email: josepablo@persona.cr
 whatsapp: "50688433789"
 instagram: https://www.instagram.com/persona.cr
@@ -26,8 +26,8 @@ servicios:
     enlace: photo/en-vivo/
   - titulo_es: Cine & video
     titulo_en: Film & video
-    texto_es: Dirección, fotografía y edición de videoclips, cortos, reels y contenido de marca.
-    texto_en: Direction, cinematography and editing for music videos, shorts, reels and brand content.
+    texto_es: Dirección, fotografía y edición de cortos, videoclips y contenido para redes sociales.
+    texto_en: Direction, cinematography and editing for shorts, music videos and social media content.
     enlace: motion/
   - titulo_es: Artes escénicas
     titulo_en: Performing arts

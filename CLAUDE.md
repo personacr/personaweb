@@ -1,92 +1,33 @@
-# CLAUDE.md — personα · Sitio web portafolio (personaweb)
+# CLAUDE.md — persona · Sitio web portafolio (personaweb)
 
-Este archivo es la memoria del proyecto. Leelo completo antes de hacer cualquier cambio.
+Memoria del proyecto. Leelo completo antes de cambiar algo.
 
-## Quién es el dueño
+## Dueño
+- **Jose Pablo García** (Jose SIN tilde en todo lo visible; «José Pablo García» solo como nombre alterno en el código). Cineasta, fotógrafo, director escénico y creador de contenido. **20+ años** de trayectoria. Marca **PERSONA**.
+- Está aprendiendo: hablale en español sencillo (voseo costarricense), sin jerga. Antes de un cambio grande, resumí y pedí confirmación. Al terminar, 2–3 líneas de qué cambió.
+- Sus fuertes: cine, fotografía, contenido para redes, artes escénicas. **No se presenta como músico** (produce bandas sonoras para sus proyectos y canta en sus shows).
 
-- **José Pablo García** — cineasta, fotógrafo y director escénico costarricense, 20+ años de trayectoria. Marca: **PERSONA** (se escribe `personα`).
-- Está aprendiendo a usar GitHub y Claude Code. **Explicale todo en español sencillo (voseo costarricense), sin jerga técnica.**
-- Antes de un cambio grande, resumí qué vas a hacer y pedí confirmación. Al terminar, decí en 2–3 líneas qué cambió y cómo verlo en vivo.
+## Cómo funciona (desde oct 2026)
+- Publica en **GitHub Pages** desde `main` (personacr.github.io/personaweb; luego nuevo.persona.cr → persona.cr). `.nojekyll` activo.
+- **Contenido** en `contenido/*.yml` (editable con Pages CMS, ver `.pages.yml`). **Moldes** en `plantillas/*.html` (Jinja2). **Armador**: `python3 herramientas/construir.py` genera todas las páginas ES (raíz) y EN (`/en/`), `sitemap.xml` y `robots.txt`. GitHub Actions (`.github/workflows/construir.yml`) lo corre solo al cambiar contenido.
+- **Nunca edites a mano** los `index.html` generados: editá contenido o plantillas y volvé a correr el armador.
+- **Originales nunca entran al repo** (.gitignore). Respaldo de originales: `~/Documents/RESPALDO_CONTENIDO_SITIO_PERSONA/SITIOWEB_PERSONA_GITHUB/`.
 
-## Qué es este proyecto
+## Sistema de diseño «Sala oscura» (no cambiar sin permiso)
+- Negro #000 · hueso #F4F2ED · niebla #7A7875 / #A8A5A0 · azul #4FB3E8 (solo como «luz»: última letra, activo, foco).
+- **Tipografías: Zodiak 300 (títulos) + Switzer (texto)**, de Fontshare. Elegidas para no parecerse a sitios genéricos: NO usar Fraunces, Plus Jakarta, Inter, Instrument Serif, Playfair, Space Grotesk, DM Sans, Satoshi.
+- **Wordmark:** `person<span class="l">a</span>` — «a» latina itálica azul. **Ya no se usa la α griega** (se parecía a Sony α).
+- Títulos en minúsculas con la última letra itálica azul. Fotos sin borde, esquinas rectas, formato original. Portadas panorámicas 2,39:1.
 
-- Sitio portafolio completo, en **HTML + CSS + JS puro**. Decisión tomada: **no WordPress, no Squarespace, no frameworks, no librerías externas.**
-- Publicación: **GitHub Pages** (rama `main`, carpeta raíz). Dominio de trabajo: **nuevo.persona.cr**. Al final reemplazará a persona.cr.
-- Debe sentirse **de la misma familia que la Bio** (bio.persona.cr), pero a escala de portafolio. Repo de referencia de la Bio: `personacr/persona-bio`.
-
-## Estructura
-
-```
-index.html      → Home (HECHA: hero con video en loop + 4 "puertas" con banners)
-motion.html     → por construir
-photo.html      → por construir
-stage.html      → por construir
-music.html      → por construir
-about.html      → por construir
-contacto.html   → por construir
-styles.css      → sistema de diseño compartido
-site.js         → idioma, menú, reveal, lightbox, contenido dinámico
-contenido/      → textos.txt y galerias.txt (José Pablo los edita)
-img/            → fotos y videos organizados por sección
-```
-
-Orden de construcción acordado: **Motion → Photo → Stage → Music → About → Contacto**. Construí una página por vez y esperá aprobación antes de seguir.
-
-## Sistema de diseño (NO cambiar sin permiso explícito)
-
-Todo vive en `styles.css`. Usá siempre las variables, nunca colores sueltos.
-
-| Token | Valor | Uso |
-|---|---|---|
-| `--black` | `#000000` | Fondo |
-| `--bone` | `#F4F2ED` | Texto principal |
-| `--fog` / `--mist` | `#7A7875` / `#A8A5A0` | Texto secundario |
-| `--accent` | `#4FB3E8` | Acento azul |
-| `--accent-d` | `#2E8FC0` | Hover |
-
-- **Tipografía:** Fraunces (serif: wordmark, títulos, manifiesto) + Plus Jakarta Sans (texto, navegación, etiquetas).
-- **Wordmark:** `person<span class="alpha">α</span>` — la α en itálica azul.
-- **Títulos de sección/página:** Fraunces peso 200, minúsculas, última letra en itálica azul: `motio<span class="last">n</span>`.
-- **Componentes disponibles en styles.css:** `.nav`, `.hero`, `.door`, `.page-head` (banner de página interna), `.section` + `.section-label`, `.gallery` (`g2`, `g3`, `.gitem`, `.gitem.wide`), `.vid-grid` / `.vid-wrap`, `.lightbox`, `.footer`, `.reveal`.
-- Cada página interna reutiliza la misma navegación y footer de `index.html` (copialos idénticos; marcá el link activo con `class="active"`).
-
-## Contenido editable (lo que toca José Pablo)
-
-- **`contenido/textos.txt`** — formato `clave = valor`. Los elementos HTML con `data-text="clave"` se llenan solos desde aquí; el texto escrito en el HTML queda como respaldo.
-- **`contenido/galerias.txt`** — formato `nombre = ruta1, ruta2, ruta3` (una línea). Un contenedor `<div class="gallery g3" data-auto-gallery="nombre">` se llena solo y queda conectado al lightbox.
-- Cuando agregues textos o galerías nuevas, **agregalas a estos archivos** (con comentarios `#` claros) para que José Pablo pueda editarlas después sin tocar HTML.
-- **Bilingüe siempre:** todo texto visible lleva `<span data-es>…</span><span data-en>…</span>`. Si falta el inglés, traducilo y avisale.
-
-## Imágenes
-
-José Pablo sube originales a **`nuevas/`**. Vos:
-
-1. Procesalas con Python + Pillow:
-   - **Fotos de galería:** máximo 2500 px de lado largo, JPEG calidad 82–85 (el grid las recorta con CSS; el lightbox las muestra completas).
-   - **Banners:** 1400×350 px (proporción 16:4), JPEG calidad 87, guardados como `img/<seccion>/banner/banner.jpg`.
-   - **Video del hero:** `img/home/hero.mp4` — H.264, 1920×1080, sin audio, 15–30 s, máx. 25 MB. Poster: `img/home/hero-poster.jpg`.
-2. Nombres en minúsculas, sin espacios ni tildes, numerados: `01.jpg`, `02.jpg`…
-3. Movelas a su carpeta en `img/`, actualizá `contenido/galerias.txt` y **borrá los originales de `nuevas/`**.
-4. Ojo con el tamaño del repo: GitHub recomienda no pasar de ~1 GB en total. Avisá si una tanda de fotos es muy pesada.
-
-## Contenido de marca (referencia)
-
-- **Manifiesto:** "La magia de lo cotidiano y el poder del subconsciente para crear." / "The magic of everyday life and the power of the subconscious to create."
-- **Rol:** Cineasta, fotógrafo & narrador visual / Filmmaker, photographer & visual storyteller.
-- **Proyectos clave:** Dele Viaje (serie TV 2012 y 2017, director y guionista), A Ojos Cerrados (productor, 2010, dir. Hernán Jiménez), Lights Will Guide You (show inmersivo inspirado en Coldplay, co-director y vocalista), Matilda Jr. (dirección artística, 2025), Still Standing (stage, nuevo).
-- Usá como fuente de verdad los textos de la Bio (`persona-bio/index.html`). Si falta información para una página (bio larga, créditos, años), **preguntá; no inventes datos.**
+## Fotos
+- Cada foto en 3 tamaños WebP: `nombre-640.webp`, `-1280.webp`, `-2048.webp`. En los .yml se escribe la ruta SIN sufijo.
+- Nombres: `artista-capitulo-año-orden`. Formatos de fila: `completa`, `par`, `detalle`.
+- Pendiente: originales de Stage (hoy vienen de la Bio, cuadradas), video `img/home/hero.mp4`.
 
 ## Integraciones
-
-- **Formspree:** `https://formspree.io/f/mojoqqqn`
-- **Google Analytics 4:** `G-TY6Y414RXR` (agregar en todas las páginas, con los mismos eventos que la Bio).
-- **WhatsApp:** `https://wa.me/50688433789` · **Instagram:** @persona.cr · **Vimeo:** vimeo.com/personacr · **Email:** josepablo@persona.cr
+- GA4 `G-TY6Y414RXR` en todas las páginas · Formspree `mojoqqqn` · WhatsApp 50688433789 · IG @persona.cr · Vimeo personacr · josepablo@persona.cr.
 
 ## Reglas de oro
-
-- ❌ Este repo es público: nunca subir contraseñas, datos de clientes, cotizaciones (`/oferta/` vive solo en Hostinger) ni galerías privadas de clientes (van en un sistema aparte).
-- ❌ No cambiar paleta, tipografías ni estructura sin permiso.
-- ✅ Responsive hasta móvil, foco visible con teclado, respetar `prefers-reduced-motion`.
-- ✅ Rutas relativas (`img/...`, `styles.css`) para que funcione en GitHub Pages y en el dominio final.
-- ✅ Antes de terminar: revisá HTML válido, toggle ES/EN, menú móvil, lightbox y que los links de la navegación funcionen.
-- ✅ Mensajes de commit en español y claros: `Construye página Motion`.
+- Repo público: nada de contraseñas, cotizaciones, galerías privadas ni originales.
+- Si un cambio toca contenido compartido con la Bio (proyectos, logo, textos), preguntá si va también en la Bio.
+- Commits en español y claros.
