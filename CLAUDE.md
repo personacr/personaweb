@@ -8,7 +8,7 @@ Memoria del proyecto. Leelo completo antes de cambiar algo.
 - Sus fuertes: cine, fotografía, contenido para redes, artes escénicas. **No se presenta como músico** (produce bandas sonoras para sus proyectos y canta en sus shows).
 
 ## Cómo funciona (desde oct 2026)
-- Publica en **GitHub Pages** desde `main` (personacr.github.io/personaweb; luego nuevo.persona.cr → persona.cr). `.nojekyll` activo.
+- Publica en **GitHub Pages** desde `main` en **https://www.persona.cr** (archivo `CNAME`; DNS en Dominios.cr/NIC: 4 registros A a GitHub y CNAME www → personacr.github.io). `.nojekyll` activo.
 - **Contenido** en `contenido/*.yml` (editable con Pages CMS, ver `.pages.yml`). **Moldes** en `plantillas/*.html` (Jinja2). **Armador**: `python3 herramientas/construir.py` genera todas las páginas ES (raíz) y EN (`/en/`), `sitemap.xml` y `robots.txt`. GitHub Actions (`.github/workflows/construir.yml`) lo corre solo al cambiar contenido.
 - **Nunca edites a mano** los `index.html` generados: editá contenido o plantillas y volvé a correr el armador.
 - **Originales nunca entran al repo** (.gitignore). Respaldo de originales: `~/Documents/RESPALDO_CONTENIDO_SITIO_PERSONA/SITIOWEB_PERSONA_GITHUB/`.
