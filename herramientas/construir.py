@@ -143,7 +143,7 @@ for lang in ('es', 'en'):
                schema=[{'@type': 'ImageGallery', 'name': tit, 'description': c['intro_' + lang], 'hasPart': imgs}])
     pagina('motion.html', 'motion/', 'en/motion/', lang, 'motion',
            f"{'Cine y video: series, cortos y videoclips' if es else 'Film & Video: series, shorts and music videos'} · {N}",
-           'Dirección, fotografía y edición: ABRIL (segunda unidad), Dele Viaje, Lorem Ipsum, Preludio, Moment y videoclips. Desde Costa Rica.' if es else
+           'Dirección, fotografía y edición: Abril (segunda unidad), Dele Viaje, Lorem Ipsum, Preludio, Moment y videoclips. Desde Costa Rica.' if es else
            'Direction, cinematography and editing: ABRIL (second unit), Dele Viaje, Lorem Ipsum, Preludio, Moment and music videos. From Costa Rica.',
            schema=[{'@type': 'CreativeWork', 'name': p['titulo'], 'dateCreated': str(p['anio']), 'contributor': {'@id': site['url'] + '/#jpg'},
                     'description': p['rol_' + lang]} for p in motion['proyectos']])
