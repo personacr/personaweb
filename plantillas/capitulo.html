@@ -10,7 +10,6 @@
 <main class="wrap">
   <nav class="chapter-bar" aria-label="{{ t.chapters }}">
     <div class="chapnav">{% for o in capitulos %}<a href="{{ R }}{{ P }}photo/{{ o.slug if lang == 'es' else o.slug_en }}/"{% if o.slug == c.slug %} class="on" aria-current="page"{% endif %}>{{ o['titulo_' ~ lang] }}</a>{% endfor %}</div>
-    <span class="credit">Jose Pablo García / PERSONA</span>
   </nav>
   <div class="jg">
   {%- set ns = namespace(g='') -%}

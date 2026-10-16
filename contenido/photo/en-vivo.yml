@@ -6,8 +6,8 @@ slug: en-vivo
 slug_en: live
 titulo_es: En vivo
 titulo_en: Live
-intro_es: Una noche de concierto, de la puerta del camerino al último aplauso.
-intro_en: One night of live music, from the dressing-room door to the final bow.
+intro_es: Conciertos, giras y backstage.
+intro_en: Concerts, tours and backstage.
 portada: img/photo/en-vivo/jacob-collier-en-vivo-2025-04
 fotos:
 - archivo: img/photo/en-vivo/arturo-pardo-en-vivo-2025-01
@@ -17,8 +17,8 @@ fotos:
   formato: par
   grupo_es: ''
   grupo_en: ''
-  pie_es: 'Antes de salir: perfil en el pasillo'
-  pie_en: 'Before going on: profile in the corridor'
+  pie_es: Arturo Pardo en el pasillo antes del concierto
+  pie_en: Arturo Pardo in the corridor before the concert
   credito: Arturo Pardo · 2025
 - archivo: img/photo/en-vivo/arturo-pardo-en-vivo-2025-02
   w: 668
@@ -27,8 +27,8 @@ fotos:
   formato: par
   grupo_es: ''
   grupo_en: ''
-  pie_es: El chelo calienta. Acceso al backstage
-  pie_en: The cello warms up backstage
+  pie_es: Chelo en el backstage de un concierto de Arturo Pardo
+  pie_en: Cello backstage at an Arturo Pardo concert
   credito: Arturo Pardo · 2025
 - archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-03
   w: 1000
@@ -37,8 +37,8 @@ fotos:
   formato: completa
   grupo_es: ''
   grupo_en: ''
-  pie_es: 'Plano general: la sala y su luz'
-  pie_en: 'Wide shot: the hall and its light'
+  pie_es: Jacob Collier en concierto, vista general de la sala
+  pie_en: Jacob Collier in concert, wide view of the hall
   credito: Jacob Collier · 2025
 - archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-04
   w: 1000
@@ -47,8 +47,8 @@ fotos:
   formato: completa
   grupo_es: ''
   grupo_en: ''
-  pie_es: 'La entrada: brazos abiertos, simetría'
-  pie_en: 'The entrance: open arms, symmetry'
+  pie_es: Jacob Collier con los brazos abiertos en el escenario
+  pie_en: Jacob Collier on stage with open arms
   credito: Jacob Collier · 2025
 - archivo: img/photo/en-vivo/daniel-patino-en-vivo-2024-05
   w: 1000
@@ -57,8 +57,8 @@ fotos:
   formato: completa
   grupo_es: ''
   grupo_en: ''
-  pie_es: Primer plano entre destellos
-  pie_en: Close-up among flares
+  pie_es: Daniel Patiño cantando entre luces
+  pie_en: Daniel Patiño singing among stage lights
   credito: Daniel Patiño · 2024
 - archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-06
   w: 1000
@@ -67,8 +67,8 @@ fotos:
   formato: detalle
   grupo_es: ''
   grupo_en: ''
-  pie_es: 'Respiro con humor: los zapatos'
-  pie_en: 'A breath of humor: the shoes'
+  pie_es: Zapatos de Jacob Collier en el escenario
+  pie_en: Jacob Collier's shoes on stage
   credito: Jacob Collier · 2025
 - archivo: img/photo/en-vivo/daniel-patino-en-vivo-2024-07
   w: 1000
@@ -77,8 +77,8 @@ fotos:
   formato: completa
   grupo_es: ''
   grupo_en: ''
-  pie_es: 'Blanco y negro: la luz manda'
-  pie_en: 'Black and white: light takes over'
+  pie_es: Daniel Patiño en concierto, blanco y negro
+  pie_en: Daniel Patiño in concert, black and white
   credito: Daniel Patiño · 2024
 - archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-08
   w: 1000
@@ -87,8 +87,8 @@ fotos:
   formato: completa
   grupo_es: ''
   grupo_en: ''
-  pie_es: 'Salto: sube la energía'
-  pie_en: 'The leap: energy rises'
+  pie_es: Jacob Collier saltando en el escenario
+  pie_en: Jacob Collier jumping on stage
   credito: Jacob Collier · 2025
 - archivo: img/photo/en-vivo/fabi-arroyo-en-vivo-2026-09
   w: 1000
@@ -97,8 +97,8 @@ fotos:
   formato: detalle
   grupo_es: ''
   grupo_en: ''
-  pie_es: 'Detalle: una mano contra el LED'
-  pie_en: 'Detail: a hand against the LED'
+  pie_es: Mano de Fabi Arroyo frente a una pantalla LED
+  pie_en: Fabi Arroyo's hand against an LED screen
   credito: Fabi Arroyo · 2026
 - archivo: img/photo/en-vivo/daniel-patino-en-vivo-2024-10
   w: 668
@@ -107,8 +107,8 @@ fotos:
   formato: par
   grupo_es: ''
   grupo_en: ''
-  pie_es: 'Tu firma: remolino hecho en cámara'
-  pie_en: 'Signature: an in-camera swirl'
+  pie_es: Daniel Patiño en concierto, efecto de remolino
+  pie_en: Daniel Patiño in concert, swirl effect
   credito: Daniel Patiño · 2024
 - archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-11
   w: 668
@@ -117,8 +117,8 @@ fotos:
   formato: par
   grupo_es: ''
   grupo_en: ''
-  pie_es: El grito, en vertical
-  pie_en: The shout, in vertical
+  pie_es: Jacob Collier gritando en el escenario
+  pie_en: Jacob Collier shouting on stage
   credito: Jacob Collier · 2025
 - archivo: img/photo/en-vivo/daniel-patino-en-vivo-2024-12
   w: 1000
@@ -127,8 +127,8 @@ fotos:
   formato: completa
   grupo_es: ''
   grupo_en: ''
-  pie_es: 'Tu firma II: el prisma multiplica'
-  pie_en: 'Signature II: the prism multiplies'
+  pie_es: Daniel Patiño en concierto, efecto de prisma
+  pie_en: Daniel Patiño in concert, prism effect
   credito: Daniel Patiño · 2024
 - archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-13
   w: 1000
@@ -137,8 +137,8 @@ fotos:
   formato: completa
   grupo_es: ''
   grupo_en: ''
-  pie_es: 'Pausa: la batuta en contraluz'
-  pie_en: 'Pause: the baton, backlit'
+  pie_es: Director de orquesta a contraluz, concierto de Jacob Collier
+  pie_en: Conductor backlit at Jacob Collier's concert
   credito: Jacob Collier · 2025
 - archivo: img/photo/en-vivo/arturo-pardo-en-vivo-2025-14
   w: 1000
@@ -147,8 +147,8 @@ fotos:
   formato: completa
   grupo_es: ''
   grupo_en: ''
-  pie_es: El público enciende la sala
-  pie_en: The audience lights up the room
+  pie_es: Público con luces en un concierto de Arturo Pardo
+  pie_en: Audience lights at an Arturo Pardo concert
   credito: Arturo Pardo · 2025
 - archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-15
   w: 1000
@@ -157,8 +157,8 @@ fotos:
   formato: completa
   grupo_es: ''
   grupo_en: ''
-  pie_es: 'Clímax: artista, orquesta y manos'
-  pie_en: 'Climax: artist, orchestra and hands'
+  pie_es: Jacob Collier con la orquesta y el público
+  pie_en: Jacob Collier with the orchestra and audience
   credito: Jacob Collier · 2025
 - archivo: img/photo/en-vivo/arturo-pardo-en-vivo-2025-16
   w: 1000
@@ -167,6 +167,6 @@ fotos:
   formato: completa
   grupo_es: ''
   grupo_en: ''
-  pie_es: 'Cierre: dos siluetas miran la luz'
-  pie_en: 'Ending: two silhouettes watch the light'
+  pie_es: Dos siluetas frente a las luces, concierto de Arturo Pardo
+  pie_en: Two silhouettes facing the lights, Arturo Pardo concert
   credito: Arturo Pardo · 2025

@@ -6,8 +6,8 @@ slug: arte
 slug_en: fine-art
 titulo_es: Arte
 titulo_en: Fine art
-intro_es: Lo onírico y lo simbólico, en tres series y dos piezas sueltas.
-intro_en: The dreamlike and the symbolic, in three series and two singles.
+intro_es: Series personales y fotomontajes.
+intro_en: Personal series and photomontages.
 portada: img/photo/arte/parallel-perceptions-arte-02
 fotos:
 - archivo: img/photo/arte/parallel-perceptions-arte-01
@@ -17,8 +17,8 @@ fotos:
   formato: completa
   grupo_es: Parallel Perceptions
   grupo_en: Parallel Perceptions
-  pie_es: Isla y árbol
-  pie_en: Island and tree
+  pie_es: Isla con un árbol, serie Parallel Perceptions
+  pie_en: Island with a tree, Parallel Perceptions series
   credito: Parallel Perceptions
 - archivo: img/photo/arte/parallel-perceptions-arte-02
   w: 1000
@@ -27,8 +27,8 @@ fotos:
   formato: completa
   grupo_es: Parallel Perceptions
   grupo_en: Parallel Perceptions
-  pie_es: Vuelo y estructura
-  pie_en: Flight and structure
+  pie_es: Cuerpo en el aire junto a una estructura metálica, Parallel Perceptions
+  pie_en: Body in mid-air beside a metal structure, Parallel Perceptions
   credito: Parallel Perceptions
 - archivo: img/photo/arte/parallel-perceptions-arte-03
   w: 1000
@@ -37,8 +37,8 @@ fotos:
   formato: completa
   grupo_es: Parallel Perceptions
   grupo_en: Parallel Perceptions
-  pie_es: Cascada y agua
-  pie_en: Waterfall and water
+  pie_es: Cascada en espejo, Parallel Perceptions
+  pie_en: Mirrored waterfall, Parallel Perceptions
   credito: Parallel Perceptions
 - archivo: img/photo/arte/parallel-perceptions-arte-04
   w: 1000
@@ -47,8 +47,8 @@ fotos:
   formato: completa
   grupo_es: Parallel Perceptions
   grupo_en: Parallel Perceptions
-  pie_es: Puente y cuerpo
-  pie_en: Bridge and body
+  pie_es: Cuerpo y puente en espejo, Parallel Perceptions
+  pie_en: Body and bridge mirrored, Parallel Perceptions
   credito: Parallel Perceptions
 - archivo: img/photo/arte/parallel-perceptions-arte-05
   w: 1000
@@ -57,8 +57,8 @@ fotos:
   formato: completa
   grupo_es: Parallel Perceptions
   grupo_en: Parallel Perceptions
-  pie_es: Fachada y mirada
-  pie_en: Facade and gaze
+  pie_es: Fachada y rostro en espejo, Parallel Perceptions
+  pie_en: Facade and face mirrored, Parallel Perceptions
   credito: Parallel Perceptions
 - archivo: img/photo/arte/parallel-perceptions-arte-06
   w: 1000
@@ -67,126 +67,126 @@ fotos:
   formato: completa
   grupo_es: Parallel Perceptions
   grupo_en: Parallel Perceptions
-  pie_es: Silueta y túnel
-  pie_en: Silhouette and tunnel
+  pie_es: Silueta y túnel, Parallel Perceptions
+  pie_en: Silhouette and tunnel, Parallel Perceptions
   credito: Parallel Perceptions
 - archivo: img/photo/arte/arte-2021-07
   w: 1000
   h: 667
   color: '#7c7c97'
   formato: completa
-  grupo_es: Serie del parqueo, 2021 (necesita título)
-  grupo_en: Parking-garage series, 2021
-  pie_es: Dos figuras cargan la tabla
-  pie_en: Two figures carry the board
+  grupo_es: Serie 2021
+  grupo_en: Series 2021
+  pie_es: Dos figuras cargan una tabla en un parqueo
+  pie_en: Two figures carry a board in a parking garage
   credito: '2021'
 - archivo: img/photo/arte/arte-2021-08
   w: 1000
   h: 667
   color: '#626a97'
   formato: par
-  grupo_es: Serie del parqueo, 2021 (necesita título)
-  grupo_en: Parking-garage series, 2021
-  pie_es: Se separan
-  pie_en: They part
+  grupo_es: Serie 2021
+  grupo_en: Series 2021
+  pie_es: Dos figuras se separan en un parqueo
+  pie_en: Two figures part ways in a parking garage
   credito: '2021'
 - archivo: img/photo/arte/arte-2021-09
   w: 1000
   h: 667
   color: '#6b739e'
   formato: par
-  grupo_es: Serie del parqueo, 2021 (necesita título)
-  grupo_en: Parking-garage series, 2021
-  pie_es: Uno se arrodilla
-  pie_en: One kneels
+  grupo_es: Serie 2021
+  grupo_en: Series 2021
+  pie_es: Una figura arrodillada en un parqueo
+  pie_en: A kneeling figure in a parking garage
   credito: '2021'
 - archivo: img/photo/arte/arte-2021-10
   w: 1000
   h: 667
   color: '#5e6797'
   formato: completa
-  grupo_es: Serie del parqueo, 2021 (necesita título)
-  grupo_en: Parking-garage series, 2021
-  pie_es: Contra la pared
-  pie_en: Against the wall
+  grupo_es: Serie 2021
+  grupo_en: Series 2021
+  pie_es: Dos figuras contra la pared de un parqueo
+  pie_en: Two figures against a parking-garage wall
   credito: '2021'
 - archivo: img/photo/arte/hyatt-place-arte-11
   w: 1000
   h: 520
   color: '#40544b'
   formato: completa
-  grupo_es: Fotomontaje para Hyatt Place (obra por encargo)
-  grupo_en: Photomontage for Hyatt Place
-  pie_es: 'Geometría: catarata'
-  pie_en: 'Geometry: waterfall'
+  grupo_es: Hyatt Place
+  grupo_en: Hyatt Place
+  pie_es: Fotomontaje geométrico de una catarata para Hyatt Place
+  pie_en: Geometric photomontage of a waterfall for Hyatt Place
   credito: Hyatt Place
 - archivo: img/photo/arte/hyatt-place-arte-12
   w: 1000
   h: 520
   color: '#4e5451'
   formato: completa
-  grupo_es: Fotomontaje para Hyatt Place (obra por encargo)
-  grupo_en: Photomontage for Hyatt Place
-  pie_es: 'Geometría: volcán'
-  pie_en: 'Geometry: volcano'
+  grupo_es: Hyatt Place
+  grupo_en: Hyatt Place
+  pie_es: Fotomontaje geométrico de un volcán para Hyatt Place
+  pie_en: Geometric photomontage of a volcano for Hyatt Place
   credito: Hyatt Place
 - archivo: img/photo/arte/hyatt-place-arte-13
   w: 769
   h: 1000
   color: '#998973'
   formato: par
-  grupo_es: Fotomontaje para Hyatt Place (obra por encargo)
-  grupo_en: Photomontage for Hyatt Place
-  pie_es: Árbol en dispersión
-  pie_en: Tree in dispersion
+  grupo_es: Hyatt Place
+  grupo_en: Hyatt Place
+  pie_es: Fotomontaje de un árbol para Hyatt Place
+  pie_en: Photomontage of a tree for Hyatt Place
   credito: Hyatt Place
 - archivo: img/photo/arte/hyatt-place-arte-14
   w: 818
   h: 1000
   color: '#46433d'
   formato: par
-  grupo_es: Fotomontaje para Hyatt Place (obra por encargo)
-  grupo_en: Photomontage for Hyatt Place
-  pie_es: 'Geometría: Bajos del Toro'
-  pie_en: 'Geometry: Bajos del Toro'
+  grupo_es: Hyatt Place
+  grupo_en: Hyatt Place
+  pie_es: Fotomontaje geométrico de Bajos del Toro para Hyatt Place
+  pie_en: Geometric photomontage of Bajos del Toro for Hyatt Place
   credito: Hyatt Place
 - archivo: img/photo/arte/hyatt-place-arte-15
   w: 750
   h: 1000
   color: '#4c4a39'
   formato: par
-  grupo_es: Fotomontaje para Hyatt Place (obra por encargo)
-  grupo_en: Photomontage for Hyatt Place
-  pie_es: 'Caleidoscopio: Bajos del Toro'
-  pie_en: 'Kaleidoscope: Bajos del Toro'
+  grupo_es: Hyatt Place
+  grupo_en: Hyatt Place
+  pie_es: Caleidoscopio de Bajos del Toro para Hyatt Place
+  pie_en: Kaleidoscope of Bajos del Toro for Hyatt Place
   credito: Hyatt Place
 - archivo: img/photo/arte/hyatt-place-arte-16
   w: 750
   h: 1000
   color: '#27302b'
   formato: par
-  grupo_es: Fotomontaje para Hyatt Place (obra por encargo)
-  grupo_en: Photomontage for Hyatt Place
-  pie_es: Cuadros y flor
-  pie_en: Squares and flower
+  grupo_es: Hyatt Place
+  grupo_en: Hyatt Place
+  pie_es: Fotomontaje de cuadros y una flor para Hyatt Place
+  pie_en: Photomontage of squares and a flower for Hyatt Place
   credito: Hyatt Place
 - archivo: img/photo/arte/arte-17
   w: 1000
   h: 667
   color: '#95a8b7'
   formato: completa
-  grupo_es: Sueltas
-  grupo_en: Singles
-  pie_es: Reflejo en la orilla
-  pie_en: Reflection on the shore
+  grupo_es: Otras
+  grupo_en: Others
+  pie_es: Figuras reflejadas en la orilla
+  pie_en: Figures reflected on the shore
   credito: ''
 - archivo: img/photo/arte/arte-18
   w: 1000
   h: 563
   color: '#424e54'
   formato: completa
-  grupo_es: Sueltas
-  grupo_en: Singles
-  pie_es: «Where is my mind»
-  pie_en: “Where is my mind”
+  grupo_es: Otras
+  grupo_en: Others
+  pie_es: Fotomontaje «Where is my mind»
+  pie_en: Photomontage “Where is my mind”
   credito: ''

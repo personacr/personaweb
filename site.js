@@ -30,13 +30,60 @@
     rv.forEach(function (e) { io.observe(e); });
   }
 
+  /* Mosaico parejo: reparte las fotos en filas completas de alto parecido (--row en styles.css),
+     sin dejar una última fila coja. Respeta el orden. Sin JS queda el mosaico de respaldo en CSS. */
+  function partir(r, k) {           // divide la lista r en k filas con sumas lo más parejas posible
+    var n = r.length, P = [0], i, j, x, ideal, cost = [], cut = [];
+    for (i = 0; i < n; i++) P.push(P[i] + r[i]);
+    ideal = P[n] / k;
+    for (j = 0; j <= k; j++) { cost.push([]); cut.push([]); for (i = 0; i <= n; i++) cost[j].push(Infinity); }
+    cost[0][0] = 0;
+    for (j = 1; j <= k; j++) for (i = j; i <= n; i++) for (x = j - 1; x < i; x++) {
+      var c = cost[j - 1][x] + Math.pow(P[i] - P[x] - ideal, 2);
+      if (c < cost[j][i]) { cost[j][i] = c; cut[j][i] = x; }
+    }
+    var filas = [], end = n;
+    for (j = k; j > 0; j--) { var st = cut[j][end]; filas.unshift([st, end]); end = st; }
+    return filas;
+  }
+  function justify(g) {
+    var W = g.clientWidth; if (!W) return;
+    var cs = getComputedStyle(g), gap = parseFloat(cs.columnGap) || 0;
+    var T = parseFloat(cs.getPropertyValue('--row')) || 220, grupos = [[]];
+    $$(':scope > *', g).forEach(function (it) {
+      if (it.classList.contains('it')) { it._r = parseFloat(it.style.getPropertyValue('--r')) || 1; grupos[grupos.length - 1].push(it); }
+      else grupos.push([]);
+    });
+    grupos.forEach(function (its) {
+      if (!its.length) return;
+      var r = its.map(function (it) { return it._r; }), total = r.reduce(function (a, b) { return a + b; }, 0);
+      var k = Math.min(its.length, Math.max(1, Math.round((total * T + gap * its.length) / W)));
+      partir(r, k).forEach(function (f) {
+        var row = its.slice(f[0], f[1]), sum = r.slice(f[0], f[1]).reduce(function (a, b) { return a + b; }, 0);
+        var avail = W - gap * (row.length - 1), h = Math.min(avail / sum, T * 1.45), used = 0;
+        var full = avail / sum <= T * 1.45;
+        row.forEach(function (it, q) {
+          var w = (full && q === row.length - 1) ? avail - used - 0.5 : Math.floor(it._r * h);
+          used += w; it.style.flex = 'none'; it.style.width = w + 'px'; it.style.height = Math.round(h) + 'px';
+        });
+      });
+    });
+    g.classList.add('justified');
+  }
+  var grids = $$('.jg');
+  grids.forEach(justify);
+  if ('ResizeObserver' in window) {
+    var ro = new ResizeObserver(function (es) { es.forEach(function (e) { if (e.target._w !== e.contentRect.width) { e.target._w = e.contentRect.width; justify(e.target); } }); });
+    grids.forEach(function (g) { ro.observe(g); });
+  }
+
   /* Galería ampliada */
   var lb = $('#lb'), li = $('#lb-img'), lc = $('#lb-c'), figs = [], cur = 0;
   function show(i) {
     cur = (i + figs.length) % figs.length;
     var f = figs[cur], img = $('img', f);
     li.style.animation = 'none'; void li.offsetWidth; li.style.animation = '';
-    li.src = f.dataset.full; li.alt = img.alt; lc.textContent = img.alt;
+    li.src = f.dataset.full; li.alt = img.alt; lc.textContent = (cur + 1) + ' / ' + figs.length;
   }
   $$('figure.it[data-full]').forEach(function (f) {
     var open = function () {
@@ -60,15 +107,14 @@
   /* Videos: se ve la imagen; el reproductor carga solo al tocar */
   function play(v) {
     var p = v.dataset.p, id = v.dataset.id, src;
-    if (p === 'instagram') { src = 'https://www.instagram.com/reel/' + id + '/embed/'; v.classList.add('playing'); }
-    else if (p === 'vimeo') src = 'https://player.vimeo.com/video/' + id + '?autoplay=1&title=0&byline=0&portrait=0&dnt=1';
+    if (p === 'vimeo') src = 'https://player.vimeo.com/video/' + id + '?autoplay=1&title=0&byline=0&portrait=0&dnt=1';
     else src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
     var f = document.createElement('iframe');
     f.src = src; f.title = v.getAttribute('aria-label'); f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true;
     v.appendChild(f); v.style.cursor = 'default'; track('video_play', { platform: p, id: id });
   }
   document.addEventListener('click', function (e) {
-    var v = e.target.closest('.video');
+    var v = e.target.closest('button.video');
     if (v && !$('iframe', v)) play(v);
   });
 
@@ -79,7 +125,7 @@
     d.innerHTML = d._html;
     $$('iframe[data-src]', d).forEach(function (f) { f.src = f.dataset.src; });
     d.showModal(); d.scrollTop = 0;
-    var first = $('.video', d); if (first && !calm && first.dataset.p !== 'instagram') play(first);
+    var first = $('button.video', d); if (first && !calm) play(first);
     history.replaceState(null, '', '#' + id.replace('ver-', ''));
     track('section_open', { section: id });
   }

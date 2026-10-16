@@ -6,8 +6,8 @@ slug: retrato
 slug_en: portrait
 titulo_es: Retrato
 titulo_en: Portrait
-intro_es: 'Personas en su lugar: músicos, parejas y desconocidos, con luz de cine.'
-intro_en: 'People in their place: musicians, couples and strangers, lit like cinema.'
+intro_es: Retratos de músicos, parejas y familias.
+intro_en: Portraits of musicians, couples and families.
 portada: img/photo/retrato/retrato-2025-07
 fotos:
 - archivo: img/photo/retrato/retrato-2025-01
@@ -17,8 +17,8 @@ fotos:
   formato: par
   grupo_es: ''
   grupo_en: ''
-  pie_es: Chelista en la ventana del palacio
-  pie_en: Cellist at the palace window
+  pie_es: Chelista junto a la ventana de un palacio
+  pie_en: Cellist by a palace window
   credito: '2025'
 - archivo: img/photo/retrato/retrato-2025-02
   w: 668
@@ -37,8 +37,8 @@ fotos:
   formato: par
   grupo_es: ''
   grupo_en: ''
-  pie_es: Reflejo en la tapa del piano
-  pie_en: Reflection on the piano lid
+  pie_es: Pianista reflejada en la tapa del piano
+  pie_en: Pianist reflected on the piano lid
   credito: '2025'
 - archivo: img/photo/retrato/retrato-2025-04
   w: 668
@@ -47,8 +47,8 @@ fotos:
   formato: par
   grupo_es: ''
   grupo_en: ''
-  pie_es: El trío en el salón dorado
-  pie_en: The trio in the golden hall
+  pie_es: Trío de músicos en un salón dorado
+  pie_en: Music trio in a golden hall
   credito: '2025'
 - archivo: img/photo/retrato/retrato-2019-05
   w: 1000
@@ -57,8 +57,8 @@ fotos:
   formato: completa
   grupo_es: ''
   grupo_en: ''
-  pie_es: Mirada directa (venía de PERSONAL)
-  pie_en: Direct gaze
+  pie_es: Retrato de mujer en exteriores
+  pie_en: Portrait of a woman outdoors
   credito: '2019'
 - archivo: img/photo/retrato/retrato-06
   w: 1000
@@ -67,8 +67,8 @@ fotos:
   formato: completa
   grupo_es: ''
   grupo_en: ''
-  pie_es: Espalda y luz lateral
-  pie_en: Back and side light
+  pie_es: Mujer de espaldas con luz lateral
+  pie_en: Woman from behind in side light
   credito: ''
 - archivo: img/photo/retrato/retrato-2025-07
   w: 1000
@@ -77,8 +77,8 @@ fotos:
   formato: completa
   grupo_es: ''
   grupo_en: ''
-  pie_es: Enmarcado por la espiral
-  pie_en: Framed by the spiral
+  pie_es: Hombre enmarcado por una espiral de hierro
+  pie_en: Man framed by an iron spiral
   credito: '2025'
 - archivo: img/photo/retrato/retrato-08
   w: 1000
@@ -87,8 +87,8 @@ fotos:
   formato: completa
   grupo_es: ''
   grupo_en: ''
-  pie_es: Luz de ventana, día de boda
-  pie_en: Window light, wedding day
+  pie_es: Hombre de traje con luz de ventana, día de boda
+  pie_en: Man in a suit in window light, wedding day
   credito: ''
 - archivo: img/photo/retrato/retrato-2023-09
   w: 668
@@ -97,8 +97,8 @@ fotos:
   formato: par
   grupo_es: ''
   grupo_en: ''
-  pie_es: Manos y reflejo, B/N
-  pie_en: Hands and reflection, B&W
+  pie_es: Manos y reflejo, blanco y negro
+  pie_en: Hands and reflection, black and white
   credito: '2023'
 - archivo: img/photo/retrato/retrato-2023-10
   w: 668
@@ -107,8 +107,8 @@ fotos:
   formato: par
   grupo_es: ''
   grupo_en: ''
-  pie_es: La casa antes de la ceremonia, B/N
-  pie_en: The house before the ceremony, B&W
+  pie_es: Familia en casa antes de una boda, blanco y negro
+  pie_en: Family at home before a wedding, black and white
   credito: '2023'
 - archivo: img/photo/retrato/retrato-2023-11
   w: 668
@@ -117,8 +117,8 @@ fotos:
   formato: detalle
   grupo_es: ''
   grupo_en: ''
-  pie_es: La risa que no se dirige
-  pie_en: Laughter nobody directs
+  pie_es: Niña riendo
+  pie_en: Girl laughing
   credito: '2023'
 - archivo: img/photo/retrato/retrato-2026-12
   w: 667
@@ -127,6 +127,6 @@ fotos:
   formato: detalle
   grupo_es: ''
   grupo_en: ''
-  pie_es: 'Cierre: silueta frente al valle'
-  pie_en: 'Ending: silhouette before the valley'
+  pie_es: Silueta frente al valle al atardecer
+  pie_en: Silhouette facing the valley at sunset
   credito: '2026'

@@ -6,8 +6,8 @@ slug: teatro
 slug_en: theatre
 titulo_es: Teatro
 titulo_en: Theatre
-intro_es: 'Sala de Espera de principio a fin: el libreto, el espejo, el afiche y la función.'
-intro_en: 'Sala de Espera from start to finish: the script, the mirror, the poster and the show.'
+intro_es: 'Sala de Espera (2026): camerino, afiche y función.'
+intro_en: 'Sala de Espera (2026): dressing room, poster and performance.'
 portada: img/photo/teatro/sala-de-espera-teatro-2026-04
 fotos:
 - archivo: img/photo/teatro/sala-de-espera-teatro-2026-01
@@ -17,8 +17,8 @@ fotos:
   formato: completa
   grupo_es: Camerino
   grupo_en: Dressing room
-  pie_es: El libreto sobre la mesa
-  pie_en: The script on the table
+  pie_es: Libreto de Sala de Espera sobre la mesa
+  pie_en: Sala de Espera script on the table
   credito: Sala de Espera · 2026
 - archivo: img/photo/teatro/sala-de-espera-teatro-2026-02
   w: 1000
@@ -27,8 +27,8 @@ fotos:
   formato: completa
   grupo_es: Camerino
   grupo_en: Dressing room
-  pie_es: 'El espejo: la actriz se vuelve personaje'
-  pie_en: 'The mirror: actress becomes character'
+  pie_es: Actriz frente al espejo, Sala de Espera
+  pie_en: Actress at the mirror, Sala de Espera
   credito: Sala de Espera · 2026
 - archivo: img/photo/teatro/sala-de-espera-teatro-2026-03
   w: 667
@@ -37,8 +37,8 @@ fotos:
   formato: detalle
   grupo_es: Camerino
   grupo_en: Dressing room
-  pie_es: Otro espejo, otro personaje
-  pie_en: Another mirror, another character
+  pie_es: Actores en el camerino, Sala de Espera
+  pie_en: Actors in the dressing room, Sala de Espera
   credito: Sala de Espera · 2026
 - archivo: img/photo/teatro/sala-de-espera-teatro-2026-04
   w: 1000
@@ -47,8 +47,8 @@ fotos:
   formato: completa
   grupo_es: Camerino
   grupo_en: Dressing room
-  pie_es: El ritual del grupo antes de salir
-  pie_en: The group ritual before going on
+  pie_es: El elenco reunido antes de la función, Sala de Espera
+  pie_en: The cast gathered before the show, Sala de Espera
   credito: Sala de Espera · 2026
 - archivo: img/photo/teatro/sala-de-espera-teatro-2026-05
   w: 800
@@ -57,8 +57,8 @@ fotos:
   formato: par
   grupo_es: Afiche
   grupo_en: Poster
-  pie_es: Personaje 1
-  pie_en: Character 1
+  pie_es: Retrato de personaje para el afiche de Sala de Espera
+  pie_en: Character portrait for the Sala de Espera poster
   credito: Sala de Espera · 2026
 - archivo: img/photo/teatro/sala-de-espera-teatro-2026-06
   w: 800
@@ -67,8 +67,8 @@ fotos:
   formato: par
   grupo_es: Afiche
   grupo_en: Poster
-  pie_es: 'Personaje 2: el teléfono'
-  pie_en: 'Character 2: the phone'
+  pie_es: Personaje con teléfono, afiche de Sala de Espera
+  pie_en: Character with a phone, Sala de Espera poster
   credito: Sala de Espera · 2026
 - archivo: img/photo/teatro/sala-de-espera-teatro-2026-07
   w: 800
@@ -77,8 +77,8 @@ fotos:
   formato: par
   grupo_es: Afiche
   grupo_en: Poster
-  pie_es: 'Personaje 3: el gesto'
-  pie_en: 'Character 3: the gesture'
+  pie_es: Personaje con un gesto, afiche de Sala de Espera
+  pie_en: Character gesturing, Sala de Espera poster
   credito: Sala de Espera · 2026
 - archivo: img/photo/teatro/sala-de-espera-teatro-2026-08
   w: 800
@@ -87,8 +87,8 @@ fotos:
   formato: par
   grupo_es: Afiche
   grupo_en: Poster
-  pie_es: 'Personaje 4: la espera'
-  pie_en: 'Character 4: the wait'
+  pie_es: Personaje esperando, afiche de Sala de Espera
+  pie_en: Character waiting, Sala de Espera poster
   credito: Sala de Espera · 2026
 - archivo: img/photo/teatro/sala-de-espera-teatro-2026-09
   w: 800
@@ -97,8 +97,8 @@ fotos:
   formato: detalle
   grupo_es: Afiche
   grupo_en: Poster
-  pie_es: 'El elenco completo: imagen de campaña'
-  pie_en: 'The full cast: campaign image'
+  pie_es: Elenco completo de Sala de Espera
+  pie_en: Full cast of Sala de Espera
   credito: Sala de Espera · 2026
 - archivo: img/photo/teatro/sala-de-espera-teatro-2026-10
   w: 1000
@@ -107,8 +107,8 @@ fotos:
   formato: completa
   grupo_es: Función
   grupo_en: Performance
-  pie_es: La escena completa
-  pie_en: The full scene
+  pie_es: Escena completa de Sala de Espera
+  pie_en: Full scene of Sala de Espera
   credito: Sala de Espera · 2026
 - archivo: img/photo/teatro/sala-de-espera-teatro-2026-11
   w: 667
@@ -117,8 +117,8 @@ fotos:
   formato: detalle
   grupo_es: Función
   grupo_en: Performance
-  pie_es: Primer plano en función
-  pie_en: Close-up during the show
+  pie_es: Actriz en función, Sala de Espera
+  pie_en: Actress during the show, Sala de Espera
   credito: Sala de Espera · 2026
 - archivo: img/photo/teatro/sala-de-espera-teatro-2026-12
   w: 1000
@@ -127,8 +127,8 @@ fotos:
   formato: completa
   grupo_es: Función
   grupo_en: Performance
-  pie_es: Manos que esperan
-  pie_en: Waiting hands
+  pie_es: Manos de una actriz en función, Sala de Espera
+  pie_en: An actress's hands during the show, Sala de Espera
   credito: Sala de Espera · 2026
 - archivo: img/photo/teatro/sala-de-espera-teatro-2026-13
   w: 1000
@@ -137,6 +137,6 @@ fotos:
   formato: completa
   grupo_es: Función
   grupo_en: Performance
-  pie_es: 'Último cuadro: el elenco en penumbra'
-  pie_en: 'Last tableau: the cast in half-light'
+  pie_es: El elenco en penumbra al final de Sala de Espera
+  pie_en: The cast in half-light at the end of Sala de Espera
   credito: Sala de Espera · 2026

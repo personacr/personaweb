@@ -1,46 +1,71 @@
 {% extends "base.html" %}{% from "macros.html" import L, pic, tile with context %}
 {% block body %}
 <header class="hero">
-  <img class="poster" src="{{ R }}img/home/hero-poster.jpg" alt="" fetchpriority="high">
-  <video autoplay muted loop playsinline preload="none" poster="{{ R }}img/home/hero-poster.jpg" data-src="{{ R }}img/home/hero.mp4" aria-hidden="true"></video>
+  <img class="poster" src="{{ R }}img/home/hero-1280.webp" srcset="{{ R }}img/home/hero-640.webp 640w, {{ R }}img/home/hero-1280.webp 1280w, {{ R }}img/home/hero-2048.webp 2048w, {{ R }}img/home/hero-2880.webp 2880w" sizes="100vw" alt="" fetchpriority="high" decoding="async">
+  {% if hero_video %}<video autoplay muted loop playsinline preload="none" poster="{{ R }}img/home/hero-1280.webp" data-src="{{ R }}img/home/hero.mp4" aria-hidden="true"></video>{% endif %}
   <div class="bars" aria-hidden="true"></div>
   <div class="hero-in">
     <div>
       <h1>{{ site['frase_' ~ lang] }}</h1>
       <p class="credit">{{ site.nombre }} · {{ site['lugar_' ~ lang] }}</p>
     </div>
-    <div class="btns"><a class="btn" href="#trabajo">{{ t.explore }} ↓</a><a class="btn" href="{{ R }}{{ P }}motion/">Motion ▸</a></div>
+    <div class="btns"><a class="btn" href="#trabajo">{{ t.explore }} ↓</a><a class="btn" href="{{ R }}{{ P }}{{ t.contact_slug }}/">{{ t.write }}</a></div>
   </div>
 </header>
 <main>
-  <section class="block wrap" id="trabajo">
-    <div class="head"><h2 class="h2">{{ L(t.selected) }}</h2><a class="more" href="{{ R }}{{ P }}photo/">{{ t.all_photo }} →</a></div>
+  {#- 1 · Fotos, sin título: hablan solas -#}
+  <section class="wrap mosaic" id="trabajo" aria-label="{{ t.photo_eyebrow }}">
     <div class="jg tight">{% for m in mosaico %}{{ tile(m.f, lang, R ~ P ~ 'photo/' ~ m.slug ~ '/', loop.index0) }}{% endfor %}</div>
+    <p class="after"><a class="more" href="{{ R }}{{ P }}photo/">{{ t.all_photo }} →</a></p>
   </section>
-  <section class="wrap">
-    <div class="doors">
-      {% for k, label, img, sub in t.doors_list %}
-      <a class="door rv" href="{{ R }}{{ P }}{{ k }}/" style="--d:{{ loop.index0 * 0.08 }}s"><img src="{{ R }}{{ img }}" alt="" loading="lazy"><div class="door-t"><b>{{ L(label) }}</b><span>{{ sub }}</span></div></a>
-      {% endfor %}
+
+  {#- 2 · Tres salas: bandas de cine a lo ancho, numeradas -#}
+  <nav class="rooms" aria-label="Motion · Photo · Stage">
+    {% for d in puertas %}
+    <a class="room" href="{{ R }}{{ P }}{{ d.k }}/">
+      <img src="{{ R }}{{ d.img }}" alt="" loading="lazy" decoding="async" style="object-position:{{ d.pos }}">
+      <span class="room-in">
+        <span class="room-n">{{ d.n }}</span>
+        <b class="room-w">{{ L(d.k) }}</b>
+        <span class="room-m"><span class="room-a">{{ d.area }}</span><span class="room-c">{{ d.meta }}</span></span>
+        <span class="room-go" aria-hidden="true">→</span>
+      </span>
+    </a>
+    {% endfor %}
+  </nav>
+
+  {#- 3 · Servicios: lista con foto, número y flecha -#}
+  <section class="block wrap svc-wrap">
+    <div class="svc-head">
+      <h2 class="h2">{{ L(t.offer) }}</h2>
+      <p>{{ t.offer_sub }}</p>
+      <a class="btn blue" href="{{ R }}{{ P }}{{ t.contact_slug }}/">{{ t.quote_project }}</a>
     </div>
-  </section>
-  <section class="block">
-    <div class="wrap head"><h2 class="h2">{{ L(t.credits) }}</h2><span class="eyebrow">{{ t.credits_sub }}</span></div>
-    <div class="marquee" aria-label="{{ t.credits_sub }}"><div class="marquee-t">
-      {% for rep in [0, 1] %}{% for c in site.clientes %}X{% if rep %} aria-hidden="true"{% endif %}>{% endfor %}{% for n in site.clientes_sin_logo %}<span class="nm"{% if rep %} aria-hidden="true"{% endif %}>{{ n }}</span>{% endfor %}{% endfor %}
-    </div></div>
-  </section>
-  <section class="wrap">
-    <div class="head"><h2 class="h2">{{ L(t.offer) }}</h2></div>
-    <div class="services">
+    <ol class="svc">
       {% for s in site.servicios %}
-      <a class="service" href="{{ R }}{{ P }}{{ s.enlace if lang == 'es' else s.enlace|en_path }}"><h3>{{ s['titulo_' ~ lang] }}</h3><p>{{ s['texto_' ~ lang] }}</p><span>{{ t.quote }} →</span></a>
+      <li><a class="svc-row" href="{{ R }}{{ P }}{{ s.enlace if lang == 'es' else s.enlace|en_path }}">
+        <span class="svc-n">0{{ loop.index }}</span>
+        <span class="svc-img">{{ pic(s.imagen, '', sizes="(max-width:700px) 96px, 200px") }}</span>
+        <span class="svc-t"><b>{{ s['titulo_' ~ lang] }}</b><span>{{ s['texto_' ~ lang] }}</span></span>
+        <span class="svc-go" aria-hidden="true">→</span>
+      </a></li>
       {% endfor %}
-    </div>
+    </ol>
   </section>
+
+  {#- 4 · Cierre -#}
   <section class="epilogue wrap">
-    <p>{{ site['manifiesto_' ~ lang] }}</p>
+    <p>{{ site['cierre_' ~ lang] }}</p>
     <div class="btns"><a class="btn blue" href="https://wa.me/{{ site.whatsapp }}" rel="noopener">WhatsApp</a><a class="btn" href="mailto:{{ site.email }}">{{ site.email }}</a><a class="btn" href="{{ R }}{{ P }}{{ t.contact_slug }}/">{{ t.form }}</a></div>
+  </section>
+
+  {#- 5 · Clientes: lo último del sitio -#}
+  <section class="wrap clients">
+    <div class="head"><h2 class="h2">{{ L(t.clients) }}</h2><span class="eyebrow">{{ t.clients_sub }}</span></div>
+    <ul class="logos">
+      {% for c in site.clientes %}<li><img src="{{ R }}{{ c.logo }}" alt="{{ c.nombre }}" title="{{ c.nombre }}" loading="lazy" decoding="async"{% if c.alto %} class="tall"{% endif %}></li>{% endfor %}
+      {% for n in site.clientes_sin_logo %}<li class="nm">{{ n }}</li>{% endfor %}
+    </ul>
   </section>
 </main>
 {% endblock %}

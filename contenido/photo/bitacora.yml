@@ -6,8 +6,8 @@ slug: bitacora
 slug_en: field-notes
 titulo_es: Bitácora
 titulo_en: Field notes
-intro_es: 'La mirada cuando nadie te contrata: ciudades, caminos y agua.'
-intro_en: 'The eye when no one is hiring: cities, roads and water.'
+intro_es: Viajes, ciudades y paisajes.
+intro_en: Travel, cities and landscapes.
 portada: img/photo/bitacora/bitacora-2025-02
 fotos:
 - archivo: img/photo/bitacora/bitacora-2025-01
@@ -17,8 +17,8 @@ fotos:
   formato: completa
   grupo_es: ''
   grupo_en: ''
-  pie_es: Blackfriars de noche
-  pie_en: Blackfriars at night
+  pie_es: Blackfriars de noche, Londres
+  pie_en: Blackfriars at night, London
   credito: '2025'
 - archivo: img/photo/bitacora/bitacora-2025-02
   w: 1000
@@ -27,8 +27,8 @@ fotos:
   formato: completa
   grupo_es: ''
   grupo_en: ''
-  pie_es: El bus pasa
-  pie_en: The bus goes by
+  pie_es: Bus rojo pasando de noche
+  pie_en: A red bus passing at night
   credito: '2025'
 - archivo: img/photo/bitacora/bitacora-2022-03
   w: 667
@@ -37,8 +37,8 @@ fotos:
   formato: par
   grupo_es: ''
   grupo_en: ''
-  pie_es: Calle en movimiento
-  pie_en: Street in motion
+  pie_es: Calle con gente en movimiento
+  pie_en: Street with people in motion
   credito: '2022'
 - archivo: img/photo/bitacora/bitacora-2022-04
   w: 667
@@ -67,8 +67,8 @@ fotos:
   formato: par
   grupo_es: ''
   grupo_en: ''
-  pie_es: La ciudad entre rejas
-  pie_en: The city behind bars
+  pie_es: La ciudad vista entre rejas
+  pie_en: The city seen through railings
   credito: '2025'
 - archivo: img/photo/bitacora/bitacora-2023-07
   w: 562
@@ -77,8 +77,8 @@ fotos:
   formato: par
   grupo_es: ''
   grupo_en: ''
-  pie_es: La rueda en el cielo
-  pie_en: The wheel in the sky
+  pie_es: Rueda de Chicago contra el cielo
+  pie_en: Ferris wheel against the sky
   credito: '2023'
 - archivo: img/photo/bitacora/bitacora-2022-08
   w: 1000
@@ -97,8 +97,8 @@ fotos:
   formato: completa
   grupo_es: ''
   grupo_en: ''
-  pie_es: Agua larga
-  pie_en: Long water
+  pie_es: Agua en larga exposición
+  pie_en: Long-exposure water
   credito: '2018'
 - archivo: img/photo/bitacora/bitacora-10
   w: 1000
@@ -107,8 +107,8 @@ fotos:
   formato: completa
   grupo_es: ''
   grupo_en: ''
-  pie_es: Un caminante, desde el dron
-  pie_en: A walker, from the drone
+  pie_es: Una persona caminando, vista desde un dron
+  pie_en: A person walking, seen from a drone
   credito: ''
 - archivo: img/photo/bitacora/bitacora-2017-11
   w: 1000
@@ -117,6 +117,6 @@ fotos:
   formato: completa
   grupo_es: ''
   grupo_en: ''
-  pie_es: 'Cierre: agua en la mano'
-  pie_en: 'Ending: water in the hand'
+  pie_es: Mano dentro del agua
+  pie_en: A hand in the water
   credito: '2017'

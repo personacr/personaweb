@@ -5,14 +5,16 @@ nombre_alterno:
 - Jose Pablo Garcia
 - Jose Pablo García · PERSONA
 url: https://personacr.github.io/personaweb
-frase_es: Narrador visual. Cine, fotografía y escena.
-frase_en: Visual storyteller. Film, photography and stage.
+frase_es: Cineasta, fotógrafo y director escénico.
+frase_en: Filmmaker, photographer and stage director.
 lugar_es: Costa Rica · Disponible para giras y festivales
 lugar_en: Costa Rica · Available for tours and festivals
 manifiesto_es: La magia de lo cotidiano y el poder del subconsciente para crear.
 manifiesto_en: The magic of everyday life and the power of the subconscious to create.
+cierre_es: ¿Tenés un proyecto? Contame.
+cierre_en: Have a project in mind? Let's talk.
 bio_corta_es: Cineasta independiente costarricense con más de 20 años de experiencia en cine, fotografía, televisión, creación de contenido y artes escénicas.
-bio_corta_en: Costa Rican independent filmmaker with over 20 years of experience at the intersection of cinema, photography, TV, content creation and performing arts.
+bio_corta_en: Costa Rican independent filmmaker with over 20 years of experience in film, photography, TV, content creation and performing arts.
 email: josepablo@persona.cr
 whatsapp: '50688433789'
 instagram: https://www.instagram.com/persona.cr
@@ -24,24 +26,28 @@ ga4: G-TY6Y414RXR
 servicios:
 - titulo_es: Música en vivo & giras
   titulo_en: Live music & tours
-  texto_es: Foto y video de conciertos, giras y festivales, del camerino al último aplauso.
-  texto_en: Concert, tour and festival photo and video, from the dressing room to the final bow.
+  texto_es: Foto y video de conciertos, giras y festivales.
+  texto_en: Photo and video for concerts, tours and festivals.
   enlace: photo/en-vivo/
+  imagen: img/photo/en-vivo/jacob-collier-en-vivo-2025-13
 - titulo_es: Cine & video
   titulo_en: Film & video
   texto_es: Dirección, fotografía y edición de cortos, videoclips y contenido para redes sociales.
   texto_en: Direction, cinematography and editing for shorts, music videos and social media content.
   enlace: motion/
+  imagen: img/photo/movimiento/movimiento-13
 - titulo_es: Artes escénicas
   titulo_en: Performing arts
   texto_es: Fotografía de teatro y danza (afiche, ensayo y función) y dirección escénica.
   texto_en: Theatre and dance photography (poster, rehearsal, performance) and stage direction.
   enlace: stage/
+  imagen: img/photo/teatro/sala-de-espera-teatro-2026-10
 - titulo_es: Marcas & eventos
   titulo_en: Brands & events
-  texto_es: Cobertura de eventos, espacios y campañas, con mirada de cine.
-  texto_en: Events, spaces and campaigns, shot with a filmmaker's eye.
+  texto_es: Foto y video de eventos, espacios y campañas.
+  texto_en: Photo and video for events, spaces and campaigns.
   enlace: photo/marcas/
+  imagen: img/photo/marcas/grupo-del-este-marcas-2026-02
 clientes:
 - logo: img/clientes/grupo-del-este.png
   nombre: Grupo del Este
@@ -72,7 +78,7 @@ clientes:
 clientes_sin_logo:
 - Hernán Jiménez
 mosaico:
-- en-vivo:4
+- en-vivo:5
 - teatro:2
 - movimiento:2
 - en-vivo:10
@@ -89,4 +95,4 @@ mosaico:
 - en-vivo:12
 - teatro:4
 - retrato:12
-- movimiento:13
+- movimiento:12

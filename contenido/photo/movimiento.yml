@@ -6,8 +6,8 @@ slug: movimiento
 slug_en: movement
 titulo_es: Movimiento
 titulo_en: Movement
-intro_es: La danza del estudio al paisaje, del paisaje a la escena, y el proceso que nadie ve.
-intro_en: Dance from the studio to the landscape, from the landscape to the stage, and the process no one sees.
+intro_es: Danza en estudio, en exteriores y en escena.
+intro_en: Dance in the studio, outdoors and on stage.
 portada: img/photo/movimiento/movimiento-09
 fotos:
 - archivo: img/photo/movimiento/movimiento-2026-01
@@ -17,8 +17,8 @@ fotos:
   formato: par
   grupo_es: Estudio
   grupo_en: Studio
-  pie_es: 'Serie B/N 2026: postura'
-  pie_en: 'B&W series 2026: stance'
+  pie_es: Bailarina en estudio, blanco y negro
+  pie_en: Dancer in the studio, black and white
   credito: '2026'
 - archivo: img/photo/movimiento/movimiento-2026-02
   w: 786
@@ -27,8 +27,8 @@ fotos:
   formato: par
   grupo_es: Estudio
   grupo_en: Studio
-  pie_es: 'Serie B/N 2026: suelo y aire'
-  pie_en: 'B&W series 2026: floor and air'
+  pie_es: Bailarina apoyada en el suelo, blanco y negro
+  pie_en: Dancer balancing on the floor, black and white
   credito: '2026'
 - archivo: img/photo/movimiento/movimiento-2026-03
   w: 786
@@ -37,8 +37,8 @@ fotos:
   formato: par
   grupo_es: Estudio
   grupo_en: Studio
-  pie_es: 'Serie B/N 2026: salto'
-  pie_en: 'B&W series 2026: jump'
+  pie_es: Bailarina saltando, blanco y negro
+  pie_en: Dancer jumping, black and white
   credito: '2026'
 - archivo: img/photo/movimiento/movimiento-04
   w: 800
@@ -47,8 +47,8 @@ fotos:
   formato: par
   grupo_es: Estudio
   grupo_en: Studio
-  pie_es: Vuelo sobre azul
-  pie_en: Flight over blue
+  pie_es: Bailarina en el aire sobre fondo azul
+  pie_en: Dancer in mid-air on a blue background
   credito: ''
 - archivo: img/photo/movimiento/movimiento-05
   w: 800
@@ -57,8 +57,8 @@ fotos:
   formato: par
   grupo_es: Estudio
   grupo_en: Studio
-  pie_es: 'Humo rosa: color de campaña'
-  pie_en: Pink smoke
+  pie_es: Bailarina con humo rosa
+  pie_en: Dancer with pink smoke
   credito: ''
 - archivo: img/photo/movimiento/movimiento-2025-06
   w: 714
@@ -67,8 +67,8 @@ fotos:
   formato: par
   grupo_es: Estudio
   grupo_en: Studio
-  pie_es: Ámbar, Andamio 2025
-  pie_en: Amber, Andamio 2025
+  pie_es: Bailarina en luz ámbar, Andamio 2025
+  pie_en: Dancer in amber light, Andamio 2025
   credito: '2025'
 - archivo: img/photo/movimiento/movimiento-07
   w: 714
@@ -77,8 +77,8 @@ fotos:
   formato: detalle
   grupo_es: Paisaje
   grupo_en: Landscape
-  pie_es: Salto entre pinos
-  pie_en: A leap among pines
+  pie_es: Bailarina saltando entre pinos
+  pie_en: Dancer leaping among pines
   credito: ''
 - archivo: img/photo/movimiento/movimiento-08
   w: 1000
@@ -87,8 +87,8 @@ fotos:
   formato: completa
   grupo_es: Paisaje
   grupo_en: Landscape
-  pie_es: El grupo cae en el bosque
-  pie_en: The group falls in the forest
+  pie_es: Grupo de bailarines en el bosque
+  pie_en: Group of dancers in the forest
   credito: ''
 - archivo: img/photo/movimiento/movimiento-09
   w: 1000
@@ -97,8 +97,8 @@ fotos:
   formato: completa
   grupo_es: Paisaje
   grupo_en: Landscape
-  pie_es: Vuelo al atardecer
-  pie_en: Flight at sunset
+  pie_es: Bailarina en el aire al atardecer
+  pie_en: Dancer in mid-air at sunset
   credito: ''
 - archivo: img/photo/movimiento/movimiento-2019-10
   w: 1000
@@ -107,8 +107,8 @@ fotos:
   formato: completa
   grupo_es: Paisaje
   grupo_en: Landscape
-  pie_es: Una línea de bailarinas en el horizonte
-  pie_en: A line of dancers on the horizon
+  pie_es: Línea de bailarinas en el horizonte
+  pie_en: Line of dancers on the horizon
   credito: '2019'
 - archivo: img/photo/movimiento/movimiento-2026-11
   w: 667
@@ -117,8 +117,8 @@ fotos:
   formato: detalle
   grupo_es: Escena
   grupo_en: Stage
-  pie_es: 'Cenital: la cargada'
-  pie_en: 'Top light: the lift'
+  pie_es: Bailarines bajo luz cenital
+  pie_en: Dancers under a top light
   credito: '2026'
 - archivo: img/photo/movimiento/movimiento-2025-12
   w: 1000
@@ -127,8 +127,8 @@ fotos:
   formato: completa
   grupo_es: Escena
   grupo_en: Stage
-  pie_es: Rojo sobre negro
-  pie_en: Red over black
+  pie_es: Bailarina de rojo sobre fondo negro
+  pie_en: Dancer in red on a black background
   credito: '2025'
 - archivo: img/photo/movimiento/movimiento-13
   w: 1000
@@ -137,8 +137,8 @@ fotos:
   formato: completa
   grupo_es: Escena
   grupo_en: Stage
-  pie_es: Sombrero y bastón en azul
-  pie_en: Hat and cane in blue
+  pie_es: Bailarín con sombrero y bastón en luz azul
+  pie_en: Dancer with hat and cane in blue light
   credito: ''
 - archivo: img/photo/movimiento/festival-reves-movimiento-2026-14
   w: 1000
@@ -147,8 +147,8 @@ fotos:
   formato: completa
   grupo_es: Proceso
   grupo_en: Process
-  pie_es: 'Revés 2026: el taller en pleno vuelo'
-  pie_en: 'Revés 2026: the workshop mid-flight'
+  pie_es: Taller de danza, Festival Revés 2026
+  pie_en: Dance workshop, Festival Revés 2026
   credito: Festival Revés · 2026
 - archivo: img/photo/movimiento/festival-reves-movimiento-2026-15
   w: 667
@@ -157,8 +157,8 @@ fotos:
   formato: par
   grupo_es: Proceso
   grupo_en: Process
-  pie_es: 'Revés 2026: suspensión'
-  pie_en: 'Revés 2026: suspension'
+  pie_es: Bailarines en suspensión, Festival Revés 2026
+  pie_en: Dancers in suspension, Festival Revés 2026
   credito: Festival Revés · 2026
 - archivo: img/photo/movimiento/festival-reves-movimiento-2026-16
   w: 667
@@ -167,8 +167,8 @@ fotos:
   formato: par
   grupo_es: Proceso
   grupo_en: Process
-  pie_es: 'Revés 2026: de cabeza'
-  pie_en: 'Revés 2026: upside down'
+  pie_es: Bailarín de cabeza, Festival Revés 2026
+  pie_en: Dancer upside down, Festival Revés 2026
   credito: Festival Revés · 2026
 - archivo: img/photo/movimiento/festival-reves-movimiento-2026-17
   w: 667
@@ -177,6 +177,6 @@ fotos:
   formato: detalle
   grupo_es: Proceso
   grupo_en: Process
-  pie_es: 'Cierre: la puerta y los zapatos'
-  pie_en: 'Ending: the door and the shoes'
+  pie_es: Puerta y zapatos, Festival Revés 2026
+  pie_en: Door and shoes, Festival Revés 2026
   credito: Festival Revés · 2026

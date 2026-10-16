@@ -5,26 +5,35 @@
 <img src="{{ R }}{{ src }}-1280.webp" srcset="{{ R }}{{ src }}-640.webp 640w, {{ R }}{{ src }}-1280.webp 1280w, {{ R }}{{ src }}-2048.webp 2048w" sizes="{{ sizes }}" alt="{{ alt }}"{% if w %} width="{{ w }}" height="{{ h }}"{% endif %}{% if vt %} style="view-transition-name:{{ vt }}"{% endif %} {% if eager %}fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
 {%- endmacro -%}
 
-{#- Una foto dentro del mosaico justificado. k = peso (completa 1.45 · par 1 · detalle .8) -#}
+{#- Una foto dentro del mosaico justificado (sin texto encima; la descripción queda solo para Google y lectores de pantalla) -#}
 {%- macro tile(f, lang, href=None, i=0) -%}
 {%- set r = (f.w / f.h) | round(4) -%}
-{%- set k = {'completa': 1.45, 'detalle': 0.8}.get(f.formato, 1) -%}
-<{{ 'a' if href else 'figure' }} class="it rv" {% if href %}href="{{ href }}"{% else %}tabindex="0" data-full="{{ R }}{{ f.archivo }}-2048.webp"{% endif %} style="--r:{{ r }};--k:{{ k }};--d:{{ ((i % 4) * 0.07) | round(2) }}s;background:{{ f.color }}">
-  {{ pic(f.archivo, f['pie_' ~ lang] ~ (' — ' ~ f.credito if f.credito else ''), f.w, f.h, sizes="(max-width:700px) 60vw, 33vw") }}
-  <span class="cap"><span>{{ f['pie_' ~ lang] }}</span>{% if f.credito %}<small>{{ f.credito }}</small>{% endif %}</span>
+<{{ 'a' if href else 'figure' }} class="it rv" {% if href %}href="{{ href }}"{% else %}tabindex="0" role="button" aria-label="{{ f['pie_' ~ lang] }}" data-full="{{ R }}{{ f.archivo }}-2048.webp"{% endif %} style="--r:{{ r }};--d:{{ ((i % 4) * 0.07) | round(2) }}s;background:{{ f.color }}">
+  {{ pic(f.archivo, f['pie_' ~ lang], f.w, f.h, sizes="(max-width:700px) 50vw, 25vw") }}
 </{{ 'a' if href else 'figure' }}>
 {%- endmacro -%}
 
 {%- macro thumb(v) -%}
-{{- thumbs.get(v.id|string) if v.plataforma == 'vimeo' else ('https://i.ytimg.com/vi/' ~ v.id ~ '/hqdefault.jpg' if v.plataforma == 'youtube' else '') -}}
+{%- if v.plataforma == 'instagram' -%}{{ (R ~ 'img/motion/ig/' ~ v.id ~ '.webp') if v.id in ig else '' }}
+{%- elif thumbs.get(v.id|string) -%}{{ thumbs.get(v.id|string) }}
+{%- elif v.plataforma == 'youtube' -%}https://i.ytimg.com/vi/{{ v.id }}/maxresdefault.jpg
+{%- endif -%}
 {%- endmacro -%}
 
+{#- Video: se ve la imagen; el reproductor carga al tocar. Instagram abre el reel en Instagram (su reproductor incrustado no se puede diseñar). -#}
 {%- macro video(v, t) -%}
 {%- set th = thumb(v) -%}
-<button type="button" class="video {{ v.formato }}{% if v.plataforma == 'instagram' %} ig{% endif %}" data-p="{{ v.plataforma }}" data-id="{{ v.id }}" aria-label="{{ t.play }}: {{ v.titulo }}">
-  {% if th %}<img src="{{ th }}" alt="" loading="lazy">{% endif %}
-  <span class="play"><i>▶</i><span><small>{{ {'vimeo':'Vimeo','youtube':'YouTube','instagram':'Instagram'}[v.plataforma] }}</small>{{ v.titulo }}</span></span>
+{%- if v.plataforma == 'instagram' -%}
+<a class="video {{ v.formato }} ig" href="https://www.instagram.com/reel/{{ v.id }}/" target="_blank" rel="noopener" aria-label="{{ t.see_ig }}: {{ v.titulo }}">
+  {% if th %}<img src="{{ th }}" alt="" loading="lazy" decoding="async">{% endif %}
+  <span class="play"><i>↗</i><span><small>{{ t.see_ig }}</small>{{ v.titulo }}</span></span>
+</a>
+{%- else -%}
+<button type="button" class="video {{ v.formato }}" data-p="{{ v.plataforma }}" data-id="{{ v.id }}" aria-label="{{ t.play }}: {{ v.titulo }}">
+  {% if th %}<img src="{{ th }}" alt="" loading="lazy" decoding="async">{% endif %}
+  <span class="play"><i>▶</i><span><small>{{ {'vimeo':'Vimeo','youtube':'YouTube'}[v.plataforma] }}</small>{{ v.titulo }}</span></span>
 </button>
+{%- endif -%}
 {%- endmacro -%}
 
 {%- macro spotify(b) -%}

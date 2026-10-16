@@ -6,20 +6,23 @@
     {{ pic('img/about/jose-pablo-garcia', site.nombre, sizes="260px") }}
     <div>
       <p class="lead">{{ site['frase_' ~ lang] }}</p>
-      <p style="max-width:var(--text);margin-top:14px">{{ site['bio_corta_' ~ lang] }}</p>
-      <p style="margin-top:16px;font-family:var(--serif);font-style:italic;font-weight:300;font-size:19px;color:var(--mist)">«{{ site['manifiesto_' ~ lang] }}»</p>
+      <p style="max-width:var(--text);margin-top:14px;color:var(--mist)">{{ site['bio_corta_' ~ lang] }}</p>
+      <div class="btns" style="margin-top:22px"><a class="btn blue" href="{{ R }}{{ P }}{{ t.contact_slug }}/">{{ t.write }}</a><a class="btn" href="{{ site.bio }}" rel="noopener">bio.persona.cr</a></div>
     </div>
   </div>
   <section class="block">
-    <div class="head"><h2 class="h2">{{ L(t.credits) }}</h2></div>
+    <div class="head"><h2 class="h2">{{ L(t.projects) }}</h2></div>
     <ul class="credits-list">
       {% for p in m.proyectos %}<li><b>{{ p.titulo }}</b>{{ p.anio }}{% if p.anio %} · {% endif %}{{ p['rol_' ~ lang] }}</li>{% endfor %}
       {% for p in s.proyectos %}<li><b>{{ p.titulo }}</b>{{ p.anio }} · {{ p['rol_' ~ lang] }}</li>{% endfor %}
     </ul>
   </section>
-  <section>
-    <div class="head"><h2 class="h2">{{ L(t.clients) }}</h2></div>
-    <div class="marquee" style="border:0;-webkit-mask:none;mask:none"><div class="marquee-t" style="animation:none;flex-wrap:wrap;width:auto;padding:8px 0;gap:36px 52px">{% for c in site.clientes %}<img src="{{ R }}{{ c.logo }}" alt="{{ c.nombre }}" loading="lazy">{% endfor %}{% for n in site.clientes_sin_logo %}<span class="nm">{{ n }}</span>{% endfor %}</div></div>
+  <section class="clients">
+    <div class="head"><h2 class="h2">{{ L(t.clients) }}</h2><span class="eyebrow">{{ t.clients_sub }}</span></div>
+    <ul class="logos">
+      {% for c in site.clientes %}<li><img src="{{ R }}{{ c.logo }}" alt="{{ c.nombre }}" title="{{ c.nombre }}" loading="lazy" decoding="async"{% if c.alto %} class="tall"{% endif %}></li>{% endfor %}
+      {% for n in site.clientes_sin_logo %}<li class="nm">{{ n }}</li>{% endfor %}
+    </ul>
   </section>
 </main>
 {% endblock %}
