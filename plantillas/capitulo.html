@@ -1,0 +1,25 @@
+{% extends "base.html" %}{% from "macros.html" import L, pic with context %}
+{% block body %}
+<header class="cover">
+  {{ pic(c.portada, c['titulo_' ~ lang], eager=True) }}
+  <div class="cover-t"><p class="eyebrow">Photo · {{ t.chapter }} {{ c.numero }}</p><h1 class="display">{{ L(c['titulo_' ~ lang]|lower) }}</h1></div>
+</header>
+<main class="wrap">
+  <div class="intro-row"><p class="lead">{{ c['intro_' ~ lang] }}</p><p class="credit">{{ c.fotos|length }} {{ t.photos }} · Jose Pablo García / PERSONA</p></div>
+  <div class="seq">
+  {%- for row in rows %}
+    {%- if row.grupo %}<p class="seq-group">{{ row.grupo }}</p>{% endif %}
+    <div class="row {{ row.formato }}{% if row.vertical %} vertical{% endif %}">
+    {%- for f in row.fotos %}
+      <figure class="ph reveal" data-i="{{ f.i }}">{{ pic(f.archivo, f['pie_' ~ lang] ~ (' — ' ~ f.credito if f.credito else ''), f.w, f.h, sizes=row.sizes, color=f.color) }}
+        <figcaption><span>{{ '%02d' % (f.i + 1) }} · {{ f['pie_' ~ lang] }}</span><span class="credit">{{ f.credito }}</span></figcaption></figure>
+    {%- endfor %}
+    </div>
+  {%- endfor %}
+  </div>
+  <div class="next">
+    <a class="go" href="{{ R }}{{ P }}photo/{{ siguiente.slug if lang == 'es' else siguiente.slug_en }}/"><span class="eyebrow">{{ t.next_chapter }}</span><b>{{ L(siguiente['titulo_' ~ lang]|lower) }} →</b></a>
+    <a class="btn blue" href="{{ R }}{{ P }}{{ t.contact_slug }}/">{{ t.quote_project }}</a>
+  </div>
+</main>
+{% endblock %}

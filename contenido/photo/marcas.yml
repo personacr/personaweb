@@ -1,0 +1,72 @@
+# Capítulo de Photo. Editable desde Pages CMS.
+# formato: completa | par | detalle  ·  las fotos van en el orden de esta lista
+orden: 7
+numero: +
+slug: marcas
+slug_en: brands
+titulo_es: Marcas
+titulo_en: Brands
+intro_es: 'Grupo del Este · ampm: 40 aniversario y nueva sala de capacitación, 2026.'
+intro_en: 'Grupo del Este · ampm: 40th anniversary and new training space, 2026.'
+portada: img/photo/marcas/grupo-del-este-marcas-2026-01
+fotos:
+- archivo: img/photo/marcas/grupo-del-este-marcas-2026-01
+  w: 1000
+  h: 667
+  color: '#427895'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: El anfitrión y el camión de la marca
+  pie_en: The host and the brand truck
+  credito: Grupo del Este · 2026
+- archivo: img/photo/marcas/grupo-del-este-marcas-2026-02
+  w: 1000
+  h: 667
+  color: '#3a5765'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: La sala llena
+  pie_en: A full room
+  credito: Grupo del Este · 2026
+- archivo: img/photo/marcas/grupo-del-este-marcas-2026-03
+  w: 667
+  h: 1000
+  color: '#555555'
+  formato: detalle
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: La risa, en B/N
+  pie_en: Laughter, in B&W
+  credito: Grupo del Este · 2026
+- archivo: img/photo/marcas/grupo-del-este-marcas-2026-04
+  w: 1000
+  h: 667
+  color: '#5c5a59'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Abrir la caja
+  pie_en: Opening the box
+  credito: Grupo del Este · 2026
+- archivo: img/photo/marcas/grupo-del-este-marcas-2026-05
+  w: 1000
+  h: 667
+  color: '#899897'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: El espacio nuevo
+  pie_en: The new space
+  credito: Grupo del Este · 2026
+- archivo: img/photo/marcas/grupo-del-este-marcas-2026-06
+  w: 1000
+  h: 667
+  color: '#949a97'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Los valores en la pared
+  pie_en: Values on the wall
+  credito: Grupo del Este · 2026

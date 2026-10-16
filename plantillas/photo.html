@@ -1,0 +1,16 @@
+{% extends "base.html" %}{% from "macros.html" import L, pic with context %}
+{% block body %}
+<main class="wrap">
+  <header class="page-top">
+    <p class="eyebrow">{{ t.photo_eyebrow }}</p>
+    <h1 class="display">{{ L('photo') }}</h1>
+    <p class="lead">{{ t.photo_lead }}</p>
+  </header>
+  <div class="chapters">
+    {% for c in capitulos %}
+    <a class="chapter-card reveal" href="{{ R }}{{ P }}photo/{{ c.slug if lang == 'es' else c.slug_en }}/">{{ pic(c.portada, '', sizes="(max-width:700px) 100vw, 50vw") }}
+      <div><span class="eyebrow">{{ c.numero }} · {{ c.fotos|length }} {{ t.photos }}</span><b>{{ L(c['titulo_' ~ lang]|lower) }}</b></div></a>
+    {% endfor %}
+  </div>
+</main>
+{% endblock %}

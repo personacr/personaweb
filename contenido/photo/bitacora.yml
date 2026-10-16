@@ -1,0 +1,122 @@
+# Capítulo de Photo. Editable desde Pages CMS.
+# formato: completa | par | detalle  ·  las fotos van en el orden de esta lista
+orden: 6
+numero: VI
+slug: bitacora
+slug_en: field-notes
+titulo_es: Bitácora
+titulo_en: Field notes
+intro_es: 'La mirada cuando nadie te contrata: ciudades, caminos y agua.'
+intro_en: 'The eye when no one is hiring: cities, roads and water.'
+portada: img/photo/bitacora/bitacora-2025-02
+fotos:
+- archivo: img/photo/bitacora/bitacora-2025-01
+  w: 1000
+  h: 668
+  color: '#2e2a28'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Blackfriars de noche
+  pie_en: Blackfriars at night
+  credito: '2025'
+- archivo: img/photo/bitacora/bitacora-2025-02
+  w: 1000
+  h: 668
+  color: '#4b3b40'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: El bus pasa
+  pie_en: The bus goes by
+  credito: '2025'
+- archivo: img/photo/bitacora/bitacora-2022-03
+  w: 667
+  h: 1000
+  color: '#636469'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Calle en movimiento
+  pie_en: Street in motion
+  credito: '2022'
+- archivo: img/photo/bitacora/bitacora-2022-04
+  w: 667
+  h: 1000
+  color: '#474546'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Ventana en Suiza
+  pie_en: Window in Switzerland
+  credito: '2022'
+- archivo: img/photo/bitacora/bitacora-2025-05
+  w: 1000
+  h: 668
+  color: '#292e38'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Puente azul
+  pie_en: Blue bridge
+  credito: '2025'
+- archivo: img/photo/bitacora/bitacora-2025-06
+  w: 668
+  h: 1000
+  color: '#5b626a'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: La ciudad entre rejas
+  pie_en: The city behind bars
+  credito: '2025'
+- archivo: img/photo/bitacora/bitacora-2023-07
+  w: 562
+  h: 1000
+  color: '#a8bac2'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: La rueda en el cielo
+  pie_en: The wheel in the sky
+  credito: '2023'
+- archivo: img/photo/bitacora/bitacora-2022-08
+  w: 1000
+  h: 667
+  color: '#363c37'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Pueblo entre pinos
+  pie_en: Village among pines
+  credito: '2022'
+- archivo: img/photo/bitacora/bitacora-2018-09
+  w: 1000
+  h: 667
+  color: '#383f39'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Agua larga
+  pie_en: Long water
+  credito: '2018'
+- archivo: img/photo/bitacora/bitacora-10
+  w: 1000
+  h: 560
+  color: '#b3a59b'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Un caminante, desde el dron
+  pie_en: A walker, from the drone
+  credito: ''
+- archivo: img/photo/bitacora/bitacora-2017-11
+  w: 1000
+  h: 564
+  color: '#959c95'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: 'Cierre: agua en la mano'
+  pie_en: 'Ending: water in the hand'
+  credito: '2017'

@@ -1,0 +1,172 @@
+# Capítulo de Photo. Editable desde Pages CMS.
+# formato: completa | par | detalle  ·  las fotos van en el orden de esta lista
+orden: 1
+numero: I
+slug: en-vivo
+slug_en: live
+titulo_es: En vivo
+titulo_en: Live
+intro_es: Una noche de concierto, de la puerta del camerino al último aplauso.
+intro_en: One night of live music, from the dressing-room door to the final bow.
+portada: img/photo/en-vivo/jacob-collier-en-vivo-2025-04
+fotos:
+- archivo: img/photo/en-vivo/arturo-pardo-en-vivo-2025-01
+  w: 668
+  h: 1000
+  color: '#555555'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: 'Antes de salir: perfil en el pasillo'
+  pie_en: 'Before going on: profile in the corridor'
+  credito: Arturo Pardo · 2025
+- archivo: img/photo/en-vivo/arturo-pardo-en-vivo-2025-02
+  w: 668
+  h: 1000
+  color: '#353535'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: El chelo calienta. Acceso al backstage
+  pie_en: The cello warms up backstage
+  credito: Arturo Pardo · 2025
+- archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-03
+  w: 1000
+  h: 668
+  color: '#1d3b4e'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: 'Plano general: la sala y su luz'
+  pie_en: 'Wide shot: the hall and its light'
+  credito: Jacob Collier · 2025
+- archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-04
+  w: 1000
+  h: 668
+  color: '#1e3153'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: 'La entrada: brazos abiertos, simetría'
+  pie_en: 'The entrance: open arms, symmetry'
+  credito: Jacob Collier · 2025
+- archivo: img/photo/en-vivo/daniel-patino-en-vivo-2024-05
+  w: 1000
+  h: 668
+  color: '#654641'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Primer plano entre destellos
+  pie_en: Close-up among flares
+  credito: Daniel Patiño · 2024
+- archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-06
+  w: 1000
+  h: 668
+  color: '#16344e'
+  formato: detalle
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: 'Respiro con humor: los zapatos'
+  pie_en: 'A breath of humor: the shoes'
+  credito: Jacob Collier · 2025
+- archivo: img/photo/en-vivo/daniel-patino-en-vivo-2024-07
+  w: 1000
+  h: 668
+  color: '#545454'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: 'Blanco y negro: la luz manda'
+  pie_en: 'Black and white: light takes over'
+  credito: Daniel Patiño · 2024
+- archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-08
+  w: 1000
+  h: 668
+  color: '#393939'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: 'Salto: sube la energía'
+  pie_en: 'The leap: energy rises'
+  credito: Jacob Collier · 2025
+- archivo: img/photo/en-vivo/fabi-arroyo-en-vivo-2026-09
+  w: 1000
+  h: 667
+  color: '#143669'
+  formato: detalle
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: 'Detalle: una mano contra el LED'
+  pie_en: 'Detail: a hand against the LED'
+  credito: Fabi Arroyo · 2026
+- archivo: img/photo/en-vivo/daniel-patino-en-vivo-2024-10
+  w: 668
+  h: 1000
+  color: '#2d5d7a'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: 'Tu firma: remolino hecho en cámara'
+  pie_en: 'Signature: an in-camera swirl'
+  credito: Daniel Patiño · 2024
+- archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-11
+  w: 668
+  h: 1000
+  color: '#2e3642'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: El grito, en vertical
+  pie_en: The shout, in vertical
+  credito: Jacob Collier · 2025
+- archivo: img/photo/en-vivo/daniel-patino-en-vivo-2024-12
+  w: 1000
+  h: 668
+  color: '#103758'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: 'Tu firma II: el prisma multiplica'
+  pie_en: 'Signature II: the prism multiplies'
+  credito: Daniel Patiño · 2024
+- archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-13
+  w: 1000
+  h: 668
+  color: '#323232'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: 'Pausa: la batuta en contraluz'
+  pie_en: 'Pause: the baton, backlit'
+  credito: Jacob Collier · 2025
+- archivo: img/photo/en-vivo/arturo-pardo-en-vivo-2025-14
+  w: 1000
+  h: 668
+  color: '#3c2419'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: El público enciende la sala
+  pie_en: The audience lights up the room
+  credito: Arturo Pardo · 2025
+- archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-15
+  w: 1000
+  h: 668
+  color: '#232b3b'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: 'Clímax: artista, orquesta y manos'
+  pie_en: 'Climax: artist, orchestra and hands'
+  credito: Jacob Collier · 2025
+- archivo: img/photo/en-vivo/arturo-pardo-en-vivo-2025-16
+  w: 1000
+  h: 668
+  color: '#402e25'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: 'Cierre: dos siluetas miran la luz'
+  pie_en: 'Ending: two silhouettes watch the light'
+  credito: Arturo Pardo · 2025

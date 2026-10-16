@@ -1,0 +1,62 @@
+# Textos generales del sitio (español / inglés). Editable desde Pages CMS.
+nombre: Jose Pablo García
+nombre_alterno: [José Pablo García, Jose Pablo Garcia, "Jose Pablo García · PERSONA"]
+url: https://personacr.github.io/personaweb
+frase_es: Narrador visual para la música, la escena y el cine.
+frase_en: Visual storyteller for music, stage and film.
+lugar_es: Costa Rica · Disponible para giras y festivales
+lugar_en: Costa Rica · Available for tours and festivals
+manifiesto_es: La magia de lo cotidiano y el poder del subconsciente para crear.
+manifiesto_en: The magic of everyday life and the power of the subconscious to create.
+bio_corta_es: Cineasta independiente costarricense con más de 15 años de experiencia en cine, fotografía, televisión, creación de contenido y artes escénicas.
+bio_corta_en: Costa Rican independent filmmaker with over 15 years of experience at the intersection of cinema, photography, TV, content creation and performing arts.
+email: josepablo@persona.cr
+whatsapp: "50688433789"
+instagram: https://www.instagram.com/persona.cr
+vimeo: https://vimeo.com/personacr
+linkedin: https://www.linkedin.com/in/josepablogarcia/
+bio: https://bio.persona.cr
+formspree: https://formspree.io/f/mojoqqqn
+ga4: G-TY6Y414RXR
+servicios:
+  - titulo_es: Música en vivo & giras
+    titulo_en: Live music & tours
+    texto_es: Foto y video de conciertos, giras y festivales, del camerino al último aplauso.
+    texto_en: Concert, tour and festival photo and video, from the dressing room to the final bow.
+    enlace: photo/en-vivo/
+  - titulo_es: Cine & video
+    titulo_en: Film & video
+    texto_es: Dirección, fotografía y edición de videoclips, cortos, reels y contenido de marca.
+    texto_en: Direction, cinematography and editing for music videos, shorts, reels and brand content.
+    enlace: motion/
+  - titulo_es: Artes escénicas
+    titulo_en: Performing arts
+    texto_es: Fotografía de teatro y danza (afiche, ensayo y función) y dirección escénica.
+    texto_en: Theatre and dance photography (poster, rehearsal, performance) and stage direction.
+    enlace: stage/
+  - titulo_es: Marcas & eventos
+    titulo_en: Brands & events
+    texto_es: Cobertura de eventos, espacios y campañas, con mirada de cine.
+    texto_en: Events, spaces and campaigns, shot with a filmmaker's eye.
+    enlace: photo/marcas/
+destacados:   # Home · Trabajo seleccionado (franjas panorámicas)
+  - {imagen: img/photo/en-vivo/jacob-collier-en-vivo-2025-04, credito: Jacob Collier — En vivo · 2025, enlace: photo/en-vivo/, pos: 50% 35%}
+  - {imagen: img/photo/teatro/sala-de-espera-teatro-2026-04, credito: Sala de Espera — Teatro · 2026, enlace: photo/teatro/, pos: 50% 40%}
+  - {imagen: img/photo/en-vivo/daniel-patino-en-vivo-2024-12, credito: Daniel Patiño — En vivo · 2024, enlace: photo/en-vivo/, pos: 50% 40%}
+  - {imagen: img/photo/movimiento/festival-reves-movimiento-2026-14, credito: Festival Revés — Movimiento · 2026, enlace: photo/movimiento/, pos: 50% 45%}
+  - {imagen: img/photo/arte/parallel-perceptions-arte-02, credito: Parallel Perceptions — Arte, enlace: photo/arte/, pos: 50% 50%}
+clientes:
+  - {logo: img/clientes/grupo-del-este.png, nombre: Grupo del Este}
+  - {logo: img/clientes/ampm.png, nombre: ampm}
+  - {logo: img/clientes/hyatt-place.png, nombre: Hyatt Place}
+  - {logo: img/clientes/incae.png, nombre: INCAE Business School}
+  - {logo: img/clientes/centro-cultural.png, nombre: Centro Cultural Costarricense Norteamericano}
+  - {logo: img/clientes/festival-ballet-san-jose.png, nombre: Festival de Ballet San José}
+  - {logo: img/clientes/reves.png, nombre: Revés}
+  - {logo: img/clientes/andamio.png, nombre: Andamio Escuela de Movimiento}
+  - {logo: img/clientes/flamenco-naranjo.png, nombre: Flamenco Naranjo}
+  - {logo: img/clientes/los-innato.png, nombre: Los Innato}
+  - {logo: img/clientes/arturo-pardo.png, nombre: Arturo Pardo y Viceversa}
+  - {logo: img/clientes/maracuya.svg, nombre: Maracuyá}
+  - {logo: img/clientes/fresh-market.png, nombre: Fresh Market}
+clientes_sin_logo: [Hernán Jiménez]

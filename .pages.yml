@@ -1,0 +1,31 @@
+# Configuración de Pages CMS (app.pagescms.org). Solo muestra campos de contenido: no toca el diseño.
+media:
+  input: img
+  output: img
+content:
+  - name: photo
+    label: Photo · capítulos
+    type: collection
+    path: contenido/photo
+    format: yaml
+    filename: "{fields.slug}.yml"
+    fields:
+      - { name: titulo_es, label: Título (ES), type: string }
+      - { name: titulo_en, label: Título (EN), type: string }
+      - { name: intro_es, label: Introducción (ES), type: text }
+      - { name: intro_en, label: Introducción (EN), type: text }
+      - { name: portada, label: Portada (ruta sin -1000.webp), type: string }
+      - name: fotos
+        label: Fotos (en orden)
+        type: object
+        list: true
+        fields:
+          - { name: archivo, label: Archivo, type: string }
+          - { name: formato, label: Formato, type: select, options: { values: [completa, par, detalle] } }
+          - { name: pie_es, label: Pie (ES), type: string }
+          - { name: pie_en, label: Pie (EN), type: string }
+          - { name: credito, label: Crédito, type: string }
+  - { name: sitio, label: Textos generales, type: file, path: contenido/sitio.yml, format: yaml }
+  - { name: motion, label: Motion, type: file, path: contenido/motion.yml, format: yaml }
+  - { name: stage, label: Stage, type: file, path: contenido/stage.yml, format: yaml }
+  - { name: music, label: Music, type: file, path: contenido/music.yml, format: yaml }

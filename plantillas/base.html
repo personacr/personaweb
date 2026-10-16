@@ -1,0 +1,66 @@
+{#- Molde común: navegación, pie, SEO y scripts. No se edita desde Pages CMS. -#}
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description }}">
+<link rel="canonical" href="{{ site.url }}/{{ page.path }}">
+<link rel="alternate" hreflang="es" href="{{ site.url }}/{{ page.path_es }}">
+<link rel="alternate" hreflang="en" href="{{ site.url }}/{{ page.path_en }}">
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}/{{ page.path_es }}">
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ page.description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.url }}/{{ page.path }}">
+<meta property="og:image" content="{{ site.url }}/{{ page.og or 'img/og-image.jpg' }}">
+<meta property="og:locale" content="{{ 'es_CR' if lang == 'es' else 'en_US' }}">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='24' font-style='italic' fill='%234FB3E8' text-anchor='middle'%3Ea%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=zodiak@300,400,300i&f[]=switzer@400,500,600&display=swap">
+<link rel="stylesheet" href="{{ R }}styles.css">
+<script>document.documentElement.classList.add('js')</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga4 }}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','{{ site.ga4 }}');</script>
+<script type="application/ld+json">{{ page.schema | tojson }}</script>
+</head>
+<body>
+<nav class="nav" aria-label="{{ t.menu }}">
+  <div class="nav-inner">
+    <a class="wordmark" href="{{ R }}{{ P }}">person<span class="l">a</span></a>
+    <button class="burger" id="burger" aria-label="{{ t.menu }}" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      {%- for k, label in t.nav %}
+      <li><a href="{{ R }}{{ P }}{{ k }}/"{% if page.section == k %} class="active" aria-current="page"{% endif %}>{{ label }}</a></li>
+      {%- endfor %}
+      <li class="lang">{% if lang == 'es' %}<b>ES</b> · <a href="{{ R }}{{ page.path_en }}" hreflang="en" lang="en">EN</a>{% else %}<a href="{{ R }}{{ page.path_es }}" hreflang="es" lang="es">ES</a> · <b>EN</b>{% endif %}</li>
+    </ul>
+  </div>
+</nav>
+
+{% block body %}{% endblock %}
+
+<footer class="footer">
+  <div class="footer-in">
+    <a class="wordmark" href="{{ R }}{{ P }}">person<span class="l">a</span></a>
+    <nav aria-label="{{ t.menu }}">
+      {%- for k, label in t.nav %}<a href="{{ R }}{{ P }}{{ k }}/">{{ label }}</a>{% endfor -%}
+      <a href="{{ site.instagram }}" rel="noopener">Instagram</a><a href="{{ site.vimeo }}" rel="noopener">Vimeo</a><a href="{{ site.linkedin }}" rel="noopener">LinkedIn</a><a href="https://wa.me/{{ site.whatsapp }}" rel="noopener">WhatsApp</a>
+    </nav>
+    <p class="footer-meta">{{ site.nombre }} · Costa Rica · © {{ year }} · <a href="{{ site.bio }}">bio.persona.cr</a></p>
+  </div>
+</footer>
+{% if page.section != 'contacto' %}<a class="btn blue float-cta" href="{{ R }}{{ P }}contacto/">{{ t.write }}</a>{% endif %}
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="{{ t.photo }}">
+  <button class="x" type="button" id="lb-x">{{ t.close }}</button>
+  <button class="pv" type="button" id="lb-p" aria-label="{{ t.prev }}">‹</button>
+  <img id="lb-img" alt="">
+  <p id="lb-c"></p>
+  <button class="nx" type="button" id="lb-n" aria-label="{{ t.next }}">›</button>
+</div>
+<script src="{{ R }}site.js" defer></script>
+</body>
+</html>

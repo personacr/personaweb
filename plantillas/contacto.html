@@ -1,0 +1,24 @@
+{% extends "base.html" %}{% from "macros.html" import L with context %}
+{% block body %}
+<main class="wrap">
+  <header class="page-top">
+    <p class="eyebrow">{{ site['lugar_' ~ lang] }}</p>
+    <h1 class="display">{{ L(t.contact_title) }}</h1>
+    <p class="lead">{{ t.contact_lead }}</p>
+  </header>
+  <div class="about" style="grid-template-columns:1fr 1.4fr">
+    <div class="direct">
+      <a href="https://wa.me/{{ site.whatsapp }}" rel="noopener"><small>WhatsApp</small>+506 8843 3789</a>
+      <a href="mailto:{{ site.email }}"><small>{{ t.email }}</small>{{ site.email }}</a>
+      <a href="{{ site.instagram }}" rel="noopener"><small>Instagram</small>@persona.cr</a>
+    </div>
+    <form class="form" action="{{ site.formspree }}" method="POST" id="contact-form">
+      <label for="f-name">{{ t.f_name }}<input id="f-name" name="nombre" required autocomplete="name"></label>
+      <label for="f-mail">Email<input id="f-mail" name="email" type="email" required autocomplete="email"></label>
+      <label for="f-type">{{ t.f_type }}<select id="f-type" name="tipo">{% for o in t.f_types %}<option>{{ o }}</option>{% endfor %}</select></label>
+      <label for="f-msg">{{ t.f_msg }}<textarea id="f-msg" name="mensaje" required></textarea></label>
+      <button class="btn blue" type="submit" style="justify-self:start">{{ t.f_send }}</button>
+    </form>
+  </div>
+</main>
+{% endblock %}

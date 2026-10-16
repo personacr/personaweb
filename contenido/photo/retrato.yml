@@ -1,0 +1,132 @@
+# Capítulo de Photo. Editable desde Pages CMS.
+# formato: completa | par | detalle  ·  las fotos van en el orden de esta lista
+orden: 4
+numero: IV
+slug: retrato
+slug_en: portrait
+titulo_es: Retrato
+titulo_en: Portrait
+intro_es: 'Personas en su lugar: músicos, parejas y desconocidos, con luz de cine.'
+intro_en: 'People in their place: musicians, couples and strangers, lit like cinema.'
+portada: img/photo/retrato/retrato-2025-07
+fotos:
+- archivo: img/photo/retrato/retrato-2025-01
+  w: 668
+  h: 1000
+  color: '#3e4749'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Chelista en la ventana del palacio
+  pie_en: Cellist at the palace window
+  credito: '2025'
+- archivo: img/photo/retrato/retrato-2025-02
+  w: 668
+  h: 1000
+  color: '#2d292d'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Chelista en estudio
+  pie_en: Cellist in the studio
+  credito: '2025'
+- archivo: img/photo/retrato/retrato-2025-03
+  w: 668
+  h: 1000
+  color: '#4f4948'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Reflejo en la tapa del piano
+  pie_en: Reflection on the piano lid
+  credito: '2025'
+- archivo: img/photo/retrato/retrato-2025-04
+  w: 668
+  h: 1000
+  color: '#726864'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: El trío en el salón dorado
+  pie_en: The trio in the golden hall
+  credito: '2025'
+- archivo: img/photo/retrato/retrato-2019-05
+  w: 1000
+  h: 667
+  color: '#4d4e33'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Mirada directa (venía de PERSONAL)
+  pie_en: Direct gaze
+  credito: '2019'
+- archivo: img/photo/retrato/retrato-06
+  w: 1000
+  h: 800
+  color: '#1f2732'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Espalda y luz lateral
+  pie_en: Back and side light
+  credito: ''
+- archivo: img/photo/retrato/retrato-2025-07
+  w: 1000
+  h: 668
+  color: '#7e8086'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Enmarcado por la espiral
+  pie_en: Framed by the spiral
+  credito: '2025'
+- archivo: img/photo/retrato/retrato-08
+  w: 1000
+  h: 667
+  color: '#5a4f50'
+  formato: completa
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Luz de ventana, día de boda
+  pie_en: Window light, wedding day
+  credito: ''
+- archivo: img/photo/retrato/retrato-2023-09
+  w: 668
+  h: 1000
+  color: '#8d8d8d'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Manos y reflejo, B/N
+  pie_en: Hands and reflection, B&W
+  credito: '2023'
+- archivo: img/photo/retrato/retrato-2023-10
+  w: 668
+  h: 1000
+  color: '#595959'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: La casa antes de la ceremonia, B/N
+  pie_en: The house before the ceremony, B&W
+  credito: '2023'
+- archivo: img/photo/retrato/retrato-2023-11
+  w: 668
+  h: 1000
+  color: '#938a85'
+  formato: detalle
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: La risa que no se dirige
+  pie_en: Laughter nobody directs
+  credito: '2023'
+- archivo: img/photo/retrato/retrato-2026-12
+  w: 667
+  h: 1000
+  color: '#707374'
+  formato: detalle
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: 'Cierre: silueta frente al valle'
+  pie_en: 'Ending: silhouette before the valley'
+  credito: '2026'
