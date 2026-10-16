@@ -158,6 +158,8 @@ content:
       - { name: frase_en, label: Frase principal (EN), type: string }
       - { name: lugar_es, label: Línea de ubicación (ES), type: string }
       - { name: lugar_en, label: Línea de ubicación (EN), type: string }
+      - { name: rol_es, label: Línea sobre la frase principal (ES), type: string }
+      - { name: rol_en, label: Línea sobre la frase principal (EN), type: string }
       - { name: manifiesto_es, label: Manifiesto (ES · hoy no se muestra en el sitio), type: string }
       - { name: manifiesto_en, label: Manifiesto (EN · hoy no se muestra en el sitio), type: string }
       - { name: cierre_es, label: Frase de cierre antes del contacto (ES), type: string }

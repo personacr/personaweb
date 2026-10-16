@@ -141,8 +141,8 @@ for lang in ('es', 'en'):
     es = lang == 'es'
     pagina('home.html', '', 'en/', lang, '',
            f"{N} · PERSONA — " + ('Cineasta y fotógrafo, Costa Rica' if es else 'Filmmaker & Photographer'),
-           'Cineasta, fotógrafo y director escénico costarricense. Fotografía de conciertos, danza y teatro; videoclips, cortos y dirección escénica. Disponible para giras y festivales.' if es else
-           'Costa Rican filmmaker, photographer and stage director. Concert, dance and theatre photography; music videos, short films and stage direction. Available for tours and festivals.',
+           'Cineasta, fotógrafo y director escénico costarricense. Fotografía de conciertos, danza y teatro; videoclips, cortos y dirección escénica. Narrador visual.' if es else
+           'Costa Rican filmmaker, photographer and stage director. Concert, dance and theatre photography; music videos, short films and stage direction. Visual storyteller.',
            extra=dict(mosaico=mosaico(lang), puertas=puertas(lang)))
     pagina('photo.html', 'photo/', 'en/photo/', lang, 'photo',
            f"{'Fotografía de conciertos, danza y teatro' if es else 'Concert, Dance & Theatre Photography'} · {N}",

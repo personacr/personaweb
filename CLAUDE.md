@@ -17,6 +17,7 @@ Memoria del proyecto. Leelo completo antes de cambiar algo.
 - Negro #000 · hueso #F4F2ED · niebla #7A7875 / #A8A5A0 · azul #4FB3E8 (solo como «luz»: última letra, activo, foco).
 - **Tipografías: Zodiak 300 (títulos) + Switzer (texto)**, de Fontshare. Elegidas para no parecerse a sitios genéricos: NO usar Fraunces, Plus Jakarta, Inter, Instrument Serif, Playfair, Space Grotesk, DM Sans, Satoshi.
 - **Wordmark:** `person<span class="l">a</span>` — «a» latina itálica azul. **Ya no se usa la α griega** (se parecía a Sony α).
+- Espacio entre fotos mínimo (`--gap` 3–4 px) en todo el sitio. Sobre la frase principal va «Narrador visual» (campo `rol_es`).
 - Títulos en minúsculas con la última letra itálica azul. Fotos sin borde, esquinas rectas, formato original. Portadas panorámicas 2,39:1.
 
 ## Tono de los textos
@@ -24,7 +25,7 @@ Memoria del proyecto. Leelo completo antes de cambiar algo.
 - **Las fotos no llevan textos encima** (ni al pasar el mouse ni en la galería ampliada). `pie_es`/`pie_en` existen solo como descripción para Google y lectores de pantalla: describí lo que se ve, sin notas internas.
 
 ## Portada (inicio), en este orden
-1. Video/foto principal · 2. Mosaico de fotos sin título (`mosaico` en sitio.yml) · 3. Tres «salas»: bandas panorámicas numeradas Motion / Photo / Stage · 4. Servicios (lista con foto) · 5. Frase de cierre + contacto · 6. **Clientes, siempre lo último** (cuadrícula de logos; se llama «clientes», no «créditos»).
+1. Video/foto principal · 2. Mosaico de fotos sin título (`mosaico` en sitio.yml) · 3. Tres «salas»: bandas panorámicas numeradas Motion / Photo / Stage · 4. Servicios (lista con foto) · 5. Frase de cierre + contacto · 6. **Clientes, siempre lo último** (logos sueltos, sin líneas de tabla; se llama «clientes», no «créditos»).
 
 ## Fotos
 - Cada foto en 3 tamaños WebP: `nombre-640.webp`, `-1280.webp`, `-2048.webp`. En los .yml se escribe la ruta SIN sufijo.

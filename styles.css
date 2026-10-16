@@ -15,9 +15,9 @@
   --ease:cubic-bezier(.2,.65,.2,1);
   --wide:1520px; --text:620px;
   --gut:max(14px,env(safe-area-inset-left,0px));
-  --gap:6px; --row:260px; --block:72px;
+  --gap:3px; --row:260px; --block:72px;
 }
-@media(min-width:900px){:root{--gut:32px;--gap:8px}}
+@media(min-width:900px){:root{--gut:32px;--gap:4px}}
 @media(max-width:1100px){:root{--row:210px}}
 @media(max-width:700px){:root{--row:150px;--block:48px}}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -87,6 +87,7 @@ button{font:inherit;color:inherit}
 .bars::before{top:0;transform-origin:top}.bars::after{bottom:0;transform-origin:bottom}
 @keyframes bars{from{transform:scaleY(1)}to{transform:scaleY(0)}}
 .hero-in{position:relative;z-index:4;width:100%;max-width:var(--wide);margin:0 auto;padding:0 var(--gut) clamp(32px,7vh,72px);display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.hero-eye{color:var(--bone);margin-bottom:10px;animation:rise 1.2s var(--ease) .9s both}
 .hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(28px,3.7vw,54px);line-height:1.04;max-width:13em;text-wrap:balance;animation:rise 1.2s var(--ease) 1s both}
 .hero .credit{color:var(--accent);margin-top:14px;animation:rise 1.2s var(--ease) 1.2s both}
 .hero .btns{animation:rise 1.2s var(--ease) 1.35s both}
@@ -179,8 +180,8 @@ a.it{cursor:pointer}
 
 /* Clientes: cuadrícula de logos, al final */
 .clients{padding-top:var(--block)}
-.logos{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(31%,190px),1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.logos li{display:grid;place-items:center;height:clamp(84px,8vw,112px);padding:12px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.logos{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(31%,170px),1fr));gap:8px 24px;padding-top:8px}
+.logos li{display:grid;place-items:center;height:clamp(84px,8vw,112px);padding:12px}
 .logos img{height:34px;width:auto;max-width:78%;object-fit:contain;opacity:.6;transition:opacity .3s}
 .logos img.tall{height:60px}
 .logos li:hover img{opacity:1}
