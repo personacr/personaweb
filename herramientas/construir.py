@@ -47,7 +47,7 @@ def puertas(lang):
     return [
         dict(k='motion', n='01', area=t['areas'][0], img='img/motion/banner/banner.webp', pos='50% 50%',
              meta=f"{len(motion['proyectos'])} {t['n_projects']} · {n_reels} reels"),
-        dict(k='photo', n='02', area=t['areas'][1], img='img/photo/en-vivo/arturo-pardo-en-vivo-2025-14-2048.webp', pos='50% 62%',
+        dict(k='photo', n='02', area=t['areas'][1], img='img/photo/movimiento/movimiento-2019-10-2048.webp', pos='50% 58%',
              meta=f"{len(capitulos)} {t['n_chapters']} · {fotos} {'fotos' if lang == 'es' else 'photos'}"),
         dict(k='stage', n='03', area=t['areas'][2], img='img/stage/banner/banner.webp', pos='50% 50%',
              meta=f"{len(stage['proyectos'])} {t['n_productions']}"),
