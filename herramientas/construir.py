@@ -84,7 +84,8 @@ T = {
   about_title='sobre mí', contact_title='contacto', contact_lead='Contame de tu proyecto: gira, concierto, obra, película o marca.',
   email='Correo', f_name='Nombre', f_type='Tipo de proyecto', f_msg='Mensaje', f_send='Enviar mensaje',
   f_types=['Música en vivo / gira','Cine o video','Contenido para redes','Teatro o danza','Marca o evento','Otro'],
-  areas=['Cine & video', 'Fotografía', 'Artes escénicas'], n_projects='proyectos', n_chapters='capítulos', n_productions='producciones'),
+  areas=['Cine & video', 'Fotografía', 'Artes escénicas'], n_projects='proyectos', n_chapters='capítulos', n_productions='producciones',
+  galleries='Galerías de clientes'),
  'en': dict(
   nav=[('motion','Motion'),('photo','Photo'),('stage','Stage'),('about','About'),('contact','Contact')],
   contact_slug='contact', menu='Menu', write='Get in touch', photo='Enlarged photo', close='Close', prev='Previous', next='Next',
@@ -99,7 +100,8 @@ T = {
   about_title='about', contact_title='contact', contact_lead='Tell me about your project: tour, concert, play, film or brand.',
   email='Email', f_name='Name', f_type='Project type', f_msg='Message', f_send='Send message',
   f_types=['Live music / tour','Film or video','Social media content','Theatre or dance','Brand or event','Other'],
-  areas=['Film & video', 'Photography', 'Performing arts'], n_projects='projects', n_chapters='chapters', n_productions='productions'),
+  areas=['Film & video', 'Photography', 'Performing arts'], n_projects='projects', n_chapters='chapters', n_productions='productions',
+  galleries='Client galleries'),
 }
 ES2EN = {c['slug']: c['slug_en'] for c in capitulos}
 def en_path(p):
@@ -122,11 +124,12 @@ paginas = []
 # Qué tipo de proyecto llega elegido al tocar «Escribime» desde cada página (posición en f_types)
 TIPO = {'motion/': 1, 'stage/': 3, 'photo/en-vivo/': 0, 'photo/movimiento/': 3, 'photo/teatro/': 3, 'photo/marcas/': 4}
 VISTA = os.environ.get('VISTA') == '1'
+GALERIAS = 'https://galerias.persona.cr'  # galerías privadas de clientes (proyecto aparte: persona-galerias)
 def pagina(plantilla, ruta_es, ruta_en, lang, seccion, titulo, desc, extra=None, schema=None, og=None):
     ruta = ruta_es if lang == 'es' else ruta_en
     og = og or f"img/og/{seccion if seccion in ('photo', 'motion', 'stage') else 'home'}-{OG}.jpg"
     prof = ruta.count('/')
-    ctx = dict(site=site, t=T[lang], lang=lang, R='../' * prof, P='' if lang == 'es' else 'en/', thumbs=thumbs, ig=IG, hero_video=HERO_VIDEO, year=datetime.date.today().year,
+    ctx = dict(site=site, t=T[lang], lang=lang, galerias=GALERIAS, R='../' * prof, P='' if lang == 'es' else 'en/', thumbs=thumbs, ig=IG, hero_video=HERO_VIDEO, year=datetime.date.today().year,
                m=motion, s=stage, capitulos=capitulos,
                page=dict(title=titulo, description=desc, path=ruta, path_es=ruta_es, path_en=ruta_en, section=seccion, og=og, tipo=TIPO.get(ruta_es),
                          schema={'@context': 'https://schema.org', '@graph': [PERSON, ORG] + (schema or [])}))

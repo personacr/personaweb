@@ -54,7 +54,7 @@
       {%- for k, label in t.nav %}<a href="{{ R }}{{ P }}{{ k }}/">{{ label }}</a>{% endfor -%}
       <a href="{{ site.instagram }}" rel="noopener">Instagram</a><a href="{{ site.vimeo }}" rel="noopener">Vimeo</a><a href="{{ site.linkedin }}" rel="noopener">LinkedIn</a><a href="https://wa.me/{{ site.whatsapp }}" rel="noopener">WhatsApp</a>
     </nav>
-    <p class="footer-meta">{{ site.nombre }} · Costa Rica · © {{ year }} · <a href="{{ site.bio }}">bio.persona.cr</a></p>
+    <p class="footer-meta">{{ site.nombre }} · Costa Rica · © {{ year }} · <a href="{{ site.bio }}">bio.persona.cr</a> · <a href="{{ galerias }}" rel="nofollow">{{ t.galleries }}</a></p>
   </div>
 </footer>
 {% if page.section not in ('contacto', 'contact') %}<a class="btn blue float-cta" href="{{ R }}{{ P }}{{ t.contact_slug }}/{% if page.tipo is not none %}?tipo={{ page.tipo }}{% endif %}">{{ t.write }}</a>{% endif %}

@@ -55,3 +55,9 @@ Memoria del proyecto. Leelo completo antes de cambiar algo.
 ## Vista al compartir (WhatsApp, Facebook)
 - Cada página tiene su imagen 1200×630 en `img/og/<página>-v2.jpg` (foto + wordmark + nombre). Se generan con `python3 herramientas/og.py CARPETA_FUENTES [ruta-a-personabio]`.
 - WhatsApp guarda la imagen vieja: si cambiás las imágenes, subí la versión (`V` en og.py y `OG` en construir.py) para que cambie el nombre del archivo. Facebook se refresca en developers.facebook.com/tools/debug.
+
+## Galerías de clientes (galerias.persona.cr)
+- Sistema propio de entrega de fotos a clientes (reemplaza a Pixieset). **Proyecto aparte**, en el repo privado `persona-galerias` (Cloudflare Pages + D1 + R2). Nada de esto vive en este repo público.
+- Usa el mismo sistema «Sala oscura» (tokens, Zodiak + Switzer, wordmark, mosaico parejo, galería ampliada). Si cambiás tokens o piezas en `styles.css`, avisá que hay que actualizar `public/assets/gallery.css` de persona-galerias.
+- Desde este sitio solo hay un enlace discreto en el pie: «Galerías de clientes» → `GALERIAS` en construir.py.
+- Rama `demo-galerias`: demo para revisar en raw.githack.com con fotos de Sala de Espera. **Nunca va a main.**
