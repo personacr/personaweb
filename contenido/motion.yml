@@ -13,13 +13,13 @@ proyectos:
   sinopsis_en: Travel series created, written and directed by Jose Pablo García.
   videos:
   - plataforma: youtube
-    id: ImkZIvtrLjU
-    formato: horizontal
-    titulo: Tráiler · Temporada 1
-  - plataforma: youtube
     id: J74H-5ccmfQ
     formato: horizontal
     titulo: Tráiler · Temporada 2
+  - plataforma: youtube
+    id: ImkZIvtrLjU
+    formato: horizontal
+    titulo: Tráiler · Temporada 1
   banda_sonora:
   - titulo: Banda sonora · Temporada 2
     tipo: album
