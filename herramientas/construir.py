@@ -26,13 +26,17 @@ for c in capitulos:
     c['muestra'] = (port + [f for f in c['fotos'] if f['archivo'] != c['portada']])[:7]
 POR_SLUG = {c['slug']: c for c in capitulos}
 
-for cl in site.get('clientes', []):  # logos casi cuadrados se muestran un poco más altos para que pesen igual
+for cl in site.get('clientes', []):  # tamaño por «peso visual»: los logos anchos van más bajos, los compactos o finos más altos
     if cl['logo'].endswith('.svg'):
         m = re.search(r'viewBox="[\d.]+ [\d.]+ ([\d.]+) ([\d.]+)"', open(cl['logo'], encoding='utf-8').read())
-        w, h = (float(m.group(1)), float(m.group(2))) if m else (2, 1)
+        w, h = (float(m.group(1)), float(m.group(2))) if m else (2, 1); tinta = 0.3
     else:
-        w, h = Image.open(cl['logo']).size
-    cl['alto'] = w / h < 1.2
+        im = Image.open(cl['logo']).convert('RGBA'); w, h = im.size
+        tinta = sum(im.getchannel('A').resize((64, 64)).tobytes()) / (255 * 64 * 64)
+    r = w / h
+    alto = (2172 / (r * max(tinta, 0.08) ** 0.5)) ** 0.5
+    alto = max(22, min(70, alto, 150 / r))
+    cl['alto'] = round(alto)
 
 def medir(base):
     im = Image.open(base + '-640.webp').convert('RGB')
@@ -42,23 +46,17 @@ IG = {os.path.basename(p)[:-5] for p in glob.glob('img/motion/ig/*.webp')}
 HERO_VIDEO = os.path.exists('img/home/hero.mp4')
 
 def puertas(lang):
-    t = T[lang]; n_reels = len(motion.get('reels', []))
-    fotos = sum(len(c['fotos']) for c in capitulos)
-    return [
-        dict(k='motion', n='01', area=t['areas'][0], img='img/motion/banner/banner.webp', pos='50% 50%',
-             meta=f"{len(motion['proyectos'])} {t['n_projects']} · {n_reels} reels"),
-        dict(k='photo', n='02', area=t['areas'][1], img='img/photo/movimiento/movimiento-2019-10-2048.webp', pos='50% 58%',
-             meta=f"{len(capitulos)} {t['n_chapters']} · {fotos} {'fotos' if lang == 'es' else 'photos'}"),
-        dict(k='stage', n='03', area=t['areas'][2], img='img/stage/banner/banner.webp', pos='50% 50%',
-             meta=f"{len(stage['proyectos'])} {t['n_productions']}"),
-    ]
+    a = T[lang]['areas']  # íconos por disciplina, los mismos de la Bio
+    return [dict(k='motion', n='01', icono='▭', area=a[0], img='img/motion/banner/banner.webp', pos='50% 50%'),
+            dict(k='photo', n='02', icono='◎', area=a[1], img='img/photo/movimiento/movimiento-2019-10-2048.webp', pos='50% 58%'),
+            dict(k='stage', n='03', icono='⌒', area=a[2], img='img/stage/banner/banner.webp', pos='50% 50%')]
 
 def mosaico(lang):
     out = []
     for ref in site.get('mosaico', []):
         slug, orden = str(ref).split(':')
         c = POR_SLUG[slug]; f = c['fotos'][int(orden) - 1]
-        out.append(dict(f=f, slug=c['slug'] if lang == 'es' else c['slug_en']))
+        out.append(dict(f=f, slug=c['slug'] if lang == 'es' else c['slug_en'], titulo=c['titulo_' + lang]))
     return out
 
 def stills(lang):
@@ -75,7 +73,7 @@ T = {
  'es': dict(
   nav=[('motion','Motion'),('photo','Photo'),('stage','Stage'),('sobre-mi','Sobre mí'),('contacto','Contacto')],
   contact_slug='contacto', menu='Menú', write='Escribime', photo='Foto ampliada', close='Cerrar', prev='Anterior', next='Siguiente',
-  explore='Ver trabajo', all_photo='Ver todas las fotos', projects='proyectos', clients='clientes', clients_sub='Con quienes he trabajado',
+  explore='Ver trabajo', all_photo='Ver todas las fotos', projects='proyectos', awards='reconocimientos', clients='clientes', clients_sub='Con quienes he trabajado',
   offer='servicios', offer_sub='Para artistas, productoras, festivales y marcas.', quote='Cotizar', form='Formulario', see_ig='Ver en Instagram', enter='Entrar', photos='fotos', chapters='Capítulos', next_chapter='Siguiente capítulo', quote_project='Cotizar tu proyecto',
   photo_eyebrow='Fotografía', photo_lead='Música en vivo, danza, teatro, retrato, arte, viajes y marcas.',
   motion_eyebrow='Cine & video', motion_lead='Series, películas, cortos, videoclips y reels.',
@@ -90,7 +88,7 @@ T = {
  'en': dict(
   nav=[('motion','Motion'),('photo','Photo'),('stage','Stage'),('about','About'),('contact','Contact')],
   contact_slug='contact', menu='Menu', write='Get in touch', photo='Enlarged photo', close='Close', prev='Previous', next='Next',
-  explore='See work', all_photo='See all photos', projects='projects', clients='clients', clients_sub='People I have worked with',
+  explore='See work', all_photo='See all photos', projects='projects', awards='recognition', clients='clients', clients_sub='People I have worked with',
   offer='services', offer_sub='For artists, production companies, festivals and brands.', quote='Get a quote', form='Contact form', see_ig='Watch on Instagram', enter='Enter', photos='photos', chapters='Chapters', next_chapter='Next chapter', quote_project='Quote your project',
   photo_eyebrow='Photography', photo_lead='Live music, dance, theatre, portrait, fine art, travel and brands.',
   motion_eyebrow='Film & video', motion_lead='Series, films, shorts, music videos and reels.',
@@ -115,24 +113,27 @@ env.filters['en_path'] = en_path
 PERSON = {'@type': 'Person', '@id': site['url'] + '/#jpg', 'name': site['nombre'], 'alternateName': site['nombre_alterno'],
           'jobTitle': 'Cineasta, fotógrafo y director escénico', 'nationality': 'Costa Rica', 'image': site['url'] + '/img/about/jose-pablo-garcia-1280.webp',
           'knowsAbout': ['Fotografía de conciertos', 'Fotografía de danza', 'Fotografía de teatro', 'Dirección de fotografía', 'Videoclips', 'Dirección escénica'],
-          'sameAs': [site['instagram'], site['vimeo'], site['linkedin'], site['bio']], 'brand': {'@id': site['url'] + '/#persona'}}
+          'sameAs': [site['instagram'], site['vimeo'], site['linkedin'], site['bio']], 'brand': {'@id': site['url'] + '/#persona'},
+          'award': [r['texto_en'] for r in site.get('reconocimientos', [])]}
 ORG = {'@type': 'ProfessionalService', '@id': site['url'] + '/#persona', 'name': 'PERSONA', 'founder': {'@id': site['url'] + '/#jpg'},
        'url': site['url'] + '/', 'areaServed': ['Costa Rica', 'Centroamérica'], 'email': site['email']}
 
 paginas = []
+# Qué tipo de proyecto llega elegido al tocar «Escribime» desde cada página (posición en f_types)
+TIPO = {'motion/': 1, 'stage/': 3, 'photo/en-vivo/': 0, 'photo/movimiento/': 3, 'photo/teatro/': 3, 'photo/marcas/': 4}
 VISTA = os.environ.get('VISTA') == '1'
 def pagina(plantilla, ruta_es, ruta_en, lang, seccion, titulo, desc, extra=None, schema=None, og=None):
     ruta = ruta_es if lang == 'es' else ruta_en
     prof = ruta.count('/')
     ctx = dict(site=site, t=T[lang], lang=lang, R='../' * prof, P='' if lang == 'es' else 'en/', thumbs=thumbs, ig=IG, hero_video=HERO_VIDEO, year=datetime.date.today().year,
                m=motion, s=stage, capitulos=capitulos,
-               page=dict(title=titulo, description=desc, path=ruta, path_es=ruta_es, path_en=ruta_en, section=seccion, og=og,
+               page=dict(title=titulo, description=desc, path=ruta, path_es=ruta_es, path_en=ruta_en, section=seccion, og=og, tipo=TIPO.get(ruta_es),
                          schema={'@context': 'https://schema.org', '@graph': [PERSON, ORG] + (schema or [])}))
     ctx.update(extra or {})
     os.makedirs(ruta or '.', exist_ok=True)
     html = env.get_template(plantilla).render(**ctx)
     if VISTA:  # vista previa en raw.githack: los enlaces a carpetas necesitan «index.html» explícito
-        html = re.sub(r'href="((?:\.\./)*(?:[\w-]+/)*)"', lambda m: f'href="{m.group(1)}index.html"', html)
+        html = re.sub(r'href="((?:\.\./)*(?:[\w-]+/)*)(\?[^"#]*)?"', lambda m: f'href="{m.group(1)}index.html{m.group(2) or ""}"', html)
     open(os.path.join(ruta, 'index.html'), 'w', encoding='utf-8').write(html)
     paginas.append(ruta)
 

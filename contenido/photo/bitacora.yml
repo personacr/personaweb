@@ -110,6 +110,56 @@ fotos:
   pie_es: Una persona caminando, vista desde un dron
   pie_en: A person walking, seen from a drone
   credito: ''
+- archivo: img/photo/bitacora/bitacora-2025-12
+  w: 4902
+  h: 6134
+  color: '#41474f'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: 'Collage de Londres: San Pablo y el Támesis'
+  pie_en: 'London collage: St Paul’s and the Thames'
+  credito: '2025'
+- archivo: img/photo/bitacora/bitacora-2025-13
+  w: 4902
+  h: 6134
+  color: '#294350'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Collage de Londres de noche
+  pie_en: London collage at night
+  credito: '2025'
+- archivo: img/photo/bitacora/bitacora-2025-14
+  w: 4566
+  h: 5712
+  color: '#48444b'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: 'Collage de Londres: puente, bus y flores'
+  pie_en: 'London collage: bridge, bus and flowers'
+  credito: '2025'
+- archivo: img/photo/bitacora/bitacora-2025-15
+  w: 4902
+  h: 3260
+  color: '#504353'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: 'Collage de Londres: cabina, rueda y río'
+  pie_en: 'London collage: phone box, wheel and river'
+  credito: '2025'
+- archivo: img/photo/bitacora/bitacora-2021-16
+  w: 3685
+  h: 5520
+  color: '#252d2b'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Pareja en un túnel de árboles
+  pie_en: A couple in a tunnel of trees
+  credito: '2021'
 - archivo: img/photo/bitacora/bitacora-2017-11
   w: 1000
   h: 564

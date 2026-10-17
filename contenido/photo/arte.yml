@@ -6,10 +6,70 @@ slug: arte
 slug_en: fine-art
 titulo_es: Arte
 titulo_en: Fine art
-intro_es: Series personales y fotomontajes.
-intro_en: Personal series and photomontages.
+intro_es: Fotomontaje, series personales y foto con texto.
+intro_en: Photomontage, personal series and photo with text.
 portada: img/photo/arte/parallel-perceptions-arte-02
 fotos:
+- archivo: img/photo/arte/hyatt-place-arte-11
+  w: 1000
+  h: 520
+  color: '#40544b'
+  formato: completa
+  grupo_es: Hyatt Place
+  grupo_en: Hyatt Place
+  pie_es: Fotomontaje geométrico de una catarata para Hyatt Place
+  pie_en: Geometric photomontage of a waterfall for Hyatt Place
+  credito: Hyatt Place
+- archivo: img/photo/arte/hyatt-place-arte-12
+  w: 1000
+  h: 520
+  color: '#4e5451'
+  formato: completa
+  grupo_es: Hyatt Place
+  grupo_en: Hyatt Place
+  pie_es: Fotomontaje geométrico de un volcán para Hyatt Place
+  pie_en: Geometric photomontage of a volcano for Hyatt Place
+  credito: Hyatt Place
+- archivo: img/photo/arte/hyatt-place-arte-13
+  w: 769
+  h: 1000
+  color: '#998973'
+  formato: par
+  grupo_es: Hyatt Place
+  grupo_en: Hyatt Place
+  pie_es: Fotomontaje de un árbol para Hyatt Place
+  pie_en: Photomontage of a tree for Hyatt Place
+  credito: Hyatt Place
+- archivo: img/photo/arte/hyatt-place-arte-14
+  w: 818
+  h: 1000
+  color: '#46433d'
+  formato: par
+  grupo_es: Hyatt Place
+  grupo_en: Hyatt Place
+  pie_es: Fotomontaje geométrico de Bajos del Toro para Hyatt Place
+  pie_en: Geometric photomontage of Bajos del Toro for Hyatt Place
+  credito: Hyatt Place
+- archivo: img/photo/arte/hyatt-place-arte-15
+  w: 750
+  h: 1000
+  color: '#4c4a39'
+  formato: par
+  grupo_es: Hyatt Place
+  grupo_en: Hyatt Place
+  pie_es: Caleidoscopio de Bajos del Toro para Hyatt Place
+  pie_en: Kaleidoscope of Bajos del Toro for Hyatt Place
+  credito: Hyatt Place
+- archivo: img/photo/arte/hyatt-place-arte-16
+  w: 750
+  h: 1000
+  color: '#27302b'
+  formato: par
+  grupo_es: Hyatt Place
+  grupo_en: Hyatt Place
+  pie_es: Fotomontaje de cuadros y una flor para Hyatt Place
+  pie_en: Photomontage of squares and a flower for Hyatt Place
+  credito: Hyatt Place
 - archivo: img/photo/arte/parallel-perceptions-arte-01
   w: 1000
   h: 563
@@ -110,83 +170,49 @@ fotos:
   pie_es: Dos figuras contra la pared de un parqueo, serie Los Innato
   pie_en: Two figures against a parking-garage wall, Los Innato series
   credito: '2021'
-- archivo: img/photo/arte/hyatt-place-arte-11
-  w: 1000
-  h: 520
-  color: '#40544b'
-  formato: completa
-  grupo_es: Hyatt Place
-  grupo_en: Hyatt Place
-  pie_es: Fotomontaje geométrico de una catarata para Hyatt Place
-  pie_en: Geometric photomontage of a waterfall for Hyatt Place
-  credito: Hyatt Place
-- archivo: img/photo/arte/hyatt-place-arte-12
-  w: 1000
-  h: 520
-  color: '#4e5451'
-  formato: completa
-  grupo_es: Hyatt Place
-  grupo_en: Hyatt Place
-  pie_es: Fotomontaje geométrico de un volcán para Hyatt Place
-  pie_en: Geometric photomontage of a volcano for Hyatt Place
-  credito: Hyatt Place
-- archivo: img/photo/arte/hyatt-place-arte-13
-  w: 769
-  h: 1000
-  color: '#998973'
+- archivo: img/photo/arte/foto-y-texto-arte-2021-19
+  w: 4927
+  h: 2988
+  color: '#3a4c54'
   formato: par
-  grupo_es: Hyatt Place
-  grupo_en: Hyatt Place
-  pie_es: Fotomontaje de un árbol para Hyatt Place
-  pie_en: Photomontage of a tree for Hyatt Place
-  credito: Hyatt Place
-- archivo: img/photo/arte/hyatt-place-arte-14
-  w: 818
-  h: 1000
-  color: '#46433d'
+  grupo_es: Foto y texto
+  grupo_en: Photo & text
+  pie_es: 'Foto y texto: «let go of the fear of not being good enough»'
+  pie_en: 'Photo and text: “let go of the fear of not being good enough”'
+  credito: '2021'
+- archivo: img/photo/arte/foto-y-texto-arte-2021-20
+  w: 3833
+  h: 2156
+  color: '#839297'
   formato: par
-  grupo_es: Hyatt Place
-  grupo_en: Hyatt Place
-  pie_es: Fotomontaje geométrico de Bajos del Toro para Hyatt Place
-  pie_en: Geometric photomontage of Bajos del Toro for Hyatt Place
-  credito: Hyatt Place
-- archivo: img/photo/arte/hyatt-place-arte-15
-  w: 750
-  h: 1000
-  color: '#4c4a39'
+  grupo_es: Foto y texto
+  grupo_en: Photo & text
+  pie_es: Foto y texto sobre una playa
+  pie_en: Photo and text over a beach
+  credito: '2021'
+- archivo: img/photo/arte/foto-y-texto-arte-2021-21
+  w: 5961
+  h: 1987
+  color: '#312526'
   formato: par
-  grupo_es: Hyatt Place
-  grupo_en: Hyatt Place
-  pie_es: Caleidoscopio de Bajos del Toro para Hyatt Place
-  pie_en: Kaleidoscope of Bajos del Toro for Hyatt Place
-  credito: Hyatt Place
-- archivo: img/photo/arte/hyatt-place-arte-16
-  w: 750
-  h: 1000
-  color: '#27302b'
-  formato: par
-  grupo_es: Hyatt Place
-  grupo_en: Hyatt Place
-  pie_es: Fotomontaje de cuadros y una flor para Hyatt Place
-  pie_en: Photomontage of squares and a flower for Hyatt Place
-  credito: Hyatt Place
-- archivo: img/photo/arte/arte-17
-  w: 1000
-  h: 667
-  color: '#95a8b7'
-  formato: completa
-  grupo_es: Otras
-  grupo_en: Others
-  pie_es: Figuras reflejadas en la orilla
-  pie_en: Figures reflected on the shore
-  credito: ''
+  grupo_es: Foto y texto
+  grupo_en: Photo & text
+  pie_es: 'Foto y texto: «Find your breath»'
+  pie_en: 'Photo and text: “Find your breath”'
+  credito: '2021'
 - archivo: img/photo/arte/arte-18
   w: 1000
   h: 563
   color: '#424e54'
   formato: completa
-  grupo_es: Otras
-  grupo_en: Others
+  grupo_es: Foto y texto
+  grupo_en: Photo & text
   pie_es: Fotomontaje «Where is my mind»
   pie_en: Photomontage “Where is my mind”
   credito: ''
+premios:
+- grupo: Parallel Perceptions
+  imagen: img/premios/fapa-nominee
+  texto_es: Nominee · Conceptual · 12th Fine Art Photography Awards 2025–2026
+  texto_en: Nominee · Conceptual · 12th Fine Art Photography Awards 2025–2026
+  url: https://fineartphotoawards.com/winners-gallery/fapa-2025-2026/professional/conceptual/hm/23646

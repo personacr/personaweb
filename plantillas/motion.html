@@ -1,10 +1,7 @@
-{% extends "base.html" %}{% from "macros.html" import L, video, thumb, cinema with context %}
+{% extends "base.html" %}{% from "macros.html" import L, video, thumb, cinema, portada with context %}
 {% block body %}
-<main class="wrap">
-  <header class="page-top">
-    <div><p class="eyebrow">{{ t.motion_eyebrow }}</p><h1 class="display" style="margin-top:8px">{{ L('motion') }}</h1></div>
-    <p class="lead">{{ t.motion_lead }}</p>
-  </header>
+{{ portada('img/motion/banner/banner.webp', 'motion', t.motion_eyebrow, t.motion_lead) }}
+<main class="wrap" style="padding-top:22px">
   <div class="works">
     {% for p in m.proyectos %}
     {%- set th = p.portada and (R ~ p.portada ~ '-1280.webp') or (thumb(p.videos[0]) if p.videos else '') -%}

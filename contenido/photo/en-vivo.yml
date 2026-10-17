@@ -80,6 +80,16 @@ fotos:
   pie_es: Daniel Patiño en concierto, blanco y negro
   pie_en: Daniel Patiño in concert, black and white
   credito: Daniel Patiño · 2024
+- archivo: img/photo/en-vivo/daniel-patino-en-vivo-2024-17
+  w: 2811
+  h: 4208
+  color: '#585858'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Daniel Patiño cantando, blanco y negro
+  pie_en: Daniel Patiño singing, black and white
+  credito: Daniel Patiño · 2024
 - archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-08
   w: 1000
   h: 668
@@ -130,6 +140,16 @@ fotos:
   pie_es: Daniel Patiño en concierto, efecto de prisma
   pie_en: Daniel Patiño in concert, prism effect
   credito: Daniel Patiño · 2024
+- archivo: img/photo/en-vivo/daniel-patino-en-vivo-2024-18
+  w: 2832
+  h: 4240
+  color: '#273037'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Daniel Patiño bajo un haz de luz
+  pie_en: Daniel Patiño under a beam of light
+  credito: Daniel Patiño · 2024
 - archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-13
   w: 1000
   h: 668
@@ -149,6 +169,16 @@ fotos:
   grupo_en: ''
   pie_es: Público con luces en un concierto de Arturo Pardo
   pie_en: Audience lights at an Arturo Pardo concert
+  credito: Arturo Pardo · 2025
+- archivo: img/photo/en-vivo/arturo-pardo-en-vivo-2025-19
+  w: 4045
+  h: 2702
+  color: '#382955'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Escenario con luces moradas, concierto de Arturo Pardo
+  pie_en: Stage in purple light, Arturo Pardo concert
   credito: Arturo Pardo · 2025
 - archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-15
   w: 1000

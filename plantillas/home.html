@@ -16,7 +16,7 @@
 <main>
   {#- 1 · Fotos, sin título: hablan solas -#}
   <section class="wrap mosaic" id="trabajo" aria-label="{{ t.photo_eyebrow }}">
-    <div class="jg tight">{% for m in mosaico %}{{ tile(m.f, lang, R ~ P ~ 'photo/' ~ m.slug ~ '/', loop.index0) }}{% endfor %}</div>
+    <div class="jg tight">{% for m in mosaico %}{{ tile(m.f, lang, None, loop.index0, ch=R ~ P ~ 'photo/' ~ m.slug ~ '/', chl=m.titulo) }}{% endfor %}</div>
     <p class="after"><a class="more" href="{{ R }}{{ P }}photo/">{{ t.all_photo }} →</a></p>
   </section>
 
@@ -26,9 +26,9 @@
     <a class="room" href="{{ R }}{{ P }}{{ d.k }}/">
       <img src="{{ R }}{{ d.img }}" alt="" loading="lazy" decoding="async" style="object-position:{{ d.pos }}">
       <span class="room-in">
-        <span class="room-n">{{ d.n }}</span>
+        <span class="room-n">{{ d.n }}<i aria-hidden="true">{{ d.icono }}</i></span>
         <b class="room-w">{{ L(d.k) }}</b>
-        <span class="room-m"><span class="room-a">{{ d.area }}</span><span class="room-c">{{ d.meta }}</span></span>
+        <span class="room-m"><span class="room-a">{{ d.area }}</span></span>
         <span class="room-go" aria-hidden="true">→</span>
       </span>
     </a>
@@ -64,7 +64,7 @@
   <section class="wrap clients">
     <div class="head"><h2 class="h2">{{ L(t.clients) }}</h2><span class="eyebrow">{{ t.clients_sub }}</span></div>
     <ul class="logos">
-      {% for c in site.clientes %}<li><img src="{{ R }}{{ c.logo }}" alt="{{ c.nombre }}" title="{{ c.nombre }}" loading="lazy" decoding="async"{% if c.alto %} class="tall"{% endif %}></li>{% endfor %}
+      {% for c in site.clientes %}<li><img src="{{ R }}{{ c.logo }}" alt="{{ c.nombre }}" title="{{ c.nombre }}" loading="lazy" decoding="async" style="--h:{{ c.alto }}px"></li>{% endfor %}
       {% for n in site.clientes_sin_logo %}<li class="nm">{{ n }}</li>{% endfor %}
     </ul>
   </section>

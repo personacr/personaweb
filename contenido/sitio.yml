@@ -50,6 +50,11 @@ servicios:
   texto_en: Photo and video for events, spaces and campaigns.
   enlace: photo/marcas/
   imagen: img/photo/marcas/grupo-del-este-marcas-2026-02
+reconocimientos:
+- texto_es: 'Nominee, categoría Conceptual · 12th Fine Art Photography Awards 2025–2026 · Parallel Perceptions'
+  texto_en: 'Nominee, Conceptual category · 12th Fine Art Photography Awards 2025–2026 · Parallel Perceptions'
+  imagen: img/premios/fapa-nominee
+  url: https://fineartphotoawards.com/winners-gallery/fapa-2025-2026/professional/conceptual/hm/23646
 clientes:
 - logo: img/clientes/grupo-del-este.png
   nombre: Grupo del Este

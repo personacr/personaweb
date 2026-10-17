@@ -1,7 +1,8 @@
 {% extends "base.html" %}{% from "macros.html" import L, pic, tile with context %}
 {% block body %}
-<header class="cover px">
-  {{ pic(c.portada, c['titulo_' ~ lang], eager=True, vt='cover-' ~ c.slug) }}
+<header class="cover">
+  {{ pic(c.portada, c['titulo_' ~ lang], eager=True) }}
+  <div class="bars" aria-hidden="true"></div>
   <div class="cover-t">
     <div><p class="eyebrow">Photo · {{ c.numero }} · {{ c.fotos|length }} {{ t.photos }}</p><h1 class="display">{{ L(c['titulo_' ~ lang]|lower) }}</h1></div>
     <p class="lead">{{ c['intro_' ~ lang] }}</p>
@@ -14,13 +15,9 @@
   <div class="jg">
   {%- set ns = namespace(g='') -%}
   {%- for f in c.fotos %}
-    {%- if f['grupo_' ~ lang] and f['grupo_' ~ lang] != ns.g %}{% set ns.g = f['grupo_' ~ lang] %}<p class="label">{{ ns.g }}</p>{% endif %}
+    {%- if f['grupo_' ~ lang] and f['grupo_' ~ lang] != ns.g %}{% set ns.g = f['grupo_' ~ lang] %}{% set pr = (c.premios or [])|selectattr("grupo", "equalto", f.grupo_es)|first %}<p class="label{% if pr %} award{% endif %}">{{ ns.g }}{% if pr %}<a href="{{ pr.url }}" rel="noopener"><img src="{{ R }}{{ pr.imagen }}-160.webp" srcset="{{ R }}{{ pr.imagen }}-320.webp 2x" alt="Fine Art Photography Awards · Nominee" width="40" height="40">{{ pr['texto_' ~ lang] }}</a>{% endif %}</p>{% endif %}
     {{ tile(f, lang, None, loop.index0) }}
   {%- endfor %}
-  </div>
-  <div class="next">
-    <a class="go" href="{{ R }}{{ P }}photo/{{ siguiente.slug if lang == 'es' else siguiente.slug_en }}/"><span class="eyebrow">{{ t.next_chapter }}</span><b>{{ L(siguiente['titulo_' ~ lang]|lower) }} →</b></a>
-    <a class="btn blue" href="{{ R }}{{ P }}{{ t.contact_slug }}/">{{ t.quote_project }}</a>
   </div>
 </main>
 {% endblock %}

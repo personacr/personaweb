@@ -70,6 +70,16 @@ fotos:
   pie_es: Mujer de espaldas con luz lateral
   pie_en: Woman from behind in side light
   credito: ''
+- archivo: img/photo/retrato/retrato-13
+  w: 1600
+  h: 1067
+  color: '#95a8b6'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Papá con su bebé en la playa, reflejados en el agua
+  pie_en: A father with his baby on the beach, reflected in the water
+  credito: ''
 - archivo: img/photo/retrato/retrato-2025-07
   w: 1000
   h: 668
@@ -80,6 +90,26 @@ fotos:
   pie_es: Hombre enmarcado por una espiral de hierro
   pie_en: Man framed by an iron spiral
   credito: '2025'
+- archivo: img/photo/retrato/retrato-2023-15
+  w: 4160
+  h: 6240
+  color: '#64656a'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Retrato en una terraza sobre Girona
+  pie_en: Portrait on a terrace above Girona
+  credito: '2023'
+- archivo: img/photo/retrato/retrato-16
+  w: 1600
+  h: 1040
+  color: '#868d93'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Retrato entre farolas blancas
+  pie_en: Portrait among white street lamps
+  credito: ''
 - archivo: img/photo/retrato/retrato-08
   w: 1000
   h: 667
@@ -119,6 +149,16 @@ fotos:
   grupo_en: ''
   pie_es: Niña riendo
   pie_en: Girl laughing
+  credito: '2023'
+- archivo: img/photo/retrato/retrato-2023-14
+  w: 3265
+  h: 4082
+  color: '#52403a'
+  formato: par
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Silueta frente a la ventana al atardecer
+  pie_en: Silhouette by the window at sunset
   credito: '2023'
 - archivo: img/photo/retrato/retrato-2026-12
   w: 667

@@ -1,10 +1,7 @@
-{% extends "base.html" %}{% from "macros.html" import L, pic, tile, cinema with context %}
+{% extends "base.html" %}{% from "macros.html" import L, pic, tile, cinema, portada with context %}
 {% block body %}
-<main class="wrap">
-  <header class="page-top">
-    <div><p class="eyebrow">{{ t.stage_eyebrow }}</p><h1 class="display" style="margin-top:8px">{{ L('stage') }}</h1></div>
-    <p class="lead">{{ t.stage_lead }}</p>
-  </header>
+{{ portada('img/stage/banner/banner.webp', 'stage', t.stage_eyebrow, t.stage_lead) }}
+<main class="wrap" style="padding-top:22px">
   <div class="works tall">
     {% for p in s.proyectos %}
     <button type="button" class="work rv" data-open="ver-{{ p.slug }}" id="{{ p.slug }}" style="--d:{{ loop.index0 * 0.08 }}s">

@@ -70,6 +70,26 @@ fotos:
   pie_es: Bailarina en luz ámbar, Andamio 2025
   pie_en: Dancer in amber light, Andamio 2025
   credito: '2025'
+- archivo: img/photo/movimiento/andamio-movimiento-2022-18
+  w: 3388
+  h: 4235
+  color: '#7298bd'
+  formato: par
+  grupo_es: Estudio
+  grupo_en: Studio
+  pie_es: Bailarina saltando sobre fondo azul, Andamio 2022
+  pie_en: Dancer leaping on a blue background, Andamio 2022
+  credito: Andamio · 2022
+- archivo: img/photo/movimiento/moment-movimiento-2024-19
+  w: 5984
+  h: 3989
+  color: '#3e464d'
+  formato: par
+  grupo_es: Estudio
+  grupo_en: Studio
+  pie_es: Bailarín junto a una luz de estudio, videodanza Moment
+  pie_en: Dancer beside a studio light, Moment dance film
+  credito: Moment · 2024
 - archivo: img/photo/movimiento/movimiento-07
   w: 714
   h: 1000
@@ -140,13 +160,93 @@ fotos:
   pie_es: Bailarín con sombrero y bastón en luz azul
   pie_en: Dancer with hat and cane in blue light
   credito: ''
+- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-20
+  w: 4902
+  h: 6134
+  color: '#39504b'
+  formato: par
+  grupo_es: Escena · Festival de Ballet San José
+  grupo_en: Stage · Festival de Ballet San José
+  pie_es: Tres bailarinas en el aire, Festival de Ballet San José
+  pie_en: Three dancers in mid-air, Festival de Ballet San José
+  credito: Festival de Ballet San José · 2026
+- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-21
+  w: 5324
+  h: 6662
+  color: '#213e3e'
+  formato: par
+  grupo_es: Escena · Festival de Ballet San José
+  grupo_en: Stage · Festival de Ballet San José
+  pie_es: Bailarina en tutú y bailarina en escena, Festival de Ballet San José
+  pie_en: Dancer in a tutu and a dancer on stage, Festival de Ballet San José
+  credito: Festival de Ballet San José · 2026
+- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-22
+  w: 5730
+  h: 7168
+  color: '#303044'
+  formato: par
+  grupo_es: Escena · Festival de Ballet San José
+  grupo_en: Stage · Festival de Ballet San José
+  pie_es: Salto sobre fondo azul y elenco de rojo, Festival de Ballet San José
+  pie_en: A leap on blue and the cast in red, Festival de Ballet San José
+  credito: Festival de Ballet San José · 2026
+- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-23
+  w: 5730
+  h: 7168
+  color: '#233343'
+  formato: par
+  grupo_es: Escena · Festival de Ballet San José
+  grupo_en: Stage · Festival de Ballet San José
+  pie_es: Funciones del Festival de Ballet San José
+  pie_en: Performances at the Festival de Ballet San José
+  credito: Festival de Ballet San José · 2026
+- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-24
+  w: 5612
+  h: 7022
+  color: '#2b2b2b'
+  formato: par
+  grupo_es: Proceso · Festival de Ballet San José
+  grupo_en: Process · Festival de Ballet San José
+  pie_es: Ensayo en blanco y negro, Festival de Ballet San José
+  pie_en: Rehearsal in black and white, Festival de Ballet San José
+  credito: Festival de Ballet San José · 2026
+- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-25
+  w: 5730
+  h: 7168
+  color: '#878787'
+  formato: par
+  grupo_es: Proceso · Festival de Ballet San José
+  grupo_en: Process · Festival de Ballet San José
+  pie_es: Bailarina y clase en movimiento, Festival de Ballet San José
+  pie_en: A dancer and a class in motion, Festival de Ballet San José
+  credito: Festival de Ballet San José · 2026
+- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-26
+  w: 4902
+  h: 6134
+  color: '#5a5a5a'
+  formato: par
+  grupo_es: Proceso · Festival de Ballet San José
+  grupo_en: Process · Festival de Ballet San José
+  pie_es: Zapatilla de punta y manos, Festival de Ballet San José
+  pie_en: Pointe shoe and hands, Festival de Ballet San José
+  credito: Festival de Ballet San José · 2026
+- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-27
+  w: 5730
+  h: 7168
+  color: '#6b6f70'
+  formato: par
+  grupo_es: Proceso · Festival de Ballet San José
+  grupo_en: Process · Festival de Ballet San José
+  pie_es: Saltos en el estudio, Festival de Ballet San José
+  pie_en: Leaps in the studio, Festival de Ballet San José
+  credito: Festival de Ballet San José · 2026
 - archivo: img/photo/movimiento/festival-reves-movimiento-2026-14
   w: 1000
   h: 667
   color: '#746d69'
   formato: completa
-  grupo_es: Proceso
-  grupo_en: Process
+  grupo_es: Proceso · Festival Revés
+  grupo_en: Process · Festival Revés
   pie_es: Taller de danza, Festival Revés 2026
   pie_en: Dance workshop, Festival Revés 2026
   credito: Festival Revés · 2026
@@ -155,18 +255,28 @@ fotos:
   h: 1000
   color: '#7e7b76'
   formato: par
-  grupo_es: Proceso
-  grupo_en: Process
+  grupo_es: Proceso · Festival Revés
+  grupo_en: Process · Festival Revés
   pie_es: Bailarines en suspensión, Festival Revés 2026
   pie_en: Dancers in suspension, Festival Revés 2026
+  credito: Festival Revés · 2026
+- archivo: img/photo/movimiento/festival-reves-movimiento-2026-28
+  w: 4672
+  h: 7008
+  color: '#6c5d59'
+  formato: par
+  grupo_es: Proceso · Festival Revés
+  grupo_en: Process · Festival Revés
+  pie_es: Bailarina riendo en el piso, Festival Revés 2026
+  pie_en: Dancer laughing on the floor, Festival Revés 2026
   credito: Festival Revés · 2026
 - archivo: img/photo/movimiento/festival-reves-movimiento-2026-16
   w: 667
   h: 1000
   color: '#405b6e'
   formato: par
-  grupo_es: Proceso
-  grupo_en: Process
+  grupo_es: Proceso · Festival Revés
+  grupo_en: Process · Festival Revés
   pie_es: Bailarín de cabeza, Festival Revés 2026
   pie_en: Dancer upside down, Festival Revés 2026
   credito: Festival Revés · 2026
@@ -175,8 +285,8 @@ fotos:
   h: 1000
   color: '#2b4760'
   formato: detalle
-  grupo_es: Proceso
-  grupo_en: Process
+  grupo_es: Proceso · Festival Revés
+  grupo_en: Process · Festival Revés
   pie_es: Puerta y zapatos, Festival Revés 2026
   pie_en: Door and shoes, Festival Revés 2026
   credito: Festival Revés · 2026

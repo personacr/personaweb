@@ -1,14 +1,11 @@
-{% extends "base.html" %}{% from "macros.html" import L, pic with context %}
+{% extends "base.html" %}{% from "macros.html" import L, pic, portada with context %}
 {% block body %}
-<main class="wrap">
-  <header class="page-top">
-    <div><p class="eyebrow">{{ t.photo_eyebrow }}</p><h1 class="display" style="margin-top:8px">{{ L('photo') }}</h1></div>
-    <p class="lead">{{ t.photo_lead }}</p>
-  </header>
+{{ portada('img/photo/en-vivo/jacob-collier-en-vivo-2025-04-2048.webp', 'photo', t.photo_eyebrow, t.photo_lead, '50% 35%') }}
+<main class="wrap" style="padding-top:22px">
   {% for c in capitulos %}
   <a class="sheet rv" href="{{ R }}{{ P }}photo/{{ c.slug if lang == 'es' else c.slug_en }}/" style="display:block;--d:{{ (loop.index0 % 3) * 0.06 }}s">
     <div class="sheet-h"><span class="n">{{ c.numero }}</span><b>{{ L(c['titulo_' ~ lang]|lower) }}</b><i>{{ c['intro_' ~ lang] }}</i><span class="more">{{ c.fotos|length }} {{ t.photos }} →</span></div>
-    <div class="film-strip">{% for f in c.muestra %}<span style="--r:{{ (f.w / f.h) | round(3) }}">{{ pic(f.archivo, '', sizes="(max-width:700px) 33vw, 20vw", vt=('cover-' ~ c.slug) if f.archivo == c.portada else None) }}</span>{% endfor %}</div>
+    <div class="film-strip">{% for f in c.muestra %}<span style="--r:{{ (f.w / f.h) | round(3) }}">{{ pic(f.archivo, '', sizes="(max-width:700px) 33vw, 20vw") }}</span>{% endfor %}</div>
   </a>
   {% endfor %}
 </main>

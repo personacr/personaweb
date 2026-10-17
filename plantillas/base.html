@@ -53,12 +53,12 @@
     <p class="footer-meta">{{ site.nombre }} · Costa Rica · © {{ year }} · <a href="{{ site.bio }}">bio.persona.cr</a></p>
   </div>
 </footer>
-{% if page.section not in ('contacto', 'contact') %}<a class="btn blue float-cta" href="{{ R }}{{ P }}{{ t.contact_slug }}/">{{ t.write }}</a>{% endif %}
+{% if page.section not in ('contacto', 'contact') %}<a class="btn blue float-cta" href="{{ R }}{{ P }}{{ t.contact_slug }}/{% if page.tipo is not none %}?tipo={{ page.tipo }}{% endif %}">{{ t.write }}</a>{% endif %}
 <dialog class="lb" id="lb" aria-label="{{ t.photo }}">
   <button class="x" type="button" id="lb-x">{{ t.close }} ✕</button>
   <button class="pv" type="button" id="lb-p" aria-label="{{ t.prev }}">‹</button>
   <img id="lb-img" alt="">
-  <p id="lb-c" aria-live="polite"></p>
+  <p class="lb-meta"><span id="lb-c" aria-live="polite"></span><a id="lb-ch" hidden></a></p>
   <button class="nx" type="button" id="lb-n" aria-label="{{ t.next }}">›</button>
 </dialog>
 <script src="{{ R }}site.js" defer></script>

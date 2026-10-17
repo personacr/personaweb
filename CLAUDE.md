@@ -25,7 +25,17 @@ Memoria del proyecto. Leelo completo antes de cambiar algo.
 - **Las fotos no llevan textos encima** (ni al pasar el mouse ni en la galería ampliada). `pie_es`/`pie_en` existen solo como descripción para Google y lectores de pantalla: describí lo que se ve, sin notas internas.
 
 ## Portada (inicio), en este orden
-1. Video/foto principal · 2. Mosaico de fotos sin título (`mosaico` en sitio.yml) · 3. Tres «salas»: bandas panorámicas numeradas Motion / Photo / Stage · 4. Servicios (lista con foto) · 5. Frase de cierre + contacto · 6. **Clientes, siempre lo último** (logos sueltos, sin líneas de tabla; se llama «clientes», no «créditos»).
+1. Video/foto principal · 2. Mosaico de fotos sin título (`mosaico` en sitio.yml) · 3. Tres «salas»: bandas panorámicas numeradas con ícono (▭ ◎ ⌒, los de la Bio), sin cantidades · 4. Servicios (lista con foto) · 5. Frase de cierre + contacto · 6. **Clientes, siempre lo último** (logos sueltos, sin líneas de tabla; se llama «clientes», no «créditos»).
+
+## Movimiento y navegación (oct 2026)
+- Entre páginas: corte a negro (view transition de la raíz). **No usar `view-transition-name` en fotos** (causaba el salto de la portada).
+- Portadas de capítulos, Photo, Motion y Stage: franjas negras que se abren + acercamiento lento (`.cover` + `.bars`), igual que el inicio.
+- Menú: el vidrio va en `.nav::before` (si se pone `backdrop-filter` en `.nav`, el menú del celular queda encerrado). Se esconde al bajar.
+- Inicio: las fotos del mosaico abren la galería ampliada con enlace «Capítulo →» (no navegan).
+- Capítulos: barra de capítulos fija al bajar; ya no hay «Siguiente capítulo».
+- «Escribime» lleva `?tipo=N` según la página y el formulario llega con ese tipo elegido (`TIPO` en construir.py).
+- Logos de clientes: se recortan sin bordes vacíos y el armador calcula el alto por peso visual (`alto`).
+- Premios: `premios` en el .yml del capítulo (sello junto al nombre del grupo) y `reconocimientos` en sitio.yml (Sobre mí + dato `award` para Google).
 
 ## Fotos
 - Cada foto en 3 tamaños WebP: `nombre-640.webp`, `-1280.webp`, `-2048.webp`. En los .yml se escribe la ruta SIN sufijo.
