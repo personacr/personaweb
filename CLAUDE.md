@@ -51,3 +51,7 @@ Memoria del proyecto. Leelo completo antes de cambiar algo.
 - Repo público: nada de contraseñas, cotizaciones, galerías privadas ni originales.
 - Si un cambio toca contenido compartido con la Bio (proyectos, logo, textos), preguntá si va también en la Bio.
 - Commits en español y claros.
+
+## Vista al compartir (WhatsApp, Facebook)
+- Cada página tiene su imagen 1200×630 en `img/og/<página>-v2.jpg` (foto + wordmark + nombre). Se generan con `python3 herramientas/og.py CARPETA_FUENTES [ruta-a-personabio]`.
+- WhatsApp guarda la imagen vieja: si cambiás las imágenes, subí la versión (`V` en og.py y `OG` en construir.py) para que cambie el nombre del archivo. Facebook se refresca en developers.facebook.com/tools/debug.

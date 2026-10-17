@@ -124,6 +124,7 @@ TIPO = {'motion/': 1, 'stage/': 3, 'photo/en-vivo/': 0, 'photo/movimiento/': 3, 
 VISTA = os.environ.get('VISTA') == '1'
 def pagina(plantilla, ruta_es, ruta_en, lang, seccion, titulo, desc, extra=None, schema=None, og=None):
     ruta = ruta_es if lang == 'es' else ruta_en
+    og = og or f"img/og/{seccion if seccion in ('photo', 'motion', 'stage') else 'home'}-{OG}.jpg"
     prof = ruta.count('/')
     ctx = dict(site=site, t=T[lang], lang=lang, R='../' * prof, P='' if lang == 'es' else 'en/', thumbs=thumbs, ig=IG, hero_video=HERO_VIDEO, year=datetime.date.today().year,
                m=motion, s=stage, capitulos=capitulos,
@@ -138,12 +139,13 @@ def pagina(plantilla, ruta_es, ruta_en, lang, seccion, titulo, desc, extra=None,
     paginas.append(ruta)
 
 N = site['nombre']
+OG = 'v2'  # versión de las imágenes para compartir (herramientas/og.py)
 for lang in ('es', 'en'):
     es = lang == 'es'
     pagina('home.html', '', 'en/', lang, '',
-           f"{N} · PERSONA — " + ('Cineasta y fotógrafo, Costa Rica' if es else 'Filmmaker & Photographer'),
-           'Cineasta, fotógrafo y director escénico costarricense. Fotografía de conciertos, danza y teatro; videoclips, cortos y dirección escénica. Narrador visual.' if es else
-           'Costa Rican filmmaker, photographer and stage director. Concert, dance and theatre photography; music videos, short films and stage direction. Visual storyteller.',
+           f"{N} · PERSONA",
+           'Cineasta, fotógrafo y director escénico en Costa Rica. Videoclips, cortos, fotografía de conciertos, danza y teatro.' if es else
+           'Filmmaker, photographer and stage director in Costa Rica. Music videos, short films, concert, dance and theatre photography.',
            extra=dict(mosaico=mosaico(lang), puertas=puertas(lang)))
     pagina('photo.html', 'photo/', 'en/photo/', lang, 'photo',
            f"{'Fotografía de conciertos, danza y teatro' if es else 'Concert, Dance & Theatre Photography'} · {N}",
@@ -166,7 +168,7 @@ for lang in ('es', 'en'):
         pagina('capitulo.html', f"photo/{c['slug']}/", f"en/photo/{c['slug_en']}/", lang, 'photo',
                f"{tit} · {'Fotografía' if es else 'Photography'} · {N} | PERSONA",
                f"{tit}: {c['intro_' + lang]} " + (f'Fotografía de {N} (PERSONA), Costa Rica.' if es else f'Photography by {N} (PERSONA), Costa Rica.'),
-               extra=dict(c=c, rows=filas, siguiente=sig), og=c['portada'] + '-1280.webp',
+               extra=dict(c=c, rows=filas, siguiente=sig), og=f"img/og/photo-{c['slug']}-{OG}.jpg",
                schema=[{'@type': 'ImageGallery', 'name': tit, 'description': c['intro_' + lang], 'hasPart': imgs}])
     pagina('motion.html', 'motion/', 'en/motion/', lang, 'motion',
            f"{'Cine y video: series, cortos y videoclips' if es else 'Film & Video: series, shorts and music videos'} · {N}",
