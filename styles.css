@@ -177,7 +177,7 @@ a.it{cursor:pointer}
 /* Clientes: cuadrícula de logos, al final */
 .clients{padding-top:var(--block)}
 .logos{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(31%,170px),1fr));gap:8px 24px;padding-top:8px}
-.logos li{display:grid;place-items:center;height:clamp(84px,8vw,112px);padding:12px}
+.logos li{display:grid;place-items:center;height:clamp(96px,9vw,124px);padding:12px}
 .logos img{height:var(--h,34px);width:auto;max-width:86%;object-fit:contain;opacity:.68;transition:opacity .3s}
 .logos li:hover img{opacity:1}
 .logos .nm{font-family:var(--serif);font-style:italic;font-weight:400;font-size:21px;color:var(--mist);text-align:center;line-height:1.1}
@@ -357,3 +357,4 @@ dialog::backdrop{background:rgba(0,0,0,.94);backdrop-filter:blur(6px)}
 .awards a:hover{color:var(--bone)}
 .awards img{width:56px;height:56px;flex:none}
 .awards i{font-style:normal;margin-left:auto;color:var(--accent)}
+.ico{font-style:normal;font-family:var(--serif);font-size:17px;letter-spacing:0;color:var(--accent);margin-right:10px;vertical-align:-2px}

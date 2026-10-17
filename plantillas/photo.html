@@ -1,6 +1,6 @@
 {% extends "base.html" %}{% from "macros.html" import L, pic, portada with context %}
 {% block body %}
-{{ portada('img/photo/en-vivo/jacob-collier-en-vivo-2025-04-2048.webp', 'photo', t.photo_eyebrow, t.photo_lead, '50% 35%') }}
+{{ portada('img/photo/en-vivo/jacob-collier-en-vivo-2025-04-2048.webp', 'photo', t.photo_eyebrow, t.photo_lead, '50% 35%', '◎') }}
 <main class="wrap" style="padding-top:22px">
   {% for c in capitulos %}
   <a class="sheet rv" href="{{ R }}{{ P }}photo/{{ c.slug if lang == 'es' else c.slug_en }}/" style="display:block;--d:{{ (loop.index0 % 3) * 0.06 }}s">

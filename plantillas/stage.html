@@ -1,6 +1,6 @@
 {% extends "base.html" %}{% from "macros.html" import L, pic, tile, cinema, portada with context %}
 {% block body %}
-{{ portada('img/stage/banner/banner.webp', 'stage', t.stage_eyebrow, t.stage_lead) }}
+{{ portada('img/stage/banner/banner.webp', 'stage', t.stage_eyebrow, t.stage_lead, icono='⌒') }}
 <main class="wrap" style="padding-top:22px">
   <div class="works tall">
     {% for p in s.proyectos %}
@@ -10,10 +10,6 @@
     </button>
     {% endfor %}
   </div>
-  <section class="block">
-    <div class="head"><h2 class="h2">{{ L(t.stage_photos) }}</h2><span class="eyebrow">{{ t.stage_photos_sub }}</span></div>
-    <div class="jg">{% for f in stills %}{% if f.label %}<p class="label">{{ f.label }}</p>{% endif %}{{ tile(f, lang, None, loop.index0) }}{% endfor %}</div>
-  </section>
 </main>
 {% for p in s.proyectos %}{{ cinema(p, t, lang, p.fotos) }}{% endfor %}
 {% endblock %}

@@ -1,6 +1,6 @@
 {% extends "base.html" %}{% from "macros.html" import L, video, thumb, cinema, portada with context %}
 {% block body %}
-{{ portada('img/motion/banner/banner.webp', 'motion', t.motion_eyebrow, t.motion_lead) }}
+{{ portada('img/motion/banner/banner.webp', 'motion', t.motion_eyebrow, t.motion_lead, icono='▭') }}
 <main class="wrap" style="padding-top:22px">
   <div class="works">
     {% for p in m.proyectos %}

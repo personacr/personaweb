@@ -35,7 +35,7 @@ for cl in site.get('clientes', []):  # tamaño por «peso visual»: los logos an
         tinta = sum(im.getchannel('A').resize((64, 64)).tobytes()) / (255 * 64 * 64)
     r = w / h
     alto = (2172 / (r * max(tinta, 0.08) ** 0.5)) ** 0.5
-    alto = max(22, min(70, alto, 150 / r))
+    alto = max(22, min(82, alto, 150 / r))
     cl['alto'] = round(alto)
 
 def medir(base):

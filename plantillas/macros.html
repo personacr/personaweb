@@ -69,12 +69,12 @@
 
 
 {#- Portada corta de sección (Photo, Motion, Stage): misma apertura de cine que el inicio -#}
-{%- macro portada(img, palabra, eyebrow, lead, pos='50% 50%') -%}
+{%- macro portada(img, palabra, eyebrow, lead, pos='50% 50%', icono='') -%}
 <header class="cover short">
   <img src="{{ R }}{{ img }}" alt="" fetchpriority="high" decoding="async" style="object-position:{{ pos }}">
   <div class="bars" aria-hidden="true"></div>
   <div class="cover-t">
-    <div><p class="eyebrow">{{ eyebrow }}</p><h1 class="display">{{ L(palabra) }}</h1></div>
+    <div><p class="eyebrow">{% if icono %}<i class="ico" aria-hidden="true">{{ icono }}</i>{% endif %}{{ eyebrow }}</p><h1 class="display">{{ L(palabra) }}</h1></div>
     <p class="lead">{{ lead }}</p>
   </div>
 </header>

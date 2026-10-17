@@ -4,7 +4,7 @@
   {{ pic(c.portada, c['titulo_' ~ lang], eager=True) }}
   <div class="bars" aria-hidden="true"></div>
   <div class="cover-t">
-    <div><p class="eyebrow">Photo · {{ c.numero }} · {{ c.fotos|length }} {{ t.photos }}</p><h1 class="display">{{ L(c['titulo_' ~ lang]|lower) }}</h1></div>
+    <div><p class="eyebrow"><i class="ico" aria-hidden="true">◎</i>Photo · {{ c.numero }} · {{ c.fotos|length }} {{ t.photos }}</p><h1 class="display">{{ L(c['titulo_' ~ lang]|lower) }}</h1></div>
     <p class="lead">{{ c['intro_' ~ lang] }}</p>
   </div>
 </header>
