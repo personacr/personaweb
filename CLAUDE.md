@@ -61,3 +61,4 @@ Memoria del proyecto. Leelo completo antes de cambiar algo.
 - Usa el mismo sistema «Sala oscura» (tokens, Zodiak + Switzer, wordmark, mosaico parejo, galería ampliada). Si cambiás tokens o piezas en `styles.css`, avisá que hay que actualizar `public/assets/gallery.css` de persona-galerias.
 - Desde este sitio solo hay un enlace discreto en el pie: «Galerías de clientes» → `GALERIAS` en construir.py.
 - Rama `demo-galerias`: demo para revisar en raw.githack.com con fotos de Sala de Espera. **Nunca va a main.**
+- **Favicon:** «a» de Zodiak itálica azul sobre negro, en `favicon.ico`, `favicon-32.png`, `favicon-512.png` y `apple-touch-icon.png` (raíz). Igual en el sitio y la Bio.
