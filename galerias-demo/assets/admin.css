@@ -136,3 +136,26 @@
   .dz-bar .row{gap:4px;flex-wrap:nowrap}
   .dz-bar .chip{padding:0 9px;letter-spacing:.08em;min-height:32px}
 }
+
+/* compartir: tarjeta como la de WhatsApp */
+.ogcard{max-width:420px;background:#1f2c33;border-radius:8px;overflow:hidden;color:#e9edef}
+.ogimg{aspect-ratio:1200/630;background:#111}
+.ogimg img{width:100%;height:100%;object-fit:cover}
+.ogtxt{display:grid;gap:3px;padding:10px 12px 12px;font-size:14px;line-height:1.35}
+.ogtxt b{font-weight:600}
+.ogtxt span{color:#aebac1;font-size:13px}
+.ogtxt small{color:#8696a0;font-size:12px}
+
+/* compartir por correo */
+.mail{display:grid;gap:18px}
+.mail .row .eyebrow{margin-right:6px}
+.mail .form{max-width:none}
+.mail-to{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px 28px}
+.mail-fields{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.mail-h{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--mist);margin-top:4px}
+.mail-preview{background:#F4F2ED;color:#1b1b1b;padding:18px 20px;border-radius:2px}
+.mail-subj{font-weight:600;font-size:15px;padding-bottom:10px;margin-bottom:12px;border-bottom:1px solid rgba(0,0,0,.12)}
+.mail-body{white-space:pre-wrap;font-family:var(--sans);font-size:15px;line-height:1.6;word-break:break-word}
+.mail-tpl{gap:16px}
+.share .mail-body{background:none;border:0;padding:0;color:#1b1b1b}
+.mail-gm{max-width:420px}

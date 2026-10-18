@@ -183,12 +183,13 @@ svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:
 .jg::after{content:"";flex-grow:1000000}
 .jg .label{flex-basis:100%;padding:22px 0 4px;font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--mist)}
 .jg .label:first-child{padding-top:0}
-.it{position:relative;flex:calc(var(--r) * 100) 1 calc(var(--r) * var(--row));min-width:0;overflow:hidden;background:var(--c1)}
+.it{position:relative;flex:calc(var(--r) * 100) 1 calc(var(--r) * var(--row));min-width:0;overflow:hidden;background:var(--c1);background:color-mix(in srgb,var(--pc,#0b0b0c) 18%,#050505)}
 .jg.justified .it{flex:none}
 .it-open{position:absolute;inset:0;display:block;width:100%;padding:0;cursor:zoom-in}
 .it-open:focus-visible{outline-offset:-3px}
-.it img{width:100%;height:100%;object-fit:cover;filter:brightness(.9);transition:filter .6s var(--ease),transform 1.4s var(--ease),opacity .5s var(--ease);opacity:0}
-.it img.ok{opacity:1}
+/* las fotos aparecen con un fundido lento desde negro (sin desenfoque ni destello) */
+.it img{width:100%;height:100%;object-fit:cover;filter:brightness(.9);transition:opacity 1.4s cubic-bezier(.33,0,.2,1) var(--d,0s),filter .6s var(--ease),transform 1.4s var(--ease);opacity:0}
+.it.in img.ok{opacity:1}
 .it:hover img,.it-open:focus-visible img{filter:brightness(1.04);transform:scale(1.015)}
 .it-fav{position:absolute;right:6px;bottom:6px;z-index:1;width:36px;height:36px;display:grid;place-items:center;border-radius:50%;color:var(--bone);background:rgba(0,0,0,.45);opacity:0;transition:opacity .25s,color .25s}
 .it-fav[aria-pressed="true"]{opacity:1;color:var(--accent)}
@@ -233,9 +234,6 @@ svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:
 .g-single .it{width:min(100%,var(--sw),calc((100vh - 150px) * var(--r)));width:min(100%,var(--sw),calc((100svh - 150px) * var(--r)))}
 .g-single .label{align-self:stretch}
 
-/* foco que se ajusta al entrar en cuadro */
-.js .rv{filter:blur(6px);transform:scale(1.012);transition:filter .6s var(--ease) var(--d,0s),transform .8s var(--ease) var(--d,0s)}
-.js .rv.in{filter:none;transform:none}
 
 /* ── galería ampliada ── */
 dialog{border:0;padding:0;background:transparent;color:var(--bone);max-width:none;max-height:none}
@@ -298,6 +296,5 @@ dialog{border:0;padding:0;background:transparent;color:var(--bone);max-width:non
 
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-  .js .rv{filter:none;transform:none}
   .it img{opacity:1}
 }

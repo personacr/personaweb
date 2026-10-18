@@ -445,8 +445,9 @@ function makeTile(photo, index) {
   tile.dataset.id = photo.id;
   tile._r = r;
   tile.style.setProperty('--r', r.toFixed(4));
-  tile.style.setProperty('--d', `${((index % 4) * 0.07).toFixed(2)}s`);
-  if (COLOR_RE.test(photo.c || '')) tile.style.backgroundColor = photo.c;
+  tile.style.setProperty('--d', `${((index % 4) * 0.12).toFixed(2)}s`);
+  // Mientras carga, un tono muy oscuro del color de la foto (nunca un bloque claro).
+  if (COLOR_RE.test(photo.c || '')) tile.style.setProperty('--pc', photo.c);
 
   const open = document.createElement('button');
   open.type = 'button';
