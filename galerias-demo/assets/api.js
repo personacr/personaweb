@@ -1,6 +1,7 @@
 // Datos de prueba para la demo (reemplaza a api.js). Usa las fotos de Sala de Espera
 // que ya están publicadas en www.persona.cr. Contraseña de la demo: persona
 // Portada en franja de cine: agregá ?portada=franja a la dirección.
+// diseno.html muestra la misma pestaña «Diseño» del panel, con esta galería adentro.
 
 const PASSWORD = 'persona';
 const BASE = '../img/photo/teatro/sala-de-espera-teatro-2026-';
@@ -15,9 +16,10 @@ const FOTOS = [ // número, sección, ancho, alto, color de fondo (del contenido
 
 const src = (n, w) => `${BASE}${String(n).padStart(2, '0')}-${w}.webp`;
 const pause = (ms) => new Promise((r) => setTimeout(r, ms));
-const franja = new URLSearchParams(location.search).get('portada') === 'franja';
-let unlocked = false;
-try { unlocked = sessionStorage.getItem('demo:unlocked') === '1'; } catch { /* modo privado */ }
+const params = new URLSearchParams(location.search);
+const franja = params.get('portada') === 'franja';
+let unlocked = params.has('preview'); // en la vista previa del diseño no se pide contraseña
+try { unlocked = unlocked || sessionStorage.getItem('demo:unlocked') === '1'; } catch { /* modo privado */ }
 
 export const api = {
   async meta() {
@@ -25,7 +27,7 @@ export const api = {
       title: 'Maracuyá',
       subtitle: 'La sala de espera',
       eventDate: '2026-09-08',
-      coverStyle: franja ? 'band' : 'full',
+      design: { grid: 'rows', size: 'normal', gap: 'fine', cover: franja ? 'band' : 'full', shade: 1 },
       focal: franja ? [0.5, 0.3] : [0.5, 0.22],
       lang: 'es',
       studio: 'PERSONA',
@@ -45,6 +47,7 @@ export const api = {
   },
   async photos() {
     return {
+      welcome: { es: '', en: '' },
       sets: [
         { id: 'camerino', title: 'Camerino' },
         { id: 'afiche', title: 'Afiche' },
@@ -62,7 +65,8 @@ export const api = {
         web: src(n, 2048),
       })),
       favoritesEnabled: true,
-      downloads: { enabled: true, sizes: ['original', 'web'], pin: false },
+      // En la demo no hay archivos para descargar.
+      downloads: { enabled: false, sizes: [], pin: false },
     };
   },
   track() {},
