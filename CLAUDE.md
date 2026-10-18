@@ -34,6 +34,7 @@ Memoria del proyecto. Leelo completo antes de cambiar algo.
 - Inicio: las fotos del mosaico abren la galería ampliada con enlace «Capítulo →» (no navegan).
 - Capítulos: barra de capítulos fija al bajar; ya no hay «Siguiente capítulo».
 - «Escribime» lleva `?tipo=N` según la página y el formulario llega con ese tipo elegido (`TIPO` en construir.py).
+- Fotos y piezas aparecen con un **fundido suave desde negro** (.9 s, `.rv` + `img.ok` en site.js), sin desenfoque ni destello; mientras carga, un tono muy oscuro del color de la foto (`--pc`). Igual en galerias.persona.cr.
 - Logos de clientes: se recortan sin bordes vacíos y el armador calcula el alto por peso visual (`alto`).
 - Premios: `premios` en el .yml del capítulo (sello junto al nombre del grupo) y `reconocimientos` en sitio.yml (Sobre mí + dato `award` para Google).
 
@@ -62,3 +63,7 @@ Memoria del proyecto. Leelo completo antes de cambiar algo.
 - Desde este sitio solo hay un enlace discreto en el pie: «Galerías de clientes» → `GALERIAS` en construir.py.
 - Rama `demo-galerias`: demo para revisar en raw.githack.com con fotos de Sala de Espera. **Nunca va a main.**
 - **Favicon:** «a» de Zodiak itálica azul sobre negro, en `favicon.ico`, `favicon-32.png`, `favicon-512.png` y `apple-touch-icon.png` (raíz). Igual en el sitio y la Bio.
+
+## Kit de marca (oct 2026)
+- Logo, ícono, firma, Instagram, tarjeta y guía en la carpeta `kit-marca` de la Mac (PERSONACR), no en este repo.
+- `img/marca/firma-persona.png`: imagen de la firma de correo (la usa la firma de Gmail; no cambiar de ruta).
