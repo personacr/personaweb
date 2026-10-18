@@ -29,7 +29,13 @@
     if (r.ok) { hv.src = hv.dataset.src; hv.play && hv.play().catch(function () {}); }
   }).catch(function () {});
 
-  /* Foco que se ajusta cuando la imagen entra en cuadro (una sola vez) */
+  /* Las fotos del mosaico aparecen con un fundido cuando terminan de cargar (nunca de golpe) */
+  $$('.jg .it img').forEach(function (im) {
+    var ok = function () { im.classList.add('ok'); };
+    if (im.complete && im.naturalWidth) ok(); else { im.addEventListener('load', ok, { once: true }); im.addEventListener('error', ok, { once: true }); }
+  });
+
+  /* Fundido suave cuando cada pieza entra en cuadro (una sola vez) */
   var rv = $$('.rv');
   if (calm || !('IntersectionObserver' in window)) rv.forEach(function (e) { e.classList.add('in'); });
   else {

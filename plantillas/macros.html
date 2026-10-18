@@ -8,7 +8,7 @@
 {#- Una foto dentro del mosaico justificado (sin texto encima; la descripción queda solo para Google y lectores de pantalla) -#}
 {%- macro tile(f, lang, href=None, i=0, ch=None, chl=None) -%}
 {%- set r = (f.w / f.h) | round(4) -%}
-<{{ 'a' if href else 'figure' }} class="it rv" {% if href %}href="{{ href }}"{% else %}tabindex="0" role="button" aria-label="{{ f['pie_' ~ lang] }}" data-full="{{ R }}{{ f.archivo }}-2048.webp"{% if ch %} data-ch="{{ ch }}" data-chl="{{ chl }}"{% endif %}{% endif %} style="--r:{{ r }};--d:{{ ((i % 4) * 0.07) | round(2) }}s;background:{{ f.color }}">
+<{{ 'a' if href else 'figure' }} class="it rv" {% if href %}href="{{ href }}"{% else %}tabindex="0" role="button" aria-label="{{ f['pie_' ~ lang] }}" data-full="{{ R }}{{ f.archivo }}-2048.webp"{% if ch %} data-ch="{{ ch }}" data-chl="{{ chl }}"{% endif %}{% endif %} style="--r:{{ r }};--d:{{ ((i % 4) * 0.08) | round(2) }}s;--pc:{{ f.color }}">
   {{ pic(f.archivo, f['pie_' ~ lang], f.w, f.h, sizes="(max-width:700px) 50vw, 25vw") }}
 </{{ 'a' if href else 'figure' }}>
 {%- endmacro -%}

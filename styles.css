@@ -102,17 +102,19 @@ button{font:inherit;color:inherit}
 /* ── MOSAICO JUSTIFICADO (orden de lectura intacto, formato original, sin textos encima) ── */
 .jg{display:flex;flex-wrap:wrap;gap:var(--gap)}
 .jg::after{content:"";flex-grow:1000000}
-.jg .it{position:relative;flex:calc(var(--r) * 100) 1 calc(var(--r) * var(--row));min-width:0;overflow:hidden;background:var(--c1);cursor:zoom-in;display:block}
+.jg .it{position:relative;flex:calc(var(--r) * 100) 1 calc(var(--r) * var(--row));min-width:0;overflow:hidden;background:var(--c1);background:color-mix(in srgb,var(--pc,#0b0b0c) 18%,#050505);cursor:zoom-in;display:block}
 a.it{cursor:pointer}
-.jg .it img{width:100%;height:100%;aspect-ratio:var(--r);object-fit:cover;filter:brightness(.9);transition:filter .6s var(--ease),transform 1.4s var(--ease)}
+.jg .it img{width:100%;height:100%;aspect-ratio:var(--r);object-fit:cover;filter:brightness(.9);transition:opacity .9s cubic-bezier(.33,0,.2,1),filter .6s var(--ease),transform 1.4s var(--ease)}
+.js .jg .it img{opacity:0}
+.js .jg .it img.ok{opacity:1}
 .jg.justified .it img{aspect-ratio:auto}
 .jg .it:hover img,.jg .it:focus-visible img{filter:brightness(1.04);transform:scale(1.015)}
 .jg .label{flex-basis:100%;padding:22px 0 4px;font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--mist)}
 .jg .label:first-child{padding-top:0}
 
-/* foco que se ajusta al entrar en cuadro */
-.js .rv{opacity:0;filter:blur(6px);transform:scale(1.012);transition:opacity .5s var(--ease) var(--d,0s),filter .6s var(--ease) var(--d,0s),transform .8s var(--ease) var(--d,0s)}
-.js .rv.in{opacity:1;filter:none;transform:none}
+/* fundido suave desde negro al entrar en cuadro (sin desenfoque ni destello) */
+.js .rv{opacity:0;transition:opacity .9s cubic-bezier(.33,0,.2,1) var(--d,0s)}
+.js .rv.in{opacity:1}
 
 /* ── INICIO: después del mosaico ── */
 .mosaic{padding-top:var(--gap)}
@@ -328,7 +330,8 @@ dialog::backdrop{background:rgba(0,0,0,.94);backdrop-filter:blur(6px)}
 
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-  .js .rv{opacity:1;filter:none;transform:none}
+  .js .rv{opacity:1}
+  .js .jg .it img{opacity:1}
   @view-transition{navigation:none}
 }
 /* ajustes */
