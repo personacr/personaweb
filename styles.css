@@ -355,9 +355,19 @@ dialog::backdrop{background:rgba(0,0,0,.94);backdrop-filter:blur(6px)}
 .jg .label.award a{display:inline-flex;align-items:center;gap:10px;color:var(--mist);letter-spacing:.16em;transition:color .25s}
 .jg .label.award a:hover{color:var(--bone)}
 .jg .label.award img{width:30px;height:30px;opacity:.9}
-.awards{list-style:none;display:grid;gap:10px}
-.awards a{display:flex;align-items:center;gap:16px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:14px;color:var(--mist);transition:color .25s}
-.awards a:hover{color:var(--bone)}
-.awards img{width:56px;height:56px;flex:none}
-.awards i{font-style:normal;margin-left:auto;color:var(--accent)}
+.about .bio{max-width:var(--text);margin-top:14px;color:var(--mist)}
+.disc{list-style:none;margin-top:18px;border-top:1px solid var(--line)}
+.disc li{display:flex;gap:14px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--bone)}
+.disc i{font-style:normal;color:var(--accent);width:18px;flex:none;text-align:center}
+.awards{list-style:none;border-top:1px solid var(--line)}
+.awards li>a,.awards li>div{display:flex;align-items:center;gap:18px;padding:16px 0;border-bottom:1px solid var(--line);color:var(--mist)}
+.awards li>a{transition:color .25s}.awards li>a:hover .aw-t b{color:var(--accent)}
+.aw-i{font-style:normal;color:var(--accent);width:18px;flex:none;text-align:center;align-self:flex-start;padding-top:3px}
+.aw-t{flex:1;min-width:0}
+.aw-t b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(17px,1.5vw,20px);line-height:1.25;color:var(--bone);transition:color .25s}
+.aw-t span{display:block;margin-top:4px;font-size:13px;line-height:1.5}
+.aw-t em{font-style:italic;color:var(--bone)}
+.aw-y{flex:none;font-size:12px;letter-spacing:.12em;color:var(--fog);font-variant-numeric:tabular-nums}
+.awards img{width:48px;height:48px;flex:none}
+@media(max-width:600px){.awards li>a,.awards li>div{flex-wrap:wrap;gap:6px 14px}.aw-t{flex-basis:calc(100% - 32px)}.aw-y{margin-left:32px}.awards img{width:40px;height:40px}}
 .ico{font-style:normal;font-family:var(--serif);font-size:17px;letter-spacing:0;color:var(--accent);margin-right:10px;vertical-align:-2px}

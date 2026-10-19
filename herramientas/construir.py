@@ -116,7 +116,7 @@ PERSON = {'@type': 'Person', '@id': site['url'] + '/#jpg', 'name': site['nombre'
           'jobTitle': 'Cineasta, fotógrafo y director escénico', 'nationality': 'Costa Rica', 'image': site['url'] + '/img/about/jose-pablo-garcia-1280.webp',
           'knowsAbout': ['Fotografía de conciertos', 'Fotografía de danza', 'Fotografía de teatro', 'Dirección de fotografía', 'Videoclips', 'Dirección escénica'],
           'sameAs': [site['instagram'], site['vimeo'], site['linkedin'], site['bio']], 'brand': {'@id': site['url'] + '/#persona'},
-          'award': [r['texto_en'] for r in site.get('reconocimientos', [])]}
+          'award': [f"{r['titulo_en']}, {r['evento_en']} {r['anio']} ({r['obra']})" for r in site.get('reconocimientos', [])]}
 ORG = {'@type': 'ProfessionalService', '@id': site['url'] + '/#persona', 'name': 'PERSONA', 'founder': {'@id': site['url'] + '/#jpg'},
        'url': site['url'] + '/', 'areaServed': ['Costa Rica', 'Centroamérica'], 'email': site['email']}
 

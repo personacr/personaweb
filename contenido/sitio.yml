@@ -15,8 +15,19 @@ rol_es: Narrador visual
 rol_en: Visual storyteller
 cierre_es: ¿Tenés un proyecto? Contame.
 cierre_en: Have a project in mind? Let's talk.
-bio_corta_es: Cineasta independiente costarricense con más de 20 años de experiencia en cine, fotografía, televisión, creación de contenido y artes escénicas.
-bio_corta_en: Costa Rican independent filmmaker with over 20 years of experience in film, photography, TV, content creation and performing arts.
+bio_corta_es: Licenciado en Cine y Televisión (Universidad Veritas) y Bachiller en Ciencias de la Comunicación Colectiva (UCR). Más de 20 años entre televisión, cine, fotografía y escena. Profesor de narración en la UCR de 2017 a 2020.
+bio_corta_en: Licentiate in Film and Television (Veritas University) and BA in Media and Communication (University of Costa Rica). Over 20 years across television, film, photography and stage. Storytelling professor at the University of Costa Rica, 2017–2020.
+# Sobre mí: una línea por disciplina, con los íconos del sitio
+disciplinas:
+- icono: ▭
+  texto_es: Series, cortometrajes, videodanza y videoclips.
+  texto_en: Series, short films, dance films and music videos.
+- icono: ◎
+  texto_es: Fotografía de música en vivo, danza, teatro y retrato.
+  texto_en: Live music, dance, theatre and portrait photography.
+- icono: ⌒
+  texto_es: Dirección escénica y artística.
+  texto_en: Stage and artistic direction.
 email: josepablo@persona.cr
 whatsapp: '50688433789'
 instagram: https://www.instagram.com/persona.cr
@@ -50,11 +61,52 @@ servicios:
   texto_en: Photo and video for events, spaces and campaigns.
   enlace: photo/marcas/
   imagen: img/photo/marcas/grupo-del-este-marcas-2026-02
+# Reconocimientos (Sobre mí). imagen y url son opcionales.
 reconocimientos:
-- texto_es: 'Nominee, categoría Conceptual · 12th Fine Art Photography Awards 2025–2026 · Parallel Perceptions'
-  texto_en: 'Nominee, Conceptual category · 12th Fine Art Photography Awards 2025–2026 · Parallel Perceptions'
+- icono: ◎
+  anio: 2025–26
+  titulo_es: Nominee · categoría Conceptual
+  titulo_en: Nominee · Conceptual category
+  evento_es: 12th Fine Art Photography Awards
+  evento_en: 12th Fine Art Photography Awards
+  obra: Parallel Perceptions
   imagen: img/premios/fapa-nominee
   url: https://fineartphotoawards.com/winners-gallery/fapa-2025-2026/professional/conceptual/hm/23646
+- icono: ▭
+  anio: '2022'
+  titulo_es: Mejor Cortometraje Experimental Centroamericano
+  titulo_en: Best Central American Experimental Short
+  evento_es: Festival Internacional ICARO
+  evento_en: ICARO International Film Festival
+  obra: Preludio
+- icono: ▭
+  anio: '2021'
+  titulo_es: Mejor Cortometraje Nacional
+  titulo_en: Best Costa Rican Short Film
+  evento_es: Festival Lúdico
+  evento_en: Lúdico Festival
+  obra: Silencio
+- icono: ▭
+  anio: 2018–19
+  titulo_es: 4 premios internacionales
+  titulo_en: 4 international awards
+  evento_es: Mejor Cinematografía (São Paulo Webfest) · Mejor Drama (Bilbao Seriesland) · Mejor Webserie Internacional (Fidewà) · Mejor Guion Iberoamérica (BAWEBFEST)
+  evento_en: Best Cinematography (São Paulo Webfest) · Best Drama (Bilbao Seriesland) · Best International Web Series (Fidewà) · Best Ibero-American Script (BAWEBFEST)
+  obra: Dele Viaje
+- icono: ▭
+  anio: '2018'
+  titulo_es: Candidatura · Mejor Teleserie Iberoamericana
+  titulo_en: Shortlisted · Best Ibero-American Series
+  evento_es: Premios Platino
+  evento_en: Platino Awards
+  obra: Dele Viaje
+- icono: ▭
+  anio: '2015'
+  titulo_es: Ganador · Fondo para el Fomento Audiovisual y Cinematográfico “El Fauno”
+  titulo_en: Winner · “El Fauno” Fund for Audiovisual and Film Development
+  evento_es: Ministerio de Cultura y Juventud
+  evento_en: Ministry of Culture and Youth
+  obra: Dele Viaje
 clientes:
 - logo: img/clientes/grupo-del-este.png
   nombre: Grupo del Este
