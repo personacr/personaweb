@@ -23,6 +23,11 @@ stage = leer('contenido/stage.yml')
 
 thumbs = {str(k): v for k, v in (leer('contenido/miniaturas.yml') or {}).items()}
 capitulos = sorted((leer(p) for p in glob.glob('contenido/photo/*.yml')), key=lambda c: c['orden'])
+for c in capitulos:  # Pages CMS borra los campos vacíos al guardar: aquí se rellenan
+    c.setdefault('premios', [])
+    for f in c.get('fotos', []):
+        for k, v in (('grupo_es', ''), ('grupo_en', ''), ('pie_es', ''), ('pie_en', ''), ('credito', ''), ('formato', 'par')):
+            if f.get(k) is None: f[k] = v
 from PIL import Image
 for c in capitulos:
     for i, f in enumerate(c['fotos']):
