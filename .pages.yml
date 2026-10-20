@@ -12,9 +12,13 @@ content:
     type: collection
     path: contenido/photo
     format: yaml
+    extension: yml
+    filename: '{fields.slug}.yml'
     view:
+      fields: [titulo_es, orden]
       primary: titulo_es
-      sort: orden
+      sort: [orden]
+      default: { sort: orden, order: asc }
     fields:
       - { name: orden, label: Orden en el menú, type: number }
       - { name: numero, label: Número (I, II…), type: string }
@@ -195,15 +199,28 @@ content:
           - { name: texto_en, label: Texto (EN), type: string }
           - { name: enlace, label: Enlace interno, type: string }
           - { name: imagen, label: Foto (ruta sin tamaño, ej. img/photo/marcas/grupo-del-este-marcas-2026-02), type: string }
-      - name: reconocimientos
-        label: Reconocimientos (Sobre mí)
+      - name: disciplinas
+        label: Sobre mí · líneas por disciplina
         type: object
         list: true
         fields:
+          - { name: icono, label: Ícono (▭ ◎ ⌒), type: string }
           - { name: texto_es, label: Texto (ES), type: string }
           - { name: texto_en, label: Texto (EN), type: string }
-          - { name: imagen, label: Sello (ruta sin tamaño), type: string }
-          - { name: url, label: Enlace oficial, type: string }
+      - name: reconocimientos
+        label: Sobre mí · reconocimientos (el más reciente arriba)
+        type: object
+        list: true
+        fields:
+          - { name: icono, label: Ícono (▭ motion · ◎ photo · ⌒ stage), type: string }
+          - { name: anio, label: Año, type: string }
+          - { name: titulo_es, label: Premio o nominación (ES), type: string }
+          - { name: titulo_en, label: Premio o nominación (EN), type: string }
+          - { name: evento_es, label: Festival o institución (ES), type: string }
+          - { name: evento_en, label: Festival o institución (EN), type: string }
+          - { name: obra, label: Obra, type: string }
+          - { name: imagen, label: Sello (opcional · ruta sin tamaño), type: string }
+          - { name: url, label: Enlace oficial (opcional), type: string }
       - name: clientes
         label: Clientes con logo
         type: object
