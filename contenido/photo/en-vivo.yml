@@ -1,5 +1,3 @@
-# Capítulo de Photo. Editable desde Pages CMS.
-# formato: completa | par | detalle  ·  las fotos van en el orden de esta lista
 orden: 1
 numero: I
 slug: en-vivo
@@ -10,193 +8,155 @@ intro_es: Conciertos, giras y backstage.
 intro_en: Concerts, tours and backstage.
 portada: img/photo/en-vivo/jacob-collier-en-vivo-2025-04-640.webp
 fotos:
-- archivo: img/photo/en-vivo/arturo-pardo-en-vivo-2025-01-640.webp
-  w: 668
-  h: 1000
-  color: '#555555'
-  formato: par
-  grupo_es: ''
-  grupo_en: ''
-  pie_es: Arturo Pardo en el pasillo antes del concierto
-  pie_en: Arturo Pardo in the corridor before the concert
-  credito: Arturo Pardo · 2025
-- archivo: img/photo/en-vivo/arturo-pardo-en-vivo-2025-02-640.webp
-  w: 668
-  h: 1000
-  color: '#353535'
-  formato: par
-  grupo_es: ''
-  grupo_en: ''
-  pie_es: Chelo en el backstage de un concierto de Arturo Pardo
-  pie_en: Cello backstage at an Arturo Pardo concert
-  credito: Arturo Pardo · 2025
-- archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-03-640.webp
-  w: 1000
-  h: 668
-  color: '#1d3b4e'
-  formato: completa
-  grupo_es: ''
-  grupo_en: ''
-  pie_es: Jacob Collier en concierto, vista general de la sala
-  pie_en: Jacob Collier in concert, wide view of the hall
-  credito: Jacob Collier · 2025
-- archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-04-640.webp
-  w: 1000
-  h: 668
-  color: '#1e3153'
-  formato: completa
-  grupo_es: ''
-  grupo_en: ''
-  pie_es: Jacob Collier con los brazos abiertos en el escenario
-  pie_en: Jacob Collier on stage with open arms
-  credito: Jacob Collier · 2025
-- archivo: img/photo/en-vivo/daniel-patino-en-vivo-2024-05-640.webp
-  w: 1000
-  h: 668
-  color: '#654641'
-  formato: completa
-  grupo_es: ''
-  grupo_en: ''
-  pie_es: Daniel Patiño cantando entre luces
-  pie_en: Daniel Patiño singing among stage lights
-  credito: Daniel Patiño · 2024
-- archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-06-640.webp
-  w: 1000
-  h: 668
-  color: '#16344e'
-  formato: detalle
-  grupo_es: ''
-  grupo_en: ''
-  pie_es: Zapatos de Jacob Collier en el escenario
-  pie_en: Jacob Collier's shoes on stage
-  credito: Jacob Collier · 2025
-- archivo: img/photo/en-vivo/daniel-patino-en-vivo-2024-07-640.webp
-  w: 1000
-  h: 668
-  color: '#545454'
-  formato: completa
-  grupo_es: ''
-  grupo_en: ''
-  pie_es: Daniel Patiño en concierto, blanco y negro
-  pie_en: Daniel Patiño in concert, black and white
-  credito: Daniel Patiño · 2024
-- archivo: img/photo/en-vivo/daniel-patino-en-vivo-2024-17-640.webp
-  w: 2811
-  h: 4208
-  color: '#585858'
-  formato: par
-  grupo_es: ''
-  grupo_en: ''
-  pie_es: Daniel Patiño cantando, blanco y negro
-  pie_en: Daniel Patiño singing, black and white
-  credito: Daniel Patiño · 2024
-- archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-08-640.webp
-  w: 1000
-  h: 668
-  color: '#393939'
-  formato: completa
-  grupo_es: ''
-  grupo_en: ''
-  pie_es: Jacob Collier saltando en el escenario
-  pie_en: Jacob Collier jumping on stage
-  credito: Jacob Collier · 2025
-- archivo: img/photo/en-vivo/fabi-arroyo-en-vivo-2026-09-640.webp
-  w: 1000
-  h: 667
-  color: '#143669'
-  formato: detalle
-  grupo_es: ''
-  grupo_en: ''
-  pie_es: Mano de Fabi Arroyo frente a una pantalla LED
-  pie_en: Fabi Arroyo's hand against an LED screen
-  credito: Fabi Arroyo · 2026
-- archivo: img/photo/en-vivo/daniel-patino-en-vivo-2024-10-640.webp
-  w: 668
-  h: 1000
-  color: '#2d5d7a'
-  formato: par
-  grupo_es: ''
-  grupo_en: ''
-  pie_es: Daniel Patiño en concierto, efecto de remolino
-  pie_en: Daniel Patiño in concert, swirl effect
-  credito: Daniel Patiño · 2024
-- archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-11-640.webp
-  w: 668
-  h: 1000
-  color: '#2e3642'
-  formato: par
-  grupo_es: ''
-  grupo_en: ''
-  pie_es: Jacob Collier gritando en el escenario
-  pie_en: Jacob Collier shouting on stage
-  credito: Jacob Collier · 2025
-- archivo: img/photo/en-vivo/daniel-patino-en-vivo-2024-12-640.webp
-  w: 1000
-  h: 668
-  color: '#103758'
-  formato: completa
-  grupo_es: ''
-  grupo_en: ''
-  pie_es: Daniel Patiño en concierto, efecto de prisma
-  pie_en: Daniel Patiño in concert, prism effect
-  credito: Daniel Patiño · 2024
-- archivo: img/photo/en-vivo/daniel-patino-en-vivo-2024-18-640.webp
-  w: 2832
-  h: 4240
-  color: '#273037'
-  formato: par
-  grupo_es: ''
-  grupo_en: ''
-  pie_es: Daniel Patiño bajo un haz de luz
-  pie_en: Daniel Patiño under a beam of light
-  credito: Daniel Patiño · 2024
-- archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-13-640.webp
-  w: 1000
-  h: 668
-  color: '#323232'
-  formato: completa
-  grupo_es: ''
-  grupo_en: ''
-  pie_es: Director de orquesta a contraluz, concierto de Jacob Collier
-  pie_en: Conductor backlit at Jacob Collier's concert
-  credito: Jacob Collier · 2025
-- archivo: img/photo/en-vivo/arturo-pardo-en-vivo-2025-14-640.webp
-  w: 1000
-  h: 668
-  color: '#3c2419'
-  formato: completa
-  grupo_es: ''
-  grupo_en: ''
-  pie_es: Público con luces en un concierto de Arturo Pardo
-  pie_en: Audience lights at an Arturo Pardo concert
-  credito: Arturo Pardo · 2025
-- archivo: img/photo/en-vivo/arturo-pardo-en-vivo-2025-19-640.webp
-  w: 4045
-  h: 2702
-  color: '#382955'
-  formato: par
-  grupo_es: ''
-  grupo_en: ''
-  pie_es: Escenario con luces moradas, concierto de Arturo Pardo
-  pie_en: Stage in purple light, Arturo Pardo concert
-  credito: Arturo Pardo · 2025
-- archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-15-640.webp
-  w: 1000
-  h: 668
-  color: '#232b3b'
-  formato: completa
-  grupo_es: ''
-  grupo_en: ''
-  pie_es: Jacob Collier con la orquesta y el público
-  pie_en: Jacob Collier with the orchestra and audience
-  credito: Jacob Collier · 2025
-- archivo: img/photo/en-vivo/arturo-pardo-en-vivo-2025-16-640.webp
-  w: 1000
-  h: 668
-  color: '#402e25'
-  formato: completa
-  grupo_es: ''
-  grupo_en: ''
-  pie_es: Dos siluetas frente a las luces, concierto de Arturo Pardo
-  pie_en: Two silhouettes facing the lights, Arturo Pardo concert
-  credito: Arturo Pardo · 2025
+  - archivo: img/photo/en-vivo/arturo-pardo-en-vivo-2025-01-640.webp
+    formato: par
+    pie_es: Felipe Pérez en el pasillo antes del concierto
+    pie_en: Felipe Pérez in the corridor before the concert
+    credito: Arturo Pardo · 2025
+    w: 668
+    h: 1000
+    color: "#555555"
+  - archivo: img/photo/en-vivo/arturo-pardo-en-vivo-2025-02-640.webp
+    formato: par
+    pie_es: Chelo en el backstage de un concierto de Arturo Pardo
+    pie_en: Cello backstage at an Arturo Pardo concert
+    credito: Arturo Pardo · 2025
+    w: 668
+    h: 1000
+    color: "#353535"
+  - archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-03-640.webp
+    formato: completa
+    pie_es: Jacob Collier en concierto, vista general de la sala
+    pie_en: Jacob Collier in concert, wide view of the hall
+    credito: Jacob Collier · 2025
+    w: 1000
+    h: 668
+    color: "#1d3b4e"
+  - archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-04-640.webp
+    formato: completa
+    pie_es: Jacob Collier con los brazos abiertos en el escenario
+    pie_en: Jacob Collier on stage with open arms
+    credito: Jacob Collier · 2025
+    w: 1000
+    h: 668
+    color: "#1e3153"
+  - archivo: img/photo/en-vivo/daniel-patino-en-vivo-2024-05-640.webp
+    formato: completa
+    pie_es: Daniel Patiño cantando entre luces
+    pie_en: Daniel Patiño singing among stage lights
+    credito: Daniel Patiño · 2024
+    w: 1000
+    h: 668
+    color: "#654641"
+  - archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-06-640.webp
+    formato: detalle
+    pie_es: Zapatos de Jacob Collier en el escenario
+    pie_en: Jacob Collier's shoes on stage
+    credito: Jacob Collier · 2025
+    w: 1000
+    h: 668
+    color: "#16344e"
+  - archivo: img/photo/en-vivo/daniel-patino-en-vivo-2024-07-640.webp
+    formato: completa
+    pie_es: Daniel Patiño en concierto, blanco y negro
+    pie_en: Daniel Patiño in concert, black and white
+    credito: Daniel Patiño · 2024
+    w: 1000
+    h: 668
+    color: "#545454"
+  - archivo: img/photo/en-vivo/daniel-patino-en-vivo-2024-17-640.webp
+    formato: par
+    pie_es: Daniel Patiño cantando, blanco y negro
+    pie_en: Daniel Patiño singing, black and white
+    credito: Daniel Patiño · 2024
+    w: 2811
+    h: 4208
+    color: "#585858"
+  - archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-08-640.webp
+    formato: completa
+    pie_es: Jacob Collier saltando en el escenario
+    pie_en: Jacob Collier jumping on stage
+    credito: Jacob Collier · 2025
+    w: 1000
+    h: 668
+    color: "#393939"
+  - archivo: img/photo/en-vivo/fabi-arroyo-en-vivo-2026-09-640.webp
+    formato: detalle
+    pie_es: Mano de Fabi Arroyo frente a una pantalla LED
+    pie_en: Fabi Arroyo's hand against an LED screen
+    credito: Fabi Arroyo · 2026
+    w: 1000
+    h: 667
+    color: "#143669"
+  - archivo: img/photo/en-vivo/daniel-patino-en-vivo-2024-10-640.webp
+    formato: par
+    pie_es: Daniel Patiño en concierto, efecto de remolino
+    pie_en: Daniel Patiño in concert, swirl effect
+    credito: Daniel Patiño · 2024
+    w: 668
+    h: 1000
+    color: "#2d5d7a"
+  - archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-11-640.webp
+    formato: par
+    pie_es: Jacob Collier gritando en el escenario
+    pie_en: Jacob Collier shouting on stage
+    credito: Jacob Collier · 2025
+    w: 668
+    h: 1000
+    color: "#2e3642"
+  - archivo: img/photo/en-vivo/daniel-patino-en-vivo-2024-12-640.webp
+    formato: completa
+    pie_es: Daniel Patiño en concierto, efecto de prisma
+    pie_en: Daniel Patiño in concert, prism effect
+    credito: Daniel Patiño · 2024
+    w: 1000
+    h: 668
+    color: "#103758"
+  - archivo: img/photo/en-vivo/daniel-patino-en-vivo-2024-18-640.webp
+    formato: par
+    pie_es: Daniel Patiño bajo un haz de luz
+    pie_en: Daniel Patiño under a beam of light
+    credito: Daniel Patiño · 2024
+    w: 2832
+    h: 4240
+    color: "#273037"
+  - archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-13-640.webp
+    formato: completa
+    pie_es: Director de orquesta a contraluz, concierto de Jacob Collier
+    pie_en: Conductor backlit at Jacob Collier's concert
+    credito: Jacob Collier · 2025
+    w: 1000
+    h: 668
+    color: "#323232"
+  - archivo: img/photo/en-vivo/arturo-pardo-en-vivo-2025-14-640.webp
+    formato: completa
+    pie_es: Público con luces en un concierto de Arturo Pardo
+    pie_en: Audience lights at an Arturo Pardo concert
+    credito: Arturo Pardo · 2025
+    w: 1000
+    h: 668
+    color: "#3c2419"
+  - archivo: img/photo/en-vivo/arturo-pardo-en-vivo-2025-19-640.webp
+    formato: par
+    pie_es: Escenario con luces moradas, concierto de Arturo Pardo
+    pie_en: Stage in purple light, Arturo Pardo concert
+    credito: Arturo Pardo · 2025
+    w: 4045
+    h: 2702
+    color: "#382955"
+  - archivo: img/photo/en-vivo/jacob-collier-en-vivo-2025-15-640.webp
+    formato: completa
+    pie_es: Jacob Collier con la orquesta y el público
+    pie_en: Jacob Collier with the orchestra and audience
+    credito: Jacob Collier · 2025
+    w: 1000
+    h: 668
+    color: "#232b3b"
+  - archivo: img/photo/en-vivo/arturo-pardo-en-vivo-2025-16-640.webp
+    formato: completa
+    pie_es: Dos siluetas frente a las luces, concierto de Arturo Pardo
+    pie_en: Two silhouettes facing the lights, Arturo Pardo concert
+    credito: Arturo Pardo · 2025
+    w: 1000
+    h: 668
+    color: "#402e25"
