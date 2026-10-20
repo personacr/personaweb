@@ -8,9 +8,9 @@ titulo_es: Arte
 titulo_en: Fine art
 intro_es: Fotomontaje, series personales y foto con texto.
 intro_en: Photomontage, personal series and photo with text.
-portada: img/photo/arte/parallel-perceptions-arte-02
+portada: img/photo/arte/parallel-perceptions-arte-02-640.webp
 fotos:
-- archivo: img/photo/arte/hyatt-place-arte-11
+- archivo: img/photo/arte/hyatt-place-arte-11-640.webp
   w: 1000
   h: 520
   color: '#40544b'
@@ -20,7 +20,7 @@ fotos:
   pie_es: Fotomontaje geométrico de una catarata para Hyatt Place
   pie_en: Geometric photomontage of a waterfall for Hyatt Place
   credito: Hyatt Place
-- archivo: img/photo/arte/hyatt-place-arte-12
+- archivo: img/photo/arte/hyatt-place-arte-12-640.webp
   w: 1000
   h: 520
   color: '#4e5451'
@@ -30,7 +30,7 @@ fotos:
   pie_es: Fotomontaje geométrico de un volcán para Hyatt Place
   pie_en: Geometric photomontage of a volcano for Hyatt Place
   credito: Hyatt Place
-- archivo: img/photo/arte/hyatt-place-arte-13
+- archivo: img/photo/arte/hyatt-place-arte-13-640.webp
   w: 769
   h: 1000
   color: '#998973'
@@ -40,7 +40,7 @@ fotos:
   pie_es: Fotomontaje de un árbol para Hyatt Place
   pie_en: Photomontage of a tree for Hyatt Place
   credito: Hyatt Place
-- archivo: img/photo/arte/hyatt-place-arte-14
+- archivo: img/photo/arte/hyatt-place-arte-14-640.webp
   w: 818
   h: 1000
   color: '#46433d'
@@ -50,7 +50,7 @@ fotos:
   pie_es: Fotomontaje geométrico de Bajos del Toro para Hyatt Place
   pie_en: Geometric photomontage of Bajos del Toro for Hyatt Place
   credito: Hyatt Place
-- archivo: img/photo/arte/hyatt-place-arte-15
+- archivo: img/photo/arte/hyatt-place-arte-15-640.webp
   w: 750
   h: 1000
   color: '#4c4a39'
@@ -60,7 +60,7 @@ fotos:
   pie_es: Caleidoscopio de Bajos del Toro para Hyatt Place
   pie_en: Kaleidoscope of Bajos del Toro for Hyatt Place
   credito: Hyatt Place
-- archivo: img/photo/arte/hyatt-place-arte-16
+- archivo: img/photo/arte/hyatt-place-arte-16-640.webp
   w: 750
   h: 1000
   color: '#27302b'
@@ -70,7 +70,7 @@ fotos:
   pie_es: Fotomontaje de cuadros y una flor para Hyatt Place
   pie_en: Photomontage of squares and a flower for Hyatt Place
   credito: Hyatt Place
-- archivo: img/photo/arte/parallel-perceptions-arte-01
+- archivo: img/photo/arte/parallel-perceptions-arte-01-640.webp
   w: 1000
   h: 563
   color: '#93a9bf'
@@ -80,7 +80,7 @@ fotos:
   pie_es: Isla con un árbol, serie Parallel Perceptions
   pie_en: Island with a tree, Parallel Perceptions series
   credito: Parallel Perceptions
-- archivo: img/photo/arte/parallel-perceptions-arte-02
+- archivo: img/photo/arte/parallel-perceptions-arte-02-640.webp
   w: 1000
   h: 563
   color: '#64777d'
@@ -90,7 +90,7 @@ fotos:
   pie_es: Cuerpo en el aire junto a una estructura metálica, Parallel Perceptions
   pie_en: Body in mid-air beside a metal structure, Parallel Perceptions
   credito: Parallel Perceptions
-- archivo: img/photo/arte/parallel-perceptions-arte-03
+- archivo: img/photo/arte/parallel-perceptions-arte-03-640.webp
   w: 1000
   h: 563
   color: '#6b7b79'
@@ -100,7 +100,7 @@ fotos:
   pie_es: Cascada en espejo, Parallel Perceptions
   pie_en: Mirrored waterfall, Parallel Perceptions
   credito: Parallel Perceptions
-- archivo: img/photo/arte/parallel-perceptions-arte-04
+- archivo: img/photo/arte/parallel-perceptions-arte-04-640.webp
   w: 1000
   h: 563
   color: '#b5b9cc'
@@ -110,7 +110,7 @@ fotos:
   pie_es: Cuerpo y puente en espejo, Parallel Perceptions
   pie_en: Body and bridge mirrored, Parallel Perceptions
   credito: Parallel Perceptions
-- archivo: img/photo/arte/parallel-perceptions-arte-05
+- archivo: img/photo/arte/parallel-perceptions-arte-05-640.webp
   w: 1000
   h: 563
   color: '#6f7877'
@@ -120,7 +120,7 @@ fotos:
   pie_es: Fachada y rostro en espejo, Parallel Perceptions
   pie_en: Facade and face mirrored, Parallel Perceptions
   credito: Parallel Perceptions
-- archivo: img/photo/arte/parallel-perceptions-arte-06
+- archivo: img/photo/arte/parallel-perceptions-arte-06-640.webp
   w: 1000
   h: 563
   color: '#194b58'
@@ -130,7 +130,7 @@ fotos:
   pie_es: Silueta y túnel, Parallel Perceptions
   pie_en: Silhouette and tunnel, Parallel Perceptions
   credito: Parallel Perceptions
-- archivo: img/photo/arte/arte-2021-07
+- archivo: img/photo/arte/arte-2021-07-640.webp
   w: 1000
   h: 667
   color: '#7c7c97'
@@ -140,7 +140,7 @@ fotos:
   pie_es: Dos figuras cargan una tabla en un parqueo, serie Los Innato
   pie_en: Two figures carry a board in a parking garage, Los Innato series
   credito: '2021'
-- archivo: img/photo/arte/arte-2021-08
+- archivo: img/photo/arte/arte-2021-08-640.webp
   w: 1000
   h: 667
   color: '#626a97'
@@ -150,7 +150,7 @@ fotos:
   pie_es: Dos figuras se separan en un parqueo, serie Los Innato
   pie_en: Two figures part ways in a parking garage, Los Innato series
   credito: '2021'
-- archivo: img/photo/arte/arte-2021-09
+- archivo: img/photo/arte/arte-2021-09-640.webp
   w: 1000
   h: 667
   color: '#6b739e'
@@ -160,7 +160,7 @@ fotos:
   pie_es: Una figura arrodillada en un parqueo, serie Los Innato
   pie_en: A kneeling figure in a parking garage, Los Innato series
   credito: '2021'
-- archivo: img/photo/arte/arte-2021-10
+- archivo: img/photo/arte/arte-2021-10-640.webp
   w: 1000
   h: 667
   color: '#5e6797'
@@ -170,7 +170,7 @@ fotos:
   pie_es: Dos figuras contra la pared de un parqueo, serie Los Innato
   pie_en: Two figures against a parking-garage wall, Los Innato series
   credito: '2021'
-- archivo: img/photo/arte/foto-y-texto-arte-2021-19
+- archivo: img/photo/arte/foto-y-texto-arte-2021-19-640.webp
   w: 4927
   h: 2988
   color: '#3a4c54'
@@ -180,7 +180,7 @@ fotos:
   pie_es: 'Foto y texto: «let go of the fear of not being good enough»'
   pie_en: 'Photo and text: “let go of the fear of not being good enough”'
   credito: '2021'
-- archivo: img/photo/arte/foto-y-texto-arte-2021-20
+- archivo: img/photo/arte/foto-y-texto-arte-2021-20-640.webp
   w: 3833
   h: 2156
   color: '#839297'
@@ -190,7 +190,7 @@ fotos:
   pie_es: Foto y texto sobre una playa
   pie_en: Photo and text over a beach
   credito: '2021'
-- archivo: img/photo/arte/foto-y-texto-arte-2021-21
+- archivo: img/photo/arte/foto-y-texto-arte-2021-21-640.webp
   w: 5961
   h: 1987
   color: '#312526'
@@ -200,7 +200,7 @@ fotos:
   pie_es: 'Foto y texto: «Find your breath»'
   pie_en: 'Photo and text: “Find your breath”'
   credito: '2021'
-- archivo: img/photo/arte/arte-18
+- archivo: img/photo/arte/arte-18-640.webp
   w: 1000
   h: 563
   color: '#424e54'

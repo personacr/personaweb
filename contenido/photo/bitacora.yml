@@ -8,9 +8,9 @@ titulo_es: Bitácora
 titulo_en: Field notes
 intro_es: Viajes, ciudades y paisajes.
 intro_en: Travel, cities and landscapes.
-portada: img/photo/bitacora/bitacora-2025-02
+portada: img/photo/bitacora/bitacora-2025-02-640.webp
 fotos:
-- archivo: img/photo/bitacora/bitacora-2025-01
+- archivo: img/photo/bitacora/bitacora-2025-01-640.webp
   w: 1000
   h: 668
   color: '#2e2a28'
@@ -20,7 +20,7 @@ fotos:
   pie_es: Blackfriars de noche, Londres
   pie_en: Blackfriars at night, London
   credito: '2025'
-- archivo: img/photo/bitacora/bitacora-2025-02
+- archivo: img/photo/bitacora/bitacora-2025-02-640.webp
   w: 1000
   h: 668
   color: '#4b3b40'
@@ -30,7 +30,7 @@ fotos:
   pie_es: Bus rojo pasando de noche
   pie_en: A red bus passing at night
   credito: '2025'
-- archivo: img/photo/bitacora/bitacora-2022-03
+- archivo: img/photo/bitacora/bitacora-2022-03-640.webp
   w: 667
   h: 1000
   color: '#636469'
@@ -40,7 +40,7 @@ fotos:
   pie_es: Calle con gente en movimiento
   pie_en: Street with people in motion
   credito: '2022'
-- archivo: img/photo/bitacora/bitacora-2022-04
+- archivo: img/photo/bitacora/bitacora-2022-04-640.webp
   w: 667
   h: 1000
   color: '#474546'
@@ -50,7 +50,7 @@ fotos:
   pie_es: Ventana en Suiza
   pie_en: Window in Switzerland
   credito: '2022'
-- archivo: img/photo/bitacora/bitacora-2025-05
+- archivo: img/photo/bitacora/bitacora-2025-05-640.webp
   w: 1000
   h: 668
   color: '#292e38'
@@ -60,7 +60,7 @@ fotos:
   pie_es: Puente azul
   pie_en: Blue bridge
   credito: '2025'
-- archivo: img/photo/bitacora/bitacora-2025-06
+- archivo: img/photo/bitacora/bitacora-2025-06-640.webp
   w: 668
   h: 1000
   color: '#5b626a'
@@ -70,7 +70,7 @@ fotos:
   pie_es: La ciudad vista entre rejas
   pie_en: The city seen through railings
   credito: '2025'
-- archivo: img/photo/bitacora/bitacora-2023-07
+- archivo: img/photo/bitacora/bitacora-2023-07-640.webp
   w: 562
   h: 1000
   color: '#a8bac2'
@@ -80,7 +80,7 @@ fotos:
   pie_es: Rueda de Chicago contra el cielo
   pie_en: Ferris wheel against the sky
   credito: '2023'
-- archivo: img/photo/bitacora/bitacora-2022-08
+- archivo: img/photo/bitacora/bitacora-2022-08-640.webp
   w: 1000
   h: 667
   color: '#363c37'
@@ -90,7 +90,7 @@ fotos:
   pie_es: Pueblo entre pinos
   pie_en: Village among pines
   credito: '2022'
-- archivo: img/photo/bitacora/bitacora-2018-09
+- archivo: img/photo/bitacora/bitacora-2018-09-640.webp
   w: 1000
   h: 667
   color: '#383f39'
@@ -100,7 +100,7 @@ fotos:
   pie_es: Agua en larga exposición
   pie_en: Long-exposure water
   credito: '2018'
-- archivo: img/photo/bitacora/bitacora-10
+- archivo: img/photo/bitacora/bitacora-10-640.webp
   w: 1000
   h: 560
   color: '#b3a59b'
@@ -110,7 +110,7 @@ fotos:
   pie_es: Una persona caminando, vista desde un dron
   pie_en: A person walking, seen from a drone
   credito: ''
-- archivo: img/photo/bitacora/bitacora-2025-12
+- archivo: img/photo/bitacora/bitacora-2025-12-640.webp
   w: 4902
   h: 6134
   color: '#41474f'
@@ -120,7 +120,7 @@ fotos:
   pie_es: 'Collage de Londres: San Pablo y el Támesis'
   pie_en: 'London collage: St Paul’s and the Thames'
   credito: '2025'
-- archivo: img/photo/bitacora/bitacora-2025-13
+- archivo: img/photo/bitacora/bitacora-2025-13-640.webp
   w: 4902
   h: 6134
   color: '#294350'
@@ -130,7 +130,7 @@ fotos:
   pie_es: Collage de Londres de noche
   pie_en: London collage at night
   credito: '2025'
-- archivo: img/photo/bitacora/bitacora-2025-14
+- archivo: img/photo/bitacora/bitacora-2025-14-640.webp
   w: 4566
   h: 5712
   color: '#48444b'
@@ -140,7 +140,7 @@ fotos:
   pie_es: 'Collage de Londres: puente, bus y flores'
   pie_en: 'London collage: bridge, bus and flowers'
   credito: '2025'
-- archivo: img/photo/bitacora/bitacora-2025-15
+- archivo: img/photo/bitacora/bitacora-2025-15-640.webp
   w: 4902
   h: 3260
   color: '#504353'
@@ -150,7 +150,7 @@ fotos:
   pie_es: 'Collage de Londres: cabina, rueda y río'
   pie_en: 'London collage: phone box, wheel and river'
   credito: '2025'
-- archivo: img/photo/bitacora/bitacora-2021-16
+- archivo: img/photo/bitacora/bitacora-2021-16-640.webp
   w: 3685
   h: 5520
   color: '#252d2b'
@@ -160,7 +160,7 @@ fotos:
   pie_es: Pareja en un túnel de árboles
   pie_en: A couple in a tunnel of trees
   credito: '2021'
-- archivo: img/photo/bitacora/bitacora-2017-11
+- archivo: img/photo/bitacora/bitacora-2017-11-640.webp
   w: 1000
   h: 564
   color: '#959c95'

@@ -10,7 +10,12 @@ from jinja2 import Environment, FileSystemLoader
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(RAIZ)
-leer = lambda p: yaml.safe_load(open(p, encoding='utf-8'))
+def _base(v):  # en los .yml las fotos van como «…-640.webp» (para que Pages CMS las muestre); el sitio usa la ruta sin tamaño
+    if isinstance(v, str): return re.sub(r'-(640|1280|2048)\.webp$', '', v)
+    if isinstance(v, list): return [_base(x) for x in v]
+    if isinstance(v, dict): return {k: _base(x) for k, x in v.items()}
+    return v
+leer = lambda p: _base(yaml.safe_load(open(p, encoding='utf-8')))
 
 site = leer('contenido/sitio.yml')
 motion = leer('contenido/motion.yml')

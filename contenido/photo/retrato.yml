@@ -8,9 +8,9 @@ titulo_es: Retrato
 titulo_en: Portrait
 intro_es: Retratos de músicos, parejas y familias.
 intro_en: Portraits of musicians, couples and families.
-portada: img/photo/retrato/retrato-2025-07
+portada: img/photo/retrato/retrato-2025-07-640.webp
 fotos:
-- archivo: img/photo/retrato/retrato-2025-01
+- archivo: img/photo/retrato/retrato-2025-01-640.webp
   w: 668
   h: 1000
   color: '#3e4749'
@@ -20,7 +20,7 @@ fotos:
   pie_es: Chelista junto a la ventana de un palacio
   pie_en: Cellist by a palace window
   credito: '2025'
-- archivo: img/photo/retrato/retrato-2025-02
+- archivo: img/photo/retrato/retrato-2025-02-640.webp
   w: 668
   h: 1000
   color: '#2d292d'
@@ -30,7 +30,7 @@ fotos:
   pie_es: Chelista en estudio
   pie_en: Cellist in the studio
   credito: '2025'
-- archivo: img/photo/retrato/retrato-2025-03
+- archivo: img/photo/retrato/retrato-2025-03-640.webp
   w: 668
   h: 1000
   color: '#4f4948'
@@ -40,7 +40,7 @@ fotos:
   pie_es: Pianista reflejada en la tapa del piano
   pie_en: Pianist reflected on the piano lid
   credito: '2025'
-- archivo: img/photo/retrato/retrato-2025-04
+- archivo: img/photo/retrato/retrato-2025-04-640.webp
   w: 668
   h: 1000
   color: '#726864'
@@ -50,7 +50,7 @@ fotos:
   pie_es: Trío de músicos en un salón dorado
   pie_en: Music trio in a golden hall
   credito: '2025'
-- archivo: img/photo/retrato/retrato-2019-05
+- archivo: img/photo/retrato/retrato-2019-05-640.webp
   w: 1000
   h: 667
   color: '#4d4e33'
@@ -60,7 +60,7 @@ fotos:
   pie_es: Retrato de mujer en exteriores
   pie_en: Portrait of a woman outdoors
   credito: '2019'
-- archivo: img/photo/retrato/retrato-06
+- archivo: img/photo/retrato/retrato-06-640.webp
   w: 1000
   h: 800
   color: '#1f2732'
@@ -70,7 +70,7 @@ fotos:
   pie_es: Mujer de espaldas con luz lateral
   pie_en: Woman from behind in side light
   credito: ''
-- archivo: img/photo/retrato/retrato-13
+- archivo: img/photo/retrato/retrato-13-640.webp
   w: 1600
   h: 1067
   color: '#95a8b6'
@@ -80,7 +80,7 @@ fotos:
   pie_es: Papá con su bebé en la playa, reflejados en el agua
   pie_en: A father with his baby on the beach, reflected in the water
   credito: ''
-- archivo: img/photo/retrato/retrato-2025-07
+- archivo: img/photo/retrato/retrato-2025-07-640.webp
   w: 1000
   h: 668
   color: '#7e8086'
@@ -90,7 +90,7 @@ fotos:
   pie_es: Hombre enmarcado por una espiral de hierro
   pie_en: Man framed by an iron spiral
   credito: '2025'
-- archivo: img/photo/retrato/retrato-2023-15
+- archivo: img/photo/retrato/retrato-2023-15-640.webp
   w: 4160
   h: 6240
   color: '#64656a'
@@ -100,7 +100,7 @@ fotos:
   pie_es: Retrato en una terraza sobre Girona
   pie_en: Portrait on a terrace above Girona
   credito: '2023'
-- archivo: img/photo/retrato/retrato-16
+- archivo: img/photo/retrato/retrato-16-640.webp
   w: 1600
   h: 1040
   color: '#868d93'
@@ -110,7 +110,7 @@ fotos:
   pie_es: Retrato entre farolas blancas
   pie_en: Portrait among white street lamps
   credito: ''
-- archivo: img/photo/retrato/retrato-08
+- archivo: img/photo/retrato/retrato-08-640.webp
   w: 1000
   h: 667
   color: '#5a4f50'
@@ -120,7 +120,7 @@ fotos:
   pie_es: Hombre de traje con luz de ventana, día de boda
   pie_en: Man in a suit in window light, wedding day
   credito: ''
-- archivo: img/photo/retrato/retrato-2023-09
+- archivo: img/photo/retrato/retrato-2023-09-640.webp
   w: 668
   h: 1000
   color: '#8d8d8d'
@@ -130,7 +130,7 @@ fotos:
   pie_es: Manos y reflejo, blanco y negro
   pie_en: Hands and reflection, black and white
   credito: '2023'
-- archivo: img/photo/retrato/retrato-2023-10
+- archivo: img/photo/retrato/retrato-2023-10-640.webp
   w: 668
   h: 1000
   color: '#595959'
@@ -140,7 +140,7 @@ fotos:
   pie_es: Familia en casa antes de una boda, blanco y negro
   pie_en: Family at home before a wedding, black and white
   credito: '2023'
-- archivo: img/photo/retrato/retrato-2023-11
+- archivo: img/photo/retrato/retrato-2023-11-640.webp
   w: 668
   h: 1000
   color: '#938a85'
@@ -150,7 +150,7 @@ fotos:
   pie_es: Niña riendo
   pie_en: Girl laughing
   credito: '2023'
-- archivo: img/photo/retrato/retrato-2023-14
+- archivo: img/photo/retrato/retrato-2023-14-640.webp
   w: 3265
   h: 4082
   color: '#52403a'
@@ -160,7 +160,7 @@ fotos:
   pie_es: Silueta frente a la ventana al atardecer
   pie_en: Silhouette by the window at sunset
   credito: '2023'
-- archivo: img/photo/retrato/retrato-2026-12
+- archivo: img/photo/retrato/retrato-2026-12-640.webp
   w: 667
   h: 1000
   color: '#707374'

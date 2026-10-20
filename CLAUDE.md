@@ -39,7 +39,7 @@ Memoria del proyecto. Leelo completo antes de cambiar algo.
 - Premios: `premios` en el .yml del capítulo (sello junto al nombre del grupo) y `reconocimientos` en sitio.yml (Sobre mí + dato `award` para Google).
 
 ## Fotos
-- Cada foto en 3 tamaños WebP: `nombre-640.webp`, `-1280.webp`, `-2048.webp`. En los .yml se escribe la ruta SIN sufijo.
+- Cada foto en 3 tamaños WebP: `nombre-640.webp`, `-1280.webp`, `-2048.webp`. En los .yml se escribe la ruta de **640** (`…-640.webp`) para que Pages CMS muestre la miniatura; el armador le quita el sufijo.
 - Nombres: `artista-capitulo-año-orden`. El mosaico arma filas parejas solo (site.js · `justify`); el alto de fila se cambia con `--row` en styles.css.
 - **Reels de Instagram:** no se incrusta el reproductor de Instagram. Se usa una portada propia `img/motion/ig/<código>.webp` (540 px de ancho) y el botón abre el reel en Instagram.
 - Pendiente: originales de Stage (hoy vienen de la Bio, cuadradas), video `img/home/hero.mp4` (si existe, el inicio lo usa solo; si no, muestra la foto `img/home/hero-*.webp`).

@@ -8,9 +8,9 @@ titulo_es: Movimiento
 titulo_en: Movement
 intro_es: Danza en estudio, en exteriores y en escena.
 intro_en: Dance in the studio, outdoors and on stage.
-portada: img/photo/movimiento/movimiento-09
+portada: img/photo/movimiento/movimiento-09-640.webp
 fotos:
-- archivo: img/photo/movimiento/movimiento-2026-01
+- archivo: img/photo/movimiento/movimiento-2026-01-640.webp
   w: 786
   h: 1000
   color: '#9f9e9e'
@@ -20,7 +20,7 @@ fotos:
   pie_es: Bailarina en estudio, blanco y negro
   pie_en: Dancer in the studio, black and white
   credito: '2026'
-- archivo: img/photo/movimiento/movimiento-2026-02
+- archivo: img/photo/movimiento/movimiento-2026-02-640.webp
   w: 786
   h: 1000
   color: '#8b8a89'
@@ -30,7 +30,7 @@ fotos:
   pie_es: Bailarina apoyada en el suelo, blanco y negro
   pie_en: Dancer balancing on the floor, black and white
   credito: '2026'
-- archivo: img/photo/movimiento/movimiento-2026-03
+- archivo: img/photo/movimiento/movimiento-2026-03-640.webp
   w: 786
   h: 1000
   color: '#919191'
@@ -40,7 +40,7 @@ fotos:
   pie_es: Bailarina saltando, blanco y negro
   pie_en: Dancer jumping, black and white
   credito: '2026'
-- archivo: img/photo/movimiento/movimiento-04
+- archivo: img/photo/movimiento/movimiento-04-640.webp
   w: 800
   h: 1000
   color: '#6f869b'
@@ -50,7 +50,7 @@ fotos:
   pie_es: Bailarina en el aire sobre fondo azul
   pie_en: Dancer in mid-air on a blue background
   credito: ''
-- archivo: img/photo/movimiento/movimiento-05
+- archivo: img/photo/movimiento/movimiento-05-640.webp
   w: 800
   h: 1000
   color: '#bb7aa9'
@@ -60,7 +60,7 @@ fotos:
   pie_es: Bailarina con humo rosa
   pie_en: Dancer with pink smoke
   credito: ''
-- archivo: img/photo/movimiento/movimiento-2025-06
+- archivo: img/photo/movimiento/movimiento-2025-06-640.webp
   w: 714
   h: 1000
   color: '#694d34'
@@ -70,7 +70,7 @@ fotos:
   pie_es: Bailarina en luz ámbar, Andamio 2025
   pie_en: Dancer in amber light, Andamio 2025
   credito: '2025'
-- archivo: img/photo/movimiento/andamio-movimiento-2022-18
+- archivo: img/photo/movimiento/andamio-movimiento-2022-18-640.webp
   w: 3388
   h: 4235
   color: '#7298bd'
@@ -80,7 +80,7 @@ fotos:
   pie_es: Bailarina saltando sobre fondo azul, Andamio 2022
   pie_en: Dancer leaping on a blue background, Andamio 2022
   credito: Andamio · 2022
-- archivo: img/photo/movimiento/moment-movimiento-2024-19
+- archivo: img/photo/movimiento/moment-movimiento-2024-19-640.webp
   w: 5984
   h: 3989
   color: '#3e464d'
@@ -90,7 +90,7 @@ fotos:
   pie_es: Bailarín junto a una luz de estudio, videodanza Moment
   pie_en: Dancer beside a studio light, Moment dance film
   credito: Moment · 2024
-- archivo: img/photo/movimiento/movimiento-07
+- archivo: img/photo/movimiento/movimiento-07-640.webp
   w: 714
   h: 1000
   color: '#3d4c4b'
@@ -100,7 +100,7 @@ fotos:
   pie_es: Bailarina saltando entre pinos
   pie_en: Dancer leaping among pines
   credito: ''
-- archivo: img/photo/movimiento/movimiento-08
+- archivo: img/photo/movimiento/movimiento-08-640.webp
   w: 1000
   h: 667
   color: '#424f3e'
@@ -110,7 +110,7 @@ fotos:
   pie_es: Grupo de bailarines en el bosque
   pie_en: Group of dancers in the forest
   credito: ''
-- archivo: img/photo/movimiento/movimiento-09
+- archivo: img/photo/movimiento/movimiento-09-640.webp
   w: 1000
   h: 800
   color: '#58596f'
@@ -120,7 +120,7 @@ fotos:
   pie_es: Bailarina en el aire al atardecer
   pie_en: Dancer in mid-air at sunset
   credito: ''
-- archivo: img/photo/movimiento/movimiento-2019-10
+- archivo: img/photo/movimiento/movimiento-2019-10-640.webp
   w: 1000
   h: 563
   color: '#90857e'
@@ -130,7 +130,7 @@ fotos:
   pie_es: Línea de bailarinas en el horizonte
   pie_en: Line of dancers on the horizon
   credito: '2019'
-- archivo: img/photo/movimiento/movimiento-2026-11
+- archivo: img/photo/movimiento/movimiento-2026-11-640.webp
   w: 667
   h: 1000
   color: '#262a2f'
@@ -140,7 +140,7 @@ fotos:
   pie_es: Bailarines bajo luz cenital
   pie_en: Dancers under a top light
   credito: '2026'
-- archivo: img/photo/movimiento/movimiento-2025-12
+- archivo: img/photo/movimiento/movimiento-2025-12-640.webp
   w: 1000
   h: 668
   color: '#1a0d0c'
@@ -150,7 +150,7 @@ fotos:
   pie_es: Bailarina de rojo sobre fondo negro
   pie_en: Dancer in red on a black background
   credito: '2025'
-- archivo: img/photo/movimiento/movimiento-13
+- archivo: img/photo/movimiento/movimiento-13-640.webp
   w: 1000
   h: 563
   color: '#102235'
@@ -160,7 +160,7 @@ fotos:
   pie_es: Bailarín con sombrero y bastón en luz azul
   pie_en: Dancer with hat and cane in blue light
   credito: ''
-- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-20
+- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-20-640.webp
   w: 4902
   h: 6134
   color: '#39504b'
@@ -170,7 +170,7 @@ fotos:
   pie_es: Tres bailarinas en el aire, Festival de Ballet San José
   pie_en: Three dancers in mid-air, Festival de Ballet San José
   credito: Festival de Ballet San José · 2026
-- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-21
+- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-21-640.webp
   w: 5324
   h: 6662
   color: '#213e3e'
@@ -180,7 +180,7 @@ fotos:
   pie_es: Bailarina en tutú y bailarina en escena, Festival de Ballet San José
   pie_en: Dancer in a tutu and a dancer on stage, Festival de Ballet San José
   credito: Festival de Ballet San José · 2026
-- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-22
+- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-22-640.webp
   w: 5730
   h: 7168
   color: '#303044'
@@ -190,7 +190,7 @@ fotos:
   pie_es: Salto sobre fondo azul y elenco de rojo, Festival de Ballet San José
   pie_en: A leap on blue and the cast in red, Festival de Ballet San José
   credito: Festival de Ballet San José · 2026
-- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-23
+- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-23-640.webp
   w: 5730
   h: 7168
   color: '#233343'
@@ -200,7 +200,7 @@ fotos:
   pie_es: Funciones del Festival de Ballet San José
   pie_en: Performances at the Festival de Ballet San José
   credito: Festival de Ballet San José · 2026
-- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-24
+- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-24-640.webp
   w: 5612
   h: 7022
   color: '#2b2b2b'
@@ -210,7 +210,7 @@ fotos:
   pie_es: Ensayo en blanco y negro, Festival de Ballet San José
   pie_en: Rehearsal in black and white, Festival de Ballet San José
   credito: Festival de Ballet San José · 2026
-- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-25
+- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-25-640.webp
   w: 5730
   h: 7168
   color: '#878787'
@@ -220,7 +220,7 @@ fotos:
   pie_es: Bailarina y clase en movimiento, Festival de Ballet San José
   pie_en: A dancer and a class in motion, Festival de Ballet San José
   credito: Festival de Ballet San José · 2026
-- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-26
+- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-26-640.webp
   w: 4902
   h: 6134
   color: '#5a5a5a'
@@ -230,7 +230,7 @@ fotos:
   pie_es: Zapatilla de punta y manos, Festival de Ballet San José
   pie_en: Pointe shoe and hands, Festival de Ballet San José
   credito: Festival de Ballet San José · 2026
-- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-27
+- archivo: img/photo/movimiento/festival-ballet-san-jose-movimiento-2026-27-640.webp
   w: 5730
   h: 7168
   color: '#6b6f70'
@@ -240,7 +240,7 @@ fotos:
   pie_es: Saltos en el estudio, Festival de Ballet San José
   pie_en: Leaps in the studio, Festival de Ballet San José
   credito: Festival de Ballet San José · 2026
-- archivo: img/photo/movimiento/festival-reves-movimiento-2026-14
+- archivo: img/photo/movimiento/festival-reves-movimiento-2026-14-640.webp
   w: 1000
   h: 667
   color: '#746d69'
@@ -250,7 +250,7 @@ fotos:
   pie_es: Taller de danza, Festival Revés 2026
   pie_en: Dance workshop, Festival Revés 2026
   credito: Festival Revés · 2026
-- archivo: img/photo/movimiento/festival-reves-movimiento-2026-15
+- archivo: img/photo/movimiento/festival-reves-movimiento-2026-15-640.webp
   w: 667
   h: 1000
   color: '#7e7b76'
@@ -260,7 +260,7 @@ fotos:
   pie_es: Bailarines en suspensión, Festival Revés 2026
   pie_en: Dancers in suspension, Festival Revés 2026
   credito: Festival Revés · 2026
-- archivo: img/photo/movimiento/festival-reves-movimiento-2026-28
+- archivo: img/photo/movimiento/festival-reves-movimiento-2026-28-640.webp
   w: 4672
   h: 7008
   color: '#6c5d59'
@@ -270,7 +270,7 @@ fotos:
   pie_es: Bailarina riendo en el piso, Festival Revés 2026
   pie_en: Dancer laughing on the floor, Festival Revés 2026
   credito: Festival Revés · 2026
-- archivo: img/photo/movimiento/festival-reves-movimiento-2026-16
+- archivo: img/photo/movimiento/festival-reves-movimiento-2026-16-640.webp
   w: 667
   h: 1000
   color: '#405b6e'
@@ -280,7 +280,7 @@ fotos:
   pie_es: Bailarín de cabeza, Festival Revés 2026
   pie_en: Dancer upside down, Festival Revés 2026
   credito: Festival Revés · 2026
-- archivo: img/photo/movimiento/festival-reves-movimiento-2026-17
+- archivo: img/photo/movimiento/festival-reves-movimiento-2026-17-640.webp
   w: 667
   h: 1000
   color: '#2b4760'

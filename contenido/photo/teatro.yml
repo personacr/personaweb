@@ -8,9 +8,9 @@ titulo_es: Teatro
 titulo_en: Theatre
 intro_es: 'Sala de Espera (2026): camerino, afiche y función.'
 intro_en: 'Sala de Espera (2026): dressing room, poster and performance.'
-portada: img/photo/teatro/sala-de-espera-teatro-2026-04
+portada: img/photo/teatro/sala-de-espera-teatro-2026-04-640.webp
 fotos:
-- archivo: img/photo/teatro/sala-de-espera-teatro-2026-01
+- archivo: img/photo/teatro/sala-de-espera-teatro-2026-01-640.webp
   w: 1000
   h: 667
   color: '#2f2f2f'
@@ -20,7 +20,7 @@ fotos:
   pie_es: Libreto de Sala de Espera sobre la mesa
   pie_en: Sala de Espera script on the table
   credito: Sala de Espera · 2026
-- archivo: img/photo/teatro/sala-de-espera-teatro-2026-02
+- archivo: img/photo/teatro/sala-de-espera-teatro-2026-02-640.webp
   w: 1000
   h: 667
   color: '#393939'
@@ -30,7 +30,7 @@ fotos:
   pie_es: Actriz frente al espejo, Sala de Espera
   pie_en: Actress at the mirror, Sala de Espera
   credito: Sala de Espera · 2026
-- archivo: img/photo/teatro/sala-de-espera-teatro-2026-03
+- archivo: img/photo/teatro/sala-de-espera-teatro-2026-03-640.webp
   w: 667
   h: 1000
   color: '#444444'
@@ -40,7 +40,7 @@ fotos:
   pie_es: Actores en el camerino, Sala de Espera
   pie_en: Actors in the dressing room, Sala de Espera
   credito: Sala de Espera · 2026
-- archivo: img/photo/teatro/sala-de-espera-teatro-2026-04
+- archivo: img/photo/teatro/sala-de-espera-teatro-2026-04-640.webp
   w: 1000
   h: 667
   color: '#474747'
@@ -50,7 +50,7 @@ fotos:
   pie_es: El elenco reunido antes de la función, Sala de Espera
   pie_en: The cast gathered before the show, Sala de Espera
   credito: Sala de Espera · 2026
-- archivo: img/photo/teatro/sala-de-espera-teatro-2026-05
+- archivo: img/photo/teatro/sala-de-espera-teatro-2026-05-640.webp
   w: 800
   h: 1000
   color: '#4c4e54'
@@ -60,7 +60,7 @@ fotos:
   pie_es: Retrato de personaje para el afiche de Sala de Espera
   pie_en: Character portrait for the Sala de Espera poster
   credito: Sala de Espera · 2026
-- archivo: img/photo/teatro/sala-de-espera-teatro-2026-06
+- archivo: img/photo/teatro/sala-de-espera-teatro-2026-06-640.webp
   w: 800
   h: 1000
   color: '#333336'
@@ -70,7 +70,7 @@ fotos:
   pie_es: Personaje con teléfono, afiche de Sala de Espera
   pie_en: Character with a phone, Sala de Espera poster
   credito: Sala de Espera · 2026
-- archivo: img/photo/teatro/sala-de-espera-teatro-2026-07
+- archivo: img/photo/teatro/sala-de-espera-teatro-2026-07-640.webp
   w: 800
   h: 1000
   color: '#39393d'
@@ -80,7 +80,7 @@ fotos:
   pie_es: Personaje con un gesto, afiche de Sala de Espera
   pie_en: Character gesturing, Sala de Espera poster
   credito: Sala de Espera · 2026
-- archivo: img/photo/teatro/sala-de-espera-teatro-2026-08
+- archivo: img/photo/teatro/sala-de-espera-teatro-2026-08-640.webp
   w: 800
   h: 1000
   color: '#2d3740'
@@ -90,7 +90,7 @@ fotos:
   pie_es: Personaje esperando, afiche de Sala de Espera
   pie_en: Character waiting, Sala de Espera poster
   credito: Sala de Espera · 2026
-- archivo: img/photo/teatro/sala-de-espera-teatro-2026-09
+- archivo: img/photo/teatro/sala-de-espera-teatro-2026-09-640.webp
   w: 800
   h: 1000
   color: '#272b33'
@@ -100,7 +100,7 @@ fotos:
   pie_es: Elenco completo de Sala de Espera
   pie_en: Full cast of Sala de Espera
   credito: Sala de Espera · 2026
-- archivo: img/photo/teatro/sala-de-espera-teatro-2026-10
+- archivo: img/photo/teatro/sala-de-espera-teatro-2026-10-640.webp
   w: 1000
   h: 667
   color: '#2f2e37'
@@ -110,7 +110,7 @@ fotos:
   pie_es: Escena completa de Sala de Espera
   pie_en: Full scene of Sala de Espera
   credito: Sala de Espera · 2026
-- archivo: img/photo/teatro/sala-de-espera-teatro-2026-11
+- archivo: img/photo/teatro/sala-de-espera-teatro-2026-11-640.webp
   w: 667
   h: 1000
   color: '#3e3d45'
@@ -120,7 +120,7 @@ fotos:
   pie_es: Actriz en función, Sala de Espera
   pie_en: Actress during the show, Sala de Espera
   credito: Sala de Espera · 2026
-- archivo: img/photo/teatro/sala-de-espera-teatro-2026-12
+- archivo: img/photo/teatro/sala-de-espera-teatro-2026-12-640.webp
   w: 1000
   h: 667
   color: '#323037'
@@ -130,7 +130,7 @@ fotos:
   pie_es: Manos de una actriz en función, Sala de Espera
   pie_en: An actress's hands during the show, Sala de Espera
   credito: Sala de Espera · 2026
-- archivo: img/photo/teatro/sala-de-espera-teatro-2026-13
+- archivo: img/photo/teatro/sala-de-espera-teatro-2026-13-640.webp
   w: 1000
   h: 667
   color: '#1f1e22'

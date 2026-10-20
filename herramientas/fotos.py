@@ -4,7 +4,7 @@ Cuando en un capítulo (contenido/photo/*.yml) o en Stage aparece una foto reci�
 (una ruta que termina en .jpg / .jpeg / .png / .webp, normalmente dentro de img/subidas/),
 este script:
   1. crea las tres versiones livianas (640, 1280 y 2048 px, WebP) en la carpeta del capítulo,
-  2. escribe en el .yml la ruta nueva (sin sufijo), el ancho, el alto y el color promedio,
+  2. escribe en el .yml la ruta de la versión de 640 px, el ancho, el alto y el color promedio,
   3. borra el archivo original subido, para que el repositorio no crezca.
 GitHub lo corre solo antes de armar las páginas.
 """
@@ -20,8 +20,8 @@ def slug(s):
     s = unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode().lower()
     return re.sub(r'[^a-z0-9]+', '-', s).strip('-') or 'foto'
 
-def subida(v):
-    return isinstance(v, str) and v.lower().endswith(EXT)
+def subida(v):  # foto nueva = imagen que todavía no es una versión liviana «-640/-1280/-2048.webp»
+    return isinstance(v, str) and v.lower().endswith(EXT) and not re.search(r'-(640|1280|2048)\.webp$', v)
 
 def procesar(ruta, destino_dir, nombre):
     ruta = ruta.lstrip('/')
@@ -36,9 +36,8 @@ def procesar(ruta, destino_dir, nombre):
         t = im.copy(); t.thumbnail((w, w), Image.LANCZOS)
         t.save(f'{base}-{w}.webp', 'WEBP', quality=80 if w < 2048 else 74, method=5, exif=ex.tobytes())
     color = '#%02x%02x%02x' % im.resize((1, 1), Image.BOX).getpixel((0, 0))
-    if ruta.startswith('img/subidas/'):
-        os.remove(ruta)
-    return base, im.width, im.height, color
+    os.remove(ruta)  # el original pesado no se queda en el repo
+    return base + '-640.webp', im.width, im.height, color
 
 def guardar(path, data, cabecera):
     open(path, 'w', encoding='utf-8').write(cabecera + yaml.safe_dump(data, allow_unicode=True, sort_keys=False, width=200))
@@ -55,8 +54,6 @@ for path in glob.glob('contenido/photo/*.yml'):
             f.setdefault('formato', 'par'); tocado = True
     if subida(c.get('portada')):
         c['portada'] = procesar(c['portada'], f"img/photo/{c['slug']}", f"{c['slug']}-portada")[0]; tocado = True
-    if c.get('fotos') and c.get('portada') not in [f['archivo'] for f in c['fotos']]:
-        pass  # la portada puede ser cualquier foto procesada
     if tocado:
         guardar(path, c, cab); cambios += 1
 

@@ -8,9 +8,9 @@ titulo_es: Marcas
 titulo_en: Brands
 intro_es: 'Grupo del Este y ampm: 40 aniversario y nueva sala de capacitación, 2026.'
 intro_en: 'Grupo del Este and ampm: 40th anniversary and new training space, 2026.'
-portada: img/photo/marcas/grupo-del-este-marcas-2026-01
+portada: img/photo/marcas/grupo-del-este-marcas-2026-01-640.webp
 fotos:
-- archivo: img/photo/marcas/grupo-del-este-marcas-2026-01
+- archivo: img/photo/marcas/grupo-del-este-marcas-2026-01-640.webp
   w: 1000
   h: 667
   color: '#427895'
@@ -20,7 +20,7 @@ fotos:
   pie_es: Evento de Grupo del Este junto al camión de la marca
   pie_en: Grupo del Este event beside the brand truck
   credito: Grupo del Este · 2026
-- archivo: img/photo/marcas/grupo-del-este-marcas-2026-02
+- archivo: img/photo/marcas/grupo-del-este-marcas-2026-02-640.webp
   w: 1000
   h: 667
   color: '#3a5765'
@@ -30,7 +30,7 @@ fotos:
   pie_es: Sala llena en el aniversario de Grupo del Este
   pie_en: Full room at the Grupo del Este anniversary
   credito: Grupo del Este · 2026
-- archivo: img/photo/marcas/grupo-del-este-marcas-2026-03
+- archivo: img/photo/marcas/grupo-del-este-marcas-2026-03-640.webp
   w: 667
   h: 1000
   color: '#555555'
@@ -40,7 +40,7 @@ fotos:
   pie_es: Invitados riendo en el evento de Grupo del Este
   pie_en: Guests laughing at the Grupo del Este event
   credito: Grupo del Este · 2026
-- archivo: img/photo/marcas/grupo-del-este-marcas-2026-04
+- archivo: img/photo/marcas/grupo-del-este-marcas-2026-04-640.webp
   w: 1000
   h: 667
   color: '#5c5a59'
@@ -50,7 +50,7 @@ fotos:
   pie_es: Abriendo una caja en el evento de Grupo del Este
   pie_en: Opening a box at the Grupo del Este event
   credito: Grupo del Este · 2026
-- archivo: img/photo/marcas/grupo-del-este-marcas-2026-05
+- archivo: img/photo/marcas/grupo-del-este-marcas-2026-05-640.webp
   w: 1000
   h: 667
   color: '#899897'
@@ -60,7 +60,7 @@ fotos:
   pie_es: Nueva sala de capacitación de Grupo del Este
   pie_en: Grupo del Este's new training space
   credito: Grupo del Este · 2026
-- archivo: img/photo/marcas/grupo-del-este-marcas-2026-06
+- archivo: img/photo/marcas/grupo-del-este-marcas-2026-06-640.webp
   w: 1000
   h: 667
   color: '#949a97'

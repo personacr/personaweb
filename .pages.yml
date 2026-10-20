@@ -1,8 +1,8 @@
 # Pages CMS (app.pagescms.org) · solo toca contenido, nunca el diseño.
-# Las fotos que subás van a img/subidas/ y GitHub las convierte solas a 3 tamaños livianos.
+# Elegí la carpeta img/subidas al subir fotos nuevas; y GitHub las convierte solas a 3 tamaños livianos.
 media:
-  input: img/subidas
-  output: img/subidas
+  input: img
+  output: img
   rename: safe
   extensions: [jpg, jpeg, png, webp]
 

@@ -1,7 +1,7 @@
 """Genera las imágenes para compartir (WhatsApp, Facebook…): 1200×630 JPEG.
 Uso: python3 herramientas/og.py CARPETA_FUENTES   (woff2 de Zodiak y Switzer)
 Cada página tiene su foto. Si cambiás una, subí la versión (V) para que WhatsApp la vuelva a pedir."""
-import sys, os, glob, yaml, base64, pathlib
+import sys, os, re, glob, yaml, base64, pathlib
 from playwright.sync_api import sync_playwright
 
 V = 'v2'
@@ -17,7 +17,7 @@ PIEZAS = {
     'stage':  ('img/stage/banner/banner.webp', '50% 50%', 'Stage', 'banda'),
 }
 for c in caps:
-    PIEZAS['photo-' + c['slug']] = (c['portada'] + '-2048.webp', '50% 40%', 'Photo · ' + c['titulo_es'], 'full')
+    PIEZAS['photo-' + c['slug']] = (re.sub(r'-640\.webp$', '', c['portada']) + '-2048.webp', '50% 40%', 'Photo · ' + c['titulo_es'], 'full')
 
 def data(p):
     return 'data:image/webp;base64,' + base64.b64encode(open(p, 'rb').read()).decode()
