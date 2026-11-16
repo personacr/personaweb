@@ -1,6 +1,6 @@
 # CLAUDE.md — persona · Sitio web portafolio (personaweb)
 
-Memoria del proyecto. Leelo completo antes de cambiar algo.
+Memoria del proyecto. Leelo completo antes de cambiar algo. **La parte técnica (estructura, Pages CMS, reglas visuales, despliegue) está en `ARQUITECTURA.md`.**
 
 ## Dueño
 - **Jose Pablo García** (Jose SIN tilde en todo lo visible; «José Pablo García» solo como nombre alterno en el código). Cineasta, fotógrafo, director escénico y creador de contenido. **20+ años** de trayectoria. Marca **PERSONA**.
@@ -67,3 +67,11 @@ Memoria del proyecto. Leelo completo antes de cambiar algo.
 ## Kit de marca (oct 2026)
 - Logo, ícono, firma, Instagram, tarjeta y guía en la carpeta `kit-marca` de la Mac (PERSONACR), no en este repo.
 - `img/marca/firma-persona.png`: imagen de la firma de correo (la usa la firma de Gmail; no cambiar de ruta).
+
+## Cambios de noviembre 2026 (ver ARQUITECTURA.md)
+- **Sin velo:** las fotos van a su brillo real; solo se oscurece detrás del texto. Sin grano. Botones de esquinas rectas, sin botón flotante, etiquetas de 12 px.
+- **Inicio:** espacio para el reel (video mudo en loop + botón «Ver reel»), manifiesto una sola vez, mosaico, tres bandas.
+- **Motion:** un proyecto «destacado» va grande arriba (Dele Viaje) con sus premios. Miniaturas: cuadros limpios, sin títulos ni laureles (`img/motion/cuadros/` o campo «Miniatura propia»).
+- **Photo:** Arte va primero (abre con Parallel Perceptions). Marcas va al final e incluye Hyatt Place Cariari Convention Center como **obra comisionada**. Cada capítulo abre con una foto grande y tiene pausas; en celular, una foto por fila.
+- **Stage:** cada obra es un «programa de mano» (sala, funciones, créditos, música en una barra abajo).
+- **El retrato de Sobre mí y el de la Bio no se cambian.**

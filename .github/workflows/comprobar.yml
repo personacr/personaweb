@@ -1,0 +1,22 @@
+# Revisa que el sitio se arme bien en cualquier rama que NO sea main (vistas previas, mejoras).
+# No publica ni guarda nada: solo avisa con ✓ o ✗ en la pestaña Actions.
+name: Comprobar armado
+on:
+  push:
+    branches-ignore: [main, vista-previa]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  comprobar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install pyyaml jinja2 pillow
+      - name: Armar el sitio (en una carpeta aparte)
+        run: PERSONA_SALIDA=/tmp/sitio python3 herramientas/construir.py
+      - name: Prueba de campos vacíos
+        run: python3 herramientas/probar.py

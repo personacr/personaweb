@@ -2,7 +2,7 @@ name: Armar sitio
 on:
   push:
     branches: [main]
-    paths: ['contenido/**', 'plantillas/**', 'herramientas/**', 'img/subidas/**', 'styles.css', 'site.js']
+    paths: ['contenido/**', 'plantillas/**', 'herramientas/**', 'img/subidas/**', 'medios/**', 'styles.css', 'site.js']
   workflow_dispatch:
 permissions:
   contents: write
