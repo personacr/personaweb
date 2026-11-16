@@ -1,80 +1,25 @@
 # Capítulo de Photo. Editable desde Pages CMS.
-# formato: completa | par | detalle  ·  las fotos van en el orden de esta lista
-orden: 5
-numero: V
+# Las fotos van en el orden de esta lista · formato: normal (mosaico) | grande (a todo el ancho: apertura y pausas)
+orden: 1
 slug: arte
 slug_en: fine-art
 titulo_es: Arte
 titulo_en: Fine art
-intro_es: Fotomontaje, series personales y foto con texto.
-intro_en: Photomontage, personal series and photo with text.
+intro_es: 'Series personales: Parallel Perceptions, Los Innato y foto con texto.'
+intro_en: 'Personal series: Parallel Perceptions, Los Innato and photo with text.'
 portada: img/photo/arte/parallel-perceptions-arte-02-640.webp
+grupos:
+- nombre: Parallel Perceptions
+  premio_es: Nominee · Conceptual · 12th Fine Art Photography Awards 2025–2026
+  premio_en: Nominee · Conceptual · 12th Fine Art Photography Awards 2025–2026
+  premio_sello: img/premios/fapa-nominee-320.webp
+  premio_url: https://fineartphotoawards.com/winners-gallery/fapa-2025-2026/professional/conceptual/hm/23646
 fotos:
-- archivo: img/photo/arte/hyatt-place-arte-11-640.webp
-  w: 1000
-  h: 520
-  color: '#40544b'
-  formato: completa
-  grupo_es: Hyatt Place
-  grupo_en: Hyatt Place
-  pie_es: Fotomontaje geométrico de una catarata para Hyatt Place
-  pie_en: Geometric photomontage of a waterfall for Hyatt Place
-  credito: Hyatt Place
-- archivo: img/photo/arte/hyatt-place-arte-12-640.webp
-  w: 1000
-  h: 520
-  color: '#4e5451'
-  formato: completa
-  grupo_es: Hyatt Place
-  grupo_en: Hyatt Place
-  pie_es: Fotomontaje geométrico de un volcán para Hyatt Place
-  pie_en: Geometric photomontage of a volcano for Hyatt Place
-  credito: Hyatt Place
-- archivo: img/photo/arte/hyatt-place-arte-13-640.webp
-  w: 769
-  h: 1000
-  color: '#998973'
-  formato: par
-  grupo_es: Hyatt Place
-  grupo_en: Hyatt Place
-  pie_es: Fotomontaje de un árbol para Hyatt Place
-  pie_en: Photomontage of a tree for Hyatt Place
-  credito: Hyatt Place
-- archivo: img/photo/arte/hyatt-place-arte-14-640.webp
-  w: 818
-  h: 1000
-  color: '#46433d'
-  formato: par
-  grupo_es: Hyatt Place
-  grupo_en: Hyatt Place
-  pie_es: Fotomontaje geométrico de Bajos del Toro para Hyatt Place
-  pie_en: Geometric photomontage of Bajos del Toro for Hyatt Place
-  credito: Hyatt Place
-- archivo: img/photo/arte/hyatt-place-arte-15-640.webp
-  w: 750
-  h: 1000
-  color: '#4c4a39'
-  formato: par
-  grupo_es: Hyatt Place
-  grupo_en: Hyatt Place
-  pie_es: Caleidoscopio de Bajos del Toro para Hyatt Place
-  pie_en: Kaleidoscope of Bajos del Toro for Hyatt Place
-  credito: Hyatt Place
-- archivo: img/photo/arte/hyatt-place-arte-16-640.webp
-  w: 750
-  h: 1000
-  color: '#27302b'
-  formato: par
-  grupo_es: Hyatt Place
-  grupo_en: Hyatt Place
-  pie_es: Fotomontaje de cuadros y una flor para Hyatt Place
-  pie_en: Photomontage of squares and a flower for Hyatt Place
-  credito: Hyatt Place
 - archivo: img/photo/arte/parallel-perceptions-arte-01-640.webp
   w: 1000
   h: 563
   color: '#93a9bf'
-  formato: completa
+  formato: grande
   grupo_es: Parallel Perceptions
   grupo_en: Parallel Perceptions
   pie_es: Isla con un árbol, serie Parallel Perceptions
@@ -84,7 +29,7 @@ fotos:
   w: 1000
   h: 563
   color: '#64777d'
-  formato: completa
+  formato: normal
   grupo_es: Parallel Perceptions
   grupo_en: Parallel Perceptions
   pie_es: Cuerpo en el aire junto a una estructura metálica, Parallel Perceptions
@@ -94,7 +39,7 @@ fotos:
   w: 1000
   h: 563
   color: '#6b7b79'
-  formato: completa
+  formato: normal
   grupo_es: Parallel Perceptions
   grupo_en: Parallel Perceptions
   pie_es: Cascada en espejo, Parallel Perceptions
@@ -104,7 +49,7 @@ fotos:
   w: 1000
   h: 563
   color: '#b5b9cc'
-  formato: completa
+  formato: normal
   grupo_es: Parallel Perceptions
   grupo_en: Parallel Perceptions
   pie_es: Cuerpo y puente en espejo, Parallel Perceptions
@@ -114,7 +59,7 @@ fotos:
   w: 1000
   h: 563
   color: '#6f7877'
-  formato: completa
+  formato: normal
   grupo_es: Parallel Perceptions
   grupo_en: Parallel Perceptions
   pie_es: Fachada y rostro en espejo, Parallel Perceptions
@@ -124,17 +69,27 @@ fotos:
   w: 1000
   h: 563
   color: '#194b58'
-  formato: completa
+  formato: normal
   grupo_es: Parallel Perceptions
   grupo_en: Parallel Perceptions
   pie_es: Silueta y túnel, Parallel Perceptions
   pie_en: Silhouette and tunnel, Parallel Perceptions
   credito: Parallel Perceptions
+- archivo: img/photo/arte/arte-2021-09-640.webp
+  w: 1000
+  h: 667
+  color: '#6b739e'
+  formato: grande
+  grupo_es: Los Innato
+  grupo_en: Los Innato
+  pie_es: Una figura arrodillada en un parqueo, serie Los Innato
+  pie_en: A kneeling figure in a parking garage, Los Innato series
+  credito: '2021'
 - archivo: img/photo/arte/arte-2021-07-640.webp
   w: 1000
   h: 667
   color: '#7c7c97'
-  formato: completa
+  formato: normal
   grupo_es: Los Innato
   grupo_en: Los Innato
   pie_es: Dos figuras cargan una tabla en un parqueo, serie Los Innato
@@ -144,37 +99,37 @@ fotos:
   w: 1000
   h: 667
   color: '#626a97'
-  formato: par
+  formato: normal
   grupo_es: Los Innato
   grupo_en: Los Innato
   pie_es: Dos figuras se separan en un parqueo, serie Los Innato
   pie_en: Two figures part ways in a parking garage, Los Innato series
   credito: '2021'
-- archivo: img/photo/arte/arte-2021-09-640.webp
-  w: 1000
-  h: 667
-  color: '#6b739e'
-  formato: par
-  grupo_es: Los Innato
-  grupo_en: Los Innato
-  pie_es: Una figura arrodillada en un parqueo, serie Los Innato
-  pie_en: A kneeling figure in a parking garage, Los Innato series
-  credito: '2021'
 - archivo: img/photo/arte/arte-2021-10-640.webp
   w: 1000
   h: 667
   color: '#5e6797'
-  formato: completa
+  formato: normal
   grupo_es: Los Innato
   grupo_en: Los Innato
   pie_es: Dos figuras contra la pared de un parqueo, serie Los Innato
   pie_en: Two figures against a parking-garage wall, Los Innato series
   credito: '2021'
+- archivo: img/photo/arte/foto-y-texto-arte-2021-21-640.webp
+  w: 5961
+  h: 1987
+  color: '#312526'
+  formato: grande
+  grupo_es: Foto y texto
+  grupo_en: Photo & text
+  pie_es: 'Foto y texto: «Find your breath»'
+  pie_en: 'Photo and text: “Find your breath”'
+  credito: '2021'
 - archivo: img/photo/arte/foto-y-texto-arte-2021-19-640.webp
   w: 4927
   h: 2988
   color: '#3a4c54'
-  formato: par
+  formato: normal
   grupo_es: Foto y texto
   grupo_en: Photo & text
   pie_es: 'Foto y texto: «let go of the fear of not being good enough»'
@@ -184,35 +139,19 @@ fotos:
   w: 3833
   h: 2156
   color: '#839297'
-  formato: par
+  formato: normal
   grupo_es: Foto y texto
   grupo_en: Photo & text
   pie_es: Foto y texto sobre una playa
   pie_en: Photo and text over a beach
   credito: '2021'
-- archivo: img/photo/arte/foto-y-texto-arte-2021-21-640.webp
-  w: 5961
-  h: 1987
-  color: '#312526'
-  formato: par
-  grupo_es: Foto y texto
-  grupo_en: Photo & text
-  pie_es: 'Foto y texto: «Find your breath»'
-  pie_en: 'Photo and text: “Find your breath”'
-  credito: '2021'
 - archivo: img/photo/arte/arte-18-640.webp
   w: 1000
   h: 563
   color: '#424e54'
-  formato: completa
+  formato: normal
   grupo_es: Foto y texto
   grupo_en: Photo & text
   pie_es: Fotomontaje «Where is my mind»
   pie_en: Photomontage “Where is my mind”
   credito: ''
-premios:
-- grupo: Parallel Perceptions
-  imagen: img/premios/fapa-nominee
-  texto_es: Nominee · Conceptual · 12th Fine Art Photography Awards 2025–2026
-  texto_en: Nominee · Conceptual · 12th Fine Art Photography Awards 2025–2026
-  url: https://fineartphotoawards.com/winners-gallery/fapa-2025-2026/professional/conceptual/hm/23646

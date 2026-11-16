@@ -1,7 +1,6 @@
 # Capítulo de Photo. Editable desde Pages CMS.
-# formato: completa | par | detalle  ·  las fotos van en el orden de esta lista
-orden: 3
-numero: III
+# Las fotos van en el orden de esta lista · formato: normal (mosaico) | grande (a todo el ancho: apertura y pausas)
+orden: 4
 slug: teatro
 slug_en: theatre
 titulo_es: Teatro
@@ -10,31 +9,31 @@ intro_es: 'Sala de Espera (2026): camerino, afiche y función.'
 intro_en: 'Sala de Espera (2026): dressing room, poster and performance.'
 portada: img/photo/teatro/sala-de-espera-teatro-2026-04-640.webp
 fotos:
-- archivo: img/photo/teatro/sala-de-espera-teatro-2026-01-640.webp
-  w: 1000
-  h: 667
-  color: '#2f2f2f'
-  formato: completa
-  grupo_es: Camerino
-  grupo_en: Dressing room
-  pie_es: Libreto de Sala de Espera sobre la mesa
-  pie_en: Sala de Espera script on the table
-  credito: Sala de Espera · 2026
 - archivo: img/photo/teatro/sala-de-espera-teatro-2026-02-640.webp
   w: 1000
   h: 667
   color: '#393939'
-  formato: completa
+  formato: grande
   grupo_es: Camerino
   grupo_en: Dressing room
   pie_es: Actriz frente al espejo, Sala de Espera
   pie_en: Actress at the mirror, Sala de Espera
   credito: Sala de Espera · 2026
+- archivo: img/photo/teatro/sala-de-espera-teatro-2026-01-640.webp
+  w: 1000
+  h: 667
+  color: '#2f2f2f'
+  formato: normal
+  grupo_es: Camerino
+  grupo_en: Dressing room
+  pie_es: Libreto de Sala de Espera sobre la mesa
+  pie_en: Sala de Espera script on the table
+  credito: Sala de Espera · 2026
 - archivo: img/photo/teatro/sala-de-espera-teatro-2026-03-640.webp
   w: 667
   h: 1000
   color: '#444444'
-  formato: detalle
+  formato: normal
   grupo_es: Camerino
   grupo_en: Dressing room
   pie_es: Actores en el camerino, Sala de Espera
@@ -44,7 +43,7 @@ fotos:
   w: 1000
   h: 667
   color: '#474747'
-  formato: completa
+  formato: normal
   grupo_es: Camerino
   grupo_en: Dressing room
   pie_es: El elenco reunido antes de la función, Sala de Espera
@@ -54,7 +53,7 @@ fotos:
   w: 800
   h: 1000
   color: '#4c4e54'
-  formato: par
+  formato: normal
   grupo_es: Afiche
   grupo_en: Poster
   pie_es: Retrato de personaje para el afiche de Sala de Espera
@@ -64,7 +63,7 @@ fotos:
   w: 800
   h: 1000
   color: '#333336'
-  formato: par
+  formato: normal
   grupo_es: Afiche
   grupo_en: Poster
   pie_es: Personaje con teléfono, afiche de Sala de Espera
@@ -74,7 +73,7 @@ fotos:
   w: 800
   h: 1000
   color: '#39393d'
-  formato: par
+  formato: normal
   grupo_es: Afiche
   grupo_en: Poster
   pie_es: Personaje con un gesto, afiche de Sala de Espera
@@ -84,7 +83,7 @@ fotos:
   w: 800
   h: 1000
   color: '#2d3740'
-  formato: par
+  formato: normal
   grupo_es: Afiche
   grupo_en: Poster
   pie_es: Personaje esperando, afiche de Sala de Espera
@@ -94,7 +93,7 @@ fotos:
   w: 800
   h: 1000
   color: '#272b33'
-  formato: detalle
+  formato: normal
   grupo_es: Afiche
   grupo_en: Poster
   pie_es: Elenco completo de Sala de Espera
@@ -104,7 +103,7 @@ fotos:
   w: 1000
   h: 667
   color: '#2f2e37'
-  formato: completa
+  formato: grande
   grupo_es: Función
   grupo_en: Performance
   pie_es: Escena completa de Sala de Espera
@@ -114,7 +113,7 @@ fotos:
   w: 667
   h: 1000
   color: '#3e3d45'
-  formato: detalle
+  formato: normal
   grupo_es: Función
   grupo_en: Performance
   pie_es: Actriz en función, Sala de Espera
@@ -124,7 +123,7 @@ fotos:
   w: 1000
   h: 667
   color: '#323037'
-  formato: completa
+  formato: normal
   grupo_es: Función
   grupo_en: Performance
   pie_es: Manos de una actriz en función, Sala de Espera
@@ -134,7 +133,7 @@ fotos:
   w: 1000
   h: 667
   color: '#1f1e22'
-  formato: completa
+  formato: grande
   grupo_es: Función
   grupo_en: Performance
   pie_es: El elenco en penumbra al final de Sala de Espera

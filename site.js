@@ -1,4 +1,4 @@
-/* PERSONA — menú, foco al entrar, galería, sala de proyección, videos que cargan al tocar. Sin librerías. */
+/* PERSONA — menú, reel del inicio, galería ampliada, sala de proyección, videos que cargan al tocar y música de Stage. Sin librerías. */
 (function () {
   var $ = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
@@ -23,14 +23,45 @@
     b.setAttribute('aria-expanded', open); document.body.style.overflow = open ? 'hidden' : '';
   });
 
-  /* Video del inicio: solo si existe y si la persona no pidió menos movimiento */
-  var hv = $('.hero video');
-  if (hv && !calm) fetch(hv.dataset.src, { method: 'HEAD' }).then(function (r) {
-    if (r.ok) { hv.src = hv.dataset.src; hv.play && hv.play().catch(function () {}); }
-  }).catch(function () {});
+  /* Capítulos en celular: la barra de capítulos arranca mostrando el capítulo actual */
+  var cn = $('.chapnav'), on = cn && $('a.on', cn);
+  if (on && cn.scrollWidth > cn.clientWidth) cn.scrollLeft = on.offsetLeft - (cn.clientWidth - on.offsetWidth) / 2;
+
+  /* Reel del inicio: video mudo en loop sobre la foto. No carga si la persona pidió menos movimiento
+     o ahorro de datos; siempre hay un botón para pausarlo. Si el archivo falla, queda la foto. */
+  var hv = $('.hero video.reel'), ht = $('.reel-toggle');
+  var ahorro = navigator.connection && navigator.connection.saveData;
+  if (hv && !calm && !ahorro) {
+    hv.addEventListener('playing', function () { hv.classList.add('on'); if (ht) ht.hidden = false; }, { once: true });
+    hv.addEventListener('error', function () { hv.remove(); if (ht) ht.remove(); });
+    hv.src = hv.dataset.src; hv.load();
+    var pr = hv.play(); if (pr && pr.catch) pr.catch(function () {});
+    if (ht) ht.addEventListener('click', function () {
+      var parar = !hv.paused; if (parar) hv.pause(); else hv.play();
+      ht.setAttribute('aria-pressed', parar); ht.setAttribute('aria-label', parar ? ht.dataset.play : ht.dataset.pause);
+      ht.firstElementChild.textContent = parar ? '▶' : '❚❚';
+    });
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (es) {   // fuera de pantalla no gasta batería
+      if (ht && ht.getAttribute('aria-pressed') === 'true') return;
+      if (es[0].isIntersecting) hv.play().catch(function () {}); else hv.pause();
+    }, { threshold: 0.05 }).observe(hv);
+  }
+  /* «Ver reel»: abre el reel completo con sonido; al cerrar, se detiene */
+  var rd = $('#reel');
+  if (rd) {
+    rd._html = rd.innerHTML;
+    $$('[data-reel]').forEach(function (bt) { bt.addEventListener('click', function () {
+      rd.innerHTML = rd._html; rd.showModal();
+      var v = $('button.video', rd), f = $('video.reel-full', rd);
+      if (v) play(v); else if (f) { f.src = f.dataset.src; f.play().catch(function () {}); }
+      if (hv) hv.pause(); track('reel_open');
+    }); });
+    rd.addEventListener('click', function (e) { if (e.target.closest('[data-close]') || e.target === rd) rd.close(); });
+    rd.addEventListener('close', function () { rd.innerHTML = rd._html; if (hv && ht && ht.getAttribute('aria-pressed') !== 'true') hv.play().catch(function () {}); });
+  }
 
   /* Las fotos del mosaico aparecen con un fundido cuando terminan de cargar (nunca de golpe) */
-  $$('.jg .it img').forEach(function (im) {
+  $$('.it img').forEach(function (im) {
     var ok = function () { im.classList.add('ok'); };
     if (im.complete && im.naturalWidth) ok(); else { im.addEventListener('load', ok, { once: true }); im.addEventListener('error', ok, { once: true }); }
   });
@@ -63,6 +94,7 @@
   }
   function justify(g) {
     var W = g.clientWidth; if (!W) return;
+    if (innerWidth <= 700 && g.closest('.chap, .prog-m')) return;   // en celular va una foto por fila (styles.css)
     var cs = getComputedStyle(g), gap = parseFloat(cs.columnGap) || 0;
     var T = parseFloat(cs.getPropertyValue('--row')) || 220, grupos = [[]];
     $$(':scope > *', g).forEach(function (it) {
@@ -111,7 +143,7 @@
   }
   $$('figure.it[data-full]').forEach(function (f) {
     var open = function () {
-      figs = $$('figure.it[data-full]', f.closest('.jg')); li.removeAttribute('src'); show(figs.indexOf(f));
+      figs = $$('figure.it[data-full]', f.closest('[data-gal]') || f.parentNode); li.removeAttribute('src'); show(figs.indexOf(f));
       lb.showModal(); document.body.style.overflow = 'hidden'; track('photo_open', { src: f.dataset.full });
     };
     f.addEventListener('click', open);
@@ -150,7 +182,8 @@
   });
 
   /* Sala de proyección: abre la ficha; al cerrar, se detiene todo */
-  $$('dialog.cinema').forEach(function (d) { d._html = d.innerHTML; });
+  var fichas = $$('dialog.cinema:not(.reel-dlg)');
+  fichas.forEach(function (d) { d._html = d.innerHTML; });
   function openWork(id) {
     var d = document.getElementById(id); if (!d) return;
     d.innerHTML = d._html;
@@ -161,15 +194,45 @@
     track('section_open', { section: id });
   }
   $$('[data-open]').forEach(function (btn) { btn.addEventListener('click', function () { openWork(btn.dataset.open); }); });
-  $$('dialog.cinema').forEach(function (d) {
+  fichas.forEach(function (d) {
     d.addEventListener('click', function (e) { if (e.target.closest('[data-close]') || e.target === d) d.close(); });
     d.addEventListener('close', function () { d.innerHTML = d._html; history.replaceState(null, '', location.pathname); });
   });
   if (location.hash && document.getElementById('ver-' + location.hash.slice(1))) openWork('ver-' + location.hash.slice(1));
 
-  /* Botón flotante «Escribime» */
-  var fc = $('.float-cta');
-  if (fc) addEventListener('scroll', function () { fc.classList.toggle('on', scrollY > innerHeight * 1.2); }, { passive: true });
+  /* Stage · música del montaje: un reproductor propio por obra (solo suena uno a la vez).
+     Si la obra no tiene archivo de audio pero sí disco en Spotify, el botón carga el reproductor de Spotify. */
+  var players = $$('[data-player]');
+  var mmss = function (t) { t = Math.max(0, Math.floor(t || 0)); return Math.floor(t / 60) + ':' + ('0' + (t % 60)).slice(-2); };
+  players.forEach(function (pl) {
+    var bt = $('.pl-b', pl), au = $('audio', pl), rg = $('.pl-r', pl), ck = $('.pl-c', pl);
+    if (!bt) return;
+    if (!au) {   // Spotify
+      bt.addEventListener('click', function () {
+        var f = document.createElement('iframe');
+        f.src = bt.dataset.spotify; f.title = 'Spotify'; f.allow = 'autoplay; encrypted-media; clipboard-write'; f.loading = 'lazy';
+        $('.pl-sp', pl).appendChild(f); pl.classList.add('sp-on'); track('stage_music', { via: 'spotify' });
+      });
+      return;
+    }
+    var estado = function () {
+      var on = !au.paused; pl.classList.toggle('on', on);
+      bt.firstElementChild.textContent = on ? '❚❚' : '▶'; bt.setAttribute('aria-label', on ? bt.dataset.pause : bt.dataset.play);
+    };
+    bt.addEventListener('click', function () {
+      if (au.paused) { players.forEach(function (o) { var a = $('audio', o); if (a && a !== au) a.pause(); }); au.play().catch(function () {}); track('stage_music', { via: 'audio' }); }
+      else au.pause();
+    });
+    au.addEventListener('play', estado); au.addEventListener('pause', estado); au.addEventListener('ended', function () { au.currentTime = 0; estado(); });
+    au.addEventListener('timeupdate', function () {
+      var d = au.duration || 0, p = d ? au.currentTime / d : 0;
+      if (!rg._drag) { rg.value = Math.round(p * 1000); rg.style.setProperty('--p', (p * 100) + '%'); }
+      ck.textContent = mmss(au.currentTime);
+    });
+    au.addEventListener('error', function () { pl.hidden = true; });
+    rg.addEventListener('input', function () { rg._drag = true; rg.style.setProperty('--p', (rg.value / 10) + '%'); });
+    rg.addEventListener('change', function () { if (au.duration) au.currentTime = au.duration * rg.value / 1000; rg._drag = false; });
+  });
 
   /* Eventos (mismos que la Bio) */
   $$('a[href^="http"]').forEach(function (a) { if (a.host !== location.host) a.addEventListener('click', function () { track('outbound_click', { url: a.href }); }); });

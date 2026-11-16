@@ -1,27 +1,47 @@
 {% extends "base.html" %}{% from "macros.html" import L, pic, tile with context %}
 {% block body %}
-<header class="hero">
-  <img class="poster" src="{{ R }}img/home/hero-1280.webp" srcset="{{ R }}img/home/hero-640.webp 640w, {{ R }}img/home/hero-1280.webp 1280w, {{ R }}img/home/hero-2048.webp 2048w, {{ R }}img/home/hero-2880.webp 2880w" sizes="100vw" alt="" fetchpriority="high" decoding="async">
-  {% if hero_video %}<video autoplay muted loop playsinline preload="none" poster="{{ R }}img/home/hero-1280.webp" data-src="{{ R }}img/home/hero.mp4" aria-hidden="true"></video>{% endif %}
+{#- HERO · espacio del reel: video mudo en loop sobre la foto de portada. Sin video queda la foto (se cambia en Pages CMS → Textos generales → Reel del inicio) -#}
+<header class="hero{% if reel.video %} has-reel{% endif %}">
+  {% if reel.poster_propio %}{{ pic(reel.poster, '', eager=True, cls='poster') }}
+  {% else %}<img class="poster" src="{{ R }}img/home/hero-1280.webp" srcset="{{ R }}img/home/hero-640.webp 640w, {{ R }}img/home/hero-1280.webp 1280w, {{ R }}img/home/hero-2048.webp 2048w, {{ R }}img/home/hero-2880.webp 2880w" sizes="100vw" alt="" fetchpriority="high" decoding="async">{% endif %}
+  {% if reel.video %}<video class="reel" muted loop playsinline preload="none" data-src="{{ R }}{{ reel.video }}" aria-hidden="true" tabindex="-1"></video>{% endif %}
   <div class="bars" aria-hidden="true"></div>
   <div class="hero-in">
     <div>
-      <p class="eyebrow hero-eye">{{ site['rol_' ~ lang] }}</p>
+      {% if site['rol_' ~ lang] %}<p class="eyebrow hero-eye">{{ site['rol_' ~ lang] }}</p>{% endif %}
       <h1>{{ site['frase_' ~ lang] }}</h1>
       <p class="credit">{{ site.nombre }} · {{ site['lugar_' ~ lang] }}</p>
     </div>
-    <div class="btns"><a class="btn" href="#trabajo">{{ t.explore }} ↓</a><a class="btn" href="{{ R }}{{ P }}{{ t.contact_slug }}/">{{ t.write }}</a></div>
+    <div class="btns">
+      {% if reel.hay_completo %}<button class="btn reel-open" type="button" data-reel>▶ {{ reel['boton_' ~ lang] }}</button>{% endif %}
+      <a class="btn" href="#trabajo">{{ t.explore }} ↓</a><a class="btn" href="{{ R }}{{ P }}{{ t.contact_slug }}/">{{ t.write }}</a>
+      {% if reel.video %}<button class="btn reel-toggle" type="button" hidden aria-pressed="false" data-pause="{{ t.reel_pause }}" data-play="{{ t.reel_play }}" aria-label="{{ t.reel_pause }}"><span aria-hidden="true">❚❚</span></button>{% endif %}
+    </div>
   </div>
 </header>
+{% if reel.hay_completo %}
+<dialog class="cinema reel-dlg" id="reel" aria-label="{{ reel['boton_' ~ lang] }}">
+  <div class="cinema-in">
+    <button class="x" type="button" data-close>{{ t.close }} ✕</button>
+    <div class="screen one">
+      {% if reel.completo_id %}<button type="button" class="video horizontal" data-p="{{ reel.completo_plataforma }}" data-id="{{ reel.completo_id }}" aria-label="{{ t.play }}: reel"></button>
+      {% else %}<video class="reel-full" controls playsinline preload="none" data-src="{{ R }}{{ reel.video }}"></video>{% endif %}
+    </div>
+  </div>
+</dialog>
+{% endif %}
 <main>
+  {#- 0 · Manifiesto: una sola vez en todo el sitio (se apaga en Pages CMS → Textos generales) -#}
+  {% if site.mostrar_manifiesto %}<section class="manifesto wrap rv"><p>{{ site['manifiesto_' ~ lang] }}</p></section>{% endif %}
+
   {#- 1 · Fotos, sin título: hablan solas -#}
-  <section class="wrap mosaic" id="trabajo" aria-label="{{ t.photo_eyebrow }}">
-    <div class="jg tight">{% for m in mosaico %}{{ tile(m.f, lang, None, loop.index0, ch=R ~ P ~ 'photo/' ~ m.slug ~ '/', chl=m.titulo) }}{% endfor %}</div>
+  {% if mosaico %}<section class="wrap mosaic" id="trabajo" aria-label="{{ t.photo_eyebrow }}">
+    <div class="jg tight" data-gal>{% for m in mosaico %}{{ tile(m.f, lang, loop.index0, ch=R ~ P ~ 'photo/' ~ m.slug ~ '/', chl=m.titulo) }}{% endfor %}</div>
     <p class="after"><a class="more" href="{{ R }}{{ P }}photo/">{{ t.all_photo }} →</a></p>
-  </section>
+  </section>{% endif %}
 
   {#- 2 · Tres salas: bandas de cine a lo ancho, numeradas -#}
-  <nav class="rooms" aria-label="Motion · Photo · Stage">
+  <nav class="rooms" aria-label="Motion · Photo · Stage"{% if not mosaico %} id="trabajo"{% endif %}>
     {% for d in puertas %}
     <a class="room" href="{{ R }}{{ P }}{{ d.k }}/">
       <img src="{{ R }}{{ d.img }}" alt="" loading="lazy" decoding="async" style="object-position:{{ d.pos }}">
@@ -36,7 +56,7 @@
   </nav>
 
   {#- 3 · Servicios: lista con foto, número y flecha -#}
-  <section class="block wrap svc-wrap">
+  {% if site.servicios %}<section class="block wrap svc-wrap">
     <div class="svc-head">
       <h2 class="h2">{{ L(t.offer) }}</h2>
       <p>{{ t.offer_sub }}</p>
@@ -44,29 +64,29 @@
     </div>
     <ol class="svc">
       {% for s in site.servicios %}
-      <li><a class="svc-row" href="{{ R }}{{ P }}{{ s.enlace if lang == 'es' else s.enlace|en_path }}">
+      <li><a class="svc-row{% if not s.imagen %} noimg{% endif %}" href="{{ R }}{{ P }}{{ (s.enlace if lang == 'es' else s.enlace|en_path) or (t.contact_slug ~ '/') }}">
         <span class="svc-n">0{{ loop.index }}</span>
-        <span class="svc-img">{{ pic(s.imagen, '', sizes="(max-width:700px) 96px, 200px") }}</span>
+        {% if s.imagen %}<span class="svc-img">{{ pic(s.imagen, '', sizes="(max-width:700px) 96px, 200px") }}</span>{% endif %}
         <span class="svc-t"><b>{{ s['titulo_' ~ lang] }}</b><span>{{ s['texto_' ~ lang] }}</span></span>
         <span class="svc-go" aria-hidden="true">→</span>
       </a></li>
       {% endfor %}
     </ol>
-  </section>
+  </section>{% endif %}
 
   {#- 4 · Cierre -#}
   <section class="epilogue wrap">
-    <p>{{ site['cierre_' ~ lang] }}</p>
+    {% if site['cierre_' ~ lang] %}<p>{{ site['cierre_' ~ lang] }}</p>{% endif %}
     <div class="btns"><a class="btn blue" href="https://wa.me/{{ site.whatsapp }}" rel="noopener">WhatsApp</a><a class="btn" href="mailto:{{ site.email }}">{{ site.email }}</a><a class="btn" href="{{ R }}{{ P }}{{ t.contact_slug }}/">{{ t.form }}</a></div>
   </section>
 
   {#- 5 · Clientes: lo último del sitio -#}
-  <section class="wrap clients">
+  {% if site.clientes or site.clientes_sin_logo %}<section class="wrap clients">
     <div class="head"><h2 class="h2">{{ L(t.clients) }}</h2><span class="eyebrow">{{ t.clients_sub }}</span></div>
     <ul class="logos">
       {% for c in site.clientes %}<li><img src="{{ R }}{{ c.logo }}" alt="{{ c.nombre }}" title="{{ c.nombre }}" loading="lazy" decoding="async" style="--h:{{ c.alto }}px"></li>{% endfor %}
       {% for n in site.clientes_sin_logo %}<li class="nm">{{ n }}</li>{% endfor %}
     </ul>
-  </section>
+  </section>{% endif %}
 </main>
 {% endblock %}

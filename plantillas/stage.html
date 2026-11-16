@@ -1,15 +1,50 @@
-{% extends "base.html" %}{% from "macros.html" import L, pic, tile, cinema, portada with context %}
+{% extends "base.html" %}{% from "macros.html" import L, pic, tile, video, portada with context %}
 {% block body %}
 {{ portada('img/stage/banner/banner.webp', 'stage', t.stage_eyebrow, t.stage_lead, icono='⌒') }}
-<main class="wrap" style="padding-top:22px">
-  <div class="works tall">
-    {% for p in s.proyectos %}
-    <button type="button" class="work rv" data-open="ver-{{ p.slug }}" id="{{ p.slug }}" style="--d:{{ loop.index0 * 0.08 }}s">
-      {{ pic(p.fotos[0], '', sizes="(max-width:520px) 100vw, 33vw") }}
-      <span class="t"><b>{{ p.titulo }}</b><small><em>{{ p.anio }}</em> · {{ p['rol_' ~ lang] }}</small></span>
-    </button>
-    {% endfor %}
-  </div>
+{#- STAGE como programa de mano: cada obra es un programa con su ficha técnica, sus fotos y su música.
+    La barra de música queda pegada abajo mientras se recorre la obra. -#}
+<main class="wrap programas">
+  {% if s.proyectos|length > 1 %}<nav class="prog-index" aria-label="{{ t.programme }}">{% for p in s.proyectos %}<a href="#{{ p.slug }}"><span>{{ p.numero }}</span>{{ p.titulo }}</a>{% endfor %}</nav>{% endif %}
+  {% for p in s.proyectos %}
+  <article class="programa" id="{{ p.slug }}">
+    <header class="prog-h rv">
+      <p class="eyebrow">{{ t.programme }} {{ p.numero }}{% if p['genero_' ~ lang] %} · {{ p['genero_' ~ lang] }}{% endif %}</p>
+      <h2>{{ p.titulo }}</h2>
+      <p class="prog-sub">{% if p.sala %}{{ p.sala }}{% endif %}{% if p.sala and p.anio %} · {% endif %}{{ p.anio }}</p>
+    </header>
+    <div class="prog-b">
+      <div class="prog-f">
+        {% if p['sinopsis_' ~ lang] %}<p class="prog-s">{{ p['sinopsis_' ~ lang] }}</p>{% endif %}
+        <dl class="ficha-t">
+          {% if p.sala %}<div><dt>{{ t.venue }}</dt><dd>{{ p.sala }}</dd></div>{% endif %}
+          {% if p['funciones_' ~ lang] %}<div><dt>{{ t.dates }}</dt><dd>{{ p['funciones_' ~ lang] }}</dd></div>{% endif %}
+          {% for c in p.creditos %}<div><dt>{{ c['rol_' ~ lang] }}</dt><dd>{{ c.nombre }}</dd></div>{% endfor %}
+          {% if p['rol_' ~ lang] %}<div class="mio"><dt>{{ t.my_role }}</dt><dd>{{ p['rol_' ~ lang] }}</dd></div>{% endif %}
+          {% if p.enlaces %}<div><dt>{{ t.links }}</dt><dd>{% for e in p.enlaces %}<a href="{{ e.url }}" rel="noopener">{{ e.texto }}</a>{% if not loop.last %}<br>{% endif %}{% endfor %}</dd></div>{% endif %}
+        </dl>
+      </div>
+      <div class="prog-m">
+        {% if p.fotos %}<div class="jg" data-gal>{% for f in p.fotos %}{{ tile(f, lang, loop.index0, sizes="(max-width:700px) 100vw, 33vw") }}{% endfor %}</div>{% endif %}
+        {% if p.videos %}<div class="screen prog-v{% if p.videos|length == 1 %} one{% endif %}">{% for v in p.videos %}{{ video(v, t) }}{% endfor %}</div>{% endif %}
+      </div>
+    </div>
+    {% set sp = p.banda_sonora[0] if p.banda_sonora else None %}
+    {% if p.audio or sp %}
+    <div class="player" data-player>
+      {% if p.audio %}
+      <button class="pl-b" type="button" aria-label="{{ t.play }}" data-play="{{ t.play }}" data-pause="{{ t.pause }}"><span aria-hidden="true">▶</span></button>
+      <div class="pl-t"><small>{{ t.music }}</small><b>{{ p['audio_titulo_' ~ lang] or p.titulo }}</b></div>
+      <input class="pl-r" type="range" min="0" max="1000" value="0" step="1" aria-label="{{ t.music }}">
+      <span class="pl-c" aria-hidden="true">0:00</span>
+      <audio preload="none" src="{{ R }}{{ p.audio }}"></audio>
+      {% else %}
+      <button class="pl-b" type="button" aria-label="{{ t.listen }}: {{ sp.titulo }}" data-spotify="https://open.spotify.com/embed/{{ sp.tipo }}/{{ sp.id }}?theme=0"><span aria-hidden="true">▶</span></button>
+      <div class="pl-t"><small>{{ t.music }} · Spotify</small><b>{{ sp.titulo or p.titulo }}</b></div>
+      <div class="pl-sp"></div>
+      {% endif %}
+    </div>
+    {% endif %}
+  </article>
+  {% endfor %}
 </main>
-{% for p in s.proyectos %}{{ cinema(p, t, lang, p.fotos) }}{% endfor %}
 {% endblock %}

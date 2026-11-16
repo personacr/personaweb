@@ -1,4 +1,6 @@
-# Miniaturas de Vimeo (se llenan solas al agregar videos nuevos con herramientas/miniaturas). YouTube no necesita.
+# Miniaturas automáticas de la plataforma (código del video → dirección de la imagen). No se edita desde Pages CMS.
+# Para YouTube sirven los cuadros limpios que YouTube saca solo: …/maxres1.jpg, maxres2.jpg o maxres3.jpg.
+# Si un video tiene «Miniatura propia» en Pages CMS, esa manda sobre esta lista.
 "601395044": https://i.vimeocdn.com/video/1247401396-e430afc40732257f796689a6c4a52abe1dc3bc3cd474d9c221d9795e607d12be-d_1280x720
 "634799613": https://i.vimeocdn.com/video/1693985338-6fa975f4965d995d028c014c543e6878734c03b618612df860a8e22697850b6c-d_1280x720
 "1162873267": https://i.vimeocdn.com/video/2118832591-8f77d8b44bb0ef87fe1577e4ac72fed9508804e8520bfbd78190899f9d5997c7-d_720x1280
@@ -12,4 +14,5 @@
 "853482772": https://i.vimeocdn.com/video/1709133842-80b382e2d3ab4c67b9b78b2456f9711fbf926b38e7129b1f344e9ecde4a1c5eb-d_720x1280
 "853482737": https://i.vimeocdn.com/video/1709020980-529ecb58b2579edf8aa3411e2a5dfb613d5ec7ba75a3bf4c3acbd30df63c2280-d_720x1280
 "853482933": https://i.vimeocdn.com/video/1709020998-23cccc0d342bc8371f97502b3434f03d6446513077d90dd2a8b564c990720716-d_720x1280
-"J74H-5ccmfQ": https://i.ytimg.com/vi/J74H-5ccmfQ/hqdefault.jpg
+"J74H-5ccmfQ": https://i.ytimg.com/vi/J74H-5ccmfQ/maxres3.jpg
+"IJOK1HAB5E8": https://i.ytimg.com/vi/IJOK1HAB5E8/maxres2.jpg

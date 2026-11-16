@@ -1,25 +1,28 @@
-# Motion · filmografía, reels y bitácora en video. Editable desde Pages CMS.
-# plataforma: vimeo | youtube | instagram · formato: horizontal | vertical
-# banda_sonora: discos o canciones de Spotify (tipo: album | track)
+# Motion · filmografía, reels y bitácora en video. Editable desde Pages CMS → «Motion».
+# plataforma: vimeo | youtube | instagram · formato: horizontal | vertical · banda_sonora: discos o canciones de Spotify
 proyectos:
 - slug: dele-viaje
   titulo: Dele Viaje
+  destacado: true
   anio: 2012 · 2017
   tipo_es: Serie de televisión · dos temporadas
   tipo_en: TV series · two seasons
   rol_es: Director, guionista y producción de la banda sonora
   rol_en: Director, screenwriter & soundtrack producer
-  sinopsis_es: Serie de viajes creada, escrita y dirigida por Jose Pablo García.
-  sinopsis_en: Travel series created, written and directed by Jose Pablo García.
+  sinopsis_es: Serie de viajes creada, escrita y dirigida por Jose Pablo García. Dos temporadas, con banda sonora original.
+  sinopsis_en: Travel series created, written and directed by Jose Pablo García. Two seasons, with an original soundtrack.
+  portada: ''
   videos:
   - plataforma: youtube
     id: J74H-5ccmfQ
     formato: horizontal
     titulo: Tráiler · Temporada 2
+    miniatura: ''
   - plataforma: youtube
     id: ImkZIvtrLjU
     formato: horizontal
     titulo: Tráiler · Temporada 1
+    miniatura: ''
   banda_sonora:
   - titulo: Banda sonora · Temporada 2
     tipo: album
@@ -30,9 +33,9 @@ proyectos:
   - titulo: La Mitad de lo que Soy · Temporada 1
     tipo: track
     id: 3tS1qb3pVKpIaCs0Dcny3r
-  portada: ''
 - slug: a-ojos-cerrados
   titulo: A Ojos Cerrados
+  destacado: false
   anio: '2010'
   tipo_es: Largometraje · dir. Hernán Jiménez
   tipo_en: Feature film · dir. Hernán Jiménez
@@ -40,15 +43,17 @@ proyectos:
   rol_en: Producer
   sinopsis_es: Ópera prima de Hernán Jiménez.
   sinopsis_en: Hernán Jiménez's debut feature.
+  portada: ''
   videos:
   - plataforma: youtube
     id: uN0BB31Eztw
     formato: horizontal
     titulo: Tráiler oficial
+    miniatura: ''
   banda_sonora: []
-  portada: ''
 - slug: lorem-ipsum
   titulo: Lorem Ipsum
+  destacado: false
   anio: '2021'
   tipo_es: Cortometraje
   tipo_en: Short film
@@ -56,15 +61,17 @@ proyectos:
   rol_en: Co-director & cinematographer
   sinopsis_es: Con Marko Fonseca y Melania Fernández. Codirección con Diego van der Laat, quien firma historia y música.
   sinopsis_en: With Marko Fonseca and Melania Fernández. Co-directed with Diego van der Laat, who wrote the story and music.
+  portada: ''
   videos:
   - plataforma: vimeo
     id: '634799613'
     formato: horizontal
     titulo: Lorem Ipsum
+    miniatura: img/motion/cuadros/634799613-640.webp
   banda_sonora: []
-  portada: ''
 - slug: preludio
   titulo: Preludio
+  destacado: false
   anio: '2021'
   tipo_es: Cortometraje
   tipo_en: Short film
@@ -72,15 +79,17 @@ proyectos:
   rol_en: Co-director, cinematography & editing
   sinopsis_es: Lo que precede y sirve de entrada, preparación o principio de algo.
   sinopsis_en: An action or event serving as an introduction.
+  portada: ''
   videos:
   - plataforma: vimeo
     id: '601395044'
     formato: horizontal
     titulo: Preludio | Prelude
+    miniatura: img/motion/cuadros/601395044-640.webp
   banda_sonora: []
-  portada: ''
 - slug: manana-manana
   titulo: Mañana Mañana
+  destacado: false
   anio: ''
   tipo_es: Videoclip · Patiño
   tipo_en: Music video · Patiño
@@ -88,15 +97,17 @@ proyectos:
   rol_en: Director, cinematography & editing
   sinopsis_es: Video oficial de Patiño.
   sinopsis_en: Official music video for Patiño.
+  portada: ''
   videos:
   - plataforma: youtube
     id: ymWONly-2FE
     formato: horizontal
     titulo: Mañana Mañana · Patiño
+    miniatura: ''
   banda_sonora: []
-  portada: ''
 - slug: moment
   titulo: Moment
+  destacado: false
   anio: '2024'
   tipo_es: Videodanza
   tipo_en: Dance film
@@ -104,15 +115,17 @@ proyectos:
   rol_en: Cinematography & editing
   sinopsis_es: Video promocional de danza.
   sinopsis_en: Dance promo film.
+  portada: ''
   videos:
   - plataforma: vimeo
     id: '963239232'
     formato: horizontal
     titulo: MOMENT · Promo
+    miniatura: ''
   banda_sonora: []
-  portada: ''
 - slug: abril
   titulo: Abril
+  destacado: false
   anio: '2026'
   tipo_es: Largometraje · dir. Hernán Jiménez
   tipo_en: Feature film · dir. Hernán Jiménez
@@ -120,15 +133,17 @@ proyectos:
   rol_en: Second unit cinematography · Social media campaign
   sinopsis_es: Segunda unidad de fotografía para la película de Hernán Jiménez, y reels para su lanzamiento en redes.
   sinopsis_en: Second unit cinematography for Hernán Jiménez's feature, plus reels for its social media launch.
+  portada: ''
   videos:
   - plataforma: instagram
     id: Dc8yRiOx5L5
     formato: vertical
     titulo: Reel de lanzamiento · Abril
+    miniatura: ''
   banda_sonora: []
-  portada: ''
 - slug: an-instant
   titulo: An Instant
+  destacado: false
   anio: ''
   tipo_es: Cortometraje
   tipo_en: Short film
@@ -136,15 +151,17 @@ proyectos:
   rol_en: Director & editor
   sinopsis_es: Un instante.
   sinopsis_en: A single instant.
+  portada: ''
   videos:
   - plataforma: youtube
     id: 7NnWlWsZX48
     formato: horizontal
     titulo: an instant (un instante)
+    miniatura: ''
   banda_sonora: []
-  portada: ''
 - slug: silencio
   titulo: Silencio
+  destacado: false
   anio: '2019'
   tipo_es: Cortometraje
   tipo_en: Short film
@@ -152,56 +169,68 @@ proyectos:
   rol_en: Creator
   sinopsis_es: Voz de Adriana Álvarez. Moravia, San José.
   sinopsis_en: Voice by Adriana Álvarez. Moravia, San José.
+  portada: ''
   videos:
   - plataforma: vimeo
     id: '339285450'
     formato: horizontal
     titulo: Silencio (Silence)
+    miniatura: img/motion/cuadros/339285450-640.webp
   banda_sonora: []
-  portada: ''
 reels:
 - plataforma: vimeo
   id: '1162873267'
   formato: vertical
   titulo: Festival Revés 2026
+  miniatura: img/motion/cuadros/1162873267-640.webp
 - plataforma: vimeo
   id: '1163467105'
   formato: vertical
   titulo: Andamio · Promo 2026
+  miniatura: ''
 - plataforma: vimeo
   id: '1104345596'
   formato: vertical
   titulo: Festival Revés 2025
+  miniatura: img/motion/cuadros/1104345596-640.webp
 - plataforma: vimeo
   id: '857355547'
   formato: vertical
   titulo: Acentos · 2023
+  miniatura: img/motion/cuadros/857355547-640.webp
 bitacora:
 - plataforma: instagram
   id: DVce0h9DZBW
   formato: vertical
   titulo: Atardecer desde el dron
+  miniatura: ''
 - plataforma: instagram
   id: CwnhgZvoEj9
   formato: vertical
   titulo: Afuera de un concierto de Coldplay
+  miniatura: ''
 - plataforma: vimeo
   id: '1104339033'
   formato: vertical
   titulo: Coldplay · Roma 2024
+  miniatura: ''
 - plataforma: vimeo
   id: '1104347403'
   formato: vertical
   titulo: Imagination · Coldplay 2022–2025
+  miniatura: ''
 - plataforma: vimeo
   id: '853482772'
   formato: vertical
   titulo: Photo Reel · Suiza
+  miniatura: img/motion/cuadros/853482772-640.webp
 - plataforma: vimeo
   id: '853482737'
   formato: vertical
   titulo: Photo Reel · Barcelona
+  miniatura: img/motion/cuadros/853482737-640.webp
 - plataforma: vimeo
   id: '853482933'
   formato: vertical
   titulo: Photo Reel · Copenhague
+  miniatura: img/motion/cuadros/853482933-640.webp

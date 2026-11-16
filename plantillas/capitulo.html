@@ -1,23 +1,28 @@
-{% extends "base.html" %}{% from "macros.html" import L, pic, tile with context %}
+{% extends "base.html" %}{% from "macros.html" import L, pic, tile, premio with context %}
 {% block body %}
 <header class="cover">
   {{ pic(c.portada, c['titulo_' ~ lang], eager=True) }}
   <div class="bars" aria-hidden="true"></div>
   <div class="cover-t">
     <div><p class="eyebrow"><i class="ico" aria-hidden="true">◎</i>Photo · {{ c.numero }} · {{ c.fotos|length }} {{ t.photos }}</p><h1 class="display">{{ L(c['titulo_' ~ lang]|lower) }}</h1></div>
-    <p class="lead">{{ c['intro_' ~ lang] }}</p>
+    {% if c['intro_' ~ lang] %}<p class="lead">{{ c['intro_' ~ lang] }}</p>{% endif %}
   </div>
 </header>
 <main class="wrap">
   <nav class="chapter-bar" aria-label="{{ t.chapters }}">
     <div class="chapnav">{% for o in capitulos %}<a href="{{ R }}{{ P }}photo/{{ o.slug if lang == 'es' else o.slug_en }}/"{% if o.slug == c.slug %} class="on" aria-current="page"{% endif %}>{{ o['titulo_' ~ lang] }}</a>{% endfor %}</div>
   </nav>
-  <div class="jg">
-  {%- set ns = namespace(g='') -%}
-  {%- for f in c.fotos %}
-    {%- if f['grupo_' ~ lang] and f['grupo_' ~ lang] != ns.g %}{% set ns.g = f['grupo_' ~ lang] %}{% set pr = (c.premios or [])|selectattr("grupo", "equalto", f.grupo_es)|first %}<p class="label{% if pr %} award{% endif %}">{{ ns.g }}{% if pr %}<a href="{{ pr.url }}" rel="noopener"><img src="{{ R }}{{ pr.imagen }}-160.webp" srcset="{{ R }}{{ pr.imagen }}-320.webp 2x" alt="Fine Art Photography Awards · Nominee" width="40" height="40">{{ pr['texto_' ~ lang] }}</a>{% endif %}</p>{% endif %}
-    {{ tile(f, lang, None, loop.index0) }}
-  {%- endfor %}
+  {#- Recorrido: títulos de grupo, fotos grandes (pausas) y mosaicos, en el orden de Pages CMS. En celular va una foto por fila. -#}
+  <div class="chap" data-gal>
+  {% for b in bloques %}
+    {% if b.tipo == 'grupo' %}
+    <header class="grp"><h2 class="label">{{ b.titulo }}</h2>{% if b.premio %}{{ premio(b.premio, b.premio_url, b.premio_sello) }}{% endif %}{% if b.nota %}<p class="nota">{{ b.nota }}</p>{% endif %}</header>
+    {% elif b.tipo == 'pausa' %}
+    {{ tile(b.f, lang, 0, clase='pausa' ~ (' vertical' if b.f.h > b.f.w else ''), sizes="(max-width:1520px) 100vw, 1520px") }}
+    {% else %}
+    <div class="jg">{% for f in b.fotos %}{{ tile(f, lang, loop.index0, sizes="(max-width:700px) 100vw, (max-width:1100px) 50vw, 34vw") }}{% endfor %}</div>
+    {% endif %}
+  {% endfor %}
   </div>
 </main>
 {% endblock %}

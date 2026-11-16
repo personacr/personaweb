@@ -1,12 +1,63 @@
 # Pages CMS (app.pagescms.org) · solo toca contenido, nunca el diseño.
-# Elegí la carpeta img/subidas al subir fotos nuevas; y GitHub las convierte solas a 3 tamaños livianos.
+# Manual completo: ARQUITECTURA.md (en la raíz del repositorio).
+#
+# REGLAS DE ESTE ARCHIVO
+#  · Todo campo que exista en contenido/*.yml tiene que estar aquí: Pages CMS borra al guardar lo que no conoce.
+#  · Cada campo lleva «label» (nombre) y, si hace falta, «description» (ayuda) en español sencillo.
+#  · Ningún campo es obligatorio para el armado: si queda vacío, el sitio usa un valor seguro (herramientas/construir.py).
+#  · Después de cambiar este archivo: python3 herramientas/probar.py
+
 media:
-  input: img
-  output: img
-  rename: safe
-  extensions: [jpg, jpeg, png, webp]
+  - name: fotos
+    label: Fotos
+    input: img
+    output: img
+    rename: safe
+    extensions: [jpg, jpeg, png, webp, svg]
+  - name: video
+    label: Video (reel del inicio)
+    input: medios/video
+    output: medios/video
+    rename: safe
+    extensions: [mp4, webm]
+  - name: audio
+    label: Audio (música de Stage)
+    input: medios/audio
+    output: medios/audio
+    rename: safe
+    extensions: [mp3, m4a]
+
+# Piezas que se repiten (un video, un disco de Spotify)
+components:
+  video:
+    type: object
+    fields:
+      - { name: titulo, label: Título, type: string, description: "Se ve debajo del video." }
+      - name: plataforma
+        label: Dónde está el video
+        type: select
+        default: vimeo
+        options: { values: [vimeo, youtube, instagram] }
+      - { name: id, label: Código del video, type: string, description: "Lo que va al final del link. Vimeo: vimeo.com/634799613 → 634799613. YouTube: …watch?v=J74H-5ccmfQ → J74H-5ccmfQ. Instagram: …/reel/Dc8yRiOx5L5/ → Dc8yRiOx5L5. Sin código, el video no se muestra." }
+      - name: formato
+        label: Formato
+        type: select
+        default: horizontal
+        options: { values: [horizontal, vertical] }
+      - { name: miniatura, label: Miniatura propia (opcional), type: image, options: { media: fotos, path: img/subidas }, description: "Un cuadro limpio del video, sin títulos ni laureles. Si la dejás vacía se usa la imagen de Vimeo o YouTube." }
+  spotify:
+    type: object
+    fields:
+      - { name: titulo, label: Título, type: string }
+      - name: tipo
+        label: Tipo
+        type: select
+        default: album
+        options: { values: [album, track, playlist] }
+      - { name: id, label: Código de Spotify, type: string, description: "Lo que va al final del link: open.spotify.com/album/0jFRRi06CjHRyyJElNydOc → 0jFRRi06CjHRyyJElNydOc." }
 
 content:
+  # ───────────────────────── PHOTO ─────────────────────────
   - name: photo
     label: Photo · capítulos
     type: collection
@@ -20,44 +71,50 @@ content:
       sort: [orden]
       default: { sort: orden, order: asc }
     fields:
-      - { name: orden, label: Orden en el menú, type: number }
-      - { name: numero, label: Número (I, II…), type: string }
-      - { name: slug, label: Dirección en español (no cambiar), type: string }
-      - { name: slug_en, label: Dirección en inglés (no cambiar), type: string }
+      - { name: orden, label: Orden, type: number, description: "1 = primero en el menú y en la página Photo. El número romano (I, II…) se pone solo." }
+      - { name: slug, label: Dirección en español, type: string, description: "Va en el link: persona.cr/photo/arte/. Minúsculas, sin espacios ni tildes. No la cambiés después de publicar." }
+      - { name: slug_en, label: Dirección en inglés, type: string, description: "Igual que la anterior, para la versión en inglés. No la cambiés después de publicar." }
       - { name: titulo_es, label: Título (ES), type: string }
-      - { name: titulo_en, label: Título (EN), type: string }
+      - { name: titulo_en, label: Título (EN), type: string, description: "Si queda vacío se usa el título en español." }
       - { name: intro_es, label: Una línea de introducción (ES), type: text }
       - { name: intro_en, label: Una línea de introducción (EN), type: text }
-      - { name: portada, label: Portada, type: image }
-      - name: premios
-        label: Premios o nominaciones (aparecen junto al nombre del grupo)
+      - { name: portada, label: Portada del capítulo, type: image, options: { media: fotos, path: img/subidas }, description: "La franja de arriba del capítulo. Si queda vacía se usa la primera foto." }
+      - name: grupos
+        label: Grupos · nota y premio (opcional)
+        description: "Para agregarle una nota o un premio a un grupo de fotos. El nombre tiene que ser igual al «Grupo (ES)» que llevan las fotos."
         type: object
         list: true
         fields:
-          - { name: grupo, label: Nombre exacto del grupo (ES), type: string }
-          - { name: imagen, label: Sello (ruta sin tamaño), type: string }
-          - { name: texto_es, label: Texto (ES), type: string }
-          - { name: texto_en, label: Texto (EN), type: string }
-          - { name: url, label: Enlace oficial, type: string }
+          - { name: nombre, label: Nombre del grupo, type: string, description: "Igual al «Grupo (ES)» de las fotos. Ejemplo: Parallel Perceptions." }
+          - { name: nota_es, label: Nota (ES), type: text, description: "Una o dos líneas debajo del nombre del grupo. Ejemplo: obra comisionada para el hotel." }
+          - { name: nota_en, label: Nota (EN), type: text }
+          - { name: premio_es, label: Premio o nominación (ES), type: string, description: "Ejemplo: Nominee · Conceptual · 12th Fine Art Photography Awards 2025–2026." }
+          - { name: premio_en, label: Premio o nominación (EN), type: string }
+          - { name: premio_sello, label: Sello del premio, type: image, options: { media: fotos, path: img/premios }, description: "Imagen pequeña y cuadrada (PNG o WebP)." }
+          - { name: premio_url, label: Enlace oficial del premio, type: string }
       - name: fotos
-        label: Fotos (arrastrá para cambiar el orden)
+        label: Fotos
+        description: "Arrastrá para cambiar el orden. La primera foto «grande» abre el capítulo."
         type: object
         list: true
         fields:
-          - { name: archivo, label: Foto, type: image }
+          - { name: archivo, label: Foto, type: image, options: { media: fotos, path: img/subidas }, description: "Subí el original a la carpeta «subidas». GitHub lo achica solo y borra el original." }
           - name: formato
-            label: Peso en el mosaico
+            label: Tamaño
+            description: "normal = dentro del mosaico. grande = a todo el ancho (usala para abrir el capítulo y para 2 o 3 pausas; mejor con fotos horizontales)."
             type: select
-            options: { values: [completa, par, detalle] }
-          - { name: pie_es, label: Descripción para Google y lectores de pantalla (ES · no se muestra), type: string }
-          - { name: pie_en, label: Descripción para Google y lectores de pantalla (EN · no se muestra), type: string }
-          - { name: credito, label: Crédito (artista · año), type: string }
-          - { name: grupo_es, label: Subtítulo de grupo (ES, opcional), type: string }
-          - { name: grupo_en, label: Subtítulo de grupo (EN, opcional), type: string }
-          - { name: w, label: Ancho (automático), type: number }
-          - { name: h, label: Alto (automático), type: number }
-          - { name: color, label: Color (automático), type: string }
+            default: normal
+            options: { values: [normal, grande] }
+          - { name: grupo_es, label: Grupo (ES, opcional), type: string, description: "Subtítulo que junta varias fotos seguidas. Ejemplo: Parallel Perceptions." }
+          - { name: grupo_en, label: Grupo (EN, opcional), type: string }
+          - { name: pie_es, label: Descripción (ES), type: string, description: "No se muestra: es para Google y lectores de pantalla. Decí lo que se ve." }
+          - { name: pie_en, label: Descripción (EN), type: string }
+          - { name: credito, label: Crédito, type: string, description: "Artista o cliente · año. Ejemplo: Jacob Collier · 2025. Tampoco se muestra sobre la foto." }
+          - { name: w, label: Ancho (automático), type: number, readonly: true }
+          - { name: h, label: Alto (automático), type: number, readonly: true }
+          - { name: color, label: Color (automático), type: string, readonly: true }
 
+  # ───────────────────────── MOTION ─────────────────────────
   - name: motion
     label: Motion
     type: file
@@ -66,74 +123,73 @@ content:
     fields:
       - name: proyectos
         label: Filmografía
+        description: "Arrastrá para cambiar el orden."
         type: object
         list: true
         fields:
-          - { name: slug, label: Identificador (sin espacios), type: string }
-          - { name: titulo, label: Título, type: string }
+          - { name: titulo, label: Título, type: string, description: "Sin título, el proyecto no se muestra." }
+          - { name: slug, label: Identificador, type: string, description: "Minúsculas y guiones, sin espacios (ejemplo: dele-viaje). Va en el link. Si queda vacío se arma con el título." }
+          - { name: destacado, label: Proyecto destacado, type: boolean, description: "Encendido = va grande, arriba de Motion, con su primer video y sus premios. Los premios salen de Textos generales → Reconocimientos (los que llevan el mismo nombre de obra)." }
           - { name: anio, label: Año, type: string }
-          - { name: tipo_es, label: Formato (ES), type: string }
+          - { name: tipo_es, label: Formato (ES), type: string, description: "Ejemplo: Serie de televisión · dos temporadas." }
           - { name: tipo_en, label: Formato (EN), type: string }
-          - { name: rol_es, label: Rol (ES), type: string }
-          - { name: rol_en, label: Rol (EN), type: string }
-          - { name: sinopsis_es, label: Sinopsis (ES), type: text }
+          - { name: rol_es, label: Mi rol (ES), type: string }
+          - { name: rol_en, label: Mi rol (EN), type: string }
+          - { name: sinopsis_es, label: Sinopsis (ES), type: text, description: "Datos, no adjetivos: qué es, con quién, dónde." }
           - { name: sinopsis_en, label: Sinopsis (EN), type: text }
-          - { name: portada, label: Imagen de portada (opcional), type: image }
-          - name: videos
-            label: Videos
+          - { name: portada, label: Imagen de la tarjeta (opcional), type: image, options: { media: fotos, path: img/subidas }, description: "Un cuadro limpio para la tarjeta del proyecto. Si queda vacía se usa la miniatura del primer video." }
+          - { name: videos, label: Videos, description: "El primero es el principal.", component: video, list: true }
+          - { name: banda_sonora, label: Banda sonora (Spotify), component: spotify, list: true }
+          - name: enlaces
+            label: Enlaces (opcional)
             type: object
             list: true
             fields:
-              - { name: plataforma, label: Plataforma, type: select, options: { values: [vimeo, youtube, instagram] } }
-              - { name: id, label: Código del video (lo que va al final del link), type: string }
-              - { name: formato, label: Formato, type: select, options: { values: [horizontal, vertical] } }
-              - { name: titulo, label: Título, type: string }
-          - name: banda_sonora
-            label: Banda sonora (Spotify)
-            type: object
-            list: true
-            fields:
-              - { name: titulo, label: Título, type: string }
-              - { name: tipo, label: Tipo, type: select, options: { values: [album, track] } }
-              - { name: id, label: Código de Spotify, type: string }
-      - name: reels
-        label: Reels
-        type: object
-        list: true
-        fields:
-          - { name: plataforma, label: Plataforma, type: select, options: { values: [vimeo, youtube, instagram] } }
-          - { name: id, label: Código del video, type: string }
-          - { name: formato, label: Formato, type: select, options: { values: [vertical, horizontal] } }
-          - { name: titulo, label: Título, type: string }
-      - name: bitacora
-        label: Bitácora en video
-        type: object
-        list: true
-        fields:
-          - { name: plataforma, label: Plataforma, type: select, options: { values: [vimeo, youtube, instagram] } }
-          - { name: id, label: Código del video, type: string }
-          - { name: formato, label: Formato, type: select, options: { values: [vertical, horizontal] } }
-          - { name: titulo, label: Título, type: string }
+              - { name: texto, label: Texto, type: string }
+              - { name: url, label: Dirección, type: string }
+      - { name: reels, label: Reels, description: "Videos verticales para festivales, escuelas y marcas.", component: video, list: true }
+      - { name: bitacora, label: Bitácora en video, description: "Viajes, conciertos y dron.", component: video, list: true }
 
+  # ───────────────────────── STAGE ─────────────────────────
   - name: stage
-    label: Stage
+    label: Stage · programas de mano
     type: file
     path: contenido/stage.yml
     format: yaml
     fields:
       - name: proyectos
-        label: Producciones
+        label: Obras
+        description: "Cada obra es un programa de mano. Arrastrá para cambiar el orden. Lo que quede vacío no se muestra."
         type: object
         list: true
         fields:
-          - { name: slug, label: Identificador (sin espacios), type: string }
-          - { name: titulo, label: Título, type: string }
+          - { name: titulo, label: Título, type: string, description: "Sin título, la obra no se muestra." }
+          - { name: slug, label: Identificador, type: string, description: "Minúsculas y guiones, sin espacios (ejemplo: still-standing). Si queda vacío se arma con el título." }
           - { name: anio, label: Año, type: string }
-          - { name: rol_es, label: Rol (ES), type: string }
-          - { name: rol_en, label: Rol (EN), type: string }
-          - { name: sinopsis_es, label: Sinopsis (ES), type: text }
-          - { name: sinopsis_en, label: Sinopsis (EN), type: text }
-          - { name: fotos, label: Fotos, type: image, options: { multiple: true } }
+          - { name: genero_es, label: Tipo de montaje (ES), type: string, description: "Ejemplo: Danza, teatro y música en vivo." }
+          - { name: genero_en, label: Tipo de montaje (EN), type: string }
+          - { name: sala, label: Sala o teatro, type: string, description: "Ejemplo: Teatro Nacional de Costa Rica." }
+          - { name: funciones_es, label: Fechas y funciones (ES), type: string, description: "Ejemplo: 2 de octubre de 2026 · una función." }
+          - { name: funciones_en, label: Fechas y funciones (EN), type: string }
+          - { name: rol_es, label: Mi rol (ES), type: string, description: "Ejemplo: Codirector y vocalista." }
+          - { name: rol_en, label: Mi rol (EN), type: string }
+          - { name: sinopsis_es, label: De qué trata (ES), type: text }
+          - { name: sinopsis_en, label: De qué trata (EN), type: text }
+          - name: creditos
+            label: Créditos (ficha técnica)
+            description: "Una línea por crédito, en el orden en que deben leerse."
+            type: object
+            list: true
+            fields:
+              - { name: rol_es, label: Crédito (ES), type: string, description: "Ejemplo: Dirección, Producción, Elenco, Música." }
+              - { name: rol_en, label: Crédito (EN), type: string }
+              - { name: nombre, label: Nombre, type: string, description: "Sin nombre, la línea no se muestra." }
+          - { name: audio, label: Música del montaje (archivo), type: file, options: { media: audio }, description: "Un MP3 que suena en la barra de abajo mientras se recorren las fotos. Solo música propia o con permiso. Si queda vacío se usa el primer disco de Spotify de «Banda sonora»." }
+          - { name: audio_titulo_es, label: Título de la música (ES), type: string, description: "Ejemplo: Tema principal. Si queda vacío se usa el título de la obra." }
+          - { name: audio_titulo_en, label: Título de la música (EN), type: string }
+          - { name: banda_sonora, label: Banda sonora (Spotify), component: spotify, list: true }
+          - { name: fotos, label: Fotos, type: image, options: { multiple: true, media: fotos, path: img/subidas }, description: "Subí los originales a la carpeta «subidas»; van en su formato original." }
+          - { name: videos, label: Videos, component: video, list: true }
           - name: enlaces
             label: Enlaces
             type: object
@@ -141,92 +197,94 @@ content:
             fields:
               - { name: texto, label: Texto, type: string }
               - { name: url, label: Dirección, type: string }
-          - name: videos
-            label: Videos
-            type: object
-            list: true
-            fields:
-              - { name: plataforma, label: Plataforma, type: select, options: { values: [vimeo, youtube, instagram] } }
-              - { name: id, label: Código del video, type: string }
-              - { name: formato, label: Formato, type: select, options: { values: [horizontal, vertical] } }
-              - { name: titulo, label: Título, type: string }
-          - name: banda_sonora
-            label: Banda sonora (Spotify)
-            type: object
-            list: true
-            fields:
-              - { name: titulo, label: Título, type: string }
-              - { name: tipo, label: Tipo, type: select, options: { values: [album, track] } }
-              - { name: id, label: Código de Spotify, type: string }
 
+  # ───────────────────────── TEXTOS GENERALES ─────────────────────────
   - name: sitio
     label: Textos generales
     type: file
     path: contenido/sitio.yml
     format: yaml
     fields:
-      - { name: nombre, label: Nombre visible, type: string }
+      - { name: nombre, label: Nombre visible, type: string, description: "Jose sin tilde." }
       - { name: nombre_alterno, label: Variantes del nombre (para Google), type: string, list: true }
-      - { name: url, label: Dirección del sitio, type: string }
-      - { name: frase_es, label: Frase principal (ES), type: string }
-      - { name: frase_en, label: Frase principal (EN), type: string }
+      - { name: url, label: Dirección del sitio, type: string, description: "https://www.persona.cr — no cambiar." }
+      - { name: rol_es, label: Inicio · línea pequeña sobre la frase (ES), type: string }
+      - { name: rol_en, label: Inicio · línea pequeña sobre la frase (EN), type: string }
+      - { name: frase_es, label: Inicio · frase principal (ES), type: string }
+      - { name: frase_en, label: Inicio · frase principal (EN), type: string }
       - { name: lugar_es, label: Línea de ubicación (ES), type: string }
       - { name: lugar_en, label: Línea de ubicación (EN), type: string }
-      - { name: rol_es, label: Línea sobre la frase principal (ES), type: string }
-      - { name: rol_en, label: Línea sobre la frase principal (EN), type: string }
-      - { name: manifiesto_es, label: Manifiesto (ES · hoy no se muestra en el sitio), type: string }
-      - { name: manifiesto_en, label: Manifiesto (EN · hoy no se muestra en el sitio), type: string }
-      - { name: cierre_es, label: Frase de cierre antes del contacto (ES), type: string }
-      - { name: cierre_en, label: Frase de cierre antes del contacto (EN), type: string }
-      - { name: bio_corta_es, label: Bio corta (ES), type: text }
-      - { name: bio_corta_en, label: Bio corta (EN), type: text }
-      - { name: email, type: string }
-      - { name: whatsapp, type: string }
-      - { name: instagram, type: string }
-      - { name: vimeo, type: string }
-      - { name: linkedin, type: string }
-      - { name: bio, label: Link a la Bio, type: string }
-      - { name: formspree, type: string }
-      - { name: ga4, label: Google Analytics, type: string }
+      - name: reel
+        label: Inicio · Reel
+        description: "El video que abre el sitio. Mientras no haya video se ve la foto de portada."
+        type: object
+        fields:
+          - { name: activo, label: Mostrar el reel, type: boolean, default: true, description: "Apagado = el inicio muestra solo la foto de portada." }
+          - { name: video, label: Video en loop (MP4), type: file, options: { media: video }, description: "20–30 segundos, horizontal, 1920×1080. Se reproduce sin sonido y en loop. Exportalo liviano (H.264, idealmente menos de 10 MB)." }
+          - { name: poster, label: Foto de portada, type: image, options: { media: fotos, path: img/subidas }, description: "Se ve mientras carga el video, y siempre si no hay video. Si queda vacía se usa la foto actual del inicio." }
+          - name: completo_plataforma
+            label: Reel completo · dónde está
+            type: select
+            default: vimeo
+            options: { values: [vimeo, youtube] }
+          - { name: completo_id, label: Reel completo · código del video, type: string, description: "Para el botón «Ver reel» (con sonido). Vimeo: vimeo.com/123456789 → 123456789. Si queda vacío, el botón abre el mismo video en loop, con sonido y controles." }
+          - { name: boton_es, label: Texto del botón (ES), type: string, description: "Por defecto: Ver reel." }
+          - { name: boton_en, label: Texto del botón (EN), type: string, description: "Por defecto: Watch reel." }
+      - { name: manifiesto_es, label: Manifiesto (ES), type: string, description: "Aparece una sola vez: en el inicio, entre el reel y las fotos." }
+      - { name: manifiesto_en, label: Manifiesto (EN), type: string }
+      - { name: mostrar_manifiesto, label: Mostrar el manifiesto en el inicio, type: boolean, default: true }
+      - { name: mosaico, label: Inicio · mosaico de fotos, type: image, options: { multiple: true, media: fotos, path: img/photo }, description: "Elegí fotos que ya estén en un capítulo de Photo (dentro de img/photo). Arrastrá para cambiar el orden. Una foto que no esté en ningún capítulo no se muestra." }
       - name: servicios
-        label: Servicios
+        label: Inicio · servicios
         type: object
         list: true
         fields:
-          - { name: titulo_es, label: Título (ES), type: string }
+          - { name: titulo_es, label: Título (ES), type: string, description: "Sin título, el servicio no se muestra." }
           - { name: titulo_en, label: Título (EN), type: string }
           - { name: texto_es, label: Texto (ES), type: string }
           - { name: texto_en, label: Texto (EN), type: string }
-          - { name: enlace, label: Enlace interno, type: string }
-          - { name: imagen, label: Foto (ruta sin tamaño, ej. img/photo/marcas/grupo-del-este-marcas-2026-02), type: string }
+          - { name: enlace, label: A dónde lleva, type: string, description: "Una página del sitio, en español y terminada en /. Ejemplos: motion/ · stage/ · photo/en-vivo/ · contacto/." }
+          - { name: imagen, label: Foto, type: image, options: { media: fotos, path: img/photo } }
+      - { name: cierre_es, label: Inicio · frase de cierre antes del contacto (ES), type: string }
+      - { name: cierre_en, label: Inicio · frase de cierre antes del contacto (EN), type: string }
+      - { name: bio_corta_es, label: Sobre mí · bio (ES), type: text }
+      - { name: bio_corta_en, label: Sobre mí · bio (EN), type: text }
       - name: disciplinas
         label: Sobre mí · líneas por disciplina
         type: object
         list: true
         fields:
-          - { name: icono, label: Ícono (▭ ◎ ⌒), type: string }
+          - { name: icono, label: Ícono, type: string, description: "▭ motion · ◎ photo · ⌒ stage" }
           - { name: texto_es, label: Texto (ES), type: string }
           - { name: texto_en, label: Texto (EN), type: string }
       - name: reconocimientos
-        label: Sobre mí · reconocimientos (el más reciente arriba)
+        label: Reconocimientos
+        description: "Se ven en Sobre mí (el más reciente arriba). Los que llevan el nombre de un proyecto de Motion aparecen también en su ficha."
         type: object
         list: true
         fields:
-          - { name: icono, label: Ícono (▭ motion · ◎ photo · ⌒ stage), type: string }
-          - { name: anio, label: Año, type: string }
-          - { name: titulo_es, label: Premio o nominación (ES), type: string }
+          - { name: titulo_es, label: Premio o nominación (ES), type: string, description: "Sin esto, la línea no se muestra." }
           - { name: titulo_en, label: Premio o nominación (EN), type: string }
-          - { name: evento_es, label: Festival o institución (ES), type: string }
+          - { name: evento_es, label: Festival o institución (ES), type: string, description: "Nombre oficial completo. Ejemplo: 12th Fine Art Photography Awards 2025–2026." }
           - { name: evento_en, label: Festival o institución (EN), type: string }
-          - { name: obra, label: Obra, type: string }
-          - { name: imagen, label: Sello (opcional · ruta sin tamaño), type: string }
+          - { name: obra, label: Obra, type: string, description: "Igual al título del proyecto (ejemplo: Dele Viaje) para que aparezca también en Motion." }
+          - { name: anio, label: Año, type: string, description: "Si el nombre del festival ya trae el año, no se repite." }
+          - { name: icono, label: Ícono, type: string, description: "▭ motion · ◎ photo · ⌒ stage" }
+          - { name: imagen, label: Sello (opcional), type: image, options: { media: fotos, path: img/premios } }
           - { name: url, label: Enlace oficial (opcional), type: string }
       - name: clientes
         label: Clientes con logo
         type: object
         list: true
         fields:
-          - { name: logo, label: Logo (PNG/SVG en un color), type: image }
+          - { name: logo, label: Logo, type: image, options: { media: fotos, path: img/clientes }, description: "PNG o SVG en un solo color claro, sin fondo." }
           - { name: nombre, label: Nombre, type: string }
       - { name: clientes_sin_logo, label: Clientes sin logo, type: string, list: true }
-      - { name: mosaico, label: "Home · Mosaico de fotos (capítulo:número de foto)", type: string, list: true }
+      - { name: email, label: Correo, type: string }
+      - { name: whatsapp, label: WhatsApp, type: string, description: "Solo números, con el 506 adelante." }
+      - { name: instagram, label: Instagram (link), type: string }
+      - { name: vimeo, label: Vimeo (link), type: string }
+      - { name: linkedin, label: LinkedIn (link), type: string }
+      - { name: bio, label: Link a la Bio, type: string }
+      - { name: formspree, label: Formulario de contacto (Formspree), type: string, description: "No cambiar." }
+      - { name: ga4, label: Google Analytics, type: string, description: "No cambiar." }

@@ -1,7 +1,6 @@
 # Capítulo de Photo. Editable desde Pages CMS.
-# formato: completa | par | detalle  ·  las fotos van en el orden de esta lista
+# Las fotos van en el orden de esta lista · formato: normal (mosaico) | grande (a todo el ancho: apertura y pausas)
 orden: 6
-numero: VI
 slug: bitacora
 slug_en: field-notes
 titulo_es: Bitácora
@@ -10,11 +9,21 @@ intro_es: Viajes, ciudades y paisajes.
 intro_en: Travel, cities and landscapes.
 portada: img/photo/bitacora/bitacora-2025-02-640.webp
 fotos:
+- archivo: img/photo/bitacora/bitacora-10-640.webp
+  w: 1000
+  h: 560
+  color: '#b3a59b'
+  formato: grande
+  grupo_es: ''
+  grupo_en: ''
+  pie_es: Una persona caminando, vista desde un dron
+  pie_en: A person walking, seen from a drone
+  credito: ''
 - archivo: img/photo/bitacora/bitacora-2025-01-640.webp
   w: 1000
   h: 668
   color: '#2e2a28'
-  formato: completa
+  formato: normal
   grupo_es: ''
   grupo_en: ''
   pie_es: Blackfriars de noche, Londres
@@ -24,7 +33,7 @@ fotos:
   w: 1000
   h: 668
   color: '#4b3b40'
-  formato: completa
+  formato: normal
   grupo_es: ''
   grupo_en: ''
   pie_es: Bus rojo pasando de noche
@@ -34,7 +43,7 @@ fotos:
   w: 667
   h: 1000
   color: '#636469'
-  formato: par
+  formato: normal
   grupo_es: ''
   grupo_en: ''
   pie_es: Calle con gente en movimiento
@@ -44,7 +53,7 @@ fotos:
   w: 667
   h: 1000
   color: '#474546'
-  formato: par
+  formato: normal
   grupo_es: ''
   grupo_en: ''
   pie_es: Ventana en Suiza
@@ -54,7 +63,7 @@ fotos:
   w: 1000
   h: 668
   color: '#292e38'
-  formato: completa
+  formato: grande
   grupo_es: ''
   grupo_en: ''
   pie_es: Puente azul
@@ -64,7 +73,7 @@ fotos:
   w: 668
   h: 1000
   color: '#5b626a'
-  formato: par
+  formato: normal
   grupo_es: ''
   grupo_en: ''
   pie_es: La ciudad vista entre rejas
@@ -74,7 +83,7 @@ fotos:
   w: 562
   h: 1000
   color: '#a8bac2'
-  formato: par
+  formato: normal
   grupo_es: ''
   grupo_en: ''
   pie_es: Rueda de Chicago contra el cielo
@@ -84,7 +93,7 @@ fotos:
   w: 1000
   h: 667
   color: '#363c37'
-  formato: completa
+  formato: normal
   grupo_es: ''
   grupo_en: ''
   pie_es: Pueblo entre pinos
@@ -94,27 +103,17 @@ fotos:
   w: 1000
   h: 667
   color: '#383f39'
-  formato: completa
+  formato: normal
   grupo_es: ''
   grupo_en: ''
   pie_es: Agua en larga exposición
   pie_en: Long-exposure water
   credito: '2018'
-- archivo: img/photo/bitacora/bitacora-10-640.webp
-  w: 1000
-  h: 560
-  color: '#b3a59b'
-  formato: completa
-  grupo_es: ''
-  grupo_en: ''
-  pie_es: Una persona caminando, vista desde un dron
-  pie_en: A person walking, seen from a drone
-  credito: ''
 - archivo: img/photo/bitacora/bitacora-2025-12-640.webp
   w: 4902
   h: 6134
   color: '#41474f'
-  formato: par
+  formato: normal
   grupo_es: ''
   grupo_en: ''
   pie_es: 'Collage de Londres: San Pablo y el Támesis'
@@ -124,7 +123,7 @@ fotos:
   w: 4902
   h: 6134
   color: '#294350'
-  formato: par
+  formato: normal
   grupo_es: ''
   grupo_en: ''
   pie_es: Collage de Londres de noche
@@ -134,7 +133,7 @@ fotos:
   w: 4566
   h: 5712
   color: '#48444b'
-  formato: par
+  formato: normal
   grupo_es: ''
   grupo_en: ''
   pie_es: 'Collage de Londres: puente, bus y flores'
@@ -144,7 +143,7 @@ fotos:
   w: 4902
   h: 3260
   color: '#504353'
-  formato: par
+  formato: normal
   grupo_es: ''
   grupo_en: ''
   pie_es: 'Collage de Londres: cabina, rueda y río'
@@ -154,7 +153,7 @@ fotos:
   w: 3685
   h: 5520
   color: '#252d2b'
-  formato: par
+  formato: normal
   grupo_es: ''
   grupo_en: ''
   pie_es: Pareja en un túnel de árboles
@@ -164,7 +163,7 @@ fotos:
   w: 1000
   h: 564
   color: '#959c95'
-  formato: completa
+  formato: grande
   grupo_es: ''
   grupo_en: ''
   pie_es: Mano dentro del agua

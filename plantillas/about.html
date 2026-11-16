@@ -6,7 +6,7 @@
     {{ pic('img/about/jose-pablo-garcia', site.nombre, sizes="260px") }}
     <div>
       <p class="lead">{{ site['frase_' ~ lang] }}</p>
-      <p class="bio">{{ site['bio_corta_' ~ lang] }}</p>
+      {% if site['bio_corta_' ~ lang] %}<p class="bio">{{ site['bio_corta_' ~ lang] }}</p>{% endif %}
       {% if site.disciplinas %}<ul class="disc">{% for d in site.disciplinas %}<li><i aria-hidden="true">{{ d.icono }}</i>{{ d['texto_' ~ lang] }}</li>{% endfor %}</ul>{% endif %}
       <div class="btns" style="margin-top:22px"><a class="btn blue" href="{{ R }}{{ P }}{{ t.contact_slug }}/">{{ t.write }}</a><a class="btn" href="{{ site.bio }}" rel="noopener">bio.persona.cr</a></div>
     </div>
@@ -15,16 +15,15 @@
     <div class="head"><h2 class="h2">{{ L(t.awards) }}</h2></div>
     <ul class="awards">{% for r in site.reconocimientos %}<li>{% if r.url %}<a href="{{ r.url }}" rel="noopener">{% else %}<div>{% endif %}
         <i class="aw-i" aria-hidden="true">{{ r.icono }}</i>
-        <span class="aw-t"><b>{{ r['titulo_' ~ lang] }}</b><span>{{ r['evento_' ~ lang] }} · <em>{{ r.obra }}</em></span></span>
-        <span class="aw-y">{{ r.anio }}</span>
-        {% if r.imagen %}<img src="{{ R }}{{ r.imagen }}-160.webp" srcset="{{ R }}{{ r.imagen }}-320.webp 2x" alt="" width="48" height="48" loading="lazy">{% endif %}
+        <span class="aw-t"><b>{{ r['titulo_' ~ lang] }}</b><span>{{ r['evento_' ~ lang] }}{% if r['evento_' ~ lang] and r.obra %} · {% endif %}{% if r.obra %}<em>{{ r.obra }}</em>{% endif %}</span></span>
+        {% if r.ver_anio %}<span class="aw-y">{{ r.anio }}</span>{% endif %}
+        {% if r.imagen %}<img src="{{ R }}{{ r.imagen }}" alt="" width="48" height="48" loading="lazy">{% endif %}
       {% if r.url %}</a>{% else %}</div>{% endif %}</li>{% endfor %}</ul>
   </section>{% endif %}
   <section class="block">
     <div class="head"><h2 class="h2">{{ L(t.projects) }}</h2></div>
     <ul class="credits-list">
-      {% for p in m.proyectos %}<li><b>{{ p.titulo }}</b>{{ p.anio }}{% if p.anio %} · {% endif %}{{ p['rol_' ~ lang] }}</li>{% endfor %}
-      {% for p in s.proyectos %}<li><b>{{ p.titulo }}</b>{{ p.anio }} · {{ p['rol_' ~ lang] }}</li>{% endfor %}
+      {% for p in m.proyectos + s.proyectos %}<li><b>{{ p.titulo }}</b>{{ p.anio }}{% if p.anio and p['rol_' ~ lang] %} · {% endif %}{{ p['rol_' ~ lang] }}</li>{% endfor %}
     </ul>
   </section>
   <section class="clients">

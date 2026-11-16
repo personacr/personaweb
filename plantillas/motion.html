@@ -2,23 +2,40 @@
 {% block body %}
 {{ portada('img/motion/banner/banner.webp', 'motion', t.motion_eyebrow, t.motion_lead, icono='▭') }}
 <main class="wrap" style="padding-top:22px">
+  {#- Obra destacada (Pages CMS → Motion → «Proyecto destacado»): grande, con su primer video y sus premios -#}
+  {% for p in m.destacados %}
+  <section class="feature rv" id="{{ p.slug }}">
+    <div class="feature-v">{{ video(p.videos[0], t) }}</div>
+    <div class="feature-t">
+      <p class="eyebrow">{{ p['tipo_' ~ lang] }}{% if p['tipo_' ~ lang] and p.anio %} · {% endif %}{{ p.anio }}</p>
+      <h2>{{ p.titulo }}</h2>
+      {% if p['rol_' ~ lang] %}<p class="feature-r">{{ p['rol_' ~ lang] }}</p>{% endif %}
+      {% if p['sinopsis_' ~ lang] %}<p class="feature-s">{{ p['sinopsis_' ~ lang] }}</p>{% endif %}
+      {% if p.premios %}<ul class="laurels">{% for r in p.premios %}<li><b>{{ r['titulo_' ~ lang] }}</b><span>{{ r['evento_' ~ lang] }}{% if r.ver_anio %} · {{ r.anio }}{% endif %}</span></li>{% endfor %}</ul>{% endif %}
+      <button type="button" class="btn" data-open="ver-{{ p.slug }}">{{ t.full_sheet }} →</button>
+    </div>
+  </section>
+  {% endfor %}
+  {% if m.resto %}
+  {% if m.destacados %}<div class="head" style="margin-top:var(--block)"><h2 class="h2">{{ L(t.more_work) }}</h2></div>{% endif %}
   <div class="works">
-    {% for p in m.proyectos %}
-    {%- set th = p.portada and (R ~ p.portada ~ '-1280.webp') or (thumb(p.videos[0]) if p.videos else '') -%}
+    {% for p in m.resto %}
+    {%- set th = (R ~ p.portada ~ '-1280.webp') if p.portada else (thumb(p.videos[0]) if p.videos else '') -%}
     <button type="button" class="work rv{% if not th %} noimg{% endif %}" data-open="ver-{{ p.slug }}" id="{{ p.slug }}" style="--d:{{ (loop.index0 % 3) * 0.07 }}s">
       {% if th %}<img src="{{ th }}" alt="" loading="lazy">{% endif %}
-      <span class="t"><b>{{ p.titulo }}</b><small>{% if p.anio %}<em>{{ p.anio }}</em> · {% endif %}{{ p['rol_' ~ lang] }}</small></span>
+      <span class="t"><b>{{ p.titulo }}</b><small>{% if p.anio %}<em>{{ p.anio }}</em>{% if p['rol_' ~ lang] %} · {% endif %}{% endif %}{{ p['rol_' ~ lang] }}</small></span>
     </button>
     {% endfor %}
   </div>
-  <section class="block" id="reels">
+  {% endif %}
+  {% if m.reels %}<section class="block" id="reels">
     <div class="head"><h2 class="h2">{{ L('reels') }}</h2><span class="eyebrow">{{ t.reels_lead }}</span></div>
     <div class="strip-x">{% for v in m.reels %}{{ video(v, t) }}{% endfor %}</div>
-  </section>
-  <section id="bitacora">
+  </section>{% endif %}
+  {% if m.bitacora %}<section id="bitacora">
     <div class="head"><h2 class="h2">{{ L(t.fieldnotes|lower) }}</h2><span class="eyebrow">{{ t.fieldnotes_lead }}</span></div>
     <div class="strip-x">{% for v in m.bitacora %}{{ video(v, t) }}{% endfor %}</div>
-  </section>
+  </section>{% endif %}
 </main>
 {% for p in m.proyectos %}{{ cinema(p, t, lang) }}{% endfor %}
 {% endblock %}

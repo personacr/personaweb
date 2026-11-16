@@ -1,4 +1,4 @@
-# Textos generales del sitio (español / inglés). Editable desde Pages CMS.
+# Textos generales del sitio (español / inglés). Editable desde Pages CMS → «Textos generales».
 nombre: Jose Pablo García
 nombre_alterno:
 - José Pablo García
@@ -11,13 +11,21 @@ lugar_es: Costa Rica
 lugar_en: Costa Rica
 manifiesto_es: La magia de lo cotidiano y el poder del subconsciente para crear.
 manifiesto_en: The magic of everyday life and the power of the subconscious to create.
+mostrar_manifiesto: true
 rol_es: Narrador visual
 rol_en: Visual storyteller
 cierre_es: ¿Tenés un proyecto? Contame.
 cierre_en: Have a project in mind? Let's talk.
+reel:
+  activo: true
+  video: ''
+  poster: img/home/hero-640.webp
+  completo_plataforma: vimeo
+  completo_id: ''
+  boton_es: Ver reel
+  boton_en: Watch reel
 bio_corta_es: Licenciado en Cine y Televisión (Universidad Veritas) y Bachiller en Ciencias de la Comunicación Colectiva (UCR). Más de 20 años entre televisión, cine, fotografía y escena. Profesor de narración en la UCR de 2017 a 2020.
 bio_corta_en: Licentiate in Film and Television (Veritas University) and BA in Media and Communication (University of Costa Rica). Over 20 years across television, film, photography and stage. Storytelling professor at the University of Costa Rica, 2017–2020.
-# Sobre mí: una línea por disciplina, con los íconos del sitio
 disciplinas:
 - icono: ▭
   texto_es: Series, cortometrajes, videodanza y videoclips.
@@ -42,35 +50,34 @@ servicios:
   texto_es: Foto y video de conciertos, giras y festivales.
   texto_en: Photo and video for concerts, tours and festivals.
   enlace: photo/en-vivo/
-  imagen: img/photo/en-vivo/jacob-collier-en-vivo-2025-13
+  imagen: img/photo/en-vivo/jacob-collier-en-vivo-2025-13-640.webp
 - titulo_es: Cine & video
   titulo_en: Film & video
   texto_es: Dirección, fotografía y edición de cortos, videoclips y contenido para redes sociales.
   texto_en: Direction, cinematography and editing for shorts, music videos and social media content.
   enlace: motion/
-  imagen: img/photo/movimiento/movimiento-13
+  imagen: img/photo/movimiento/movimiento-13-640.webp
 - titulo_es: Artes escénicas
   titulo_en: Performing arts
   texto_es: Fotografía de teatro y danza (afiche, ensayo y función) y dirección escénica.
   texto_en: Theatre and dance photography (poster, rehearsal, performance) and stage direction.
   enlace: stage/
-  imagen: img/photo/teatro/sala-de-espera-teatro-2026-10
+  imagen: img/photo/teatro/sala-de-espera-teatro-2026-10-640.webp
 - titulo_es: Marcas & eventos
   titulo_en: Brands & events
   texto_es: Foto y video de eventos, espacios y campañas.
   texto_en: Photo and video for events, spaces and campaigns.
   enlace: photo/marcas/
-  imagen: img/photo/marcas/grupo-del-este-marcas-2026-02
-# Reconocimientos (Sobre mí). imagen y url son opcionales.
+  imagen: img/photo/marcas/grupo-del-este-marcas-2026-02-640.webp
 reconocimientos:
 - icono: ◎
-  anio: 2025–26
+  anio: 2025–2026
   titulo_es: Nominee · categoría Conceptual
   titulo_en: Nominee · Conceptual category
-  evento_es: 12th Fine Art Photography Awards
-  evento_en: 12th Fine Art Photography Awards
+  evento_es: 12th Fine Art Photography Awards 2025–2026
+  evento_en: 12th Fine Art Photography Awards 2025–2026
   obra: Parallel Perceptions
-  imagen: img/premios/fapa-nominee
+  imagen: img/premios/fapa-nominee-320.webp
   url: https://fineartphotoawards.com/winners-gallery/fapa-2025-2026/professional/conceptual/hm/23646
 - icono: ▭
   anio: '2022'
@@ -137,21 +144,21 @@ clientes:
 clientes_sin_logo:
 - Hernán Jiménez
 mosaico:
-- en-vivo:5
-- teatro:2
-- movimiento:2
-- en-vivo:10
-- retrato:1
-- arte:2
-- en-vivo:16
-- teatro:9
-- movimiento:9
-- retrato:7
-- en-vivo:15
-- movimiento:14
-- arte:15
-- bitacora:2
-- en-vivo:12
-- teatro:4
-- retrato:12
-- movimiento:12
+- img/photo/en-vivo/daniel-patino-en-vivo-2024-05-640.webp
+- img/photo/teatro/sala-de-espera-teatro-2026-02-640.webp
+- img/photo/movimiento/movimiento-2026-02-640.webp
+- img/photo/en-vivo/fabi-arroyo-en-vivo-2026-09-640.webp
+- img/photo/retrato/retrato-2025-01-640.webp
+- img/photo/arte/hyatt-place-arte-12-640.webp
+- img/photo/en-vivo/arturo-pardo-en-vivo-2025-14-640.webp
+- img/photo/teatro/sala-de-espera-teatro-2026-09-640.webp
+- img/photo/movimiento/movimiento-07-640.webp
+- img/photo/retrato/retrato-13-640.webp
+- img/photo/en-vivo/jacob-collier-en-vivo-2025-13-640.webp
+- img/photo/movimiento/movimiento-2025-12-640.webp
+- img/photo/arte/arte-2021-09-640.webp
+- img/photo/bitacora/bitacora-2025-02-640.webp
+- img/photo/en-vivo/jacob-collier-en-vivo-2025-11-640.webp
+- img/photo/teatro/sala-de-espera-teatro-2026-04-640.webp
+- img/photo/retrato/retrato-2023-09-640.webp
+- img/photo/movimiento/movimiento-2019-10-640.webp

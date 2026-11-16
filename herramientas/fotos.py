@@ -1,31 +1,44 @@
 """Prepara las fotos que se suben desde Pages CMS.
 
-Cuando en un capítulo (contenido/photo/*.yml) o en Stage aparece una foto recién subida
-(una ruta que termina en .jpg / .jpeg / .png / .webp, normalmente dentro de img/subidas/),
-este script:
-  1. crea las tres versiones livianas (640, 1280 y 2048 px, WebP) en la carpeta del capítulo,
-  2. escribe en el .yml la ruta de la versión de 640 px, el ancho, el alto y el color promedio,
+Cuando en el contenido aparece una foto recién subida (una ruta que termina en .jpg / .jpeg / .png / .webp
+y que todavía no es una versión liviana «-640/-1280/-2048.webp»), este script:
+  1. crea las tres versiones livianas (640, 1280 y 2048 px, WebP) en la carpeta que le toca,
+  2. escribe en el .yml la ruta de la versión de 640 px (y en los capítulos, el ancho, el alto y el color),
   3. borra el archivo original subido, para que el repositorio no crezca.
 GitHub lo corre solo antes de armar las páginas.
+
+Dónde busca fotos nuevas:
+  · contenido/photo/*.yml  → fotos[].archivo y portada            → img/photo/<capítulo>/
+  · contenido/stage.yml    → proyectos[].fotos[]                  → img/stage/<obra>/
+  · contenido/motion.yml   → portada y miniatura de cada video    → img/motion/cuadros/
+  · contenido/sitio.yml    → reel.poster y servicios[].imagen     → img/home/ e img/servicios/
+Videos (.mp4) y audios (.mp3) no se tocan: se usan tal como se suben.
+
+Igual que el armador, NUNCA se detiene por un campo vacío: si una foto no se puede procesar, avisa y sigue.
 """
-import glob, os, re, unicodedata
+import glob, os, re, sys, unicodedata
 import yaml
 from PIL import Image, ImageOps
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(RAIZ)
+CONT = os.environ.get('PERSONA_CONTENIDO', 'contenido')
 EXT = ('.jpg', '.jpeg', '.png', '.webp')
 
 def slug(s):
-    s = unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode().lower()
+    s = unicodedata.normalize('NFKD', str(s)).encode('ascii', 'ignore').decode().lower()
     return re.sub(r'[^a-z0-9]+', '-', s).strip('-') or 'foto'
 
 def subida(v):  # foto nueva = imagen que todavía no es una versión liviana «-640/-1280/-2048.webp»
     return isinstance(v, str) and v.lower().endswith(EXT) and not re.search(r'-(640|1280|2048)\.webp$', v)
 
 def procesar(ruta, destino_dir, nombre):
+    """Devuelve (ruta de 640, ancho, alto, color) o None si la foto no se pudo leer."""
     ruta = ruta.lstrip('/')
-    im = ImageOps.exif_transpose(Image.open(ruta)).convert('RGB')
+    try:
+        im = ImageOps.exif_transpose(Image.open(ruta)).convert('RGB')
+    except Exception as e:
+        print(f'  ⚠ No pude leer {ruta} ({e}); se deja como está.'); return None
     os.makedirs(destino_dir, exist_ok=True)
     base = os.path.join(destino_dir, nombre)
     n = 1
@@ -39,39 +52,77 @@ def procesar(ruta, destino_dir, nombre):
     os.remove(ruta)  # el original pesado no se queda en el repo
     return base + '-640.webp', im.width, im.height, color
 
-def guardar(path, data, cabecera):
-    open(path, 'w', encoding='utf-8').write(cabecera + yaml.safe_dump(data, allow_unicode=True, sort_keys=False, width=200))
+def dicts(v): return [x for x in (v if isinstance(v, list) else []) if isinstance(x, dict)]
 
-cambios = 0
-for path in glob.glob('contenido/photo/*.yml'):
+def abrir(path):
     texto = open(path, encoding='utf-8').read()
     cab = ''.join(l + '\n' for l in texto.splitlines() if l.startswith('#'))
-    c = yaml.safe_load(texto); tocado = False
-    for i, f in enumerate(c.get('fotos', [])):
-        if subida(f.get('archivo')):
-            nombre = f"{slug(f.get('credito', '').split('·')[0]) if f.get('credito') else c['slug']}-{c['slug']}-{i + 1:02d}"
-            f['archivo'], f['w'], f['h'], f['color'] = procesar(f['archivo'], f"img/photo/{c['slug']}", nombre)
-            f.setdefault('formato', 'par'); tocado = True
-    if subida(c.get('portada')):
-        c['portada'] = procesar(c['portada'], f"img/photo/{c['slug']}", f"{c['slug']}-portada")[0]; tocado = True
-    if tocado:
-        guardar(path, c, cab); cambios += 1
+    data = yaml.safe_load(texto)
+    return (data if isinstance(data, dict) else {}), cab
 
-path = 'contenido/stage.yml'
-texto = open(path, encoding='utf-8').read(); s = yaml.safe_load(texto); tocado = False
-for p in s['proyectos']:
-    for j, ruta in enumerate(p.get('fotos', [])):
-        if subida(ruta):
-            p['fotos'][j] = procesar(ruta, f"img/stage/{p['slug']}", f"{p['slug']}-{j + 1:02d}")[0]; tocado = True
-if tocado:
-    guardar(path, s, ''.join(l + '\n' for l in texto.splitlines() if l.startswith('#'))); cambios += 1
+def guardar(path, data, cabecera):
+    open(path, 'w', encoding='utf-8').write(cabecera + yaml.safe_dump(data, allow_unicode=True, sort_keys=False, width=1000))
 
-path = 'contenido/motion.yml'
-texto = open(path, encoding='utf-8').read(); m = yaml.safe_load(texto); tocado = False
-for p in m['proyectos']:
-    if subida(p.get('portada')):
-        p['portada'] = procesar(p['portada'], f"img/motion/{p['slug']}", f"{p['slug']}-portada")[0]; tocado = True
-if tocado:
-    guardar(path, m, ''.join(l + '\n' for l in texto.splitlines() if l.startswith('#'))); cambios += 1
+def campo(d, k, destino_dir, nombre):
+    """Si d[k] es una foto recién subida, la procesa y deja en d[k] la ruta liviana. Devuelve el resultado o None."""
+    if not subida(d.get(k)): return None
+    r = procesar(d[k], destino_dir, nombre)
+    if r: d[k] = r[0]
+    return r
 
+cambios = 0
+def archivo(path, fn):
+    """Aplica fn(data) a un .yml; si fn devuelve True, lo guarda. Un error en un archivo no detiene a los demás."""
+    global cambios
+    if not os.path.exists(path): return
+    try:
+        data, cab = abrir(path)
+        if fn(data): guardar(path, data, cab); cambios += 1
+    except Exception as e:
+        print(f'  ⚠ {path}: no se pudo revisar ({e}). Se sigue con lo demás.')
+
+def capitulo(c):
+    tocado = False; s = slug(c.get('slug') or 'capitulo')
+    for i, f in enumerate(dicts(c.get('fotos'))):
+        nombre = f"{slug(str(f.get('credito') or '').split('·')[0]) if f.get('credito') else s}-{s}-{i + 1:02d}"
+        r = campo(f, 'archivo', f'img/photo/{s}', nombre)
+        if r: f['w'], f['h'], f['color'] = r[1], r[2], r[3]; f.setdefault('formato', 'normal'); tocado = True
+    if campo(c, 'portada', f'img/photo/{s}', f'{s}-portada'): tocado = True
+    return tocado
+
+def escena(d):
+    tocado = False
+    for p in dicts(d.get('proyectos')):
+        s = slug(p.get('slug') or p.get('titulo') or 'obra'); fotos = p.get('fotos') if isinstance(p.get('fotos'), list) else []
+        for j, ruta in enumerate(fotos):
+            if subida(ruta):
+                r = procesar(ruta, f'img/stage/{s}', f'{s}-{j + 1:02d}')
+                if r: fotos[j] = r[0]; tocado = True
+        for j, v in enumerate(dicts(p.get('videos'))):
+            if campo(v, 'miniatura', 'img/motion/cuadros', f"{s}-{slug(v.get('id') or j)}"): tocado = True
+    return tocado
+
+def cine(d):
+    tocado = False
+    for p in dicts(d.get('proyectos')):
+        s = slug(p.get('slug') or p.get('titulo') or 'proyecto')
+        if campo(p, 'portada', 'img/motion/cuadros', f'{s}-portada'): tocado = True
+        for j, v in enumerate(dicts(p.get('videos'))):
+            if campo(v, 'miniatura', 'img/motion/cuadros', f"{s}-{slug(v.get('id') or j)}"): tocado = True
+    for k in ('reels', 'bitacora'):
+        for j, v in enumerate(dicts(d.get(k))):
+            if campo(v, 'miniatura', 'img/motion/cuadros', f"{k}-{slug(v.get('id') or j)}"): tocado = True
+    return tocado
+
+def sitio(d):
+    tocado = False
+    if isinstance(d.get('reel'), dict) and campo(d['reel'], 'poster', 'img/home', 'reel-portada'): tocado = True
+    for j, s in enumerate(dicts(d.get('servicios'))):
+        if campo(s, 'imagen', 'img/servicios', slug(s.get('titulo_es') or f'servicio-{j + 1}')): tocado = True
+    return tocado
+
+for path in sorted(glob.glob(os.path.join(CONT, 'photo', '*.yml'))): archivo(path, capitulo)
+archivo(os.path.join(CONT, 'stage.yml'), escena)
+archivo(os.path.join(CONT, 'motion.yml'), cine)
+archivo(os.path.join(CONT, 'sitio.yml'), sitio)
 print(f'Fotos: {cambios} archivo(s) de contenido actualizados.')

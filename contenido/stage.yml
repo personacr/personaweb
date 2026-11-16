@@ -1,39 +1,78 @@
-# Stage · producciones escénicas. Editable desde Pages CMS.
+# Stage · cada obra es un «programa de mano»: ficha técnica, fotos, videos y música. Editable desde Pages CMS → «Stage».
 proyectos:
 - slug: still-standing
   titulo: Still Standing
   anio: '2026'
+  genero_es: Danza, teatro y música en vivo
+  genero_en: Dance, theatre and live music
+  sala: Teatro Nacional de Costa Rica
+  funciones_es: 2 de octubre de 2026 · una función
+  funciones_en: 2 October 2026 · one performance
   rol_es: Codirector y vocalista
   rol_en: Co-director & lead vocals
-  sinopsis_es: Producción escénica de Andamio Escuela de Movimiento.
-  sinopsis_en: A stage production by Andamio Escuela de Movimiento.
+  sinopsis_es: Danza, teatro y música británica en vivo. Una mujer atrapada en una rutina de pantallas cruza una puerta que la lleva de vuelta al presente, a la naturaleza y a los demás.
+  sinopsis_en: Dance, theatre and live British music. A woman stuck in a routine of screens walks through a door that leads her back to the present, to nature and to other people.
+  creditos:
+  - &id001
+    rol_es: Dirección
+    rol_en: Direction
+    nombre: Melania Fernández y Jose Pablo García
+  - &id002
+    rol_es: Producción
+    rol_en: Production
+    nombre: Andamio Escuela de Movimiento
+  - rol_es: Intérprete principal
+    rol_en: Lead performer
+    nombre: Adriana Álvarez
+  - rol_es: Elenco
+    rol_en: Cast
+    nombre: Más de 40 artistas en escena
+  audio: ''
+  audio_titulo_es: ''
+  audio_titulo_en: ''
+  banda_sonora: []
   fotos:
   - img/stage/still-standing/still-standing-2026-01-640.webp
   - img/stage/still-standing/still-standing-2026-02-640.webp
   - img/stage/still-standing/still-standing-2026-03-640.webp
   - img/stage/still-standing/still-standing-2026-04-640.webp
+  videos: []
   enlaces:
   - texto: andamiocr.com/stillstanding
     url: https://andamiocr.com/stillstanding
-  videos: []
-  banda_sonora: []
 - slug: lights-will-guide-you
   titulo: Lights Will Guide You
   anio: 2023–2024
-  rol_es: Codirector y vocalista · Show inmersivo inspirado en Coldplay
-  rol_en: Co-director & lead vocals · Coldplay-inspired immersive show
-  sinopsis_es: Un show inmersivo inspirado en la música de Coldplay.
-  sinopsis_en: An immersive show inspired by the music of Coldplay.
+  genero_es: Teatro, danza y música en vivo · canciones de Coldplay
+  genero_en: Theatre, dance and live music · songs by Coldplay
+  sala: Teatro Nacional de Costa Rica · Teatro Eugene O’Neill
+  funciones_es: Temporadas 2023 y 2024 · cuatro funciones en abril de 2024
+  funciones_en: 2023 and 2024 seasons · four performances in April 2024
+  rol_es: Codirector, autor y vocalista principal
+  rol_en: Co-director, author & lead vocals
+  sinopsis_es: Espectáculo de teatro, danza y música en vivo inspirado en las canciones de Coldplay. Una joven emprende un viaje hacia el fondo del mar en busca de propósito y de luz.
+  sinopsis_en: A theatre, dance and live music show inspired by the songs of Coldplay. A young woman sets off on a journey to the deep sea in search of purpose and light.
+  creditos:
+  - *id001
+  - *id002
+  - rol_es: Actriz principal
+    rol_en: Lead actress
+    nombre: Adriana Álvarez
+  - rol_es: Elenco
+    rol_en: Cast
+    nombre: Más de 13 bailarines y 8 músicos en vivo
+  audio: ''
+  audio_titulo_es: ''
+  audio_titulo_en: ''
+  banda_sonora:
+  - titulo: Álbum del show · Lights Will Guide You
+    tipo: album
+    id: 0jFRRi06CjHRyyJElNydOc
   fotos:
   - img/stage/lights-will-guide-you/lights-will-guide-you-01-640.webp
   - img/stage/lights-will-guide-you/lights-will-guide-you-02-640.webp
   - img/stage/lights-will-guide-you/lights-will-guide-you-03-640.webp
   - img/stage/lights-will-guide-you/lights-will-guide-you-04-640.webp
-  enlaces:
-  - texto: lightswillguideyou.com
-    url: https://www.lightswillguideyou.com
-  - texto: '@lightswillguideyoushow'
-    url: https://www.instagram.com/lightswillguideyoushow
   videos:
   - plataforma: youtube
     id: 2vuC5Xzz3o4
@@ -47,22 +86,35 @@ proyectos:
     id: OPrmY1j9wQk
     formato: horizontal
     titulo: Amsterdam — Scene Clip
-  banda_sonora:
-  - titulo: Álbum del show · Lights Will Guide You
-    tipo: album
-    id: 0jFRRi06CjHRyyJElNydOc
+  enlaces:
+  - texto: lightswillguideyou.com
+    url: https://www.lightswillguideyou.com
+  - texto: '@lightswillguideyoushow'
+    url: https://www.instagram.com/lightswillguideyoushow
 - slug: matilda-jr
   titulo: Matilda Jr.
   anio: '2025'
+  genero_es: Teatro musical
+  genero_en: Musical theatre
+  sala: ''
+  funciones_es: ''
+  funciones_en: ''
   rol_es: Dirección artística
   rol_en: Artistic direction
-  sinopsis_es: Dirección artística del musical.
-  sinopsis_en: Artistic direction of the musical.
+  sinopsis_es: Dirección artística del musical Matilda Jr. en Lincoln School.
+  sinopsis_en: Artistic direction of the musical Matilda Jr. at Lincoln School.
+  creditos:
+  - rol_es: Producción
+    rol_en: Production
+    nombre: Lincoln School
+  audio: ''
+  audio_titulo_es: ''
+  audio_titulo_en: ''
+  banda_sonora: []
   fotos:
   - img/stage/matilda/matilda-jr-2025-01-640.webp
   - img/stage/matilda/matilda-jr-2025-02-640.webp
   - img/stage/matilda/matilda-jr-2025-03-640.webp
   - img/stage/matilda/matilda-jr-2025-04-640.webp
-  enlaces: []
   videos: []
-  banda_sonora: []
+  enlaces: []
