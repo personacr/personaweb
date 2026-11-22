@@ -50,10 +50,10 @@ button{font:inherit;color:inherit}
 .nav-links a{font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--mist);transition:color .2s}
 .nav-links a:hover{color:var(--bone)}
 .nav-links a.active{color:var(--accent)}
-.lang{display:flex;gap:4px;margin-left:6px}   /* idioma: dos cuadritos, el activo relleno */
-.nav-links .lang a,.lang b{display:inline-grid;place-items:center;min-width:32px;height:26px;padding:0 6px;border:1px solid var(--line-2);font-size:11px;font-weight:600;letter-spacing:.08em;color:var(--mist);transition:color .2s,border-color .2s}
-.nav-links .lang a:hover{color:var(--bone);border-color:var(--bone)}
-.lang b{background:var(--bone);border-color:var(--bone);color:#000}
+.lang{display:flex;gap:3px;margin-left:4px}   /* idioma: dos cuadritos de borde muy fino; el activo, apenas más claro */
+.nav-links .lang a,.lang b{display:inline-grid;place-items:center;min-width:28px;height:22px;padding:0 5px;border:1px solid rgba(244,242,237,.14);font-size:10.5px;font-weight:600;letter-spacing:.08em;color:var(--mist);transition:color .2s,border-color .2s}
+.nav-links .lang a:hover{color:var(--bone);border-color:rgba(244,242,237,.3)}
+.lang b{color:var(--bone);border-color:rgba(244,242,237,.38)}
 .burger{display:none;background:none;border:0;width:44px;height:44px;position:relative;cursor:pointer;margin-right:-10px}
 .burger span{position:absolute;left:10px;width:24px;height:1.5px;background:var(--bone);transition:transform .3s var(--ease),top .3s var(--ease)}
 .burger span:nth-child(1){top:17px}.burger span:nth-child(2){top:26px}
@@ -65,7 +65,7 @@ button{font:inherit;color:inherit}
   .nav-links.open{opacity:1;pointer-events:auto}
   .nav-links a{font-family:var(--serif);font-weight:300;font-size:40px;letter-spacing:0;text-transform:none;color:var(--bone);line-height:1.3}
   .nav-links .lang{margin-top:28px;margin-left:0}
-  .nav-links .lang a,.nav-links .lang b{font-family:var(--sans);font-size:12px;letter-spacing:.08em;line-height:1;text-transform:uppercase;min-width:40px;height:34px}
+  .nav-links .lang a,.nav-links .lang b{font-family:var(--sans);font-size:12px;letter-spacing:.08em;line-height:1;text-transform:uppercase;min-width:36px;height:30px}
 }
 
 /* ── tipografía ── */
