@@ -43,7 +43,7 @@
       {%- for k, label in t.nav %}
       <li><a href="{{ R }}{{ P }}{{ k }}/"{% if page.section == k %} class="active" aria-current="page"{% endif %}>{{ label }}</a></li>
       {%- endfor %}
-      <li class="lang">{% if lang == 'es' %}<b>ES</b> · <a href="{{ R }}{{ page.path_en }}" hreflang="en" lang="en">EN</a>{% else %}<a href="{{ R }}{{ page.path_es }}" hreflang="es" lang="es">ES</a> · <b>EN</b>{% endif %}</li>
+      <li class="lang">{% if lang == 'es' %}<b aria-current="true">ES</b><a href="{{ R }}{{ page.path_en }}" hreflang="en" lang="en">EN</a>{% else %}<a href="{{ R }}{{ page.path_es }}" hreflang="es" lang="es">ES</a><b aria-current="true">EN</b>{% endif %}</li>
     </ul>
   </div>
 </nav>

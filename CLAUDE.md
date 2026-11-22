@@ -1,6 +1,6 @@
 # CLAUDE.md — persona · Sitio web portafolio (personaweb)
 
-Memoria del proyecto. Leelo completo antes de cambiar algo.
+Memoria del proyecto. Leelo completo antes de cambiar algo. **Lo técnico (estructura, Pages CMS, despliegue, reglas visuales) está en `ARQUITECTURA.md`.**
 
 ## Dueño
 - **Jose Pablo García** (Jose SIN tilde en todo lo visible; «José Pablo García» solo como nombre alterno en el código). Cineasta, fotógrafo, director escénico y creador de contenido. **20+ años** de trayectoria. Marca **PERSONA**.
@@ -71,5 +71,6 @@ Memoria del proyecto. Leelo completo antes de cambiar algo.
 ## Ajustes de noviembre 2026
 - Botones de esquinas rectas en todo el sitio y la Bio (el retrato circular de la Bio se queda). Ya no hay botón flotante «Escribime».
 - Motion: la ficha de cada proyecto muestra sus reconocimientos; salen de `reconocimientos` en sitio.yml cuando «Obra» es igual al título del proyecto.
-- Photo: orden y portadas sin cambios (En vivo sigue primero). Marcas incluye Hyatt Place Cariari Convention Center (las mismas fotos de Arte) con una nota de «obra comisionada»: campo `grupos` (nota por grupo) del capítulo.
+- Photo: orden y portadas sin cambios (En vivo sigue primero). Hyatt Place Cariari Convention Center vive **solo en Marcas** (ya no en Arte), con una nota de «obra comisionada»: campo `grupos` (nota por grupo) del capítulo.
+- Selector ES/EN en dos cuadritos: el activo relleno (hueso con letra negra), el otro solo con borde. Igual en la Bio.
 - Stage: la ficha que se abre al tocar cada obra muestra ficha técnica: `genero_*`, `sala`, `funciones_*`, `creditos`.
