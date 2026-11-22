@@ -3,10 +3,30 @@ proyectos:
 - slug: still-standing
   titulo: Still Standing
   anio: '2026'
+  genero_es: Danza, teatro y música en vivo
+  genero_en: Dance, theatre and live music
+  sala: Teatro Nacional de Costa Rica
+  funciones_es: 2 de octubre de 2026 · una función
+  funciones_en: 2 October 2026 · one performance
   rol_es: Codirector y vocalista
   rol_en: Co-director & lead vocals
   sinopsis_es: Producción escénica de Andamio Escuela de Movimiento.
   sinopsis_en: A stage production by Andamio Escuela de Movimiento.
+  creditos:
+  - &id001
+    rol_es: Dirección
+    rol_en: Direction
+    nombre: Melania Fernández y Jose Pablo García
+  - &id002
+    rol_es: Producción
+    rol_en: Production
+    nombre: Andamio Escuela de Movimiento
+  - rol_es: Intérprete principal
+    rol_en: Lead performer
+    nombre: Adriana Álvarez
+  - rol_es: Elenco
+    rol_en: Cast
+    nombre: Más de 40 artistas en escena
   fotos:
   - img/stage/still-standing/still-standing-2026-01-640.webp
   - img/stage/still-standing/still-standing-2026-02-640.webp
@@ -20,10 +40,24 @@ proyectos:
 - slug: lights-will-guide-you
   titulo: Lights Will Guide You
   anio: 2023–2024
+  genero_es: Teatro, danza y música en vivo · canciones de Coldplay
+  genero_en: Theatre, dance and live music · songs by Coldplay
+  sala: Teatro Nacional de Costa Rica · Teatro Eugene O’Neill
+  funciones_es: Temporadas 2023 y 2024 · cuatro funciones en abril de 2024
+  funciones_en: 2023 and 2024 seasons · four performances in April 2024
   rol_es: Codirector y vocalista · Show inmersivo inspirado en Coldplay
   rol_en: Co-director & lead vocals · Coldplay-inspired immersive show
   sinopsis_es: Un show inmersivo inspirado en la música de Coldplay.
   sinopsis_en: An immersive show inspired by the music of Coldplay.
+  creditos:
+  - *id001
+  - *id002
+  - rol_es: Actriz principal
+    rol_en: Lead actress
+    nombre: Adriana Álvarez
+  - rol_es: Elenco
+    rol_en: Cast
+    nombre: Más de 13 bailarines y 8 músicos en vivo
   fotos:
   - img/stage/lights-will-guide-you/lights-will-guide-you-01-640.webp
   - img/stage/lights-will-guide-you/lights-will-guide-you-02-640.webp
@@ -54,10 +88,19 @@ proyectos:
 - slug: matilda-jr
   titulo: Matilda Jr.
   anio: '2025'
+  genero_es: Teatro musical
+  genero_en: Musical theatre
+  sala: ''
+  funciones_es: ''
+  funciones_en: ''
   rol_es: Dirección artística
   rol_en: Artistic direction
   sinopsis_es: Dirección artística del musical.
   sinopsis_en: Artistic direction of the musical.
+  creditos:
+  - rol_es: Producción
+    rol_en: Production
+    nombre: Lincoln School
   fotos:
   - img/stage/matilda/matilda-jr-2025-01-640.webp
   - img/stage/matilda/matilda-jr-2025-02-640.webp

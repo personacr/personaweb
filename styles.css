@@ -95,7 +95,7 @@ button{font:inherit;color:inherit}
 .hero .btns{animation:rise 1.2s var(--ease) 1.35s both}
 @keyframes rise{from{opacity:0;transform:translateY(16px)}}
 .btns{display:flex;gap:8px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 18px;border:1px solid var(--line-2);border-radius:30px;font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--bone);background:rgba(0,0,0,.3);cursor:pointer;transition:border-color .25s,color .25s;font-family:var(--sans)}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 18px;border:1px solid var(--line-2);border-radius:0;font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--bone);background:rgba(0,0,0,.3);cursor:pointer;transition:border-color .25s,color .25s;font-family:var(--sans)}
 .btn:hover{border-color:var(--accent);color:var(--accent)}
 .btn.blue{border-color:var(--accent);color:var(--accent)}
 
@@ -134,7 +134,7 @@ a.it{cursor:pointer}
 .room-m{display:grid;gap:4px;text-align:right}
 .room-a{font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--bone)}
 .room-c{font-size:12.5px;color:var(--mist)}
-.room-go{width:46px;height:46px;border:1px solid var(--line-2);border-radius:50%;display:grid;place-items:center;font-size:15px;color:var(--bone);transition:border-color .3s,color .3s,transform .6s var(--ease)}
+.room-go{width:46px;height:46px;border:1px solid var(--line-2);border-radius:0;display:grid;place-items:center;font-size:15px;color:var(--bone);transition:border-color .3s,color .3s,transform .6s var(--ease)}
 .room:hover img,.room:focus-visible img{filter:brightness(.8) saturate(1);transform:scale(1)}
 .room:hover::before,.room:focus-visible::before{transform:scaleX(1)}
 .room:hover .room-w,.room:focus-visible .room-w{transform:translateX(10px)}
@@ -162,7 +162,7 @@ a.it{cursor:pointer}
 .svc-t{display:grid;gap:4px}
 .svc-t b{font-family:var(--serif);font-weight:400;font-size:clamp(22px,2.3vw,34px);line-height:1.05}
 .svc-t span{color:var(--mist);font-size:14px;max-width:34em}
-.svc-go{width:40px;height:40px;border:1px solid var(--line-2);border-radius:50%;display:grid;place-items:center;transition:border-color .3s,color .3s,transform .5s var(--ease)}
+.svc-go{width:40px;height:40px;border:1px solid var(--line-2);border-radius:0;display:grid;place-items:center;transition:border-color .3s,color .3s,transform .5s var(--ease)}
 .svc-row:hover .svc-img img,.svc-row:focus-visible .svc-img img{filter:none;transform:scale(1.04)}
 .svc-row:hover .svc-go,.svc-row:focus-visible .svc-go{border-color:var(--accent);color:var(--accent);transform:translateX(4px)}
 .svc-row:hover .svc-t b{color:var(--bone)}
@@ -214,7 +214,7 @@ a.it{cursor:pointer}
 .chapter-bar::before{content:"";position:absolute;inset:0 calc(-1 * var(--gut));z-index:-1;background:inherit}
 .nav-hidden .chapter-bar{top:0}
 .chapnav{display:flex;gap:6px;flex-wrap:wrap}
-.chapnav a{font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--fog);padding:8px 12px;border:1px solid var(--line);border-radius:30px;transition:color .2s,border-color .2s}
+.chapnav a{font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--fog);padding:8px 12px;border:1px solid var(--line);border-radius:0;transition:color .2s,border-color .2s}
 .chapnav a:hover{color:var(--bone);border-color:var(--line-2)}
 .chapnav a.on{color:var(--accent);border-color:var(--accent)}
 /* ── MOTION / STAGE: grilla de obras + sala de proyección ── */
@@ -243,7 +243,7 @@ a.it{cursor:pointer}
 .video:hover img{filter:brightness(.95) saturate(1);transform:scale(1.03)}
 .video::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.7),transparent 50%)}
 .video .play{position:absolute;left:12px;bottom:12px;right:12px;z-index:1;display:flex;align-items:center;gap:10px}
-.video .play i{flex:none;width:38px;height:38px;border:1px solid var(--bone);border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:11px;transition:border-color .2s,color .2s}
+.video .play i{flex:none;width:38px;height:38px;border:1px solid var(--bone);border-radius:0;display:grid;place-items:center;font-style:normal;font-size:11px;transition:border-color .2s,color .2s}
 .video:hover .play i{border-color:var(--accent);color:var(--accent)}
 .video .play span{font-size:12.5px;line-height:1.3}
 .video .play small{display:block;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mist);font-weight:600}
@@ -260,7 +260,7 @@ dialog::backdrop{background:rgba(0,0,0,.94);backdrop-filter:blur(6px)}
 @keyframes open{from{opacity:0;transform:translateY(18px) scale(.985)}}
 @keyframes fade{from{opacity:0}}
 .cinema-in{padding:calc(60px + env(safe-area-inset-top,0px)) var(--gut) 48px}
-.cinema .x{position:fixed;top:max(14px,env(safe-area-inset-top,0px));right:max(14px,env(safe-area-inset-right,0px));z-index:5;background:rgba(0,0,0,.5);border:1px solid var(--line-2);border-radius:30px;min-height:40px;padding:0 16px;font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;cursor:pointer}
+.cinema .x{position:fixed;top:max(14px,env(safe-area-inset-top,0px));right:max(14px,env(safe-area-inset-right,0px));z-index:5;background:rgba(0,0,0,.5);border:1px solid var(--line-2);border-radius:0;min-height:40px;padding:0 16px;font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;cursor:pointer}
 .cinema .x:hover{border-color:var(--accent);color:var(--accent)}
 .screen{display:grid;gap:var(--gap);grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
 .screen.one{grid-template-columns:1fr}
@@ -273,7 +273,7 @@ dialog::backdrop{background:rgba(0,0,0,.94);backdrop-filter:blur(6px)}
 .facts dd a{color:var(--accent)}
 .ficha p{font-size:15px;color:var(--mist)}
 .sound{margin-top:18px;display:grid;gap:10px}
-.sound iframe{width:100%;border:0;border-radius:10px;background:var(--c2)}
+.sound iframe{width:100%;border:0;border-radius:0;background:var(--c2)}
 .stills{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap);margin-top:var(--gap)}
 @media(max-width:600px){.stills{grid-template-columns:1fr 1fr}}
 .stills img{width:100%;aspect-ratio:1;object-fit:cover}
@@ -307,8 +307,6 @@ dialog::backdrop{background:rgba(0,0,0,.94);backdrop-filter:blur(6px)}
 .footer nav a{font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--fog);transition:color .2s}
 .footer nav a:hover{color:var(--accent)}
 .footer-meta{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--fog);width:100%}
-.float-cta{position:fixed;right:max(14px,env(safe-area-inset-right,0px));bottom:max(14px,env(safe-area-inset-bottom,0px));z-index:90;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .35s,transform .35s var(--ease);background:#000}
-.float-cta.on{opacity:1;transform:none;pointer-events:auto}
 
 /* ── galería ampliada ── */
 .lb{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:max(52px,env(safe-area-inset-top,0px)) 14px max(20px,env(safe-area-inset-bottom,0px))}
@@ -371,3 +369,10 @@ dialog::backdrop{background:rgba(0,0,0,.94);backdrop-filter:blur(6px)}
 .awards img{width:48px;height:48px;flex:none}
 @media(max-width:600px){.awards li>a,.awards li>div{flex-wrap:wrap;gap:6px 14px}.aw-t{flex-basis:calc(100% - 32px)}.aw-y{margin-left:32px}.awards img{width:40px;height:40px}}
 .ico{font-style:normal;font-family:var(--serif);font-size:17px;letter-spacing:0;color:var(--accent);margin-right:10px;vertical-align:-2px}
+/* nov 2026 · nota por grupo (Marcas) y reconocimientos en la ficha */
+.jg .label-nota{display:block;margin-top:6px;max-width:var(--text);font-size:14px;font-weight:400;letter-spacing:0;text-transform:none;line-height:1.5;color:var(--mist)}
+.laurels{margin-top:18px}
+.laurels ul{list-style:none;margin-top:8px;border-top:1px solid var(--line-2)}
+.laurels li{display:grid;gap:3px;padding:10px 0;border-bottom:1px solid var(--line)}
+.laurels b{font-family:var(--serif);font-weight:400;font-size:17px;line-height:1.25}
+.laurels span{font-size:13px;line-height:1.45;color:var(--mist)}

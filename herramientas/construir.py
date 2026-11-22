@@ -21,10 +21,26 @@ site = leer('contenido/sitio.yml')
 motion = leer('contenido/motion.yml')
 stage = leer('contenido/stage.yml')
 
+# Campos opcionales: Pages CMS borra los vacíos al guardar, así que aquí se rellenan con valores seguros
+for p in (motion.get('proyectos') or []) + (stage.get('proyectos') or []):
+    for k in ('anio', 'rol_es', 'rol_en', 'sinopsis_es', 'sinopsis_en', 'tipo_es', 'tipo_en'):
+        if p.get(k) is None: p[k] = ''
+    for k in ('videos', 'banda_sonora', 'enlaces', 'fotos'):
+        if not isinstance(p.get(k), list): p[k] = []
+for p in (motion.get('proyectos') or []):
+    p['premios'] = [r for r in (site.get('reconocimientos') or []) if r.get('obra') and r.get('obra') == p.get('titulo')]   # una sola fuente: Textos generales
+for p in (stage.get('proyectos') or []):
+    for k in ('genero_es', 'genero_en', 'sala', 'funciones_es', 'funciones_en'):
+        if not p.get(k): p[k] = p.get(k[:-3] + '_es', '') if k.endswith('_en') else ''
+    p['creditos'] = [c for c in (p.get('creditos') or []) if isinstance(c, dict) and c.get('nombre')]
+    for c in p['creditos']:
+        c['rol_es'] = c.get('rol_es') or ''; c['rol_en'] = c.get('rol_en') or c['rol_es']
+
 thumbs = {str(k): v for k, v in (leer('contenido/miniaturas.yml') or {}).items()}
 capitulos = sorted((leer(p) for p in glob.glob('contenido/photo/*.yml')), key=lambda c: c['orden'])
 for c in capitulos:  # Pages CMS borra los campos vacíos al guardar: aquí se rellenan
     c.setdefault('premios', [])
+    c['notas'] = {g['nombre']: g for g in (c.get('grupos') or []) if isinstance(g, dict) and g.get('nombre')}   # nota opcional por grupo
     for f in c.get('fotos', []):
         for k, v in (('grupo_es', ''), ('grupo_en', ''), ('pie_es', ''), ('pie_en', ''), ('credito', ''), ('formato', 'par')):
             if f.get(k) is None: f[k] = v
@@ -83,7 +99,7 @@ T = {
  'es': dict(
   nav=[('motion','Motion'),('photo','Photo'),('stage','Stage'),('sobre-mi','Sobre mí'),('contacto','Contacto')],
   contact_slug='contacto', menu='Menú', write='Escribime', photo='Foto ampliada', close='Cerrar', prev='Anterior', next='Siguiente',
-  explore='Ver trabajo', all_photo='Ver todas las fotos', projects='proyectos', awards='reconocimientos', clients='clientes', clients_sub='Con quienes he trabajado',
+  explore='Ver trabajo', all_photo='Ver todas las fotos', projects='proyectos', awards='reconocimientos', awards_short='Reconocimientos', venue='Sala', dates='Funciones', clients='clientes', clients_sub='Con quienes he trabajado',
   offer='servicios', offer_sub='Para artistas, productoras, festivales y marcas.', quote='Cotizar', form='Formulario', see_ig='Ver en Instagram', enter='Entrar', photos='fotos', chapters='Capítulos', next_chapter='Siguiente capítulo', quote_project='Cotizar tu proyecto',
   photo_eyebrow='Fotografía', photo_lead='Música en vivo, danza, teatro, retrato, arte, viajes y marcas.',
   motion_eyebrow='Cine & video', motion_lead='Series, películas, cortos, videoclips y reels.',
@@ -99,7 +115,7 @@ T = {
  'en': dict(
   nav=[('motion','Motion'),('photo','Photo'),('stage','Stage'),('about','About'),('contact','Contact')],
   contact_slug='contact', menu='Menu', write='Get in touch', photo='Enlarged photo', close='Close', prev='Previous', next='Next',
-  explore='See work', all_photo='See all photos', projects='projects', awards='recognition', clients='clients', clients_sub='People I have worked with',
+  explore='See work', all_photo='See all photos', projects='projects', awards='recognition', awards_short='Recognition', venue='Venue', dates='Performances', clients='clients', clients_sub='People I have worked with',
   offer='services', offer_sub='For artists, production companies, festivals and brands.', quote='Get a quote', form='Contact form', see_ig='Watch on Instagram', enter='Enter', photos='photos', chapters='Chapters', next_chapter='Next chapter', quote_project='Quote your project',
   photo_eyebrow='Photography', photo_lead='Live music, dance, theatre, portrait, fine art, travel and brands.',
   motion_eyebrow='Film & video', motion_lead='Series, films, shorts, music videos and reels.',

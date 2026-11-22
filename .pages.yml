@@ -39,6 +39,15 @@ content:
           - { name: texto_es, label: Texto (ES), type: string }
           - { name: texto_en, label: Texto (EN), type: string }
           - { name: url, label: Enlace oficial, type: string }
+      - name: grupos
+        label: Notas por grupo (opcional)
+        description: "Una o dos líneas que salen debajo del nombre de un grupo de fotos. Ejemplo: en Marcas, «Obra comisionada…» debajo de Hyatt Place."
+        type: object
+        list: true
+        fields:
+          - { name: nombre, label: Nombre exacto del grupo (ES), type: string, description: "Igual al «Grupo (ES)» que llevan las fotos." }
+          - { name: nota_es, label: Nota (ES), type: text }
+          - { name: nota_en, label: Nota (EN), type: text, description: "Si queda vacía no se muestra en inglés." }
       - name: fotos
         label: Fotos (arrastrá para cambiar el orden)
         type: object
@@ -129,10 +138,24 @@ content:
           - { name: slug, label: Identificador (sin espacios), type: string }
           - { name: titulo, label: Título, type: string }
           - { name: anio, label: Año, type: string }
-          - { name: rol_es, label: Rol (ES), type: string }
-          - { name: rol_en, label: Rol (EN), type: string }
+          - { name: genero_es, label: Ficha · tipo de montaje (ES), type: string, description: "Ejemplo: Danza, teatro y música en vivo. Vacío = no se muestra." }
+          - { name: genero_en, label: Ficha · tipo de montaje (EN), type: string }
+          - { name: sala, label: Ficha · sala o teatro, type: string, description: "Ejemplo: Teatro Nacional de Costa Rica." }
+          - { name: funciones_es, label: Ficha · fechas y funciones (ES), type: string, description: "Ejemplo: 2 de octubre de 2026 · una función." }
+          - { name: funciones_en, label: Ficha · fechas y funciones (EN), type: string }
+          - { name: rol_es, label: Mi rol (ES), type: string }
+          - { name: rol_en, label: Mi rol (EN), type: string }
           - { name: sinopsis_es, label: Sinopsis (ES), type: text }
           - { name: sinopsis_en, label: Sinopsis (EN), type: text }
+          - name: creditos
+            label: Ficha · créditos
+            description: "Una línea por crédito (Dirección, Producción, Elenco…), en el orden en que deben leerse. Una línea sin nombre no se muestra."
+            type: object
+            list: true
+            fields:
+              - { name: rol_es, label: Crédito (ES), type: string }
+              - { name: rol_en, label: Crédito (EN), type: string }
+              - { name: nombre, label: Nombre, type: string }
           - { name: fotos, label: Fotos, type: image, options: { multiple: true } }
           - name: enlaces
             label: Enlaces
@@ -218,7 +241,7 @@ content:
           - { name: titulo_en, label: Premio o nominación (EN), type: string }
           - { name: evento_es, label: Festival o institución (ES), type: string }
           - { name: evento_en, label: Festival o institución (EN), type: string }
-          - { name: obra, label: Obra, type: string }
+          - { name: obra, label: Obra, type: string, description: "Escribila igual al título del proyecto de Motion (ejemplo: Dele Viaje) para que el premio aparezca también en su ficha." }
           - { name: imagen, label: Sello (opcional · ruta sin tamaño), type: string }
           - { name: url, label: Enlace oficial (opcional), type: string }
       - name: clientes

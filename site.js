@@ -167,10 +167,6 @@
   });
   if (location.hash && document.getElementById('ver-' + location.hash.slice(1))) openWork('ver-' + location.hash.slice(1));
 
-  /* Botón flotante «Escribime» */
-  var fc = $('.float-cta');
-  if (fc) addEventListener('scroll', function () { fc.classList.toggle('on', scrollY > innerHeight * 1.2); }, { passive: true });
-
   /* Eventos (mismos que la Bio) */
   $$('a[href^="http"]').forEach(function (a) { if (a.host !== location.host) a.addEventListener('click', function () { track('outbound_click', { url: a.href }); }); });
   var form = $('#contact-form');

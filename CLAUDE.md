@@ -67,3 +67,9 @@ Memoria del proyecto. Leelo completo antes de cambiar algo.
 ## Kit de marca (oct 2026)
 - Logo, ícono, firma, Instagram, tarjeta y guía en la carpeta `kit-marca` de la Mac (PERSONACR), no en este repo.
 - `img/marca/firma-persona.png`: imagen de la firma de correo (la usa la firma de Gmail; no cambiar de ruta).
+
+## Ajustes de noviembre 2026
+- Botones de esquinas rectas en todo el sitio y la Bio (el retrato circular de la Bio se queda). Ya no hay botón flotante «Escribime».
+- Motion: la ficha de cada proyecto muestra sus reconocimientos; salen de `reconocimientos` en sitio.yml cuando «Obra» es igual al título del proyecto.
+- Photo: orden y portadas sin cambios (En vivo sigue primero). Marcas incluye Hyatt Place Cariari Convention Center (las mismas fotos de Arte) con una nota de «obra comisionada»: campo `grupos` (nota por grupo) del capítulo.
+- Stage: la ficha que se abre al tocar cada obra muestra ficha técnica: `genero_*`, `sala`, `funciones_*`, `creditos`.

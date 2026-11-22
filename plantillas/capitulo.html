@@ -15,7 +15,7 @@
   <div class="jg">
   {%- set ns = namespace(g='') -%}
   {%- for f in c.fotos %}
-    {%- if f['grupo_' ~ lang] and f['grupo_' ~ lang] != ns.g %}{% set ns.g = f['grupo_' ~ lang] %}{% set pr = (c.premios or [])|selectattr("grupo", "equalto", f.grupo_es)|first %}<p class="label{% if pr %} award{% endif %}">{{ ns.g }}{% if pr %}<a href="{{ pr.url }}" rel="noopener"><img src="{{ R }}{{ pr.imagen }}-160.webp" srcset="{{ R }}{{ pr.imagen }}-320.webp 2x" alt="Fine Art Photography Awards · Nominee" width="40" height="40">{{ pr['texto_' ~ lang] }}</a>{% endif %}</p>{% endif %}
+    {%- if f['grupo_' ~ lang] and f['grupo_' ~ lang] != ns.g %}{% set ns.g = f['grupo_' ~ lang] %}{% set pr = (c.premios or [])|selectattr("grupo", "equalto", f.grupo_es)|first %}<p class="label{% if pr %} award{% endif %}">{{ ns.g }}{% if pr %}<a href="{{ pr.url }}" rel="noopener"><img src="{{ R }}{{ pr.imagen }}-160.webp" srcset="{{ R }}{{ pr.imagen }}-320.webp 2x" alt="Fine Art Photography Awards · Nominee" width="40" height="40">{{ pr['texto_' ~ lang] }}</a>{% endif %}{% set nt = c.notas.get(f.grupo_es) %}{% if nt and nt['nota_' ~ lang] %}<span class="label-nota">{{ nt['nota_' ~ lang] }}</span>{% endif %}</p>{% endif %}
     {{ tile(f, lang, None, loop.index0) }}
   {%- endfor %}
   </div>

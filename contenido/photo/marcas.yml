@@ -4,55 +4,134 @@ slug: marcas
 slug_en: brands
 titulo_es: Marcas
 titulo_en: Brands
-intro_es: "Grupo del Este: 40 aniversario y nueva Sala de Capacitación, 2026."
-intro_en: "Grupo del Este: 40th anniversary and new training space, 2026."
-portada: img/photo/marcas/grupo-del-este-marcas-2026-01-640.webp
+intro_es: Obra comisionada y cobertura para marcas.
+intro_en: Commissioned work and coverage for brands.
+portada: img/photo/arte/hyatt-place-arte-11-640.webp
+grupos:
+- nombre: Hyatt Place Cariari Convention Center
+  nota_es: 'Obra comisionada: serie de fotografía artística personalizada, creada por contrato para el hotel.'
+  nota_en: 'Commissioned work: a custom fine-art photography series created under contract for the hotel.'
+- nombre: Grupo del Este
+  nota_es: Cobertura del 40 aniversario y de la nueva Sala de Capacitación, 2026.
+  nota_en: Coverage of the 40th anniversary and the new training space, 2026.
 fotos:
-  - archivo: img/photo/marcas/grupo-del-este-marcas-2026-01-640.webp
-    formato: completa
-    pie_es: Evento de Grupo del Este junto al camión de la marca
-    pie_en: Grupo del Este event beside the brand truck
-    credito: Grupo del Este · 2026
-    w: 1000
-    h: 667
-    color: "#427895"
-  - archivo: img/photo/marcas/grupo-del-este-marcas-2026-02-640.webp
-    formato: completa
-    pie_es: Sala llena en el aniversario de Grupo del Este
-    pie_en: Full room at the Grupo del Este anniversary
-    credito: Grupo del Este · 2026
-    w: 1000
-    h: 667
-    color: "#3a5765"
-  - archivo: img/photo/marcas/grupo-del-este-marcas-2026-03-640.webp
-    formato: detalle
-    pie_es: Invitados riendo en el evento de Grupo del Este
-    pie_en: Guests laughing at the Grupo del Este event
-    credito: Grupo del Este · 2026
-    w: 667
-    h: 1000
-    color: "#555555"
-  - archivo: img/photo/marcas/grupo-del-este-marcas-2026-04-640.webp
-    formato: completa
-    pie_es: Abriendo una caja en el evento de Grupo del Este
-    pie_en: Opening a box at the Grupo del Este event
-    credito: Grupo del Este · 2026
-    w: 1000
-    h: 667
-    color: "#5c5a59"
-  - archivo: img/photo/marcas/grupo-del-este-marcas-2026-05-640.webp
-    formato: completa
-    pie_es: Nueva sala de capacitación de Grupo del Este
-    pie_en: Grupo del Este's new training space
-    credito: Grupo del Este · 2026
-    w: 1000
-    h: 667
-    color: "#899897"
-  - archivo: img/photo/marcas/grupo-del-este-marcas-2026-06-640.webp
-    formato: completa
-    pie_es: Valores de la empresa en la pared
-    pie_en: Company values on the wall
-    credito: Grupo del Este · 2026
-    w: 1000
-    h: 667
-    color: "#949a97"
+- archivo: img/photo/arte/hyatt-place-arte-11-640.webp
+  w: 1000
+  h: 520
+  color: '#40544b'
+  formato: completa
+  grupo_es: Hyatt Place Cariari Convention Center
+  grupo_en: Hyatt Place Cariari Convention Center
+  pie_es: Fotomontaje geométrico de una catarata para Hyatt Place
+  pie_en: Geometric photomontage of a waterfall for Hyatt Place
+  credito: Hyatt Place
+- archivo: img/photo/arte/hyatt-place-arte-12-640.webp
+  w: 1000
+  h: 520
+  color: '#4e5451'
+  formato: completa
+  grupo_es: Hyatt Place Cariari Convention Center
+  grupo_en: Hyatt Place Cariari Convention Center
+  pie_es: Fotomontaje geométrico de un volcán para Hyatt Place
+  pie_en: Geometric photomontage of a volcano for Hyatt Place
+  credito: Hyatt Place
+- archivo: img/photo/arte/hyatt-place-arte-13-640.webp
+  w: 769
+  h: 1000
+  color: '#998973'
+  formato: par
+  grupo_es: Hyatt Place Cariari Convention Center
+  grupo_en: Hyatt Place Cariari Convention Center
+  pie_es: Fotomontaje de un árbol para Hyatt Place
+  pie_en: Photomontage of a tree for Hyatt Place
+  credito: Hyatt Place
+- archivo: img/photo/arte/hyatt-place-arte-14-640.webp
+  w: 818
+  h: 1000
+  color: '#46433d'
+  formato: par
+  grupo_es: Hyatt Place Cariari Convention Center
+  grupo_en: Hyatt Place Cariari Convention Center
+  pie_es: Fotomontaje geométrico de Bajos del Toro para Hyatt Place
+  pie_en: Geometric photomontage of Bajos del Toro for Hyatt Place
+  credito: Hyatt Place
+- archivo: img/photo/arte/hyatt-place-arte-15-640.webp
+  w: 750
+  h: 1000
+  color: '#4c4a39'
+  formato: par
+  grupo_es: Hyatt Place Cariari Convention Center
+  grupo_en: Hyatt Place Cariari Convention Center
+  pie_es: Caleidoscopio de Bajos del Toro para Hyatt Place
+  pie_en: Kaleidoscope of Bajos del Toro for Hyatt Place
+  credito: Hyatt Place
+- archivo: img/photo/arte/hyatt-place-arte-16-640.webp
+  w: 750
+  h: 1000
+  color: '#27302b'
+  formato: par
+  grupo_es: Hyatt Place Cariari Convention Center
+  grupo_en: Hyatt Place Cariari Convention Center
+  pie_es: Fotomontaje de cuadros y una flor para Hyatt Place
+  pie_en: Photomontage of squares and a flower for Hyatt Place
+  credito: Hyatt Place
+- archivo: img/photo/marcas/grupo-del-este-marcas-2026-01-640.webp
+  formato: completa
+  pie_es: Evento de Grupo del Este junto al camión de la marca
+  pie_en: Grupo del Este event beside the brand truck
+  credito: Grupo del Este · 2026
+  w: 1000
+  h: 667
+  color: '#427895'
+  grupo_es: Grupo del Este
+  grupo_en: Grupo del Este
+- archivo: img/photo/marcas/grupo-del-este-marcas-2026-02-640.webp
+  formato: completa
+  pie_es: Sala llena en el aniversario de Grupo del Este
+  pie_en: Full room at the Grupo del Este anniversary
+  credito: Grupo del Este · 2026
+  w: 1000
+  h: 667
+  color: '#3a5765'
+  grupo_es: Grupo del Este
+  grupo_en: Grupo del Este
+- archivo: img/photo/marcas/grupo-del-este-marcas-2026-03-640.webp
+  formato: detalle
+  pie_es: Invitados riendo en el evento de Grupo del Este
+  pie_en: Guests laughing at the Grupo del Este event
+  credito: Grupo del Este · 2026
+  w: 667
+  h: 1000
+  color: '#555555'
+  grupo_es: Grupo del Este
+  grupo_en: Grupo del Este
+- archivo: img/photo/marcas/grupo-del-este-marcas-2026-04-640.webp
+  formato: completa
+  pie_es: Abriendo una caja en el evento de Grupo del Este
+  pie_en: Opening a box at the Grupo del Este event
+  credito: Grupo del Este · 2026
+  w: 1000
+  h: 667
+  color: '#5c5a59'
+  grupo_es: Grupo del Este
+  grupo_en: Grupo del Este
+- archivo: img/photo/marcas/grupo-del-este-marcas-2026-05-640.webp
+  formato: completa
+  pie_es: Nueva sala de capacitación de Grupo del Este
+  pie_en: Grupo del Este's new training space
+  credito: Grupo del Este · 2026
+  w: 1000
+  h: 667
+  color: '#899897'
+  grupo_es: Grupo del Este
+  grupo_en: Grupo del Este
+- archivo: img/photo/marcas/grupo-del-este-marcas-2026-06-640.webp
+  formato: completa
+  pie_es: Valores de la empresa en la pared
+  pie_en: Company values on the wall
+  credito: Grupo del Este · 2026
+  w: 1000
+  h: 667
+  color: '#949a97'
+  grupo_es: Grupo del Este
+  grupo_en: Grupo del Este
