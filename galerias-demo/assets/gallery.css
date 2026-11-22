@@ -46,7 +46,7 @@ svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:
 
 /* ── botones (píldora, como en el sitio) ── */
 .btns{display:flex;gap:8px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 20px;border:1px solid var(--line-2);border-radius:30px;font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--bone);background:rgba(0,0,0,.3);transition:border-color .25s,color .25s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 20px;border:1px solid var(--line-2);border-radius:0;font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--bone);background:rgba(0,0,0,.3);transition:border-color .25s,color .25s}
 .btn:hover{border-color:var(--accent);color:var(--accent)}
 .btn.blue{border-color:var(--accent);color:var(--accent)}
 .btn[disabled]{opacity:.7;cursor:progress}
@@ -58,10 +58,10 @@ svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:
 .nav.solid::before{opacity:1}
 .nav.hide{transform:translateY(-100%)}
 .nav-inner{max-width:var(--wide);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px var(--gut)}
-.lang{font-size:10.5px;letter-spacing:.18em;color:var(--fog);display:flex;align-items:center;gap:6px}
-.lang b{color:var(--bone);font-weight:600}
-.lang button{min-height:40px;padding:0 4px;font-size:10.5px;font-weight:600;letter-spacing:.18em;color:var(--mist);transition:color .2s}
-.lang button:hover{color:var(--bone)}
+.lang{display:flex;align-items:center;gap:3px}   /* idioma: dos cuadritos de borde muy fino, igual que persona.cr */
+.lang b,.lang button{display:inline-grid;place-items:center;min-width:28px;height:22px;padding:0 5px;border:1px solid rgba(244,242,237,.14);font-size:10.5px;font-weight:600;letter-spacing:.08em;color:var(--mist);transition:color .2s,border-color .2s}
+.lang button:hover{color:var(--bone);border-color:rgba(244,242,237,.3)}
+.lang b{color:var(--bone);border-color:rgba(244,242,237,.38)}
 
 /* ── PORTADA: la sala se apaga y se abre la pantalla ── */
 .cover{position:relative;overflow:hidden;background:#000;isolation:isolate}
@@ -164,7 +164,7 @@ svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:
 .chapter-bar::before{content:"";position:absolute;inset:0 calc(-1 * var(--gut));z-index:-1;background:inherit}
 .nav-hidden .chapter-bar{top:0}
 .chapnav{flex:1;min-width:0;display:flex;gap:6px;flex-wrap:wrap}
-.chip{display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:0 13px;font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--fog);border:1px solid var(--line);border-radius:30px;white-space:nowrap;transition:color .2s,border-color .2s}
+.chip{display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:0 13px;font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--fog);border:1px solid var(--line);border-radius:0;white-space:nowrap;transition:color .2s,border-color .2s}
 .chip:hover{color:var(--bone);border-color:var(--line-2)}
 .chip[aria-current="true"],.chip[aria-pressed="true"]{color:var(--accent);border-color:var(--accent)}
 .chip svg{width:14px;height:14px}
@@ -191,7 +191,7 @@ svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:
 .it img{width:100%;height:100%;object-fit:cover;filter:brightness(.9);transition:opacity .9s cubic-bezier(.33,0,.2,1) var(--d,0s),filter .6s var(--ease),transform 1.4s var(--ease);opacity:0}
 .it.in img.ok{opacity:1}
 .it:hover img,.it-open:focus-visible img{filter:brightness(1.04);transform:scale(1.015)}
-.it-fav{position:absolute;right:6px;bottom:6px;z-index:1;width:36px;height:36px;display:grid;place-items:center;border-radius:50%;color:var(--bone);background:rgba(0,0,0,.45);opacity:0;transition:opacity .25s,color .25s}
+.it-fav{position:absolute;right:6px;bottom:6px;z-index:1;width:36px;height:36px;display:grid;place-items:center;border-radius:0;color:var(--bone);background:rgba(0,0,0,.45);opacity:0;transition:opacity .25s,color .25s}
 .it-fav[aria-pressed="true"]{opacity:1;color:var(--accent)}
 .it-fav[aria-pressed="true"] svg{fill:currentColor}
 .it-fav:focus-visible{opacity:1}

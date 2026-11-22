@@ -138,8 +138,8 @@ function navHTML() {
         <a class="wordmark" href="${STUDIO.website}">${WORDMARK}</a>
         <div class="lang">
           ${getLang() === 'es'
-            ? `<b>ES</b> · <button type="button" data-action="lang" lang="en">EN</button>`
-            : `<button type="button" data-action="lang" lang="es">ES</button> · <b>EN</b>`}
+            ? `<b aria-current="true">ES</b><button type="button" data-action="lang" lang="en">EN</button>`
+            : `<button type="button" data-action="lang" lang="es">ES</button><b aria-current="true">EN</b>`}
         </div>
       </div>
     </nav>`;
