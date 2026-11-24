@@ -40,8 +40,8 @@
   }).catch(function () {});
 
   /* Las fotos del mosaico aparecen con un fundido cuando terminan de cargar (nunca de golpe) */
-  $$('.jg .it img').forEach(function (im) {
-    var ok = function () { im.classList.add('ok'); };
+  $$('.jg .it img, .about > img').forEach(function (im) {
+    var ok = function () { requestAnimationFrame(function () { im.classList.add('ok'); }); };
     if (im.complete && im.naturalWidth) ok(); else { im.addEventListener('load', ok, { once: true }); im.addEventListener('error', ok, { once: true }); }
   });
 
