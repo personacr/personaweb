@@ -5,6 +5,16 @@
   var calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var track = function (n, p) { try { window.gtag && gtag('event', n, p || {}); } catch (e) {} };
 
+  /* Portada: se enciende cuando la foto ya cargó (fundido desde negro, sin brinco) */
+  $$('.hero, .cover').forEach(function (c) {
+    var im = $('.poster', c) || $(':scope > img', c), hecho = false;
+    var lit = function () { if (hecho) return; hecho = true; requestAnimationFrame(function () { c.classList.add('lit'); }); };
+    if (!im) return lit();
+    if (im.complete && im.naturalWidth) { (im.decode ? im.decode() : Promise.resolve()).then(lit, lit); }
+    else { im.addEventListener('load', function () { (im.decode ? im.decode() : Promise.resolve()).then(lit, lit); }); im.addEventListener('error', lit); }
+    setTimeout(lit, 4000);   // por si la red tarda demasiado: nunca se queda en negro
+  });
+
   /* Menú: se oscurece al bajar; en el teléfono abre a pantalla completa */
   var nav = $('.nav'), b = $('#burger'), links = $('#nav-links');
   /* Se oscurece al bajar; se esconde al bajar y vuelve al subir (más pantalla para las fotos) */

@@ -378,3 +378,11 @@ dialog::backdrop{background:rgba(0,0,0,.94);backdrop-filter:blur(6px)}
 .laurels li{display:grid;gap:3px;padding:10px 0;border-bottom:1px solid var(--line)}
 .laurels b{font-family:var(--serif);font-weight:400;font-size:17px;line-height:1.25}
 .laurels span{font-size:13px;line-height:1.45;color:var(--mist)}
+
+/* Portadas (inicio, Photo, Motion, Stage y capítulos): la foto entra desde negro solo cuando ya cargó,
+   y recién ahí arrancan el acercamiento lento y la apertura de las franjas. Así no hay «brinco». */
+.js .hero .poster,.js .cover>img{opacity:0;animation-play-state:paused;transition:opacity 1.4s cubic-bezier(.33,0,.2,1)}
+.js .hero.lit .poster,.js .cover.lit>img{opacity:1;animation-play-state:running}
+.js .hero .bars::before,.js .hero .bars::after,.js .cover .bars::before,.js .cover .bars::after{animation-play-state:paused}
+.js .hero.lit .bars::before,.js .hero.lit .bars::after,.js .cover.lit .bars::before,.js .cover.lit .bars::after{animation-play-state:running}
+@media (prefers-reduced-motion:reduce){.js .hero .poster,.js .cover>img{transition:none}}
